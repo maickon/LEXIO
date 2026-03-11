@@ -6,9 +6,12 @@
 const CACHE_NAME = 'lexio-v1';
 const CACHE_STATIC = [
   '/',
+  '../index.html',
   '/index.html',
   '/css/style.css',
+  '/css/landing.css',
   '/js/db.js',
+  '/js/landing.js',
   '/js/state.js',
   '/js/ui.js',
   '/js/audio.js',
