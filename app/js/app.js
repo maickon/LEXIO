@@ -19,6 +19,11 @@ async function doLogin() {
   btn.disabled = true;
 
   if (LEXIO_CONFIG.demoMode && email === LEXIO_CONFIG.demoEmail) {
+    localStorage.setItem('lexio_session', JSON.stringify({
+      email: email,
+      ts: Date.now()
+    }));
+
     await _enterApp();
     return;
   }
@@ -78,6 +83,22 @@ document.addEventListener('keydown', e => {
 
 // ── BOOT ─────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', async () => {
+
+  const saved = localStorage.getItem('lexio_session');
+  if (saved) {
+    try {
+      const session = JSON.parse(saved);
+      const aDay = 24 * 60 * 60 * 1000;
+      // Sessão válida por 24h
+      if (Date.now() - session.ts < aDay) {
+        await _enterApp();
+      } else {
+        localStorage.removeItem('lexio_session');
+      }
+    } catch {
+      localStorage.removeItem('lexio_session');
+    }
+  }
   UI.spawnParticles();
 
   // Service Worker
@@ -92,9 +113,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 function doLogout() {
+  localStorage.removeItem('lexio_session'); // ← adicione esta linha
   State.setLogin(false);
   window.speechSynthesis?.cancel();
-  // Redireciona para a landing page
-  // Ajuste o caminho se o app estiver numa subpasta (ex: '../' ou '/')
   window.location.href = '../index.html';
 }
