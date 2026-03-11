@@ -21,11 +21,6 @@ async function doLogin() {
   btn.disabled = true;
 
   if (LEXIO_CONFIG.demoMode && email === LEXIO_CONFIG.demoEmail) {
-    localStorage.setItem('lexio_session', JSON.stringify({
-      email: email,
-      ts: Date.now()
-    }));
-
     await _enterApp();
     return;
   }
@@ -39,6 +34,10 @@ async function doLogin() {
     });
     const data = await res.json();
     if (data.access) {
+      localStorage.setItem('lexio_session', JSON.stringify({
+        email: email,
+        ts: Date.now()
+      }));
       await _enterApp();
     } else {
       UI.toast('Acesso negado. Verifique seu cadastro.', 'error');
