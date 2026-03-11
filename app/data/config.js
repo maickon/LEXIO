@@ -16,7 +16,7 @@ const LEXIO_CONFIG = {
   // 1. Crie uma conta em https://onesignal.com
   // 2. Crie um novo App → Web Push
   // 3. Cole aqui o App ID gerado
-  oneSignalAppId: "SEU-APP-ID-AQUI",
+  oneSignalAppId: "b4c0f417-55a5-43ea-a87f-ee4e93d14ac6",
 
   // ── LEMBRETES (horários de push notification) ───
   // Configurados via OneSignal Dashboard → Automated Messages
@@ -42,6 +42,5 @@ const LEXIO_CONFIG = {
 
   // Para demo/desenvolvimento, deixe true para pular verificação
   demoMode: false,
-  demoEmail: "demo@lexio.app",
-  demoPassword: "demo123"
+  demoEmail: "demo@lexio.app"
 };
