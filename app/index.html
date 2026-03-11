@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#050508">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="LEXIO">
+  <meta name="description" content="Domine o inglês aprendendo as palavras mais usadas do idioma.">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+
+  <title>LEXIO — English Mastery</title>
+
+  <!-- OneSignal -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- BG layers -->
+<div id="grid-bg"></div>
+<div id="particles"></div>
+<div id="toast"></div>
+
+<div id="app">
+  <div class="status-bar"></div>
+
+  <!-- ═══════════════════ LOGIN ═══════════════════ -->
+  <div class="screen active" id="screen-login">
+    <div class="login-glow-ring">
+      <div class="login-logo">L</div>
+    </div>
+    <div class="login-logo">LEXIO</div>
+    <div class="login-tagline">// ENGLISH MASTERY SYSTEM v1.0</div>
+
+    <div class="login-card">
+      <div class="field">
+        <label>// EMAIL</label>
+        <input type="email" id="login-email" placeholder="seu@email.com"
+               autocomplete="email" inputmode="email" value="demo@lexio.app">
+      </div>
+      <button class="btn btn-cyan btn-full" id="login-btn" onclick="doLogin()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        ACESSAR SISTEMA
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ MAIN APP ═══════════════ -->
+  <div class="screen" id="screen-main">
+
+    <!-- SIDEBAR (desktop only — hidden on mobile via CSS) -->
+    <aside class="sidebar" id="sidebar" style="display:none">
+      <div class="sidebar-logo">
+        LEXIO <small>// ENG MASTERY</small>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="sidebar-nav-btn active" data-nav="evolution" onclick="UI.showPage('evolution')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          Minha Evolução
+        </button>
+        <button class="sidebar-nav-btn" data-nav="learn" onclick="UI.showPage('learn')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+          Aprendizado
+        </button>
+        <button class="sidebar-nav-btn" data-nav="test" onclick="UI.showPage('test')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>
+          </svg>
+          Testes
+        </button>
+        <button class="sidebar-nav-btn" data-nav="guide" onclick="UI.showPage('guide')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <path d="M12 17h.01"/>
+          </svg>
+          Como Funciona
+        </button>
+        <button class="sidebar-nav-btn" data-nav="guide" onclick="doLogout()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Sair
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div><span id="sb-streak">0</span> dias de streak</div>
+        <div>Dominadas: <span id="sb-mastered">0</span> / <span id="sb-total">?</span></div>
+      </div>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <div class="main-area" style="flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0">
+
+      <!-- TOP BAR (mobile) -->
+      <header class="topbar">
+        <div class="topbar-logo">LEXIO</div>
+        <div class="topbar-stats">
+          <div class="topbar-stat">
+            <strong id="topbar-streak">0</strong>
+            streak
+          </div>
+          <div class="topbar-stat">
+            <strong id="topbar-mastered">0</strong>
+            dom.
+          </div>
+          <div class="speed-pill">
+            <button class="speed-opt" data-speed="0.5" onclick="setSpeed(0.5)">0.5×</button>
+            <button class="speed-opt active" data-speed="1" onclick="setSpeed(1)">1×</button>
+            <button class="speed-opt" data-speed="1.5" onclick="setSpeed(1.5)">1.5×</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGES -->
+      <div class="page-content">
+
+        <!-- ── EVOLUTION ── -->
+        <div data-page="evolution" style="display:block">
+          <div class="evo-wrap">
+
+            <div class="evo-header">
+              <div class="evo-header-top">
+                <div class="evo-title">// PROGRESSO GERAL</div>
+                <div class="streak-badge">
+                  🔥 <span id="evo-streak">0</span> dias
+                </div>
+              </div>
+              <div class="evo-ring-row">
+                <div class="ring-wrap">
+                  <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="var(--border2)" stroke-width="8"/>
+                    <circle id="ring-fill" cx="50" cy="50" r="45" fill="none"
+                      stroke="var(--cyan)" stroke-width="8" stroke-linecap="round"
+                      style="filter:drop-shadow(0 0 6px var(--cyan));transition:stroke-dashoffset 1s ease"/>
+                  </svg>
+                  <div class="ring-center">
+                    <div class="ring-pct" id="evo-pct">0%</div>
+                    <div class="ring-sub">PROGRESSO</div>
+                  </div>
+                </div>
+                <div class="evo-ring-info">
+                  <div class="evo-big-num" id="evo-big-num">0</div>
+                  <div class="evo-big-label">// PALAVRAS DOMINADAS</div>
+                  <div class="evo-sub-stats">
+                    <div class="evo-sub-stat">Em teste: <span id="evo-in-prog">0</span></div>
+                    <div class="evo-sub-stat">Restantes: <span id="evo-remaining">?</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="stat-cards">
+              <div class="stat-card">
+                <div class="stat-card-bar" style="background:var(--cyan)"></div>
+                <div class="stat-card-num" style="color:var(--cyan)" id="evo-mastered">0</div>
+                <div class="stat-card-label">DOMINADAS</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-bar" style="background:var(--yellow)"></div>
+                <div class="stat-card-num" style="color:var(--yellow)" id="evo-inprog2">0</div>
+                <div class="stat-card-label">EM PROGRESSO</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-bar" style="background:var(--magenta)"></div>
+                <div class="stat-card-num" style="color:var(--magenta)" id="evo-tests">0</div>
+                <div class="stat-card-label">TESTES FEITOS</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-bar" style="background:var(--green)"></div>
+                <div class="stat-card-num" style="color:var(--green)" id="sb-total2">?</div>
+                <div class="stat-card-label">TOTAL PALAVRAS</div>
+              </div>
+            </div>
+
+            <div class="section-head">MAPA DE PALAVRAS</div>
+            <div class="word-map" id="word-map"></div>
+
+          </div>
+        </div>
+
+        <!-- ── LEARN ── -->
+        <div data-page="learn" style="display:none">
+          <div id="learn-content"></div>
+        </div>
+
+        <!-- ── TEST ── -->
+        <div data-page="test" style="display:none">
+          <div id="test-content"></div>
+        </div>
+
+        <!-- ── GUIDE ── -->
+        <div data-page="guide" style="display:none">
+          <div style="padding:20px 16px;max-width:680px;margin:0 auto">
+
+            <!-- HEADER -->
+            <div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:24px 20px;margin-bottom:14px;position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--magenta))"></div>
+              <div style="font-family:var(--font-mono);font-size:0.55rem;color:var(--muted2);letter-spacing:0.2em;margin-bottom:10px">// DOCUMENTAÇÃO DO SISTEMA</div>
+              <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:900;color:var(--cyan);text-shadow:var(--glow-cyan);margin-bottom:6px">COMO O LEXIO FUNCIONA</div>
+              <div style="font-size:0.9rem;color:rgba(236,238,255,0.65);line-height:1.6">
+                Entenda a lógica por trás do sistema, como seu progresso é medido e o que cada fase significa para o seu aprendizado.
+              </div>
+            </div>
+
+            <!-- SEÇÃO 1: O FLUXO -->
+            <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted2);letter-spacing:0.25em;margin:24px 0 12px;display:flex;align-items:center;gap:8px">
+              FLUXO DE APRENDIZADO
+              <div style="flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent)"></div>
+            </div>
+
+            <!-- STEP CARDS -->
+            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:8px">
+
+              <div style="background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--cyan);border-radius:0 8px 8px 0;padding:16px 18px;display:flex;gap:16px;align-items:flex-start">
+                <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:900;color:var(--cyan);flex-shrink:0;line-height:1;min-width:28px">1</div>
+                <div>
+                  <div style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:var(--white);margin-bottom:6px;letter-spacing:0.05em">APRENDIZADO</div>
+                  <div style="font-size:0.88rem;color:rgba(236,238,255,0.7);line-height:1.6">
+                    Uma palavra é sorteada da fila. Você vê a palavra, ouve o áudio, vê imagens associadas e lê 8 frases reais com ela destacada. Quando se sentir confortável, clique em <strong style="color:var(--green)">✓ APRENDI!</strong> para mover a palavra para a fila de testes.
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--magenta);border-radius:0 8px 8px 0;padding:16px 18px;display:flex;gap:16px;align-items:flex-start">
+                <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:900;color:var(--magenta);flex-shrink:0;line-height:1;min-width:28px">2</div>
+                <div>
+                  <div style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:var(--white);margin-bottom:6px;letter-spacing:0.05em">TESTE</div>
+                  <div style="font-size:0.88rem;color:rgba(236,238,255,0.7);line-height:1.6">
+                    O sistema reproduz a palavra ou uma frase via áudio. Você digita <strong style="color:var(--white)">exatamente</strong> o que ouviu — sem ver o texto. Isso treina ao mesmo tempo a percepção auditiva e a memória ativa. O sistema verifica sua resposta ignorando pontuação e maiúsculas.
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:16px 18px;display:flex;gap:16px;align-items:flex-start">
+                <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:900;color:var(--green);flex-shrink:0;line-height:1;min-width:28px">3</div>
+                <div>
+                  <div style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:var(--white);margin-bottom:6px;letter-spacing:0.05em">DOMÍNIO</div>
+                  <div style="font-size:0.88rem;color:rgba(236,238,255,0.7);line-height:1.6">
+                    Cada acerto soma +1 ponto de domínio para aquela palavra. Ao atingir <strong style="color:var(--green)">5 acertos corretos</strong>, a palavra é considerada dominada, sai da fila de testes e entra no seu contador de Evolução permanentemente.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- SEÇÃO 2: DOMÍNIO -->
+            <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted2);letter-spacing:0.25em;margin:24px 0 12px;display:flex;align-items:center;gap:8px">
+              COMO O DOMÍNIO É MEDIDO
+              <div style="flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent)"></div>
+            </div>
+
+            <div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:10px">
+              <div style="font-size:0.88rem;color:rgba(236,238,255,0.7);line-height:1.7;margin-bottom:18px">
+                Cada palavra tem uma barra de domínio com <strong style="color:var(--white)">5 pontos</strong>. O sistema mistura testes de <strong style="color:var(--cyan)">palavra isolada</strong> (50% de chance) com testes de <strong style="color:var(--magenta)">frase completa</strong> (50% de chance) — ambos via áudio.
+              </div>
+
+              <!-- Barra visual de exemplo -->
+              <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted2);margin-bottom:8px">EXEMPLO — "GOOD" com 3 acertos:</div>
+              <div style="display:flex;gap:6px;margin-bottom:6px">
+                <div style="flex:1;height:8px;border-radius:3px;background:var(--green);box-shadow:0 0 8px rgba(0,255,136,0.4)"></div>
+                <div style="flex:1;height:8px;border-radius:3px;background:var(--green);box-shadow:0 0 8px rgba(0,255,136,0.4)"></div>
+                <div style="flex:1;height:8px;border-radius:3px;background:var(--green);box-shadow:0 0 8px rgba(0,255,136,0.4)"></div>
+                <div style="flex:1;height:8px;border-radius:3px;background:var(--border2)"></div>
+                <div style="flex:1;height:8px;border-radius:3px;background:var(--border2)"></div>
+              </div>
+              <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted2)">3 de 5 — ainda em progresso</div>
+
+              <div style="margin-top:16px;padding:12px 14px;background:rgba(0,245,255,0.04);border-left:3px solid var(--cyan);font-size:0.85rem;color:rgba(236,238,255,0.7);line-height:1.6">
+                <strong style="color:var(--cyan)">Por que 5 acertos?</strong> Pesquisas de repetição espaçada (Ebbinghaus, 1885) mostram que uma palavra precisa ser recuperada com sucesso múltiplas vezes em contextos diferentes para migrar da memória de curto prazo para a de longo prazo. 5 acertos é o limiar mínimo comprovado para retenção duradoura.
+              </div>
+            </div>
+
+            <!-- SEÇÃO 3: ESTADOS DA PALAVRA -->
+            <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted2);letter-spacing:0.25em;margin:24px 0 12px;display:flex;align-items:center;gap:8px">
+              ESTADOS DE UMA PALAVRA
+              <div style="flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent)"></div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px">
+              <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:10px;height:10px;border-radius:50%;background:var(--muted);flex-shrink:0"></div>
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted2);margin-bottom:2px">NÃO INICIADA</div>
+                  <div style="font-size:0.85rem;color:rgba(236,238,255,0.6)">Palavra ainda não visitada na tela de Aprendizado. Aparece cinza no Mapa de Palavras.</div>
+                </div>
+              </div>
+              <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:10px;height:10px;border-radius:50%;background:var(--yellow);flex-shrink:0;box-shadow:0 0 6px rgba(255,221,0,0.5)"></div>
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--yellow);margin-bottom:2px">EM PROGRESSO</div>
+                  <div style="font-size:0.85rem;color:rgba(236,238,255,0.6)">Você clicou em "Aprendi!" e a palavra entrou nos testes. Tem entre 0 e 4 acertos. Aparece amarela no Mapa.</div>
+                </div>
+              </div>
+              <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;box-shadow:0 0 6px rgba(0,255,136,0.5)"></div>
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--green);margin-bottom:2px">DOMINADA</div>
+                  <div style="font-size:0.85rem;color:rgba(236,238,255,0.6)">Atingiu 5 acertos corretos no teste. A palavra é removida da fila e contabilizada na sua Evolução. Aparece verde no Mapa.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SEÇÃO 4: DICAS RÁPIDAS -->
+            <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted2);letter-spacing:0.25em;margin:24px 0 12px;display:flex;align-items:center;gap:8px">
+              DICAS PARA AVANÇAR MAIS RÁPIDO
+              <div style="flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent)"></div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px">
+              <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:0.88rem;color:rgba(236,238,255,0.7);line-height:1.6">
+                <strong style="color:var(--cyan)">Use 0.5× no começo.</strong> Se estiver travando nos testes, reduza a velocidade do áudio para 0.5×. Seu ouvido precisa treinar o reconhecimento fonético antes de acompanhar velocidade natural.
+              </div>
+              <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:0.88rem;color:rgba(236,238,255,0.7);line-height:1.6">
+                <strong style="color:var(--magenta)">Ouça antes de digitar.</strong> No teste, aperte o botão de áudio pelo menos 2 vezes antes de digitar. Repetir a escuta antes de escrever ativa mais regiões cerebrais simultaneamente.
+              </div>
+              <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:0.88rem;color:rgba(236,238,255,0.7);line-height:1.6">
+                <strong style="color:var(--green)">Não avance rápido demais.</strong> Se você clicar em "Aprendi!" antes de realmente internalizar a palavra, vai acumular palavras em progresso e travar nos testes. Leia todas as frases e ouça o áudio pelo menos uma vez.
+              </div>
+              <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:0.88rem;color:rgba(236,238,255,0.7);line-height:1.6">
+                <strong style="color:var(--yellow)">Sessões curtas e diárias batem sessões longas e esporádicas.</strong> 10 minutos por dia durante 30 dias é mais eficiente do que 5 horas uma vez na semana. O cérebro consolida memória durante o sono — quanto mais dias, melhor.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /page-content -->
+
+      <!-- BOTTOM NAV (mobile) -->
+      <nav class="bottom-nav">
+        <button class="nav-btn active" data-nav="evolution" onclick="UI.showPage('evolution')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          Evolução
+        </button>
+        <button class="nav-btn" data-nav="learn" onclick="UI.showPage('learn')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+          Aprender
+        </button>
+        <button class="nav-btn" data-nav="test" onclick="UI.showPage('test')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>
+          </svg>
+          Testar
+        </button>
+        <button class="nav-btn" data-nav="guide" onclick="UI.showPage('guide')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <path d="M12 17h.01"/>
+          </svg>
+          Guia
+        </button>
+        <button class="nav-btn" onclick="doLogout()" style="color:var(--muted)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Sair
+        </button>
+      </nav>
+
+    </div><!-- /main-area -->
+  </div><!-- /screen-main -->
+</div><!-- /app -->
+
+<!-- DATA -->
+<script src="data/config.js"></script>
+<script src="data/words.js"></script>
+<script src="data/habits.js"></script>
+
+<!-- MODULES -->
+<script src="js/db.js"></script>
+<script src="js/state.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+  // Show sidebar on desktop after DOM ready
+  window.addEventListener('DOMContentLoaded', () => {
+    function checkDesktop() {
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar) sidebar.style.display = window.innerWidth >= 768 ? 'flex' : 'none';
+      // update total
+      const el = document.getElementById('sb-total2');
+      if (el) el.textContent = WORDS_DB.length;
+    }
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+  });
+</script>
+
+</body>
+</html>
