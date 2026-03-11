@@ -8,7 +8,7 @@
   "background_color": "#050508",
   "theme_color": "#050508",
   "lang": "pt-BR",
-  "scope": "/",
+  "scope": "https://maickon.github.io/LEXIO/",
   "icons": [
     {
       "src": "icons/icon-192.png",
