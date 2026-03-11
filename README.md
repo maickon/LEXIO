@@ -9,28 +9,32 @@ Mobile-first · Dark Neon Gamer · Funciona 100% offline após instalação.
 
 ```
 lexio/
-├── index.html              # App shell principal
-├── manifest.json           # PWA manifest
-├── sw.js                   # Service Worker (offline + push)
-├── css/
-│   └── style.css           # Estilos (mobile-first)
-├── js/
-│   ├── db.js               # IndexedDB wrapper
-│   ├── state.js            # Gerenciamento de estado
-│   ├── ui.js               # Utilitários de UI
-│   ├── audio.js            # TTS / áudio
-│   ├── pages.js            # Renderização de páginas
-│   └── app.js              # Bootstrap / auth
-├── data/
-│   ├── config.js           # ⚙️ CONFIGURAÇÕES (edite aqui)
-│   ├── words.js            # 📚 BANCO DE PALAVRAS (edite aqui)
-│   └── habits.js           # 💡 Dicas de hábitos
-├── icons/
-│   ├── icon-192.png
-│   └── icon-512.png
-└── .github/
-    └── workflows/
-        └── deploy.yml      # Deploy automático no GitHub Pages
+  ├── app/
+  ├────── index.html              # App shell principal
+  ├────── manifest.json           # PWA manifest
+  ├────── sw.js                   # Service Worker (offline + push)
+  ├────── css/
+  │       └── style.css           # Estilos (mobile-first)
+  │       └── landing.css         # Estilos Lnading page (mobile-first)
+  ├────── js/
+  │       ├── db.js               # IndexedDB wrapper
+  │       ├── landing.js          # JS da Landing page
+  │       ├── state.js            # Gerenciamento de estado
+  │       ├── ui.js               # Utilitários de UI
+  │       ├── audio.js            # TTS / áudio
+  │       ├── pages.js            # Renderização de páginas
+  │       └── app.js              # Bootstrap / auth
+  ├────── data/
+  │       ├── config.js           # ⚙️ CONFIGURAÇÕES (edite aqui)
+  │       ├── words.js            # 📚 BANCO DE PALAVRAS (edite aqui)
+  │       └── habits.js           # 💡 Dicas de hábitos
+  ├────── icons/
+  │       ├── icon-192.png
+  │       └── icon-512.png
+  ├────── .github/
+  |        └── workflows/
+  |            └── deploy.yml     # Deploy automático no GitHub Pages
+  ├── index.html                  # Landing page
 ```
 
 ---
