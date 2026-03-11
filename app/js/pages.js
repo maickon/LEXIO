@@ -294,19 +294,26 @@ const Pages = (() => {
       const newCount = State.addTestResult(_testWordId, true);
       UI.confetti(12);
 
-      if (State.masteredIds().includes(_testWordId)) {
+      const isMastered = State.masteredIds().includes(_testWordId);
+      if (isMastered) {
         const w = WORDS_DB.find(w => w.id === _testWordId);
         UI.toast(`🏆 "${w.en}" DOMINADA! Parabéns!`, 'green');
         UI.confetti(40);
-        if (State.isAllMastered()) {
-          setTimeout(() => _showWin(), 1500);
-          return;
-        }
       } else {
         UI.toast('✓ Correto! Continue assim.', 'cyan');
       }
       UI.updateSidebar();
-      setTimeout(() => test(), 1600);
+      playFeedback('success', ({ msg, pt }) => {
+        _showSystemMessage(fb, msg, pt);
+      }).then(() => {
+        setTimeout(() => {
+          if (isMastered && State.isAllMastered()) {
+            _showWin();
+          } else {
+            test();
+          }
+        }, 2500);
+      });
 
     } else {
       input.classList.add('wrong');
@@ -314,6 +321,9 @@ const Pages = (() => {
       fb.innerHTML = `✗ Resposta correta: <strong style="color:var(--white)">${_testAnswer}</strong>`;
       State.addTestResult(_testWordId, false);
       UI.updateSidebar();
+      playFeedback('error', ({ msg, pt }) => {
+        _showSystemMessage(fb, msg, pt);
+      });
     }
   }
 
@@ -342,9 +352,36 @@ const Pages = (() => {
     return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
+  function _showSystemMessage(container, msg, pt) {
+    const box = document.createElement('div');
+    box.style.cssText = `
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: rgba(0,245,255,0.04);
+      border: 1px solid rgba(0,245,255,0.15);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 6px 6px 0;
+      animation: fadeUp 0.3s ease both;
+    `;
+    box.innerHTML = `
+      <div style="font-family:var(--font-mono);font-size:0.55rem;color:var(--cyan);
+                  letter-spacing:0.2em;margin-bottom:6px;display:flex;align-items:center;gap:6px">
+        <span>◈</span> SYSTEM MESSAGE
+      </div>
+      <div style="font-size:0.92rem;color:var(--white);line-height:1.5;margin-bottom:4px">
+        ${msg}
+      </div>
+      <div style="font-size:0.78rem;color:rgba(236,238,255,0.45);font-style:italic">
+        ${pt}
+      </div>
+    `;
+    container.appendChild(box);
+  }
+
   return {
     evolution, learn, test,
     markLearned, nextWord, checkTest,
-    _playTest, _playAll
+    _playTest, _playAll,
+    _showSystemMessage   
   };
 })();
