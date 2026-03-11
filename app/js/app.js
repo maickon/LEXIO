@@ -5,7 +5,9 @@
 // ── SPEED CONTROLS ───────────────────────────────
 function setSpeed(v) {
   State.setSpeed(v);
-  UI.updateSpeedUI(v);
+  document.querySelectorAll('.speed-opt').forEach(b => {
+    b.classList.toggle('active', parseFloat(b.dataset.speed) === v);
+  });
 }
 
 // ── AUTH ─────────────────────────────────────────

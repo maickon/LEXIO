@@ -98,6 +98,16 @@
         </button>
       </nav>
       <div class="sidebar-footer">
+        <!-- Controle de velocidade — visível só no desktop -->
+        <div style="margin-bottom:12px;margin-bottom:12px;display:flex;flex-direction:column;">
+          <div style="font-family:var(--font-mono);font-size:0.55rem;color:var(--muted2);letter-spacing:0.15em;margin-bottom:6px">// VELOCIDADE</div>
+          <div class="speed-pill" style="justify-content:center">
+            <button class="speed-opt" data-speed="0.5" onclick="setSpeed(0.5)">0.5×</button>
+            <button class="speed-opt active" data-speed="1" onclick="setSpeed(1)">1×</button>
+            <button class="speed-opt" data-speed="1.5" onclick="setSpeed(1.5)">1.5×</button>
+          </div>
+        </div>
+
         <div><span id="sb-streak">0</span> dias de streak</div>
         <div>Dominadas: <span id="sb-mastered">0</span> / <span id="sb-total">?</span></div>
       </div>
