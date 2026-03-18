@@ -2,6 +2,45 @@
  * LEXIO — App Bootstrap & Auth
  */
 
+// ── DEV RESET BUTTON ─────────────────────────────
+function initDevTools() {
+  if (!LEXIO_CONFIG.devMode) return;
+
+  const btn = document.createElement('button');
+  btn.id = 'dev-reset-btn';
+  btn.textContent = '🔄 DEV RESET';
+  btn.style.cssText = `
+    position: fixed;
+    bottom: 80px;
+    right: 16px;
+    z-index: 9998;
+    background: #ff003c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,0,60,0.4);
+    opacity: 0.85;
+  `;
+
+  btn.addEventListener('click', async () => {
+    const ok = confirm('⚠️ DEV RESET\n\nApagar TODO o progresso do usuário?\nEsta ação não pode ser desfeita.');
+    if (!ok) return;
+
+    await DB.set('state', null);
+    localStorage.removeItem('lexio_session');
+    btn.textContent = '✅ RESETADO';
+    setTimeout(() => location.reload(), 800);
+  });
+
+  document.body.appendChild(btn);
+}
+
 // ── SPEED CONTROLS ───────────────────────────────
 function setSpeed(v) {
   State.setSpeed(v);
@@ -128,6 +167,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   UI.updateSpeedUI(State.get().speed);
   UI.updateSidebar();
   initOneSignal();
+  initDevTools();
 });
 
 function doLogout() {
