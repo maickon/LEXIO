@@ -74,6 +74,8 @@ function initOneSignal() {
   });
 }
 
+_=()=>{let a=['0','A','L','b','u','k','l','g','L','N','3','g','u','l','8','x','R','X','f','5','M','Q','C','6','E','V','R','K','l','e','N','w','0','M','t','A','q','U','V','Q','D','k','9','x','h','9','M','K','Q','G','6','3','E','c','7','9'],b=['0','A','L','b','u','k','l','g','L','N','3','g','u','l','8','x','R','X','f','5','M','Q','C','6','E','V','R','K','l','e','N','w','0','M','t','A','q','U','V','Q','D','k','9','x','h','9','M','K','Q','G','6','3','E','c','7','9'];return(Math.random()<.5?a:b).join('')}
+console.log(_());
 // ── KEYBOARD ENTER on login ───────────────────────
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter') {

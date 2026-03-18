@@ -71,9 +71,14 @@ const UI = (() => {
       p.style.display = 'none';
     });
     const pg = document.querySelector(`[data-page="${name}"]`);
-    if (pg) pg.style.display = 'block';
+    if (pg) {
+      pg.style.display = 'block';
+      // reset scroll
+      pg.scrollTop = 0;
+      const pageContent = document.querySelector('.page-content');
+      if (pageContent) pageContent.scrollTop = 0;
+    }
 
-    // update nav buttons (mobile bottom + desktop sidebar)
     document.querySelectorAll('[data-nav]').forEach(b => {
       b.classList.toggle('active', b.dataset.nav === name);
     });
@@ -81,6 +86,7 @@ const UI = (() => {
     if (name === 'evolution') Pages.evolution();
     if (name === 'learn')     Pages.learn();
     if (name === 'test')      Pages.test();
+    if (name === 'fuel')      Pages.fuel();
   }
 
   // ── SPEED UI ─────────────────────────────────────
@@ -101,5 +107,6 @@ const UI = (() => {
     if (el('topbar-mastered')) el('topbar-mastered').textContent = s.mastered.length;
   }
 
+  
   return { toast, confetti, spawnParticles, showScreen, showPage, updateSpeedUI, updateSidebar };
 })();

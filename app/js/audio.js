@@ -117,3 +117,38 @@ function playFeedback(type, onReady) {
     }, 500);
   });
 }
+
+function playSuccess() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+    // Três notas ascendentes: Dó → Mi → Sol (acorde de vitória)
+    const notes = [
+      { freq: 523.25, start: 0.00, dur: 0.12 },   // C5
+      { freq: 659.25, start: 0.10, dur: 0.12 },   // E5
+      { freq: 783.99, start: 0.20, dur: 0.22 },   // G5
+    ];
+
+    notes.forEach(({ freq, start, dur }) => {
+      const osc   = ctx.createOscillator();
+      const gain  = ctx.createGain();
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.type      = 'sine';
+      osc.frequency.setValueAtTime(freq, ctx.currentTime + start);
+
+      // Ataque rápido, decay suave
+      gain.gain.setValueAtTime(0, ctx.currentTime + start);
+      gain.gain.linearRampToValueAtTime(0.28, ctx.currentTime + start + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + start + dur);
+
+      osc.start(ctx.currentTime + start);
+      osc.stop(ctx.currentTime + start + dur + 0.05);
+    });
+
+  } catch (e) {
+    // Silencia sem quebrar nada se o browser bloquear
+  }
+}

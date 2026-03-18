@@ -48,6 +48,7 @@ const Pages = (() => {
   // ══════════════════════════════════════════════
   // LEARN
   // ══════════════════════════════════════════════
+
   function learn() {
     const container = document.getElementById('learn-content');
     const available = WORDS_DB.filter(w => State.queueIds().includes(w.id));
@@ -79,10 +80,11 @@ const Pages = (() => {
     // random habit tip
     const habit = HABIT_TIPS[Math.floor(Math.random() * HABIT_TIPS.length)];
 
+    // Monta estrutura sem as imagens primeiro
     container.innerHTML = `
       <div class="learn-wrap">
         ${_wordHero(word)}
-        ${_imgGrid(word)}
+        <div id="img-grid-placeholder"></div>
         ${_phraseSection(word, phrases)}
         ${_habitBox(habit)}
       </div>
@@ -91,6 +93,12 @@ const Pages = (() => {
         <button class="btn btn-ghost" onclick="Pages.nextWord()">→ PRÓXIMA</button>
       </div>
     `;
+
+    // Injeta as imagens de forma assíncrona
+    _imgGrid(word).then(gridEl => {
+      const placeholder = document.getElementById('img-grid-placeholder');
+      if (placeholder) placeholder.replaceWith(gridEl);
+    });
 
     // stagger phrase animations
     document.querySelectorAll('.phrase-card').forEach((el, i) => {
@@ -101,12 +109,19 @@ const Pages = (() => {
   function _wordHero(w) {
     const escaped = w.en.replace(/'/g, "\\'");
     const allPhrases = JSON.stringify(w.phrases.map(p => p.en)).replace(/"/g, '&quot;');
+    const phonetic = `
+    <span class="phonetic-badge">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7"><path d="M12 3a9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 9-9m0 2a7 7 0 0 0-7 7 7 7 0 0 0 7 7 7 7 0 0 0 7-7 7 7 0 0 0-7-7m1 3v3.586l2.707 2.707-1.414 1.414L11 13.414V8h2z"/><path d="M9 7c0-.552.448-1 1-1s1 .448 1 1v1H9V7z" style="display:none"/></svg>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7;margin-right:3px"><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/></svg>
+      como pronunciar: /${w.phonetic_br}/
+    </span>`;
+
     return `
       <div class="word-hero">
         <div class="word-rank">// #${w.rank} DAS PALAVRAS MAIS USADAS EM INGLÊS</div>
         <div class="word-main-row">
           <div class="word-text">${w.en}</div>
-          <div class="word-phonetic">${w.phonetic}</div>
+          <div class="word-phonetic">${w.phonetic} ${phonetic}</div>
         </div>
         <div class="word-pt">${w.pt}</div>
         <div class="word-audio-row">
@@ -122,23 +137,69 @@ const Pages = (() => {
       </div>`;
   }
 
-  function _imgGrid(w) {
-    const imgs = w.images || [];
-    const slots = imgs.map(url => `
-      <div class="img-slot">
-        <img src="${url}" alt="${w.en}" loading="lazy" onerror="this.parentElement.style.display='none'">
-        <div class="img-slot-overlay"></div>
-      </div>`).join('');
-    return `<div class="img-grid">${slots}</div>`;
+  const _imgCache = {};
+  async function _imgGrid(w) {
+    const container = document.createElement('div');
+    container.className = 'img-grid';
+
+    if (_imgCache[w.id]) {
+      container.innerHTML = _imgCache[w.id];
+      return container;
+    }
+    
+    // Placeholder enquanto carrega
+    for (let i = 0; i < 4; i++) {
+      const slot = document.createElement('div');
+      slot.className = 'img-slot';
+      slot.innerHTML = `<div style="width:100%;height:100%;background:var(--panel2);
+                        display:flex;align-items:center;justify-content:center;
+                        font-family:var(--font-mono);font-size:0.6rem;color:var(--muted)">
+                        LOADING...</div>`;
+      container.appendChild(slot);
+    }
+
+    try {
+      const query = encodeURIComponent(w.image_keywords || w.en);
+      const res   = await fetch(
+        `https://api.pexels.com/v1/search?query=${query}&per_page=4&orientation=square`,
+        { headers: { Authorization: _() } }
+      );
+      const data  = await res.json();
+      const photos = data.photos || [];
+
+      container.innerHTML = photos.map(photo => `
+        <div class="img-slot">
+          <img src="${photo.src.medium}" alt="${w.en}" loading="lazy"
+              onerror="this.parentElement.style.display='none'">
+          <div class="img-slot-overlay"></div>
+        </div>`).join('');
+
+      // Se veio menos de 4 fotos, preenche o resto com slots vazios
+      for (let i = photos.length; i < 4; i++) {
+        container.innerHTML += `<div class="img-slot" style="background:var(--panel2)"></div>`;
+      }
+
+    } catch(e) {
+      container.innerHTML = `<div class="img-slot" style="grid-column:span 2;
+        display:flex;align-items:center;justify-content:center;
+        font-family:var(--font-mono);font-size:0.6rem;color:var(--muted)">
+        IMAGENS INDISPONÍVEIS</div>`;
+    }
+
+    _imgCache[w.id] = container.innerHTML;
+    
+    return container;
   }
 
   function _phraseSection(w, phrases) {
     const items = phrases.map(p => {
       const esc = p.en.replace(/'/g, "\\'");
-      const highlighted = p.en.replace(
-        new RegExp('\\b(' + escapeRegex(p.key) + ')\\b', 'i'),
-        '<span class="key">$1</span>'
-      );
+      const highlighted = w.key
+      ? p.en.replace(
+          new RegExp('\\b(' + escapeRegex(w.key) + ')\\b', 'i'),
+          '<span class="key">$1</span>'
+        )
+      : p.en;
       return `
         <div class="phrase-card">
           <button class="play-btn" style="padding:8px 12px;flex-shrink:0" onclick="Audio.speak('${esc}',this)">
@@ -146,7 +207,18 @@ const Pages = (() => {
           </button>
           <div class="phrase-body">
             <div class="phrase-en">${highlighted}</div>
-            <div class="phrase-pt">${p.pt}</div>
+            ${p.phonetic_pt ? `<div class="phrase-phonetic">
+              <span class="phonetic-badge">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7"><path d="M12 3a9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 9-9m0 2a7 7 0 0 0-7 7 7 7 0 0 0 7 7 7 7 0 0 0 7-7 7 7 0 0 0-7-7m1 3v3.586l2.707 2.707-1.414 1.414L11 13.414V8h2z"/><path d="M9 7c0-.552.448-1 1-1s1 .448 1 1v1H9V7z" style="display:none"/></svg>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7;margin-right:3px"><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/></svg>
+                como pronunciar
+              </span>
+              ${p.phonetic_pt}
+            </div>` : ''}
+            <div class="phrase-pt">
+              <span class="translation-badge">🇧🇷</span>
+              ${p.pt}
+            </div>
           </div>
         </div>`;
     }).join('');
@@ -174,6 +246,7 @@ const Pages = (() => {
   function markLearned(wordId) {
     State.markInProgress(wordId);
     UI.toast('⬡ Palavra adicionada ao banco de testes!', 'cyan');
+    playSuccess();
     UI.confetti(15);
     UI.updateSidebar();
     setTimeout(() => learn(), 350);
@@ -279,29 +352,40 @@ const Pages = (() => {
 
   function checkTest() {
     if (_testAttempted) return;
-    const input    = document.getElementById('test-input');
-    const typed    = input.value.trim();
-    const fb       = document.getElementById('test-fb');
-    const norm     = s => s.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g,' ').trim();
-    const correct  = norm(typed) === norm(_testAnswer);
+    const input   = document.getElementById('test-input');
+    const typed   = input.value.trim();
+    const fb      = document.getElementById('test-fb');
+    const norm    = s => s.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g,' ').trim();
+    const correct = norm(typed) === norm(_testAnswer);
 
     _testAttempted = true;
 
     if (correct) {
       input.classList.add('correct');
-      fb.className = 'test-feedback ok';
-      fb.textContent = '✓ CORRETO! +1 ponto de domínio';
-      const newCount = State.addTestResult(_testWordId, true);
+
+      const newCount   = State.addTestResult(_testWordId, true);
+      const isMastered = State.masteredIds().includes(_testWordId);
+      const hoursLeft  = State.get()._lastSkipReason || null;
+
       UI.confetti(12);
 
-      const isMastered = State.masteredIds().includes(_testWordId);
       if (isMastered) {
         const w = WORDS_DB.find(w => w.id === _testWordId);
+        fb.className  = 'test-feedback ok';
+        fb.textContent = '✓ CORRETO! Palavra dominada!';
         UI.toast(`🏆 "${w.en}" DOMINADA! Parabéns!`, 'green');
         UI.confetti(40);
+      } else if (hoursLeft) {
+        fb.className  = 'test-feedback ok';
+        fb.textContent = `✓ CORRETO! Volte em ${hoursLeft}h para consolidar.`;
+        UI.toast(`✓ Correto! Revise em ${hoursLeft}h para fixar na memória.`, 'cyan');
+        State.get()._lastSkipReason = null;
       } else {
+        fb.className  = 'test-feedback ok';
+        fb.textContent = '✓ CORRETO! +1 ponto de domínio';
         UI.toast('✓ Correto! Continue assim.', 'cyan');
       }
+
       UI.updateSidebar();
       playFeedback('success', ({ msg, pt }) => {
         _showSystemMessage(fb, msg, pt);
@@ -378,10 +462,14 @@ const Pages = (() => {
     container.appendChild(box);
   }
 
+  function fuel() {
+    Books.render();
+  }
+
   return {
-    evolution, learn, test,
+    evolution, learn, test, fuel,   // ← adicione fuel aqui
     markLearned, nextWord, checkTest,
     _playTest, _playAll,
-    _showSystemMessage   
+    _showSystemMessage
   };
 })();

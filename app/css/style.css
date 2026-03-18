@@ -24,7 +24,7 @@
   --orange:    #ff6b00;
   --white:     #e8eaf6;
   --muted:     #4a4a70;
-  --muted2:    #6a6a90;
+  --muted2:    #9999bd;
   --border:    #1c1c35;
   --border2:   #252545;
   --radius:    12px;
@@ -832,4 +832,44 @@ body::before {
 
 @media (min-width:1024px) {
   .learn-wrap, .test-wrap, .evo-wrap { max-width:680px; margin:0 auto; }
+}
+
+.phrase-phonetic {
+  font-size: 0.82rem;
+  color: #a78bfa;
+  font-style: italic;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.phonetic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #7c5fc4;
+  background: #1e1630;
+  border: 1px solid #3d2d6e;
+  border-radius: 4px;
+  padding: 1px 5px;
+  flex-shrink: 0;
+}
+
+.phrase-pt {
+  font-size: 0.82rem;
+  color: #888;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.translation-badge {
+  font-size: 0.75rem;
+  flex-shrink: 0;
 }

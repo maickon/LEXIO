@@ -9,6 +9,7 @@ const State = (() => {
     currentWordId: null,
     queue:       [],      // word ids not yet moved to inProgress
     inProgress:  {},      // { wordId: masteryCount }
+    lastHitAt:   {},      // { wordId: timestamp (ms) do último acerto válido }
     mastered:    [],      // word ids fully mastered
     totalTests:  0,
     streak:      0,
@@ -51,13 +52,33 @@ const State = (() => {
 
   function addTestResult(wordId, correct) {
     s.totalTests++;
+
     if (correct) {
-      s.inProgress[wordId] = (s.inProgress[wordId] || 0) + 1;
-      if (s.inProgress[wordId] >= LEXIO_CONFIG.masteryThreshold) {
-        delete s.inProgress[wordId];
-        s.mastered.push(wordId);
+      const currentHits = s.inProgress[wordId] || 0;
+      const now         = Date.now();
+      const lastHit     = s.lastHitAt[wordId] || 0;
+      const intervalMs  = (LEXIO_CONFIG.masteryIntervals[currentHits] || 0) * 3600000;
+      const elapsed     = now - lastHit;
+      const intervalOk  = elapsed >= intervalMs;
+
+      if (intervalOk) {
+        // Acerto válido — avança o contador
+        s.inProgress[wordId] = currentHits + 1;
+        s.lastHitAt[wordId]  = now;
+
+        if (s.inProgress[wordId] >= LEXIO_CONFIG.masteryThreshold) {
+          delete s.inProgress[wordId];
+          delete s.lastHitAt[wordId];
+          s.mastered.push(wordId);
+        }
+      } else {
+        // Acerto cedo demais — não avança, apenas registra o tempo
+        // para não punir o usuário, só ignora silenciosamente
+        const hoursLeft = Math.ceil((intervalMs - elapsed) / 3600000);
+        s._lastSkipReason = hoursLeft; // opcional, para o toast
       }
     }
+
     save();
     return s.inProgress[wordId] ?? LEXIO_CONFIG.masteryThreshold;
   }

@@ -35,6 +35,15 @@ const LEXIO_CONFIG = {
   // Quantos acertos no teste para considerar palavra "dominada"
   masteryThreshold: 5,
 
+  // Intervalo mínimo em horas entre cada acerto válido
+  // Índice = acerto que está PRESTES a acontecer (0-based)
+  // Acerto 1 (idx 0): sem intervalo
+  // Acerto 2 (idx 1): 2h
+  // Acerto 3 (idx 2): 24h
+  // Acerto 4 (idx 3): 72h  (3 dias)
+  // Acerto 5 (idx 4): 168h (7 dias)
+  masteryIntervals: [0, 2, 24, 72, 168],
+  
   // ── AUTENTICAÇÃO ─────────────────────────────────
   // URL da sua API de pagamento para validar acesso
   // Em produção substitua pela URL real
