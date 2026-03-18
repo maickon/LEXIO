@@ -34,7 +34,7 @@ async function doLogin() {
     });
 
     const data = await res.json();
-    
+    console.log(data);
     if (data.access) {
       // Acesso válido — salva sessão com dados da licença
       localStorage.setItem('lexio_session', JSON.stringify({

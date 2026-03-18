@@ -1,4 +1,5 @@
-const WORDS_DB = [
+const WORDS_DB = 
+[
   {
     "id": 1,
     "rank": 1,
@@ -11,123 +12,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "Can you pass the salt?",
-        "pt": "Você pode passar o sal?"
+        "pt": "Você pode passar o sal?",
+        "phonetic_pt": "Kén iú péss dhê sôlt?"
       },
       {
         "en": "I went to the store yesterday.",
-        "pt": "Eu fui à loja ontem."
+        "pt": "Eu fui à loja ontem.",
+        "phonetic_pt": "Ái uênt tu dhê stôrr iéstêrdei."
       },
       {
         "en": "What's the time?",
-        "pt": "Que horas são?"
+        "pt": "Que horas são?",
+        "phonetic_pt": "Uáts dhê táim?"
       },
       {
         "en": "She's the best student in the class.",
-        "pt": "Ela é a melhor aluna da turma."
+        "pt": "Ela é a melhor aluna da turma.",
+        "phonetic_pt": "Chii's dhê bést stúdent in dhê kléss."
       },
       {
         "en": "He read the entire book in one day.",
-        "pt": "Ele leu o livro inteiro em um dia."
+        "pt": "Ele leu o livro inteiro em um dia.",
+        "phonetic_pt": "Hii réd dhê entáirr búk in uân dêi."
       },
       {
         "en": "The sun is shining brightly today.",
-        "pt": "O sol está brilhando forte hoje."
+        "pt": "O sol está brilhando forte hoje.",
+        "phonetic_pt": "Dhê sân is cháining bráitlii tudêi."
       },
       {
         "en": "Where's the remote control for the TV?",
-        "pt": "Onde está o controle remoto da TV?"
+        "pt": "Onde está o controle remoto da TV?",
+        "phonetic_pt": "Uêrr's dhê rimôut kentrôl fôrr dhê TiiVii?"
       },
       {
         "en": "I love the way you sing that song.",
-        "pt": "Eu amo o jeito que você canta aquela música."
+        "pt": "Eu amo o jeito que você canta aquela música.",
+        "phonetic_pt": "Ái lâv dhê uêi iú síng dhét sôg."
       },
       {
         "en": "We visited the museum last weekend.",
-        "pt": "Nós visitamos o museu no fim de semana passado."
+        "pt": "Nós visitamos o museu no fim de semana passado.",
+        "phonetic_pt": "Uii vízitid dhê miuzíiâm lést uíikênd."
       },
       {
         "en": "The kids are playing outside in the garden.",
-        "pt": "As crianças estão brincando lá fora no jardim."
+        "pt": "As crianças estão brincando lá fora no jardim.",
+        "phonetic_pt": "Dhê kídz ârr plêiing autsáid in dhê gárrden."
       },
       {
         "en": "Please close the door when you leave.",
-        "pt": "Por favor, feche a porta quando sair."
+        "pt": "Por favor, feche a porta quando sair.",
+        "phonetic_pt": "Plíiz klôuz dhê dôrr uên iú líiv."
       },
       {
         "en": "That's the house where I grew up.",
-        "pt": "Essa é a casa onde eu cresci."
+        "pt": "Essa é a casa onde eu cresci.",
+        "phonetic_pt": "Dhéts dhê háus uêrr Ái grúu âp."
       },
       {
         "en": "What's the problem with the computer?",
-        "pt": "Qual é o problema com o computador?"
+        "pt": "Qual é o problema com o computador?",
+        "phonetic_pt": "Uáts dhê próblêm uídh dhê kompíutêrr?"
       },
       {
         "en": "He's learning to play the guitar.",
-        "pt": "Ele está aprendendo a tocar violão."
+        "pt": "Ele está aprendendo a tocar violão.",
+        "phonetic_pt": "Hii's lêrrning tu plêi dhê guitárr."
       },
       {
         "en": "Don't forget the keys on the table.",
-        "pt": "Não esqueça as chaves na mesa."
+        "pt": "Não esqueça as chaves na mesa.",
+        "phonetic_pt": "Dôunt fôrrguét dhê kíiz ôn dhê têibôl."
       },
       {
         "en": "The weather is beautiful for a walk.",
-        "pt": "O tempo está lindo para uma caminhada."
+        "pt": "O tempo está lindo para uma caminhada.",
+        "phonetic_pt": "Dhê uédhêrr is biútifûl fôrr ê uôk."
       },
       {
         "en": "I need to finish the report by Friday.",
-        "pt": "Eu preciso terminar o relatório até sexta."
+        "pt": "Eu preciso terminar o relatório até sexta.",
+        "phonetic_pt": "Ái níid tu fínich dhê ripôrt bái fráidei."
       },
       {
         "en": "This is the last piece of cake, enjoy it.",
-        "pt": "Este é o último pedaço de bolo, aproveite."
+        "pt": "Este é o último pedaço de bolo, aproveite.",
+        "phonetic_pt": "Dhís is dhê lést píis âv kêik, enjói it."
       },
       {
         "en": "The train leaves at 7 PM sharp.",
-        "pt": "O trem parte às 19h em ponto."
+        "pt": "O trem parte às 19h em ponto.",
+        "phonetic_pt": "Dhê trêin líivz ét séven PiiÉm chárrp."
       },
       {
         "en": "Did you see the news this morning?",
-        "pt": "Você viu as notícias hoje de manhã?"
+        "pt": "Você viu as notícias hoje de manhã?",
+        "phonetic_pt": "Díd iú síi dhê niúz dhís môrrning?"
       },
       {
         "en": "She works at the hospital downtown.",
-        "pt": "Ela trabalha no hospital do centro."
+        "pt": "Ela trabalha no hospital do centro.",
+        "phonetic_pt": "Chii uêrrks ét dhê ráspitôl dáuntáun."
       },
       {
         "en": "Let's go to the beach this afternoon.",
-        "pt": "Vamos à praia esta tarde."
+        "pt": "Vamos à praia esta tarde.",
+        "phonetic_pt": "Léts gô tu dhê bíich dhís éftêrnún."
       },
       {
         "en": "The dog is barking loudly at the mailman.",
-        "pt": "O cachorro está latindo alto para o carteiro."
+        "pt": "O cachorro está latindo alto para o carteiro.",
+        "phonetic_pt": "Dhê dôg is bárking láudlii ét dhê mêilmén."
       },
       {
         "en": "He finally got the job he wanted.",
-        "pt": "Ele finalmente conseguiu o emprego que queria."
+        "pt": "Ele finalmente conseguiu o emprego que queria.",
+        "phonetic_pt": "Hii fáinalii gót dhê djób hii uântid."
       },
       {
         "en": "Can you turn off the lights, please?",
-        "pt": "Você pode apagar as luzes, por favor?"
+        "pt": "Você pode apagar as luzes, por favor?",
+        "phonetic_pt": "Kén iú têrrn ôf dhê láits, plíiz?"
       },
       {
         "en": "I really enjoyed the movie we watched.",
-        "pt": "Eu realmente gostei do filme que assistimos."
+        "pt": "Eu realmente gostei do filme que assistimos.",
+        "phonetic_pt": "Ái ríilii enjóid dhê múvii uii uótcht."
       },
       {
         "en": "The capital of Brazil is Brasília.",
-        "pt": "A capital do Brasil é Brasília."
+        "pt": "A capital do Brasil é Brasília.",
+        "phonetic_pt": "Dhê képitôl âv Brazíl is Brazíliâ."
       },
       {
         "en": "What's the difference between these two?",
-        "pt": "Qual é a diferença entre estes dois?"
+        "pt": "Qual é a diferença entre estes dois?",
+        "phonetic_pt": "Uáts dhê dífrêns bituíin dhíiz túu?"
       },
       {
         "en": "She's always on the phone talking to her friends.",
-        "pt": "Ela está sempre ao telefone conversando com as amigas."
+        "pt": "Ela está sempre ao telefone conversando com as amigas.",
+        "phonetic_pt": "Chii's ôluêiz ôn dhê fôun tôking tu hêrr frêndz."
       },
       {
         "en": "He lives near the park, so he walks there often.",
-        "pt": "Ele mora perto do parque, então ele caminha lá frequentemente."
+        "pt": "Ele mora perto do parque, então ele caminha lá frequentemente.",
+        "phonetic_pt": "Hii lívz níirr dhê párrk, sô hii uôks dhêrr ôfên."
       }
     ]
   },
@@ -143,123 +174,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "I want to be happy.",
-        "pt": "Eu quero ser feliz."
+        "pt": "Eu quero ser feliz.",
+        "phonetic_pt": "Ái uânt tchu bii répi."
       },
       {
         "en": "She is a great student.",
-        "pt": "Ela é uma ótima estudante."
+        "pt": "Ela é uma ótima estudante.",
+        "phonetic_pt": "Chii is ê grêit stiúdent."
       },
       {
         "en": "They are currently at home.",
-        "pt": "Eles estão atualmente em casa."
+        "pt": "Eles estão atualmente em casa.",
+        "phonetic_pt": "Dhêi ârr kârrêntlii ét hôm."
       },
       {
         "en": "It was a beautiful day yesterday.",
-        "pt": "Foi um lindo dia ontem."
+        "pt": "Foi um lindo dia ontem.",
+        "phonetic_pt": "It uâs ê biúrifûl dêi iésterdêi."
       },
       {
         "en": "We were very tired after the trip.",
-        "pt": "Nós estávamos muito cansados depois da viagem."
+        "pt": "Nós estávamos muito cansados depois da viagem.",
+        "phonetic_pt": "Uii uêrr vêrii táirrd éftêrr dhê tríp."
       },
       {
         "en": "You will be notified by email.",
-        "pt": "Você será notificado por e-mail."
+        "pt": "Você será notificado por e-mail.",
+        "phonetic_pt": "Iú uíl bii nôtifáid bái íimêil."
       },
       {
         "en": "He has been working hard all week.",
-        "pt": "Ele tem trabalhado duro a semana toda."
+        "pt": "Ele tem trabalhado duro a semana toda.",
+        "phonetic_pt": "Hii rés bín uêrrking hárrrd ôl uíik."
       },
       {
         "en": "I have been to New York twice.",
-        "pt": "Eu estive em Nova York duas vezes."
+        "pt": "Eu estive em Nova York duas vezes.",
+        "phonetic_pt": "Ái rév bín tchu Niú Iôrrk tuáis."
       },
       {
         "en": "She is being very quiet today.",
-        "pt": "Ela está sendo muito quieta hoje."
+        "pt": "Ela está sendo muito quieta hoje.",
+        "phonetic_pt": "Chii is bíiing vêrii kuáiet tchu-dêi."
       },
       {
         "en": "Being honest is always the best policy.",
-        "pt": "Ser honesto é sempre a melhor política."
+        "pt": "Ser honesto é sempre a melhor política.",
+        "phonetic_pt": "Bíiing ánest is ôl-uêis dhê bést páliisii."
       },
       {
         "en": "It's important to be on time.",
-        "pt": "É importante chegar na hora."
+        "pt": "É importante chegar na hora.",
+        "phonetic_pt": "Its impôrrrtânt tchu bii ôn táim."
       },
       {
         "en": "Don't be late for the appointment.",
-        "pt": "Não se atrase para o compromisso."
+        "pt": "Não se atrase para o compromisso.",
+        "phonetic_pt": "Dônt bii lêit fôrr dhê apôintmênt."
       },
       {
         "en": "Could you be more specific?",
-        "pt": "Você poderia ser mais específico?"
+        "pt": "Você poderia ser mais específico?",
+        "phonetic_pt": "Kúd iú bii môrr spêsífik?"
       },
       {
         "en": "This must be the right address.",
-        "pt": "Este deve ser o endereço certo."
+        "pt": "Este deve ser o endereço certo.",
+        "phonetic_pt": "Dhís mâst bii dhê rrâit adréss."
       },
       {
         "en": "They might be coming later.",
-        "pt": "Eles podem estar vindo mais tarde."
+        "pt": "Eles podem estar vindo mais tarde.",
+        "phonetic_pt": "Dhêi máit bii kâming lêitêrr."
       },
       {
         "en": "Where are my keys?",
-        "pt": "Onde estão minhas chaves?"
+        "pt": "Onde estão minhas chaves?",
+        "phonetic_pt": "Uêrr ârr mái kíis?"
       },
       {
         "en": "Is he feeling better now?",
-        "pt": "Ele está se sentindo melhor agora?"
+        "pt": "Ele está se sentindo melhor agora?",
+        "phonetic_pt": "Is hii fíiling bétêrr náu?"
       },
       {
         "en": "Will it be sunny tomorrow?",
-        "pt": "Fará sol amanhã?"
+        "pt": "Fará sol amanhã?",
+        "phonetic_pt": "Uíl it bii sâni tchu-mórrôu?"
       },
       {
         "en": "The coffee is too hot to drink.",
-        "pt": "O café está muito quente para beber."
+        "pt": "O café está muito quente para beber.",
+        "phonetic_pt": "Dhê káfii is tú rrót tchu drínk."
       },
       {
         "en": "My phone battery is low.",
-        "pt": "A bateria do meu celular está fraca."
+        "pt": "A bateria do meu celular está fraca.",
+        "phonetic_pt": "Mái fôn bétêrii is lôu."
       },
       {
         "en": "This is my favorite song.",
-        "pt": "Esta é minha música favorita."
+        "pt": "Esta é minha música favorita.",
+        "phonetic_pt": "Dhís is mái fêivôrit sôong."
       },
       {
         "en": "I'm going to be a little late.",
-        "pt": "Eu vou me atrasar um pouco."
+        "pt": "Eu vou me atrasar um pouco.",
+        "phonetic_pt": "Áim gôuing tchu bii ê lítôl lêit."
       },
       {
         "en": "How long have you been waiting?",
-        "pt": "Há quanto tempo você está esperando?"
+        "pt": "Há quanto tempo você está esperando?",
+        "phonetic_pt": "Háu lôong rév iú bín uêiting?"
       },
       {
         "en": "Be careful when crossing the street.",
-        "pt": "Tenha cuidado ao atravessar a rua."
+        "pt": "Tenha cuidado ao atravessar a rua.",
+        "phonetic_pt": "Bii kêrrfûl uén krôssing dhê stríit."
       },
       {
         "en": "Let's be positive about this.",
-        "pt": "Vamos ser positivos sobre isso."
+        "pt": "Vamos ser positivos sobre isso.",
+        "phonetic_pt": "Léts bii páziitiv abáut dhís."
       },
       {
         "en": "The movie is about to begin.",
-        "pt": "O filme está prestes a começar."
+        "pt": "O filme está prestes a começar.",
+        "phonetic_pt": "Dhê múvii is abáut tchu biguín."
       },
       {
         "en": "She used to be afraid of dogs.",
-        "pt": "Ela costumava ter medo de cachorros."
+        "pt": "Ela costumava ter medo de cachorros.",
+        "phonetic_pt": "Chii iúzd tchu bii afrêid âv dôgs."
       },
       {
         "en": "I'm happy to be here with you.",
-        "pt": "Estou feliz por estar aqui com você."
+        "pt": "Estou feliz por estar aqui com você.",
+        "phonetic_pt": "Áim répi tchu bii hírr uídh iú."
       },
       {
         "en": "He can't be serious about that.",
-        "pt": "Ele não pode estar falando sério sobre isso."
+        "pt": "Ele não pode estar falando sério sobre isso.",
+        "phonetic_pt": "Hii ként bii síirriâs abáut dhét."
       },
       {
         "en": "The report needs to be finished by Friday.",
-        "pt": "O relatório precisa estar pronto até sexta-feira."
+        "pt": "O relatório precisa estar pronto até sexta-feira.",
+        "phonetic_pt": "Dhê rriipôrrrt níids tchu bii fínichd bái fráidêi."
       }
     ]
   },
@@ -275,123 +336,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "A cup of coffee, please.",
-        "pt": "Uma xícara de café, por favor."
+        "pt": "Uma xícara de café, por favor.",
+        "phonetic_pt": "Ê kâp âv kófi, plíiz."
       },
       {
         "en": "What's the name of this song?",
-        "pt": "Qual é o nome desta música?"
+        "pt": "Qual é o nome desta música?",
+        "phonetic_pt": "Uáts dhê nêim âv dhís sôrng?"
       },
       {
         "en": "One of my best friends lives here.",
-        "pt": "Um dos meus melhores amigos mora aqui."
+        "pt": "Um dos meus melhores amigos mora aqui.",
+        "phonetic_pt": "Uân âv mái bést fréndz lívz rrrírr."
       },
       {
         "en": "The color of the sky is beautiful today.",
-        "pt": "A cor do céu está linda hoje."
+        "pt": "A cor do céu está linda hoje.",
+        "phonetic_pt": "Dhê kâlârr âv dhê skái iz biútifûl tudêi."
       },
       {
         "en": "He's afraid of heights.",
-        "pt": "Ele tem medo de altura."
+        "pt": "Ele tem medo de altura.",
+        "phonetic_pt": "Híiz êfrêid âv ráits."
       },
       {
         "en": "She's proud of her achievements.",
-        "pt": "Ela tem orgulho das suas conquistas."
+        "pt": "Ela tem orgulho das suas conquistas.",
+        "phonetic_pt": "Chíiz práud âv rrrêrr êchíivmênts."
       },
       {
         "en": "I need a bottle of water.",
-        "pt": "Eu preciso de uma garrafa de água."
+        "pt": "Eu preciso de uma garrafa de água.",
+        "phonetic_pt": "Ái níid ê bârâl âv uórrêrr."
       },
       {
         "en": "Many of us feel the same way.",
-        "pt": "Muitos de nós sentimos o mesmo."
+        "pt": "Muitos de nós sentimos o mesmo.",
+        "phonetic_pt": "Méni âv âs fíil dhê sêim uêi."
       },
       {
         "en": "The sound of the ocean is so relaxing.",
-        "pt": "O som do oceano é tão relaxante."
+        "pt": "O som do oceano é tão relaxante.",
+        "phonetic_pt": "Dhê sáund âv dhê ôuchân iz sô riléksing."
       },
       {
         "en": "It's a matter of time before it happens.",
-        "pt": "É uma questão de tempo até acontecer."
+        "pt": "É uma questão de tempo até acontecer.",
+        "phonetic_pt": "Its ê mérrêrr âv táim bifórr it rráppênz."
       },
       {
         "en": "The city of Rio de Janeiro is vibrant.",
-        "pt": "A cidade do Rio de Janeiro é vibrante."
+        "pt": "A cidade do Rio de Janeiro é vibrante.",
+        "phonetic_pt": "Dhê síri âv Ríiôu dii Djânêirôu iz váibrânt."
       },
       {
         "en": "He's a man of his word.",
-        "pt": "Ele é um homem de palavra."
+        "pt": "Ele é um homem de palavra.",
+        "phonetic_pt": "Híiz ê mén âv rríiz uêrrrd."
       },
       {
         "en": "She died of natural causes.",
-        "pt": "Ela morreu de causas naturais."
+        "pt": "Ela morreu de causas naturais.",
+        "phonetic_pt": "Chii dáid âv nérrchurâl kózziz."
       },
       {
         "en": "The cost of living is increasing.",
-        "pt": "O custo de vida está aumentando."
+        "pt": "O custo de vida está aumentando.",
+        "phonetic_pt": "Dhê kóst âv líving iz inkríising."
       },
       {
         "en": "I'm tired of waiting for him.",
-        "pt": "Estou cansado de esperar por ele."
+        "pt": "Estou cansado de esperar por ele.",
+        "phonetic_pt": "Áim táirrd âv uêiting fórr rríim."
       },
       {
         "en": "This is one of the best movies ever.",
-        "pt": "Este é um dos melhores filmes de todos os tempos."
+        "pt": "Este é um dos melhores filmes de todos os tempos.",
+        "phonetic_pt": "Dhís iz uân âv dhê bést múuviiz évêrr."
       },
       {
         "en": "They reached the top of the mountain.",
-        "pt": "Eles alcançaram o topo da montanha."
+        "pt": "Eles alcançaram o topo da montanha.",
+        "phonetic_pt": "Dhêi rríicht dhê tóp âv dhê máuntên."
       },
       {
         "en": "We talked for hours of everything and nothing.",
-        "pt": "Conversamos por horas sobre tudo e nada."
+        "pt": "Conversamos por horas sobre tudo e nada.",
+        "phonetic_pt": "Uii tókt fórr áuêrrz âv évriithíng énd nâthíng."
       },
       {
         "en": "It's kind of expensive, but worth it.",
-        "pt": "É meio caro, mas vale a pena."
+        "pt": "É meio caro, mas vale a pena.",
+        "phonetic_pt": "Its káind âv ikspénsiv, bât uêrrth it."
       },
       {
         "en": "A lot of people attended the event.",
-        "pt": "Muita gente compareceu ao evento."
+        "pt": "Muita gente compareceu ao evento.",
+        "phonetic_pt": "Ê lát âv píipôl âténdid dhê ivént."
       },
       {
         "en": "The smell of fresh bread filled the kitchen.",
-        "pt": "O cheiro de pão fresco encheu a cozinha."
+        "pt": "O cheiro de pão fresco encheu a cozinha.",
+        "phonetic_pt": "Dhê smél âv frésh bréd fíld dhê kítchên."
       },
       {
         "en": "He's full of energy and enthusiasm.",
-        "pt": "Ele está cheio de energia e entusiasmo."
+        "pt": "Ele está cheio de energia e entusiasmo.",
+        "phonetic_pt": "Híiz fúl âv énêrrji énd enthúuziázm."
       },
       {
         "en": "Take care of yourself while I'm gone.",
-        "pt": "Cuide-se enquanto eu estiver fora."
+        "pt": "Cuide-se enquanto eu estiver fora.",
+        "phonetic_pt": "Têik kêrr âv iurrsélf uáil áim gón."
       },
       {
         "en": "The history of the world is fascinating.",
-        "pt": "A história do mundo é fascinante."
+        "pt": "A história do mundo é fascinante.",
+        "phonetic_pt": "Dhê rríistôri âv dhê uêrrld iz fásinêiting."
       },
       {
         "en": "I'm thinking of going on a trip next month.",
-        "pt": "Estou pensando em fazer uma viagem no próximo mês."
+        "pt": "Estou pensando em fazer uma viagem no próximo mês.",
+        "phonetic_pt": "Áim thínking âv gôuing ôn ê tríp nékst mânth."
       },
       {
         "en": "She's a woman of great courage.",
-        "pt": "Ela é uma mulher de grande coragem."
+        "pt": "Ela é uma mulher de grande coragem.",
+        "phonetic_pt": "Chíiz ê uúmân âv grêit kârrêdj."
       },
       {
         "en": "The taste of victory is sweet.",
-        "pt": "O sabor da vitória é doce."
+        "pt": "O sabor da vitória é doce.",
+        "phonetic_pt": "Dhê têist âv víktôri iz suíit."
       },
       {
         "en": "It's out of my control now.",
-        "pt": "Está fora do meu controle agora."
+        "pt": "Está fora do meu controle agora.",
+        "phonetic_pt": "Its áut âv mái kântrôul náu."
       },
       {
         "en": "The majority of students passed the exam.",
-        "pt": "A maioria dos estudantes passou no exame."
+        "pt": "A maioria dos estudantes passou no exame.",
+        "phonetic_pt": "Dhê mâdjórriti âv stúudêntz pést dhê igzám."
       },
       {
         "en": "This is a picture of my family.",
-        "pt": "Esta é uma foto da minha família."
+        "pt": "Esta é uma foto da minha família.",
+        "phonetic_pt": "Dhís iz ê píktchêrr âv mái fámili."
       }
     ]
   },
@@ -407,123 +498,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "I need to buy milk and bread.",
-        "pt": "Eu preciso comprar leite e pão."
+        "pt": "Eu preciso comprar leite e pão.",
+        "phonetic_pt": "Ái níid tchu bái mílk énd bréd."
       },
       {
         "en": "We're watching a movie and eating popcorn.",
-        "pt": "Estamos assistindo a um filme e comendo pipoca."
+        "pt": "Estamos assistindo a um filme e comendo pipoca.",
+        "phonetic_pt": "Uírr uátching ê múvii énd íiting pópkôrn."
       },
       {
         "en": "The kids are playing and laughing in the yard.",
-        "pt": "As crianças estão brincando e rindo no quintal."
+        "pt": "As crianças estão brincando e rindo no quintal.",
+        "phonetic_pt": "Dhê kíds ârr plêiing énd láfing ín dhê iárd."
       },
       {
         "en": "I woke up early and made coffee.",
-        "pt": "Acordei cedo e fiz café."
+        "pt": "Acordei cedo e fiz café.",
+        "phonetic_pt": "Ái uôuk âp êrrlii énd mêid kófii."
       },
       {
         "en": "She cleaned the kitchen and organized the pantry.",
-        "pt": "Ela limpou a cozinha e organizou a despensa."
+        "pt": "Ela limpou a cozinha e organizou a despensa.",
+        "phonetic_pt": "Chii klíind dhê kítchin énd ôrrgânáizd dhê péntrii."
       },
       {
         "en": "Please send me the report and the presentation.",
-        "pt": "Por favor, me envie o relatório e a apresentação."
+        "pt": "Por favor, me envie o relatório e a apresentação.",
+        "phonetic_pt": "Plíiz sénd mii dhê rríipôrt énd dhê prézêntêichân."
       },
       {
         "en": "We discussed the budget and future plans.",
-        "pt": "Discutimos o orçamento e os planos futuros."
+        "pt": "Discutimos o orçamento e os planos futuros.",
+        "phonetic_pt": "Uii diskâst dhê bâdjêt énd fiútchârr pléns."
       },
       {
         "en": "He works hard and always meets deadlines.",
-        "pt": "Ele trabalha duro e sempre cumpre os prazos."
+        "pt": "Ele trabalha duro e sempre cumpre os prazos.",
+        "phonetic_pt": "Hii uêrrks hárrrd énd ólueiz míits dédláins."
       },
       {
         "en": "The team collaborated and finished the project on time.",
-        "pt": "A equipe colaborou e terminou o projeto a tempo."
+        "pt": "A equipe colaborou e terminou o projeto a tempo.",
+        "phonetic_pt": "Dhê tíim kôlábôrêitid énd fínisht dhê prrádjêkt ôn táim."
       },
       {
         "en": "I'll check my email and then call you back.",
-        "pt": "Vou verificar meu e-mail e depois te ligo de volta."
+        "pt": "Vou verificar meu e-mail e depois te ligo de volta.",
+        "phonetic_pt": "Áil tchêk mái íimêil énd dhén kól iú béck."
       },
       {
         "en": "My husband and I are going out tonight.",
-        "pt": "Meu marido e eu vamos sair hoje à noite."
+        "pt": "Meu marido e eu vamos sair hoje à noite.",
+        "phonetic_pt": "Mái hâzbând énd Ái ârr gôuing áut tûnáiit."
       },
       {
         "en": "She's kind and very understanding.",
-        "pt": "Ela é gentil e muito compreensiva."
+        "pt": "Ela é gentil e muito compreensiva.",
+        "phonetic_pt": "Chíiz káind énd vérrii ândêrrsténding."
       },
       {
         "en": "They met at college and have been friends ever since.",
-        "pt": "Eles se conheceram na faculdade e são amigos desde então."
+        "pt": "Eles se conheceram na faculdade e são amigos desde então.",
+        "phonetic_pt": "Dhêi mét ét kólij énd hév bíin frrénds évêrr síns."
       },
       {
         "en": "We talked for hours and shared old memories.",
-        "pt": "Conversamos por horas e compartilhamos memórias antigas."
+        "pt": "Conversamos por horas e compartilhamos memórias antigas.",
+        "phonetic_pt": "Uii tókt fôrr áuârrz énd chérrd ôuld mémôriiz."
       },
       {
         "en": "He loves his family and his dog.",
-        "pt": "Ele ama sua família e seu cachorro."
+        "pt": "Ele ama sua família e seu cachorro.",
+        "phonetic_pt": "Hii lâvz híz fámilii énd híz dôg."
       },
       {
         "en": "We're planning a trip to Italy and Greece.",
-        "pt": "Estamos planejando uma viagem para a Itália e a Grécia."
+        "pt": "Estamos planejando uma viagem para a Itália e a Grécia.",
+        "phonetic_pt": "Uírr pléning ê tríp tchu ítâlii énd gríis."
       },
       {
         "en": "The flight was long and a bit turbulent.",
-        "pt": "O voo foi longo e um pouco turbulento."
+        "pt": "O voo foi longo e um pouco turbulento.",
+        "phonetic_pt": "Dhê fláit uâz lóng énd ê bít têrrbiulênt."
       },
       {
         "en": "I packed my suitcase and my backpack.",
-        "pt": "Arrumei minha mala e minha mochila."
+        "pt": "Arrumei minha mala e minha mochila.",
+        "phonetic_pt": "Ái pékt mái súutkêis énd mái béckpék."
       },
       {
         "en": "We visited museums and historical sites.",
-        "pt": "Visitamos museus e locais históricos."
+        "pt": "Visitamos museus e locais históricos.",
+        "phonetic_pt": "Uii vízitid miuzíiâmz énd histórrikâl sáits."
       },
       {
         "en": "The weather was sunny and warm.",
-        "pt": "O tempo estava ensolarado e quente."
+        "pt": "O tempo estava ensolarado e quente.",
+        "phonetic_pt": "Dhê uédhârr uâz sâni énd uôrm."
       },
       {
         "en": "I'll have a burger and fries, please.",
-        "pt": "Eu vou querer um hambúrguer e batatas fritas, por favor."
+        "pt": "Eu vou querer um hambúrguer e batatas fritas, por favor.",
+        "phonetic_pt": "Áil hév ê bêrrgârr énd frráis, plíiz."
       },
       {
         "en": "This soup is rich and flavorful.",
-        "pt": "Esta sopa é rica e saborosa."
+        "pt": "Esta sopa é rica e saborosa.",
+        "phonetic_pt": "Dhís súup íz rítch énd flêivârrfûl."
       },
       {
         "en": "Do you want coffee or tea and a pastry?",
-        "pt": "Você quer café ou chá e um doce?"
+        "pt": "Você quer café ou chá e um doce?",
+        "phonetic_pt": "Du iú uónt kófii ôrr tii énd ê pêistrii?"
       },
       {
         "en": "She baked a cake and some cookies for the party.",
-        "pt": "Ela assou um bolo e alguns biscoitos para a festa."
+        "pt": "Ela assou um bolo e alguns biscoitos para a festa.",
+        "phonetic_pt": "Chii bêikt ê kêik énd sâm kúukiiz fôrr dhê párrrtii."
       },
       {
         "en": "I like fruits and vegetables.",
-        "pt": "Eu gosto de frutas e vegetais."
+        "pt": "Eu gosto de frutas e vegetais.",
+        "phonetic_pt": "Ái láik frúuts énd vêdjêtâbâlz."
       },
       {
         "en": "I'm tired and ready for bed.",
-        "pt": "Estou cansado e pronto para dormir."
+        "pt": "Estou cansado e pronto para dormir.",
+        "phonetic_pt": "Áim táirrd énd réddii fôrr béd."
       },
       {
         "en": "It was a long day and I'm exhausted.",
-        "pt": "Foi um dia longo e estou exausto."
+        "pt": "Foi um dia longo e estou exausto.",
+        "phonetic_pt": "Ít uâz ê lóng dêi énd Áim egzóstid."
       },
       {
         "en": "The movie was exciting and suspenseful.",
-        "pt": "O filme foi emocionante e cheio de suspense."
+        "pt": "O filme foi emocionante e cheio de suspense.",
+        "phonetic_pt": "Dhê múvii uâz iksáiting énd sâspénsfûl."
       },
       {
         "en": "He's smart and very witty.",
-        "pt": "Ele é inteligente e muito espirituoso."
+        "pt": "Ele é inteligente e muito espirituoso.",
+        "phonetic_pt": "Híiz smárrrt énd vérrii uítii."
       },
       {
         "en": "Let's go out and have some fun.",
-        "pt": "Vamos sair e nos divertir um pouco."
+        "pt": "Vamos sair e nos divertir um pouco.",
+        "phonetic_pt": "Léts gô áut énd hév sâm fân."
       }
     ]
   },
@@ -539,123 +660,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "I need a pen.",
-        "pt": "Eu preciso de uma caneta."
+        "pt": "Eu preciso de uma caneta.",
+        "phonetic_pt": "Ái níid ê pén."
       },
       {
         "en": "She has a beautiful voice.",
-        "pt": "Ela tem uma voz linda."
+        "pt": "Ela tem uma voz linda.",
+        "phonetic_pt": "Chii réz ê biúrifûl vóis."
       },
       {
         "en": "Let's grab a coffee.",
-        "pt": "Vamos tomar um café."
+        "pt": "Vamos tomar um café.",
+        "phonetic_pt": "Léts gréb ê kófii."
       },
       {
         "en": "He bought a new car.",
-        "pt": "Ele comprou um carro novo."
+        "pt": "Ele comprou um carro novo.",
+        "phonetic_pt": "Hii bót ê niú kár."
       },
       {
         "en": "It was a long day.",
-        "pt": "Foi um dia longo."
+        "pt": "Foi um dia longo.",
+        "phonetic_pt": "Ít uâz ê lóng dêi."
       },
       {
         "en": "Do you have a minute?",
-        "pt": "Você tem um minuto?"
+        "pt": "Você tem um minuto?",
+        "phonetic_pt": "Du iú rév ê mínit?"
       },
       {
         "en": "We saw a great movie.",
-        "pt": "Nós vimos um filme ótimo."
+        "pt": "Nós vimos um filme ótimo.",
+        "phonetic_pt": "Uii só ê grêit múvii."
       },
       {
         "en": "There's a cat on the roof.",
-        "pt": "Tem um gato no telhado."
+        "pt": "Tem um gato no telhado.",
+        "phonetic_pt": "Dhêrrz ê két ôn dhê rúuf."
       },
       {
         "en": "She wants to be a doctor.",
-        "pt": "Ela quer ser uma médica."
+        "pt": "Ela quer ser uma médica.",
+        "phonetic_pt": "Chii uânts tu bii ê dóktêrr."
       },
       {
         "en": "Can I ask a question?",
-        "pt": "Posso fazer uma pergunta?"
+        "pt": "Posso fazer uma pergunta?",
+        "phonetic_pt": "Kén ái ésk ê kuéstchân?"
       },
       {
         "en": "He's a very kind person.",
-        "pt": "Ele é uma pessoa muito gentil."
+        "pt": "Ele é uma pessoa muito gentil.",
+        "phonetic_pt": "Híiz ê vérrii káind pêrrsân."
       },
       {
         "en": "It's a sunny day.",
-        "pt": "Está um dia ensolarado."
+        "pt": "Está um dia ensolarado.",
+        "phonetic_pt": "Íts ê sânii dêi."
       },
       {
         "en": "I'd like a glass of water.",
-        "pt": "Eu gostaria de um copo de água."
+        "pt": "Eu gostaria de um copo de água.",
+        "phonetic_pt": "Áid láik ê glés âv uórrêrr."
       },
       {
         "en": "They live in a small town.",
-        "pt": "Eles moram em uma cidade pequena."
+        "pt": "Eles moram em uma cidade pequena.",
+        "phonetic_pt": "Dhêi lív ín ê smól táun."
       },
       {
         "en": "This is a difficult problem.",
-        "pt": "Este é um problema difícil."
+        "pt": "Este é um problema difícil.",
+        "phonetic_pt": "Dhís íz ê dífiikâlt próblêm."
       },
       {
         "en": "She wore a pretty dress.",
-        "pt": "Ela usou um vestido bonito."
+        "pt": "Ela usou um vestido bonito.",
+        "phonetic_pt": "Chii uórr ê prítii drés."
       },
       {
         "en": "I heard a strange noise.",
-        "pt": "Eu ouvi um barulho estranho."
+        "pt": "Eu ouvi um barulho estranho.",
+        "phonetic_pt": "Ái hêrrd ê strêindj nóiz."
       },
       {
         "en": "He's got a good sense of humor.",
-        "pt": "Ele tem um bom senso de humor."
+        "pt": "Ele tem um bom senso de humor.",
+        "phonetic_pt": "Híiz gót ê gúd séns âv hiúmêrr."
       },
       {
         "en": "We need a break.",
-        "pt": "Nós precisamos de uma pausa."
+        "pt": "Nós precisamos de uma pausa.",
+        "phonetic_pt": "Uii níid ê brêik."
       },
       {
         "en": "It's a pleasure to meet you.",
-        "pt": "É um prazer conhecê-lo(a)."
+        "pt": "É um prazer conhecê-lo(a).",
+        "phonetic_pt": "Íts ê pléjêrr tu míit iú."
       },
       {
         "en": "She made a delicious cake.",
-        "pt": "Ela fez um bolo delicioso."
+        "pt": "Ela fez um bolo delicioso.",
+        "phonetic_pt": "Chii mêid ê dilíchâs kêik."
       },
       {
         "en": "He gave me a useful tip.",
-        "pt": "Ele me deu uma dica útil."
+        "pt": "Ele me deu uma dica útil.",
+        "phonetic_pt": "Hii gêiv mii ê iúsfûl típ."
       },
       {
         "en": "There's a fly in my soup.",
-        "pt": "Tem uma mosca na minha sopa."
+        "pt": "Tem uma mosca na minha sopa.",
+        "phonetic_pt": "Dhêrrz ê flái ín mái súup."
       },
       {
         "en": "I need a vacation.",
-        "pt": "Eu preciso de férias."
+        "pt": "Eu preciso de férias.",
+        "phonetic_pt": "Ái níid ê vêikêichân."
       },
       {
         "en": "He's having a bad day.",
-        "pt": "Ele está tendo um dia ruim."
+        "pt": "Ele está tendo um dia ruim.",
+        "phonetic_pt": "Híiz réving ê béd dêi."
       },
       {
         "en": "It's a matter of time.",
-        "pt": "É uma questão de tempo."
+        "pt": "É uma questão de tempo.",
+        "phonetic_pt": "Íts ê métêrr âv táim."
       },
       {
         "en": "She read a fascinating book.",
-        "pt": "Ela leu um livro fascinante."
+        "pt": "Ela leu um livro fascinante.",
+        "phonetic_pt": "Chii réd ê fésinêiting búk."
       },
       {
         "en": "We found a solution.",
-        "pt": "Nós encontramos uma solução."
+        "pt": "Nós encontramos uma solução.",
+        "phonetic_pt": "Uii fáund ê solúchân."
       },
       {
         "en": "I saw a bird in the tree.",
-        "pt": "Eu vi um pássaro na árvore."
+        "pt": "Eu vi um pássaro na árvore.",
+        "phonetic_pt": "Ái só ê bêrrd ín dhê tríi."
       },
       {
         "en": "He drives a blue truck.",
-        "pt": "Ele dirige um caminhão azul."
+        "pt": "Ele dirige um caminhão azul.",
+        "phonetic_pt": "Hii dráivz ê blúu trâk."
       }
     ]
   },
@@ -671,123 +822,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "I need to go to the store.",
-        "pt": "Eu preciso ir à loja."
+        "pt": "Eu preciso ir à loja.",
+        "phonetic_pt": "Ái níid tâ gô tâ dhê stôrr."
       },
       {
         "en": "She wants to learn English.",
-        "pt": "Ela quer aprender inglês."
+        "pt": "Ela quer aprender inglês.",
+        "phonetic_pt": "Chii uónts tâ lêrrn ínglich."
       },
       {
         "en": "We're going to travel to Europe next year.",
-        "pt": "Nós vamos viajar para a Europa no ano que vem."
+        "pt": "Nós vamos viajar para a Europa no ano que vem.",
+        "phonetic_pt": "Uírr gôuing tâ trrévôl tâ iúrrôp nékst iírr."
       },
       {
         "en": "Can you pass the salt to me?",
-        "pt": "Você pode me passar o sal?"
+        "pt": "Você pode me passar o sal?",
+        "phonetic_pt": "Kén iú péss dhê sólt tâ mii?"
       },
       {
         "en": "It's important to listen carefully.",
-        "pt": "É importante ouvir com atenção."
+        "pt": "É importante ouvir com atenção.",
+        "phonetic_pt": "Íts impôrrrtânt tâ líssên kerrrfúli."
       },
       {
         "en": "They decided to move to a new city.",
-        "pt": "Eles decidiram se mudar para uma nova cidade."
+        "pt": "Eles decidiram se mudar para uma nova cidade.",
+        "phonetic_pt": "Dhêi dissáidid tâ múv tâ ê niú síti."
       },
       {
         "en": "He likes to read books before bed.",
-        "pt": "Ele gosta de ler livros antes de dormir."
+        "pt": "Ele gosta de ler livros antes de dormir.",
+        "phonetic_pt": "Hii láiks tâ rríid búks bifôrr béd."
       },
       {
         "en": "From Monday to Friday, I work from home.",
-        "pt": "De segunda a sexta, eu trabalho de casa."
+        "pt": "De segunda a sexta, eu trabalho de casa.",
+        "phonetic_pt": "Frrôm Mândêi tâ Frráidêi, Ái uêrrk frrôm hôum."
       },
       {
         "en": "This song is dedicated to my best friend.",
-        "pt": "Esta música é dedicada ao meu melhor amigo."
+        "pt": "Esta música é dedicada ao meu melhor amigo.",
+        "phonetic_pt": "Dhís sôg is dédikêitid tâ mái bést frrénd."
       },
       {
         "en": "I'm looking forward to seeing you.",
-        "pt": "Estou ansioso para te ver."
+        "pt": "Estou ansioso para te ver.",
+        "phonetic_pt": "Áim lúking fôrrruêrrrd tâ síiing iú."
       },
       {
         "en": "It's difficult to choose just one.",
-        "pt": "É difícil escolher apenas um."
+        "pt": "É difícil escolher apenas um.",
+        "phonetic_pt": "Íts díffikâlt tâ chúuz djâst uân."
       },
       {
         "en": "She moved here to start a new life.",
-        "pt": "Ela se mudou para cá para começar uma nova vida."
+        "pt": "Ela se mudou para cá para começar uma nova vida.",
+        "phonetic_pt": "Chii múvd híirr tâ stârrrt ê niú láif."
       },
       {
         "en": "We need to talk to him about the project.",
-        "pt": "Nós precisamos falar com ele sobre o projeto."
+        "pt": "Nós precisamos falar com ele sobre o projeto.",
+        "phonetic_pt": "Uii níid tâ tôk tâ rrim âbáut dhê prrádjekt."
       },
       {
         "en": "Please send the report to my email.",
-        "pt": "Por favor, envie o relatório para o meu e-mail."
+        "pt": "Por favor, envie o relatório para o meu e-mail.",
+        "phonetic_pt": "Plíiz sénd dhê rripôrrrt tâ mái íimêil."
       },
       {
         "en": "I prefer coffee to tea in the morning.",
-        "pt": "Eu prefiro café a chá de manhã."
+        "pt": "Eu prefiro café a chá de manhã.",
+        "phonetic_pt": "Ái prrifêrr kôfi tâ tíi in dhê môrrning."
       },
       {
         "en": "According to the news, it will rain tomorrow.",
-        "pt": "De acordo com as notícias, vai chover amanhã."
+        "pt": "De acordo com as notícias, vai chover amanhã.",
+        "phonetic_pt": "Âkôrrding tâ dhê niúuz, it uil rrêin tumôrrôu."
       },
       {
         "en": "Don't forget to turn off the lights.",
-        "pt": "Não se esqueça de apagar as luzes."
+        "pt": "Não se esqueça de apagar as luzes.",
+        "phonetic_pt": "Dôunt fôrrguét tâ têrrn óf dhê láits."
       },
       {
         "en": "He's always kind to everyone.",
-        "pt": "Ele é sempre gentil com todo mundo."
+        "pt": "Ele é sempre gentil com todo mundo.",
+        "phonetic_pt": "Híiz óluêis káind tâ évrriuan."
       },
       {
         "en": "We have to finish this by noon.",
-        "pt": "Nós temos que terminar isso até o meio-dia."
+        "pt": "Nós temos que terminar isso até o meio-dia.",
+        "phonetic_pt": "Uii hâv tâ fínich dhís bái núun."
       },
       {
         "en": "They went to the beach to relax.",
-        "pt": "Eles foram à praia para relaxar."
+        "pt": "Eles foram à praia para relaxar.",
+        "phonetic_pt": "Dhêi uént tâ dhê bíich tâ rriléx."
       },
       {
         "en": "I used to live in New York.",
-        "pt": "Eu costumava morar em Nova York."
+        "pt": "Eu costumava morar em Nova York.",
+        "phonetic_pt": "Ái iúzd tâ lív in Niú Iôrrk."
       },
       {
         "en": "This coat is similar to mine.",
-        "pt": "Este casaco é parecido com o meu."
+        "pt": "Este casaco é parecido com o meu.",
+        "phonetic_pt": "Dhís kôut is símilârr tâ máin."
       },
       {
         "en": "She has a lot to do today.",
-        "pt": "Ela tem muito o que fazer hoje."
+        "pt": "Ela tem muito o que fazer hoje.",
+        "phonetic_pt": "Chii hâz ê lót tâ dúu tudêi."
       },
       {
         "en": "We're invited to a party tonight.",
-        "pt": "Nós fomos convidados para uma festa hoje à noite."
+        "pt": "Nós fomos convidados para uma festa hoje à noite.",
+        "phonetic_pt": "Uírr inváitid tâ ê pârrrti tunáit."
       },
       {
         "en": "It's time to go home.",
-        "pt": "É hora de ir para casa."
+        "pt": "É hora de ir para casa.",
+        "phonetic_pt": "Íts táim tâ gô hôum."
       },
       {
         "en": "He gave the keys back to her.",
-        "pt": "Ele devolveu as chaves para ela."
+        "pt": "Ele devolveu as chaves para ela.",
+        "phonetic_pt": "Hii guêiv dhê kíiz béck tâ rr."
       },
       {
         "en": "I promise to call you later.",
-        "pt": "Eu prometo te ligar mais tarde."
+        "pt": "Eu prometo te ligar mais tarde.",
+        "phonetic_pt": "Ái prrámis tâ kôl iú lêitêrr."
       },
       {
         "en": "The train goes directly to the city center.",
-        "pt": "O trem vai direto para o centro da cidade."
+        "pt": "O trem vai direto para o centro da cidade.",
+        "phonetic_pt": "Dhê trrêin gôuz dirréktli tâ dhê síti séntêrr."
       },
       {
         "en": "They need to save money to buy a house.",
-        "pt": "Eles precisam economizar dinheiro para comprar uma casa."
+        "pt": "Eles precisam economizar dinheiro para comprar uma casa.",
+        "phonetic_pt": "Dhêi níid tâ sêiv mâni tâ bái ê háus."
       },
       {
         "en": "What are you listening to?",
-        "pt": "O que você está ouvindo?"
+        "pt": "O que você está ouvindo?",
+        "phonetic_pt": "Uât ârr iú líssêning tu?"
       }
     ]
   },
@@ -803,123 +984,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "The keys are in my pocket.",
-        "pt": "As chaves estão no meu bolso."
+        "pt": "As chaves estão no meu bolso.",
+        "phonetic_pt": "Dhê kíis ârr in mái pákit."
       },
       {
         "en": "She's working in the garden.",
-        "pt": "Ela está trabalhando no jardim."
+        "pt": "Ela está trabalhando no jardim.",
+        "phonetic_pt": "Chii's uêrrking in dhê gárrden."
       },
       {
         "en": "I'll see you in an hour.",
-        "pt": "Te vejo em uma hora."
+        "pt": "Te vejo em uma hora.",
+        "phonetic_pt": "Áil síi iú in ân áuêrr."
       },
       {
         "en": "He lives in New York City.",
-        "pt": "Ele mora em Nova York."
+        "pt": "Ele mora em Nova York.",
+        "phonetic_pt": "Hii lívs in Niú Iôrrk Síti."
       },
       {
         "en": "Are you interested in art?",
-        "pt": "Você se interessa por arte?"
+        "pt": "Você se interessa por arte?",
+        "phonetic_pt": "Ârr iú ínterêsted in árrrt?"
       },
       {
         "en": "We believe in equality.",
-        "pt": "Nós acreditamos na igualdade."
+        "pt": "Nós acreditamos na igualdade.",
+        "phonetic_pt": "Uii bilíiv in ikuáliti."
       },
       {
         "en": "What's in the box?",
-        "pt": "O que tem na caixa?"
+        "pt": "O que tem na caixa?",
+        "phonetic_pt": "Uáts in dhê bóks?"
       },
       {
         "en": "She's excellent in math.",
-        "pt": "Ela é excelente em matemática."
+        "pt": "Ela é excelente em matemática.",
+        "phonetic_pt": "Chii's ékselênt in méâth."
       },
       {
         "en": "Put your clothes in the drawer.",
-        "pt": "Coloque suas roupas na gaveta."
+        "pt": "Coloque suas roupas na gaveta.",
+        "phonetic_pt": "Pút iúrr klôudhs in dhê drôuêrr."
       },
       {
         "en": "The movie starts in five minutes.",
-        "pt": "O filme começa em cinco minutos."
+        "pt": "O filme começa em cinco minutos.",
+        "phonetic_pt": "Dhê múvii stárts in fáiv mínits."
       },
       {
         "en": "They're involved in a new project.",
-        "pt": "Eles estão envolvidos em um novo projeto."
+        "pt": "Eles estão envolvidos em um novo projeto.",
+        "phonetic_pt": "Dhêrr invólvd in ê niú prrádjekt."
       },
       {
         "en": "I'm not in the mood to talk.",
-        "pt": "Não estou com vontade de conversar."
+        "pt": "Não estou com vontade de conversar.",
+        "phonetic_pt": "Áim nát in dhê múud tu tóok."
       },
       {
         "en": "He's always dressed in black.",
-        "pt": "Ele está sempre vestido de preto."
+        "pt": "Ele está sempre vestido de preto.",
+        "phonetic_pt": "Hii's ólueis drrést in blék."
       },
       {
         "en": "There's a lot of truth in what she said.",
-        "pt": "Há muita verdade no que ela disse."
+        "pt": "Há muita verdade no que ela disse.",
+        "phonetic_pt": "Dhêrr's ê lát âv trúuth in uát chii sed."
       },
       {
         "en": "We went swimming in the lake.",
-        "pt": "Nós fomos nadar no lago."
+        "pt": "Nós fomos nadar no lago.",
+        "phonetic_pt": "Uii uênt suíming in dhê lêik."
       },
       {
         "en": "The book is written in English.",
-        "pt": "O livro está escrito em inglês."
+        "pt": "O livro está escrito em inglês.",
+        "phonetic_pt": "Dhê búk is rríten in ínglich."
       },
       {
         "en": "I have confidence in you.",
-        "pt": "Eu tenho confiança em você."
+        "pt": "Eu tenho confiança em você.",
+        "phonetic_pt": "Ái hév kánfidêns in iú."
       },
       {
         "en": "She's in charge of the event.",
-        "pt": "Ela está encarregada do evento."
+        "pt": "Ela está encarregada do evento.",
+        "phonetic_pt": "Chii's in chárj âv dhê ivênt."
       },
       {
         "en": "We're celebrating in style.",
-        "pt": "Estamos comemorando em grande estilo."
+        "pt": "Estamos comemorando em grande estilo.",
+        "phonetic_pt": "Uírr sélebrêiting in stáil."
       },
       {
         "en": "He got caught in the rain.",
-        "pt": "Ele foi pego pela chuva."
+        "pt": "Ele foi pego pela chuva.",
+        "phonetic_pt": "Hii gát kót in dhê rêin."
       },
       {
         "en": "The store is open in the morning.",
-        "pt": "A loja abre de manhã."
+        "pt": "A loja abre de manhã.",
+        "phonetic_pt": "Dhê stôrr is ôupên in dhê mórrning."
       },
       {
         "en": "I found it in the newspaper.",
-        "pt": "Eu encontrei no jornal."
+        "pt": "Eu encontrei no jornal.",
+        "phonetic_pt": "Ái fáund it in dhê niúspêipêrr."
       },
       {
         "en": "They specialize in Italian food.",
-        "pt": "Eles são especializados em comida italiana."
+        "pt": "Eles são especializados em comida italiana.",
+        "phonetic_pt": "Dhêi spéchaláis in itálian fúud."
       },
       {
         "en": "Don't speak in that tone of voice.",
-        "pt": "Não fale nesse tom de voz."
+        "pt": "Não fale nesse tom de voz.",
+        "phonetic_pt": "Dôunt spíik in dhét tôun âv vóis."
       },
       {
         "en": "We're planning a trip in July.",
-        "pt": "Estamos planejando uma viagem em julho."
+        "pt": "Estamos planejando uma viagem em julho.",
+        "phonetic_pt": "Uírr pléning ê trríp in julái."
       },
       {
         "en": "There's something in my eye.",
-        "pt": "Tem algo no meu olho."
+        "pt": "Tem algo no meu olho.",
+        "phonetic_pt": "Dhêrr's sâmthing in mái ái."
       },
       {
         "en": "She's currently in her second year of college.",
-        "pt": "Ela está atualmente no segundo ano da faculdade."
+        "pt": "Ela está atualmente no segundo ano da faculdade.",
+        "phonetic_pt": "Chii's kârrêntli in hêrr sékând iírr âv kálidj."
       },
       {
         "en": "He performs well in high-pressure situations.",
-        "pt": "Ele se sai bem em situações de alta pressão."
+        "pt": "Ele se sai bem em situações de alta pressão.",
+        "phonetic_pt": "Hii pêrrfôrmz uél in hái-prréchêrr sichuêichânz."
       },
       {
         "en": "I'm really into jazz music lately.",
-        "pt": "Eu estou realmente gostando muito de jazz ultimamente."
+        "pt": "Eu estou realmente gostando muito de jazz ultimamente.",
+        "phonetic_pt": "Áim rríili íntu jéz miúzik lêitli."
       },
       {
         "en": "Let's meet in front of the cafe.",
-        "pt": "Vamos nos encontrar em frente ao café."
+        "pt": "Vamos nos encontrar em frente ao café.",
+        "phonetic_pt": "Lêts míit in frrânt âv dhê kéfêi."
       }
     ]
   },
@@ -935,123 +1146,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "He is my best friend.",
-        "pt": "Ele é meu melhor amigo."
+        "pt": "Ele é meu melhor amigo.",
+        "phonetic_pt": "Hii is mái bést frênd."
       },
       {
         "en": "Did he call you yesterday?",
-        "pt": "Ele te ligou ontem?"
+        "pt": "Ele te ligou ontem?",
+        "phonetic_pt": "Díd hii kôl iú iéstêr dêi?"
       },
       {
         "en": "He lives down the street.",
-        "pt": "Ele mora na rua de baixo."
+        "pt": "Ele mora na rua de baixo.",
+        "phonetic_pt": "Hii lívs dáun dhê stríit."
       },
       {
         "en": "She said he was busy.",
-        "pt": "Ela disse que ele estava ocupado."
+        "pt": "Ela disse que ele estava ocupado.",
+        "phonetic_pt": "Chii séd hii uâz bízi."
       },
       {
         "en": "He likes to read books.",
-        "pt": "Ele gosta de ler livros."
+        "pt": "Ele gosta de ler livros.",
+        "phonetic_pt": "Hii láiks tu ríid búks."
       },
       {
         "en": "He works at the hospital.",
-        "pt": "Ele trabalha no hospital."
+        "pt": "Ele trabalha no hospital.",
+        "phonetic_pt": "Hii uêrrks ét dhê rrráspitôl."
       },
       {
         "en": "He told me a secret.",
-        "pt": "Ele me contou um segredo."
+        "pt": "Ele me contou um segredo.",
+        "phonetic_pt": "Hii tôld mii ê síikrrêt."
       },
       {
         "en": "He will be here soon.",
-        "pt": "Ele estará aqui em breve."
+        "pt": "Ele estará aqui em breve.",
+        "phonetic_pt": "Hii uíl bii hírr súun."
       },
       {
         "en": "He hasn't eaten yet.",
-        "pt": "Ele ainda não comeu."
+        "pt": "Ele ainda não comeu.",
+        "phonetic_pt": "Hii rrázênt íitên iét."
       },
       {
         "en": "He wants to travel more.",
-        "pt": "Ele quer viajar mais."
+        "pt": "Ele quer viajar mais.",
+        "phonetic_pt": "Hii uânts tu trrâvôl môrr."
       },
       {
         "en": "He always helps me out.",
-        "pt": "Ele sempre me ajuda."
+        "pt": "Ele sempre me ajuda.",
+        "phonetic_pt": "Hii ôl uêis rélps mii áut."
       },
       {
         "en": "He's a really good cook.",
-        "pt": "Ele é um cozinheiro muito bom."
+        "pt": "Ele é um cozinheiro muito bom.",
+        "phonetic_pt": "Hiiz ê rríili gúd kúk."
       },
       {
         "en": "He bought a new car.",
-        "pt": "Ele comprou um carro novo."
+        "pt": "Ele comprou um carro novo.",
+        "phonetic_pt": "Hii bôt ê niú karr."
       },
       {
         "en": "He felt tired after work.",
-        "pt": "Ele se sentiu cansado depois do trabalho."
+        "pt": "Ele se sentiu cansado depois do trabalho.",
+        "phonetic_pt": "Hii félt táirrd éftêrr uêrrk."
       },
       {
         "en": "He gave her a present.",
-        "pt": "Ele deu um presente a ela."
+        "pt": "Ele deu um presente a ela.",
+        "phonetic_pt": "Hii guêiv rrr ê prrêzênt."
       },
       {
         "en": "He looked very happy.",
-        "pt": "Ele parecia muito feliz."
+        "pt": "Ele parecia muito feliz.",
+        "phonetic_pt": "Hii lúkt vérri rrépi."
       },
       {
         "en": "He said he was sorry.",
-        "pt": "Ele disse que sentia muito."
+        "pt": "Ele disse que sentia muito.",
+        "phonetic_pt": "Hii séd hii uâz sôrri."
       },
       {
         "en": "He thinks it's a good idea.",
-        "pt": "Ele acha que é uma boa ideia."
+        "pt": "Ele acha que é uma boa ideia.",
+        "phonetic_pt": "Hii thínks its ê gúd áidíiâ."
       },
       {
         "en": "He needs to finish his report.",
-        "pt": "Ele precisa terminar o relatório dele."
+        "pt": "Ele precisa terminar o relatório dele.",
+        "phonetic_pt": "Hii níids tu fínich rríiz rríipôrt."
       },
       {
         "en": "He often goes for a run.",
-        "pt": "Ele frequentemente sai para correr."
+        "pt": "Ele frequentemente sai para correr.",
+        "phonetic_pt": "Hii ôfên gôuz fôrr ê rrân."
       },
       {
         "en": "He's learning to play guitar.",
-        "pt": "Ele está aprendendo a tocar violão."
+        "pt": "Ele está aprendendo a tocar violão.",
+        "phonetic_pt": "Hiiz lêrrning tu plêi guitárr."
       },
       {
         "en": "He asked about your trip.",
-        "pt": "Ele perguntou sobre sua viagem."
+        "pt": "Ele perguntou sobre sua viagem.",
+        "phonetic_pt": "Hii éskd êbáut iôrr tríp."
       },
       {
         "en": "He couldn't find his keys.",
-        "pt": "Ele não conseguiu encontrar as chaves dele."
+        "pt": "Ele não conseguiu encontrar as chaves dele.",
+        "phonetic_pt": "Hii kúdênt fáind rríiz kíiz."
       },
       {
         "en": "He usually wakes up early.",
-        "pt": "Ele geralmente acorda cedo."
+        "pt": "Ele geralmente acorda cedo.",
+        "phonetic_pt": "Hii iújuâli uêiks âp êrrli."
       },
       {
         "en": "He might come with us.",
-        "pt": "Ele talvez venha conosco."
+        "pt": "Ele talvez venha conosco.",
+        "phonetic_pt": "Hii máit kâm uídh âs."
       },
       {
         "en": "He's always telling jokes.",
-        "pt": "Ele está sempre contando piadas."
+        "pt": "Ele está sempre contando piadas.",
+        "phonetic_pt": "Hiiz ôl uêis téling jôuks."
       },
       {
         "en": "He prefers coffee over tea.",
-        "pt": "Ele prefere café a chá."
+        "pt": "Ele prefere café a chá.",
+        "phonetic_pt": "Hii prrêfêrrz kôfii ôvêrr tíi."
       },
       {
         "en": "He just got back from vacation.",
-        "pt": "Ele acabou de voltar das férias."
+        "pt": "Ele acabou de voltar das férias.",
+        "phonetic_pt": "Hii jâst gôt béck frrâm vêikêichên."
       },
       {
         "en": "He promised to help me move.",
-        "pt": "Ele prometeu me ajudar a mudar."
+        "pt": "Ele prometeu me ajudar a mudar.",
+        "phonetic_pt": "Hii prrômist tu rélp mii múuv."
       },
       {
         "en": "He seemed a little nervous.",
-        "pt": "Ele parecia um pouco nervoso."
+        "pt": "Ele parecia um pouco nervoso.",
+        "phonetic_pt": "Hii síimd ê lítôl nêrrvâs."
       }
     ]
   },
@@ -1067,123 +1308,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "I have a meeting at 10 AM.",
-        "pt": "Eu tenho uma reunião às 10 da manhã."
+        "pt": "Eu tenho uma reunião às 10 da manhã.",
+        "phonetic_pt": "Ái rév ê míiting ét tén êi ém."
       },
       {
         "en": "Do you have any questions?",
-        "pt": "Você tem alguma pergunta?"
+        "pt": "Você tem alguma pergunta?",
+        "phonetic_pt": "Dú iú rév éni kuéstchâns?"
       },
       {
         "en": "She had a good laugh at the joke.",
-        "pt": "Ela deu uma boa risada com a piada."
+        "pt": "Ela deu uma boa risada com a piada.",
+        "phonetic_pt": "Chii réd ê gúd léff ét dhê djôuk."
       },
       {
         "en": "We're going to have dinner soon.",
-        "pt": "Nós vamos jantar em breve."
+        "pt": "Nós vamos jantar em breve.",
+        "phonetic_pt": "Uírr gôuing tchu rév dírrnêrr súun."
       },
       {
         "en": "He has two sisters and one brother.",
-        "pt": "Ele tem duas irmãs e um irmão."
+        "pt": "Ele tem duas irmãs e um irmão.",
+        "phonetic_pt": "Hii réz tú síistêrrs énd uân brâdhêrr."
       },
       {
         "en": "I don't have enough money for that.",
-        "pt": "Eu não tenho dinheiro suficiente para isso."
+        "pt": "Eu não tenho dinheiro suficiente para isso.",
+        "phonetic_pt": "Ái dôunt rév inâf mâni fôrr dhét."
       },
       {
         "en": "They have lived here for five years.",
-        "pt": "Eles moram aqui há cinco anos."
+        "pt": "Eles moram aqui há cinco anos.",
+        "phonetic_pt": "Dhêi rév lívd hírr fôrr fáiv íiêrrs."
       },
       {
         "en": "You have to finish your homework.",
-        "pt": "Você tem que terminar sua lição de casa."
+        "pt": "Você tem que terminar sua lição de casa.",
+        "phonetic_pt": "Iú rév tchu fínich iôrr rôum-uêrrk."
       },
       {
         "en": "Could I have a glass of water, please?",
-        "pt": "Eu poderia ter um copo de água, por favor?"
+        "pt": "Eu poderia ter um copo de água, por favor?",
+        "phonetic_pt": "Kúd Ái rév ê gléss âv uórrêrr, plíiz?"
       },
       {
         "en": "We had a wonderful vacation last summer.",
-        "pt": "Nós tivemos umas férias maravilhosas no verão passado."
+        "pt": "Nós tivemos umas férias maravilhosas no verão passado.",
+        "phonetic_pt": "Uii réd ê uândêrrfûl vêikêichân lést sâmêrr."
       },
       {
         "en": "She has a lot of experience in marketing.",
-        "pt": "Ela tem muita experiência em marketing."
+        "pt": "Ela tem muita experiência em marketing.",
+        "phonetic_pt": "Chii réz ê lát âv ikspíiriêns ín márrkêting."
       },
       {
         "en": "They will have to make a decision soon.",
-        "pt": "Eles terão que tomar uma decisão em breve."
+        "pt": "Eles terão que tomar uma decisão em breve.",
+        "phonetic_pt": "Dhêi uíl rév tchu mêik ê disíjân súun."
       },
       {
         "en": "I've never had sushi before.",
-        "pt": "Eu nunca comi sushi antes."
+        "pt": "Eu nunca comi sushi antes.",
+        "phonetic_pt": "Áiv névêrr réd súuchii bifôrr."
       },
       {
         "en": "Do you have time to talk?",
-        "pt": "Você tem tempo para conversar?"
+        "pt": "Você tem tempo para conversar?",
+        "phonetic_pt": "Dú iú rév táim tchu tôk?"
       },
       {
         "en": "He had already left when I arrived.",
-        "pt": "Ele já tinha saído quando eu cheguei."
+        "pt": "Ele já tinha saído quando eu cheguei.",
+        "phonetic_pt": "Hii réd ôlrédii léft uén Ái arrráivd."
       },
       {
         "en": "Let's have a look at the new design.",
-        "pt": "Vamos dar uma olhada no novo design."
+        "pt": "Vamos dar uma olhada no novo design.",
+        "phonetic_pt": "Léts rév ê lúk ét dhê niú dizáin."
       },
       {
         "en": "I usually have coffee in the morning.",
-        "pt": "Eu geralmente tomo café de manhã."
+        "pt": "Eu geralmente tomo café de manhã.",
+        "phonetic_pt": "Ái iújuâlii rév kóffii ín dhê môrrning."
       },
       {
         "en": "She has a new car.",
-        "pt": "Ela tem um carro novo."
+        "pt": "Ela tem um carro novo.",
+        "phonetic_pt": "Chii réz ê niú kárr."
       },
       {
         "en": "We have had some difficulties recently.",
-        "pt": "Nós tivemos algumas dificuldades recentemente."
+        "pt": "Nós tivemos algumas dificuldades recentemente.",
+        "phonetic_pt": "Uii rév réd sâm díifíkâltiiz rríisântlii."
       },
       {
         "en": "You don't have to apologize.",
-        "pt": "Você não precisa se desculpar."
+        "pt": "Você não precisa se desculpar.",
+        "phonetic_pt": "Iú dôunt rév tchu âpólôdjáiz."
       },
       {
         "en": "They have a beautiful garden.",
-        "pt": "Eles têm um jardim bonito."
+        "pt": "Eles têm um jardim bonito.",
+        "phonetic_pt": "Dhêi rév ê biúutifûl gárrdân."
       },
       {
         "en": "I had a strange dream last night.",
-        "pt": "Eu tive um sonho estranho ontem à noite."
+        "pt": "Eu tive um sonho estranho ontem à noite.",
+        "phonetic_pt": "Ái réd ê strêindj dríim lést náit."
       },
       {
         "en": "Can I have your attention, please?",
-        "pt": "Posso ter a atenção de vocês, por favor?"
+        "pt": "Posso ter a atenção de vocês, por favor?",
+        "phonetic_pt": "Kén Ái rév iôrr âténchân, plíiz?"
       },
       {
         "en": "We have been waiting for hours.",
-        "pt": "Nós estamos esperando há horas."
+        "pt": "Nós estamos esperando há horas.",
+        "phonetic_pt": "Uii rév bíin uêiting fôrr áuêrrs."
       },
       {
         "en": "He has a fever.",
-        "pt": "Ele está com febre."
+        "pt": "Ele está com febre.",
+        "phonetic_pt": "Hii réz ê fíivêrr."
       },
       {
         "en": "Did you have fun at the party?",
-        "pt": "Você se divertiu na festa?"
+        "pt": "Você se divertiu na festa?",
+        "phonetic_pt": "Díd iú rév fân ét dhê párr-tii?"
       },
       {
         "en": "I need to have my car repaired.",
-        "pt": "Eu preciso consertar meu carro."
+        "pt": "Eu preciso consertar meu carro.",
+        "phonetic_pt": "Ái níid tchu rév mái kárr rripérrd."
       },
       {
         "en": "They often have guests over for dinner.",
-        "pt": "Eles frequentemente recebem convidados para jantar."
+        "pt": "Eles frequentemente recebem convidados para jantar.",
+        "phonetic_pt": "Dhêi ófân rév guésts ôuvêrr fôrr dírrnêrr."
       },
       {
         "en": "She must have forgotten about our appointment.",
-        "pt": "Ela deve ter esquecido do nosso compromisso."
+        "pt": "Ela deve ter esquecido do nosso compromisso.",
+        "phonetic_pt": "Chii mâst âv fôrrgótân âbáut áuêrr âpóintmênt."
       },
       {
         "en": "We'll have a meeting to discuss it next week.",
-        "pt": "Nós teremos uma reunião para discutir isso na próxima semana."
+        "pt": "Nós teremos uma reunião para discutir isso na próxima semana.",
+        "phonetic_pt": "Uíil rév ê míiting tchu diskâs ít nékst uíik."
       }
     ]
   },
@@ -1199,123 +1470,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "It's a beautiful day.",
-        "pt": "É um dia lindo."
+        "pt": "É um dia lindo.",
+        "phonetic_pt": "Íts ê biúrifôl dêi."
       },
       {
         "en": "I saw it yesterday.",
-        "pt": "Eu vi isso ontem."
+        "pt": "Eu vi isso ontem.",
+        "phonetic_pt": "Ái sô ít iésterdêi."
       },
       {
         "en": "Give it to me.",
-        "pt": "Dê-me isso."
+        "pt": "Dê-me isso.",
+        "phonetic_pt": "Guív ít tê mii."
       },
       {
         "en": "Is it true?",
-        "pt": "É verdade?"
+        "pt": "É verdade?",
+        "phonetic_pt": "Íz ít trú?"
       },
       {
         "en": "It's raining outside.",
-        "pt": "Está chovendo lá fora."
+        "pt": "Está chovendo lá fora.",
+        "phonetic_pt": "Íts rrêining áutsáid."
       },
       {
         "en": "How far is it?",
-        "pt": "Qual a distância?"
+        "pt": "Qual a distância?",
+        "phonetic_pt": "Ráu fárr íz ít?"
       },
       {
         "en": "It's time to go.",
-        "pt": "É hora de ir."
+        "pt": "É hora de ir.",
+        "phonetic_pt": "Íts táim tê gô."
       },
       {
         "en": "I don't like it.",
-        "pt": "Eu não gosto disso."
+        "pt": "Eu não gosto disso.",
+        "phonetic_pt": "Ái dônt láik ít."
       },
       {
         "en": "She made it herself.",
-        "pt": "Ela mesma fez."
+        "pt": "Ela mesma fez.",
+        "phonetic_pt": "Chii mêid ít hêrrssélf."
       },
       {
         "en": "We can do it!",
-        "pt": "Nós podemos fazer isso!"
+        "pt": "Nós podemos fazer isso!",
+        "phonetic_pt": "Wii kân dú ít!"
       },
       {
         "en": "It smells good.",
-        "pt": "Cheira bem."
+        "pt": "Cheira bem.",
+        "phonetic_pt": "Ít sméls gúd."
       },
       {
         "en": "It looks like rain.",
-        "pt": "Parece que vai chover."
+        "pt": "Parece que vai chover.",
+        "phonetic_pt": "Ít lúks láik rrêin."
       },
       {
         "en": "Take it easy.",
-        "pt": "Vá com calma."
+        "pt": "Vá com calma.",
+        "phonetic_pt": "Têik ít íizii."
       },
       {
         "en": "Forget about it.",
-        "pt": "Esqueça isso."
+        "pt": "Esqueça isso.",
+        "phonetic_pt": "Fêrrguét êbáut ít."
       },
       {
         "en": "It's getting late.",
-        "pt": "Está ficando tarde."
+        "pt": "Está ficando tarde.",
+        "phonetic_pt": "Íts guéring lêit."
       },
       {
         "en": "I can't believe it.",
-        "pt": "Não consigo acreditar."
+        "pt": "Não consigo acreditar.",
+        "phonetic_pt": "Ái ként bilíiv ít."
       },
       {
         "en": "Let's talk about it.",
-        "pt": "Vamos falar sobre isso."
+        "pt": "Vamos falar sobre isso.",
+        "phonetic_pt": "Léts tôk êbáut ít."
       },
       {
         "en": "It costs too much.",
-        "pt": "Custa muito caro."
+        "pt": "Custa muito caro.",
+        "phonetic_pt": "Ít kôsts tú mâtch."
       },
       {
         "en": "It's up to you.",
-        "pt": "Depende de você."
+        "pt": "Depende de você.",
+        "phonetic_pt": "Íts âp tê iú."
       },
       {
         "en": "Did you find it?",
-        "pt": "Você encontrou?"
+        "pt": "Você encontrou?",
+        "phonetic_pt": "Díd iê fáind ít?"
       },
       {
         "en": "It was a great movie.",
-        "pt": "Foi um ótimo filme."
+        "pt": "Foi um ótimo filme.",
+        "phonetic_pt": "Ít uâz ê grêit múvii."
       },
       {
         "en": "I need it now.",
-        "pt": "Eu preciso disso agora."
+        "pt": "Eu preciso disso agora.",
+        "phonetic_pt": "Ái níid ít náu."
       },
       {
         "en": "Don't worry about it.",
-        "pt": "Não se preocupe com isso."
+        "pt": "Não se preocupe com isso.",
+        "phonetic_pt": "Dônt uêrrii êbáut ít."
       },
       {
         "en": "It happened so fast.",
-        "pt": "Aconteceu tão rápido."
+        "pt": "Aconteceu tão rápido.",
+        "phonetic_pt": "Ít rrápend sô fêst."
       },
       {
         "en": "What is it?",
-        "pt": "O que é isso?"
+        "pt": "O que é isso?",
+        "phonetic_pt": "Uât íz ít?"
       },
       {
         "en": "It's not fair.",
-        "pt": "Não é justo."
+        "pt": "Não é justo.",
+        "phonetic_pt": "Íts nôt fêrr."
       },
       {
         "en": "I'll take it.",
-        "pt": "Eu levo."
+        "pt": "Eu levo.",
+        "phonetic_pt": "Áil têik ít."
       },
       {
         "en": "It sounds interesting.",
-        "pt": "Parece interessante."
+        "pt": "Parece interessante.",
+        "phonetic_pt": "Ít sáundz íntrêsting."
       },
       {
         "en": "It's cold in here.",
-        "pt": "Está frio aqui."
+        "pt": "Está frio aqui.",
+        "phonetic_pt": "Íts kôuld ín rrírr."
       },
       {
         "en": "You got it!",
-        "pt": "Entendeu!"
+        "pt": "Entendeu!",
+        "phonetic_pt": "Iú gôt ít!"
       }
     ]
   },
@@ -1331,123 +1632,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "That's a good idea.",
-        "pt": "Essa é uma boa ideia."
+        "pt": "Essa é uma boa ideia.",
+        "phonetic_pt": "Dhéts ê gúd áidíiâ."
       },
       {
         "en": "I like that shirt.",
-        "pt": "Eu gosto daquela camisa."
+        "pt": "Eu gosto daquela camisa.",
+        "phonetic_pt": "Ái láik dhét chêrrt."
       },
       {
         "en": "The book that I read was excellent.",
-        "pt": "O livro que eu li foi excelente."
+        "pt": "O livro que eu li foi excelente.",
+        "phonetic_pt": "Dhê búk dhét ái rréd uâz ékselânt."
       },
       {
         "en": "She said that she would come.",
-        "pt": "Ela disse que viria."
+        "pt": "Ela disse que viria.",
+        "phonetic_pt": "Chii séd dhét chii uúd kâm."
       },
       {
         "en": "Is that your car?",
-        "pt": "Aquele é o seu carro?"
+        "pt": "Aquele é o seu carro?",
+        "phonetic_pt": "Iz dhét iúrr kárr?"
       },
       {
         "en": "Can you pass me that remote?",
-        "pt": "Você pode me passar aquele controle?"
+        "pt": "Você pode me passar aquele controle?",
+        "phonetic_pt": "Kén iú péss mii dhét rrimôut?"
       },
       {
         "en": "He's the man that lives next door.",
-        "pt": "Ele é o homem que mora ao lado."
+        "pt": "Ele é o homem que mora ao lado.",
+        "phonetic_pt": "Híiz dhê mén dhét lívz nékst dôrr."
       },
       {
         "en": "I believe that you can do it.",
-        "pt": "Eu acredito que você consegue."
+        "pt": "Eu acredito que você consegue.",
+        "phonetic_pt": "Ái bilíiv dhét iú kén dú ít."
       },
       {
         "en": "Look at that sunset!",
-        "pt": "Olhe aquele pôr do sol!"
+        "pt": "Olhe aquele pôr do sol!",
+        "phonetic_pt": "Lúk ét dhét sânset!"
       },
       {
         "en": "I didn't know that.",
-        "pt": "Eu não sabia disso."
+        "pt": "Eu não sabia disso.",
+        "phonetic_pt": "Ái díidânt nôu dhét."
       },
       {
         "en": "The movie that we watched was amazing.",
-        "pt": "O filme que nós assistimos foi incrível."
+        "pt": "O filme que nós assistimos foi incrível.",
+        "phonetic_pt": "Dhê múvii dhét uii uátcht uâz âmêizing."
       },
       {
         "en": "It's important that you understand.",
-        "pt": "É importante que você entenda."
+        "pt": "É importante que você entenda.",
+        "phonetic_pt": "Íts impôrtânt dhét iú ândêrrsténd."
       },
       {
         "en": "That was a close call!",
-        "pt": "Essa foi por pouco!"
+        "pt": "Essa foi por pouco!",
+        "phonetic_pt": "Dhét uâz ê klôus kôl!"
       },
       {
         "en": "Don't forget that important meeting.",
-        "pt": "Não se esqueça daquela reunião importante."
+        "pt": "Não se esqueça daquela reunião importante.",
+        "phonetic_pt": "Dôunt fôrrguét dhét impôrtânt míiting."
       },
       {
         "en": "This is the house that Jack built.",
-        "pt": "Esta é a casa que Jack construiu."
+        "pt": "Esta é a casa que Jack construiu.",
+        "phonetic_pt": "Dhís iz dhê ráus dhét djék bílt."
       },
       {
         "en": "I hope that everything goes well.",
-        "pt": "Eu espero que tudo corra bem."
+        "pt": "Eu espero que tudo corra bem.",
+        "phonetic_pt": "Ái hôup dhét évrriithíng gôuz uél."
       },
       {
         "en": "Who is that person over there?",
-        "pt": "Quem é aquela pessoa ali?"
+        "pt": "Quem é aquela pessoa ali?",
+        "phonetic_pt": "Rú iz dhét pêrrssân ôuvêrr dhérr?"
       },
       {
         "en": "I'm glad that you came.",
-        "pt": "Fico feliz que você veio."
+        "pt": "Fico feliz que você veio.",
+        "phonetic_pt": "Áim gléd dhét iú kêim."
       },
       {
         "en": "We should discuss that later.",
-        "pt": "Devemos discutir isso depois."
+        "pt": "Devemos discutir isso depois.",
+        "phonetic_pt": "Uii chúd dískâss dhét lêitêrr."
       },
       {
         "en": "Do you remember that trip we took?",
-        "pt": "Você se lembra daquela viagem que fizemos?"
+        "pt": "Você se lembra daquela viagem que fizemos?",
+        "phonetic_pt": "Dú iú rrimémbêrr dhét tríp uii túk?"
       },
       {
         "en": "The restaurant that serves the best pizza.",
-        "pt": "O restaurante que serve a melhor pizza."
+        "pt": "O restaurante que serve a melhor pizza.",
+        "phonetic_pt": "Dhê rréstôrrânt dhét sêrrvz dhê bést píitsâ."
       },
       {
         "en": "It's a shame that he couldn't make it.",
-        "pt": "É uma pena que ele não pôde vir."
+        "pt": "É uma pena que ele não pôde vir.",
+        "phonetic_pt": "Íts ê chêim dhét hii kúdânt mêik ít."
       },
       {
         "en": "That's exactly what I meant.",
-        "pt": "É exatamente isso que eu quis dizer."
+        "pt": "É exatamente isso que eu quis dizer.",
+        "phonetic_pt": "Dhéts egzékli uât ái mént."
       },
       {
         "en": "Please pick up that package.",
-        "pt": "Por favor, pegue aquele pacote."
+        "pt": "Por favor, pegue aquele pacote.",
+        "phonetic_pt": "Plíiz píik âp dhét péckidj."
       },
       {
         "en": "He's got that look in his eye.",
-        "pt": "Ele tem aquele olhar nos olhos."
+        "pt": "Ele tem aquele olhar nos olhos.",
+        "phonetic_pt": "Híiz gât dhét lúk ín híz ái."
       },
       {
         "en": "I heard that you got a new job.",
-        "pt": "Eu ouvi dizer que você conseguiu um novo emprego."
+        "pt": "Eu ouvi dizer que você conseguiu um novo emprego.",
+        "phonetic_pt": "Ái hêrrd dhét iú gât ê niú djâb."
       },
       {
         "en": "Is that all?",
-        "pt": "É só isso?"
+        "pt": "É só isso?",
+        "phonetic_pt": "Iz dhét ôl?"
       },
       {
         "en": "I can't believe that happened.",
-        "pt": "Não consigo acreditar que isso aconteceu."
+        "pt": "Não consigo acreditar que isso aconteceu.",
+        "phonetic_pt": "Ái ként bilíiv dhét héppând."
       },
       {
         "en": "That's why I called you.",
-        "pt": "Foi por isso que eu te liguei."
+        "pt": "Foi por isso que eu te liguei.",
+        "phonetic_pt": "Dhéts uái ái kôld iú."
       },
       {
         "en": "The dog that barks the loudest.",
-        "pt": "O cachorro que late mais alto."
+        "pt": "O cachorro que late mais alto.",
+        "phonetic_pt": "Dhê dôg dhét bârks dhê láudêst."
       }
     ]
   },
@@ -1463,123 +1794,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "This gift is for you.",
-        "pt": "Este presente é para você."
+        "pt": "Este presente é para você.",
+        "phonetic_pt": "Dhís guíft íz fôrr iú."
       },
       {
         "en": "I've been waiting for you for an hour.",
-        "pt": "Eu estou esperando por você há uma hora."
+        "pt": "Eu estou esperando por você há uma hora.",
+        "phonetic_pt": "Áiv bíin uêiting fôrr iú fôrr én áuêrr."
       },
       {
         "en": "Thank you for your help.",
-        "pt": "Obrigado(a) pela sua ajuda."
+        "pt": "Obrigado(a) pela sua ajuda.",
+        "phonetic_pt": "Thénk iú fôrr iúrr rélp."
       },
       {
         "en": "We're leaving for the airport at 6 AM.",
-        "pt": "Nós estamos saindo para o aeroporto às 6 da manhã."
+        "pt": "Nós estamos saindo para o aeroporto às 6 da manhã.",
+        "phonetic_pt": "Uírr líiving fôrr dhê êrrpôrt ét síks êi ém."
       },
       {
         "en": "She works for a big company.",
-        "pt": "Ela trabalha para uma grande empresa."
+        "pt": "Ela trabalha para uma grande empresa.",
+        "phonetic_pt": "Chii uêrrks fôrr ê bíg kâmpênii."
       },
       {
         "en": "He traded his old car for a new one.",
-        "pt": "Ele trocou o carro velho dele por um novo."
+        "pt": "Ele trocou o carro velho dele por um novo.",
+        "phonetic_pt": "Hii trêidid rríiz ôuld kârr fôrr ê niú uân."
       },
       {
         "en": "What are you looking for?",
-        "pt": "O que você está procurando?"
+        "pt": "O que você está procurando?",
+        "phonetic_pt": "Uât ârr iú lúking fôrr?"
       },
       {
         "en": "This is a great opportunity for us.",
-        "pt": "Esta é uma ótima oportunidade para nós."
+        "pt": "Esta é uma ótima oportunidade para nós.",
+        "phonetic_pt": "Dhís íz ê grêit ôpêrtúnitii fôrr âs."
       },
       {
         "en": "I bought these flowers for my mom.",
-        "pt": "Eu comprei estas flores para minha mãe."
+        "pt": "Eu comprei estas flores para minha mãe.",
+        "phonetic_pt": "Ái bôt dhiiz fláuêrrz fôrr mái mâm."
       },
       {
         "en": "They've been married for twenty years.",
-        "pt": "Eles estão casados há vinte anos."
+        "pt": "Eles estão casados há vinte anos.",
+        "phonetic_pt": "Dhêiv bíin mérriid fôrr tuêntii iírrz."
       },
       {
         "en": "He's famous for his acting skills.",
-        "pt": "Ele é famoso por suas habilidades de atuação."
+        "pt": "Ele é famoso por suas habilidades de atuação.",
+        "phonetic_pt": "Hiiz fêimâs fôrr rríiz ékting skílz."
       },
       {
         "en": "We need to prepare for the meeting.",
-        "pt": "Nós precisamos nos preparar para a reunião."
+        "pt": "Nós precisamos nos preparar para a reunião.",
+        "phonetic_pt": "Uii níid tu priipérr fôrr dhê míiting."
       },
       {
         "en": "Is this coffee for me?",
-        "pt": "Este café é para mim?"
+        "pt": "Este café é para mim?",
+        "phonetic_pt": "Íz dhís kófii fôrr mii?"
       },
       {
         "en": "I'm saving money for a trip to Europe.",
-        "pt": "Eu estou economizando dinheiro para uma viagem à Europa."
+        "pt": "Eu estou economizando dinheiro para uma viagem à Europa.",
+        "phonetic_pt": "Áim sêiving mânii fôrr ê tríp tu iúrrâp."
       },
       {
         "en": "She's too young for that job.",
-        "pt": "Ela é muito jovem para aquele trabalho."
+        "pt": "Ela é muito jovem para aquele trabalho.",
+        "phonetic_pt": "Chiiz tú iâng fôrr dhét djób."
       },
       {
         "en": "We walked for miles along the beach.",
-        "pt": "Nós caminhamos por milhas ao longo da praia."
+        "pt": "Nós caminhamos por milhas ao longo da praia.",
+        "phonetic_pt": "Uii uôkt fôrr máilz êlông dhê bíich."
       },
       {
         "en": "He's tall for his age.",
-        "pt": "Ele é alto para a idade dele."
+        "pt": "Ele é alto para a idade dele.",
+        "phonetic_pt": "Hiiz tôl fôrr rríiz êidj."
       },
       {
         "en": "Let's go for a walk.",
-        "pt": "Vamos dar uma caminhada."
+        "pt": "Vamos dar uma caminhada.",
+        "phonetic_pt": "Léts gô fôrr ê uôk."
       },
       {
         "en": "I'm all for the new proposal.",
-        "pt": "Eu sou totalmente a favor da nova proposta."
+        "pt": "Eu sou totalmente a favor da nova proposta.",
+        "phonetic_pt": "Áim ôl fôrr dhê niú prôpôuzâl."
       },
       {
         "en": "For me, the best option is to stay home.",
-        "pt": "Para mim, a melhor opção é ficar em casa."
+        "pt": "Para mim, a melhor opção é ficar em casa.",
+        "phonetic_pt": "Fôrr mii, dhê bést ópchân íz tu stêi hôum."
       },
       {
         "en": "Set the alarm for 7 AM.",
-        "pt": "Ajuste o alarme para as 7 da manhã."
+        "pt": "Ajuste o alarme para as 7 da manhã.",
+        "phonetic_pt": "Sét dhê êlârm fôrr sévân êi ém."
       },
       {
         "en": "He's been living abroad for five years.",
-        "pt": "Ele está morando no exterior há cinco anos."
+        "pt": "Ele está morando no exterior há cinco anos.",
+        "phonetic_pt": "Hiiz bíin líving êbrôd fôrr fáiv iírrz."
       },
       {
         "en": "I'm so glad for you!",
-        "pt": "Eu estou tão feliz por você!"
+        "pt": "Eu estou tão feliz por você!",
+        "phonetic_pt": "Áim sô gléd fôrr iú!"
       },
       {
         "en": "We had dinner for two last night.",
-        "pt": "Nós jantamos a dois ontem à noite."
+        "pt": "Nós jantamos a dois ontem à noite.",
+        "phonetic_pt": "Uii héd dínêrr fôrr tú lést náit."
       },
       {
         "en": "Can you do me a favor for once?",
-        "pt": "Você pode me fazer um favor pela primeira vez?"
+        "pt": "Você pode me fazer um favor pela primeira vez?",
+        "phonetic_pt": "Kén iú dú mii ê fêivêrr fôrr uâns?"
       },
       {
         "en": "She's studying for her final exams.",
-        "pt": "Ela está estudando para os exames finais dela."
+        "pt": "Ela está estudando para os exames finais dela.",
+        "phonetic_pt": "Chiiz stâdiing fôrr hêrr fáinâl egzémz."
       },
       {
         "en": "This is good for your health.",
-        "pt": "Isso é bom para a sua saúde."
+        "pt": "Isso é bom para a sua saúde.",
+        "phonetic_pt": "Dhís íz gúd fôrr iúrr rélth."
       },
       {
         "en": "We need to vote for a better future.",
-        "pt": "Nós precisamos votar por um futuro melhor."
+        "pt": "Nós precisamos votar por um futuro melhor.",
+        "phonetic_pt": "Uii níid tu vôut fôrr ê bétêrr fiútchêrr."
       },
       {
         "en": "He left the country for good.",
-        "pt": "Ele deixou o país para sempre."
+        "pt": "Ele deixou o país para sempre.",
+        "phonetic_pt": "Hii léft dhê kântrii fôrr gúd."
       },
       {
         "en": "I'll pay for the drinks.",
-        "pt": "Eu vou pagar pelas bebidas."
+        "pt": "Eu vou pagar pelas bebidas.",
+        "phonetic_pt": "Áil pêi fôrr dhê drínks."
       }
     ]
   },
@@ -1595,123 +1956,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "They went to the store.",
-        "pt": "Eles foram à loja."
+        "pt": "Eles foram à loja.",
+        "phonetic_pt": "Dhêi uênt tu dhê stôrr."
       },
       {
         "en": "Do they like pizza?",
-        "pt": "Eles gostam de pizza?"
+        "pt": "Eles gostam de pizza?",
+        "phonetic_pt": "Du dhêi láik píitsâ?"
       },
       {
         "en": "Where are they now?",
-        "pt": "Onde eles estão agora?"
+        "pt": "Onde eles estão agora?",
+        "phonetic_pt": "Uêrr ârr dhêi náu?"
       },
       {
         "en": "They're coming over later.",
-        "pt": "Eles vêm aqui mais tarde."
+        "pt": "Eles vêm aqui mais tarde.",
+        "phonetic_pt": "Dhêirr kâming ôuvêrr lêitêrr."
       },
       {
         "en": "What did they say?",
-        "pt": "O que eles disseram?"
+        "pt": "O que eles disseram?",
+        "phonetic_pt": "Uât díd dhêi sêi?"
       },
       {
         "en": "They usually arrive early.",
-        "pt": "Eles geralmente chegam cedo."
+        "pt": "Eles geralmente chegam cedo.",
+        "phonetic_pt": "Dhêi iújuâli ârráiv êrrli."
       },
       {
         "en": "Are they still working?",
-        "pt": "Eles ainda estão trabalhando?"
+        "pt": "Eles ainda estão trabalhando?",
+        "phonetic_pt": "Ârr dhêi stíl uêrrking?"
       },
       {
         "en": "They seemed happy.",
-        "pt": "Eles pareciam felizes."
+        "pt": "Eles pareciam felizes.",
+        "phonetic_pt": "Dhêi síimd hépi."
       },
       {
         "en": "I hope they have fun.",
-        "pt": "Espero que eles se divirtam."
+        "pt": "Espero que eles se divirtam.",
+        "phonetic_pt": "Ái hôup dhêi hév fân."
       },
       {
         "en": "They told me to wait.",
-        "pt": "Eles me disseram para esperar."
+        "pt": "Eles me disseram para esperar.",
+        "phonetic_pt": "Dhêi tôuld mii tu uêit."
       },
       {
         "en": "Can they help us?",
-        "pt": "Eles podem nos ajudar?"
+        "pt": "Eles podem nos ajudar?",
+        "phonetic_pt": "Kén dhêi rélp âs?"
       },
       {
         "en": "They live down the street.",
-        "pt": "Eles moram na rua de baixo."
+        "pt": "Eles moram na rua de baixo.",
+        "phonetic_pt": "Dhêi lív dáun dhê stríit."
       },
       {
         "en": "They were singing loudly.",
-        "pt": "Eles estavam cantando alto."
+        "pt": "Eles estavam cantando alto.",
+        "phonetic_pt": "Dhêi uêrr sínging láudli."
       },
       {
         "en": "Have they finished yet?",
-        "pt": "Eles já terminaram?"
+        "pt": "Eles já terminaram?",
+        "phonetic_pt": "Hév dhêi fínisht iét?"
       },
       {
         "en": "They should be here soon.",
-        "pt": "Eles devem chegar logo."
+        "pt": "Eles devem chegar logo.",
+        "phonetic_pt": "Dhêi shúd bii hírr súun."
       },
       {
         "en": "They always bring snacks.",
-        "pt": "Eles sempre trazem lanches."
+        "pt": "Eles sempre trazem lanches.",
+        "phonetic_pt": "Dhêi ólueis bríng snéks."
       },
       {
         "en": "They decided to stay home.",
-        "pt": "Eles decidiram ficar em casa."
+        "pt": "Eles decidiram ficar em casa.",
+        "phonetic_pt": "Dhêi disáidid tu stêi hôum."
       },
       {
         "en": "Did they call you back?",
-        "pt": "Eles te ligaram de volta?"
+        "pt": "Eles te ligaram de volta?",
+        "phonetic_pt": "Díd dhêi kóll iú béck?"
       },
       {
         "en": "They're going on vacation next week.",
-        "pt": "Eles vão viajar na próxima semana."
+        "pt": "Eles vão viajar na próxima semana.",
+        "phonetic_pt": "Dhêirr gôuing ôn vêikêishân nékst uíik."
       },
       {
         "en": "I saw them at the park.",
-        "pt": "Eu os vi no parque."
+        "pt": "Eu os vi no parque.",
+        "phonetic_pt": "Ái só dhêm ét dhê párrk."
       },
       {
         "en": "They gave us good advice.",
-        "pt": "Eles nos deram bons conselhos."
+        "pt": "Eles nos deram bons conselhos.",
+        "phonetic_pt": "Dhêi gêiv âs gúd âdváis."
       },
       {
         "en": "They're really kind people.",
-        "pt": "Eles são pessoas muito gentis."
+        "pt": "Eles são pessoas muito gentis.",
+        "phonetic_pt": "Dhêirr rríili káind píipôl."
       },
       {
         "en": "They might be busy.",
-        "pt": "Eles podem estar ocupados."
+        "pt": "Eles podem estar ocupados.",
+        "phonetic_pt": "Dhêi máit bii bízi."
       },
       {
         "en": "They need more time.",
-        "pt": "Eles precisam de mais tempo."
+        "pt": "Eles precisam de mais tempo.",
+        "phonetic_pt": "Dhêi níid môrr táim."
       },
       {
         "en": "They've been friends for years.",
-        "pt": "Eles são amigos há anos."
+        "pt": "Eles são amigos há anos.",
+        "phonetic_pt": "Dhêiv bín frêndz fôrr iírrz."
       },
       {
         "en": "They don't understand.",
-        "pt": "Eles não entendem."
+        "pt": "Eles não entendem.",
+        "phonetic_pt": "Dhêi dôunt ândêrrsténd."
       },
       {
         "en": "They asked about you.",
-        "pt": "Eles perguntaram sobre você."
+        "pt": "Eles perguntaram sobre você.",
+        "phonetic_pt": "Dhêi éskd âbáut iú."
       },
       {
         "en": "They'll probably agree.",
-        "pt": "Eles provavelmente vão concordar."
+        "pt": "Eles provavelmente vão concordar.",
+        "phonetic_pt": "Dhêil prábbâbli âgríi."
       },
       {
         "en": "They eat dinner late.",
-        "pt": "Eles jantam tarde."
+        "pt": "Eles jantam tarde.",
+        "phonetic_pt": "Dhêi íit dínêrr lêit."
       },
       {
         "en": "They built a new house.",
-        "pt": "Eles construíram uma casa nova."
+        "pt": "Eles construíram uma casa nova.",
+        "phonetic_pt": "Dhêi bílt ê niú háus."
       }
     ]
   },
@@ -1727,123 +2118,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "I need to go now.",
-        "pt": "Eu preciso ir agora."
+        "pt": "Eu preciso ir agora.",
+        "phonetic_pt": "Ái níid tu gô náu."
       },
       {
         "en": "I love pizza.",
-        "pt": "Eu amo pizza."
+        "pt": "Eu amo pizza.",
+        "phonetic_pt": "Ái lâv píitsâ."
       },
       {
         "en": "I don't understand.",
-        "pt": "Eu não entendo."
+        "pt": "Eu não entendo.",
+        "phonetic_pt": "Ái dônt ândêrrsténd."
       },
       {
         "en": "I think I left my keys.",
-        "pt": "Eu acho que deixei minhas chaves."
+        "pt": "Eu acho que deixei minhas chaves.",
+        "phonetic_pt": "Ái thínk Ái léft mái kíis."
       },
       {
         "en": "I'm going to the store.",
-        "pt": "Eu estou indo à loja."
+        "pt": "Eu estou indo à loja.",
+        "phonetic_pt": "Áim gôuing tu dhâ stôrr."
       },
       {
         "en": "I just finished work.",
-        "pt": "Eu acabei de terminar o trabalho."
+        "pt": "Eu acabei de terminar o trabalho.",
+        "phonetic_pt": "Ái djâst fínisht uêrrk."
       },
       {
         "en": "I can help you.",
-        "pt": "Eu posso te ajudar."
+        "pt": "Eu posso te ajudar.",
+        "phonetic_pt": "Ái kân rélp iú."
       },
       {
         "en": "I would like a coffee.",
-        "pt": "Eu gostaria de um café."
+        "pt": "Eu gostaria de um café.",
+        "phonetic_pt": "Ái uúd láik ê kófii."
       },
       {
         "en": "I'm really tired today.",
-        "pt": "Eu estou muito cansado hoje."
+        "pt": "Eu estou muito cansado hoje.",
+        "phonetic_pt": "Áim rríili táirrd tudêi."
       },
       {
         "en": "I haven't seen her in ages.",
-        "pt": "Eu não a vejo há muito tempo."
+        "pt": "Eu não a vejo há muito tempo.",
+        "phonetic_pt": "Ái révént síin rêrr in êidjiz."
       },
       {
         "en": "I live in New York.",
-        "pt": "Eu moro em Nova York."
+        "pt": "Eu moro em Nova York.",
+        "phonetic_pt": "Ái lív in Niú Iôrrk."
       },
       {
         "en": "I was just thinking about that.",
-        "pt": "Eu estava pensando nisso agora."
+        "pt": "Eu estava pensando nisso agora.",
+        "phonetic_pt": "Ái uâz djâst thínking âbáut dhét."
       },
       {
         "en": "I will call you later.",
-        "pt": "Eu te ligo mais tarde."
+        "pt": "Eu te ligo mais tarde.",
+        "phonetic_pt": "Ái uíl kôl iú lêitêrr."
       },
       {
         "en": "I believe in you.",
-        "pt": "Eu acredito em você."
+        "pt": "Eu acredito em você.",
+        "phonetic_pt": "Ái bilíiv in iú."
       },
       {
         "en": "I often read before bed.",
-        "pt": "Eu costumo ler antes de dormir."
+        "pt": "Eu costumo ler antes de dormir.",
+        "phonetic_pt": "Ái ôfân rríid bifôrr bêd."
       },
       {
         "en": "I'm learning Portuguese.",
-        "pt": "Eu estou aprendendo português."
+        "pt": "Eu estou aprendendo português.",
+        "phonetic_pt": "Áim lêrrning Pôrrtchugíis."
       },
       {
         "en": "I used to play guitar.",
-        "pt": "Eu costumava tocar violão."
+        "pt": "Eu costumava tocar violão.",
+        "phonetic_pt": "Ái iúst tu plêi gitárr."
       },
       {
         "en": "I wish I could fly.",
-        "pt": "Eu queria poder voar."
+        "pt": "Eu queria poder voar.",
+        "phonetic_pt": "Ái uísh Ái kúd flái."
       },
       {
         "en": "I've been waiting for an hour.",
-        "pt": "Eu estou esperando há uma hora."
+        "pt": "Eu estou esperando há uma hora.",
+        "phonetic_pt": "Áiv bín uêiting fôrr ân áuêrr."
       },
       {
         "en": "I feel much better now.",
-        "pt": "Eu me sinto muito melhor agora."
+        "pt": "Eu me sinto muito melhor agora.",
+        "phonetic_pt": "Ái fíil mâtch bétêrr náu."
       },
       {
         "en": "I'm not sure about that.",
-        "pt": "Eu não tenho certeza disso."
+        "pt": "Eu não tenho certeza disso.",
+        "phonetic_pt": "Áim nôt shúrr âbáut dhét."
       },
       {
         "en": "I hope you have a good day.",
-        "pt": "Eu espero que você tenha um bom dia."
+        "pt": "Eu espero que você tenha um bom dia.",
+        "phonetic_pt": "Ái rôup iú rév ê gúd dêi."
       },
       {
         "en": "I'm excited for the trip.",
-        "pt": "Eu estou animado para a viagem."
+        "pt": "Eu estou animado para a viagem.",
+        "phonetic_pt": "Áim iksáitid fôrr dhâ tríp."
       },
       {
         "en": "I'd rather stay home tonight.",
-        "pt": "Eu prefiro ficar em casa hoje à noite."
+        "pt": "Eu prefiro ficar em casa hoje à noite.",
+        "phonetic_pt": "Áid rrâdhêrr stêi rôum tunáit."
       },
       {
         "en": "I got a new phone.",
-        "pt": "Eu comprei um telefone novo."
+        "pt": "Eu comprei um telefone novo.",
+        "phonetic_pt": "Ái gôt ê niú fôun."
       },
       {
         "en": "I'm trying to eat healthier.",
-        "pt": "Eu estou tentando comer de forma mais saudável."
+        "pt": "Eu estou tentando comer de forma mais saudável.",
+        "phonetic_pt": "Áim tráing tu íit rélthiiêrr."
       },
       {
         "en": "I saw that movie last week.",
-        "pt": "Eu vi aquele filme semana passada."
+        "pt": "Eu vi aquele filme semana passada.",
+        "phonetic_pt": "Ái sô dhét múvii lést uíik."
       },
       {
         "en": "I miss my family.",
-        "pt": "Eu sinto falta da minha família."
+        "pt": "Eu sinto falta da minha família.",
+        "phonetic_pt": "Ái mís mái fêmlii."
       },
       {
         "en": "I completely forgot!",
-        "pt": "Eu esqueci completamente!"
+        "pt": "Eu esqueci completamente!",
+        "phonetic_pt": "Ái kâmplíitli fôrrgôt!"
       },
       {
         "en": "I'll be right back.",
-        "pt": "Eu já volto."
+        "pt": "Eu já volto.",
+        "phonetic_pt": "Áil bii rráit béck."
       }
     ]
   },
@@ -1859,123 +2280,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "I'm going to the movies with my friends tonight.",
-        "pt": "Vou ao cinema com meus amigos hoje à noite."
+        "pt": "Vou ao cinema com meus amigos hoje à noite.",
+        "phonetic_pt": "Áim gôuing tâ dhê múviis uídh mái frrénds tunáit."
       },
       {
         "en": "She lives with her parents.",
-        "pt": "Ela mora com os pais dela."
+        "pt": "Ela mora com os pais dela.",
+        "phonetic_pt": "Chii lívs uídh hêrr pêrrents."
       },
       {
         "en": "Are you coming with us?",
-        "pt": "Você vem com a gente?"
+        "pt": "Você vem com a gente?",
+        "phonetic_pt": "Árr iú kâming uídh âs?"
       },
       {
         "en": "I love spending time with you.",
-        "pt": "Adoro passar tempo com você."
+        "pt": "Adoro passar tempo com você.",
+        "phonetic_pt": "Ái lâv spénding táim uídh iú."
       },
       {
         "en": "He cut the paper with scissors.",
-        "pt": "Ele cortou o papel com a tesoura."
+        "pt": "Ele cortou o papel com a tesoura.",
+        "phonetic_pt": "Hii kât dhê pêipêrr uídh sízêrrs."
       },
       {
         "en": "She writes with a pen.",
-        "pt": "Ela escreve com uma caneta."
+        "pt": "Ela escreve com uma caneta.",
+        "phonetic_pt": "Chii rráits uídh ê pén."
       },
       {
         "en": "You can open it with this key.",
-        "pt": "Você pode abrir com esta chave."
+        "pt": "Você pode abrir com esta chave.",
+        "phonetic_pt": "Iú kén ôupên ít uídh dhís kii."
       },
       {
         "en": "I prefer coffee with milk.",
-        "pt": "Prefiro café com leite."
+        "pt": "Prefiro café com leite.",
+        "phonetic_pt": "Ái prrifêrr kôfii uídh mílk."
       },
       {
         "en": "The man with the red hat is my uncle.",
-        "pt": "O homem com o chapéu vermelho é meu tio."
+        "pt": "O homem com o chapéu vermelho é meu tio.",
+        "phonetic_pt": "Dhê mén uídh dhê rédd hét íz mái ânkôl."
       },
       {
         "en": "A room with a view.",
-        "pt": "Um quarto com vista."
+        "pt": "Um quarto com vista.",
+        "phonetic_pt": "Ê rrum uídh ê viú."
       },
       {
         "en": "He spoke with great confidence.",
-        "pt": "Ele falou com muita confiança."
+        "pt": "Ele falou com muita confiança.",
+        "phonetic_pt": "Hii spôuk uídh grrêit kânfidêns."
       },
       {
         "en": "Treat others with kindness.",
-        "pt": "Trate os outros com gentileza."
+        "pt": "Trate os outros com gentileza.",
+        "phonetic_pt": "Trriit âdhêrrs uídh káindnês."
       },
       {
         "en": "I agree with you completely.",
-        "pt": "Eu concordo completamente com você."
+        "pt": "Eu concordo completamente com você.",
+        "phonetic_pt": "Ái êgrrii uídh iú kâmplíitlii."
       },
       {
         "en": "She argued with her brother.",
-        "pt": "Ela discutiu com o irmão dela."
+        "pt": "Ela discutiu com o irmão dela.",
+        "phonetic_pt": "Chii árrgiud uídh hêrr brrâdhêrr."
       },
       {
         "en": "I'm happy with the results.",
-        "pt": "Estou feliz com os resultados."
+        "pt": "Estou feliz com os resultados.",
+        "phonetic_pt": "Áim hépii uídh dhê rrizâlts."
       },
       {
         "en": "He was shaking with cold.",
-        "pt": "Ele estava tremendo de frio."
+        "pt": "Ele estava tremendo de frio.",
+        "phonetic_pt": "Hii uâz shêiking uídh kôuld."
       },
       {
         "en": "Can you help me with this problem?",
-        "pt": "Você pode me ajudar com este problema?"
+        "pt": "Você pode me ajudar com este problema?",
+        "phonetic_pt": "Kén iú rélp mii uídh dhís prrâblêm?"
       },
       {
         "en": "I'm dealing with a lot of stress right now.",
-        "pt": "Estou lidando com muito estresse agora."
+        "pt": "Estou lidando com muito estresse agora.",
+        "phonetic_pt": "Áim díiling uídh ê lât âv strrés rráit náu."
       },
       {
         "en": "He works with computers all day.",
-        "pt": "Ele trabalha com computadores o dia todo."
+        "pt": "Ele trabalha com computadores o dia todo.",
+        "phonetic_pt": "Hii uêrrks uídh kâmpiútêrrs ôl dêi."
       },
       {
         "en": "The manager will meet with the team.",
-        "pt": "O gerente vai se reunir com a equipe."
+        "pt": "O gerente vai se reunir com a equipe.",
+        "phonetic_pt": "Dhê ménidjêrr uíl miit uídh dhê tiim."
       },
       {
         "en": "She's always busy with her projects.",
-        "pt": "Ela está sempre ocupada com os projetos dela."
+        "pt": "Ela está sempre ocupada com os projetos dela.",
+        "phonetic_pt": "Chiiz ôlueiz bízi uídh hêrr prrádjekts."
       },
       {
         "en": "The store is filled with customers.",
-        "pt": "A loja está cheia de clientes."
+        "pt": "A loja está cheia de clientes.",
+        "phonetic_pt": "Dhê stôrr íz fíld uídh kâstômêrrs."
       },
       {
         "en": "They decorated the room with balloons.",
-        "pt": "Eles decoraram o quarto com balões."
+        "pt": "Eles decoraram o quarto com balões.",
+        "phonetic_pt": "Dhêi dékôrreitid dhê rrum uídh bâlúuns."
       },
       {
         "en": "I'm satisfied with your progress.",
-        "pt": "Estou satisfeito com o seu progresso."
+        "pt": "Estou satisfeito com o seu progresso.",
+        "phonetic_pt": "Áim sétisfáid uídh iúrr prrôugrês."
       },
       {
         "en": "What's wrong with this picture?",
-        "pt": "O que há de errado com esta imagem?"
+        "pt": "O que há de errado com esta imagem?",
+        "phonetic_pt": "Uâts rrông uídh dhís píktchêrr?"
       },
       {
         "en": "Let's start with the first item on the agenda.",
-        "pt": "Vamos começar com o primeiro item da pauta."
+        "pt": "Vamos começar com o primeiro item da pauta.",
+        "phonetic_pt": "Léts stárrrt uídh dhê fêrrst áitêm ôn dhê êdjéndâ."
       },
       {
         "en": "She's good with children.",
-        "pt": "Ela é boa com crianças."
+        "pt": "Ela é boa com crianças.",
+        "phonetic_pt": "Chiiz gúd uídh tchíldrên."
       },
       {
         "en": "I'm really impressed with her work.",
-        "pt": "Estou realmente impressionado com o trabalho dela."
+        "pt": "Estou realmente impressionado com o trabalho dela.",
+        "phonetic_pt": "Áim rríilii imprrést uídh hêrr uêrrk."
       },
       {
         "en": "Don't play with your food.",
-        "pt": "Não brinque com a sua comida."
+        "pt": "Não brinque com a sua comida.",
+        "phonetic_pt": "Dôunt plêi uídh iúrr fuud."
       },
       {
         "en": "He struggled with the heavy box.",
-        "pt": "Ele se esforçou com a caixa pesada."
+        "pt": "Ele se esforçou com a caixa pesada.",
+        "phonetic_pt": "Hii strrâgôld uídh dhê hévi bôks."
       }
     ]
   },
@@ -1991,123 +2442,153 @@ const WORDS_DB = [
     "phrases": [
       {
         "en": "She works as a teacher.",
-        "pt": "Ela trabalha como professora."
+        "pt": "Ela trabalha como professora.",
+        "phonetic_pt": "Chii uêrrks âz ê tíichêrr."
       },
       {
         "en": "He's as tall as his brother.",
-        "pt": "Ele é tão alto quanto o irmão dele."
+        "pt": "Ele é tão alto quanto o irmão dele.",
+        "phonetic_pt": "Híiz âz tôl âz rrríiz brrâdhêrr."
       },
       {
         "en": "Do as I say, not as I do.",
-        "pt": "Faça como eu digo, não como eu faço."
+        "pt": "Faça como eu digo, não como eu faço.",
+        "phonetic_pt": "Dú âz Ái sêi, nát âz Ái dú."
       },
       {
         "en": "As soon as I arrived, it started raining.",
-        "pt": "Assim que cheguei, começou a chover."
+        "pt": "Assim que cheguei, começou a chover.",
+        "phonetic_pt": "Âz súun âz Ái êrrráivd, ít stárrrtid rrêining."
       },
       {
         "en": "They were singing as they walked.",
-        "pt": "Eles estavam cantando enquanto caminhavam."
+        "pt": "Eles estavam cantando enquanto caminhavam.",
+        "phonetic_pt": "Dhêi uêrr sínguing âz dhêi uôkt."
       },
       {
         "en": "He acted as if he didn't care.",
-        "pt": "Ele agiu como se não se importasse."
+        "pt": "Ele agiu como se não se importasse.",
+        "phonetic_pt": "Híi éktid âz if híi dídênt kêrr."
       },
       {
         "en": "I used my jacket as a pillow.",
-        "pt": "Usei minha jaqueta como travesseiro."
+        "pt": "Usei minha jaqueta como travesseiro.",
+        "phonetic_pt": "Ái iúzd mái djékêt âz ê pílou."
       },
       {
         "en": "She's known as a great chef.",
-        "pt": "Ela é conhecida como uma ótima chef."
+        "pt": "Ela é conhecida como uma ótima chef.",
+        "phonetic_pt": "Chíiz nôun âz ê grrêit chéf."
       },
       {
         "en": "As you know, I'm busy tomorrow.",
-        "pt": "Como você sabe, estou ocupado amanhã."
+        "pt": "Como você sabe, estou ocupado amanhã.",
+        "phonetic_pt": "Âz iú nôu, Áim bízi tûmórrou."
       },
       {
         "en": "He eats as much as I do.",
-        "pt": "Ele come tanto quanto eu."
+        "pt": "Ele come tanto quanto eu.",
+        "phonetic_pt": "Híi íits âz mâtch âz Ái dú."
       },
       {
         "en": "The movie wasn't as good as I expected.",
-        "pt": "O filme não foi tão bom quanto eu esperava."
+        "pt": "O filme não foi tão bom quanto eu esperava.",
+        "phonetic_pt": "Dhê múvii uâzênt âz gúd âz Ái ikspéktid."
       },
       {
         "en": "As a child, I loved playing outside.",
-        "pt": "Quando criança, eu adorava brincar lá fora."
+        "pt": "Quando criança, eu adorava brincar lá fora.",
+        "phonetic_pt": "Âz ê tcháild, Ái lâvd plêiing autsáid."
       },
       {
         "en": "Leave the keys as they are.",
-        "pt": "Deixe as chaves como estão."
+        "pt": "Deixe as chaves como estão.",
+        "phonetic_pt": "Líiv dhê kíiz âz dhêi árr."
       },
       {
         "en": "She's not as quick as she used to be.",
-        "pt": "Ela não é tão rápida quanto costumava ser."
+        "pt": "Ela não é tão rápida quanto costumava ser.",
+        "phonetic_pt": "Chíiz nát âz kuík âz chii iúzd tû bii."
       },
       {
         "en": "I saw him as he was leaving.",
-        "pt": "Eu o vi enquanto ele estava saindo."
+        "pt": "Eu o vi enquanto ele estava saindo.",
+        "phonetic_pt": "Ái sô rrrím âz híi uâz líiving."
       },
       {
         "en": "He gave me a book as a gift.",
-        "pt": "Ele me deu um livro como presente."
+        "pt": "Ele me deu um livro como presente.",
+        "phonetic_pt": "Híi guêiv mii ê búk âz ê guíft."
       },
       {
         "en": "It's not as simple as it looks.",
-        "pt": "Não é tão simples quanto parece."
+        "pt": "Não é tão simples quanto parece.",
+        "phonetic_pt": "Íts nát âz símpôl âz ít lúks."
       },
       {
         "en": "As time went on, things got easier.",
-        "pt": "À medida que o tempo passava, as coisas ficavam mais fáceis."
+        "pt": "À medida que o tempo passava, as coisas ficavam mais fáceis.",
+        "phonetic_pt": "Âz táim uênt ôn, thíings gát íiziêrr."
       },
       {
         "en": "We can use this room as an office.",
-        "pt": "Podemos usar este quarto como escritório."
+        "pt": "Podemos usar este quarto como escritório.",
+        "phonetic_pt": "Uíi kên iúuz dhís rrúum âz ân ófis."
       },
       {
         "en": "He's not as strong as he pretends to be.",
-        "pt": "Ele não é tão forte quanto finge ser."
+        "pt": "Ele não é tão forte quanto finge ser.",
+        "phonetic_pt": "Híiz nát âz strrông âz híi prríténdz tû bii."
       },
       {
         "en": "As a result, we had to cancel.",
-        "pt": "Como resultado, tivemos que cancelar."
+        "pt": "Como resultado, tivemos que cancelar.",
+        "phonetic_pt": "Âz ê rrízâlt, uíi héd tû kénsôl."
       },
       {
         "en": "Just as I thought, he was late.",
-        "pt": "Exatamente como eu pensei, ele estava atrasado."
+        "pt": "Exatamente como eu pensei, ele estava atrasado.",
+        "phonetic_pt": "Djâst âz Ái thôt, híi uâz lêit."
       },
       {
         "en": "He considers her as a friend.",
-        "pt": "Ele a considera como uma amiga."
+        "pt": "Ele a considera como uma amiga.",
+        "phonetic_pt": "Híi kênsíidêrrz rrrêrr âz ê frrênd."
       },
       {
         "en": "As far as I know, he's still here.",
-        "pt": "Pelo que eu sei, ele ainda está aqui."
+        "pt": "Pelo que eu sei, ele ainda está aqui.",
+        "phonetic_pt": "Âz fárr âz Ái nôu, híiz stíl hírr."
       },
       {
         "en": "They arrived just as the party was starting.",
-        "pt": "Eles chegaram bem quando a festa estava começando."
+        "pt": "Eles chegaram bem quando a festa estava começando.",
+        "phonetic_pt": "Dhêi êrrráivd djâst âz dhê párrrtii uâz stárrting."
       },
       {
         "en": "You can come along as well.",
-        "pt": "Você pode vir também."
+        "pt": "Você pode vir também.",
+        "phonetic_pt": "Iú kên kâm êlông âz uél."
       },
       {
         "en": "As luck would have it, I found my wallet.",
-        "pt": "Por sorte, encontrei minha carteira."
+        "pt": "Por sorte, encontrei minha carteira.",
+        "phonetic_pt": "Âz lâk uúd hév ít, Ái faund mái uólêt."
       },
       {
         "en": "She felt as if she was flying.",
-        "pt": "Ela sentiu como se estivesse voando."
+        "pt": "Ela sentiu como se estivesse voando.",
+        "phonetic_pt": "Chii félt âz if chii uâz fláiing."
       },
       {
         "en": "We need to act as one team.",
-        "pt": "Precisamos agir como uma só equipe."
+        "pt": "Precisamos agir como uma só equipe.",
+        "phonetic_pt": "Uíi níid tû ékt âz uân tíim."
       },
       {
         "en": "The journey was not as long as we expected.",
-        "pt": "A viagem não foi tão longa quanto esperávamos."
+        "pt": "A viagem não foi tão longa quanto esperávamos.",
+        "phonetic_pt": "Dhê djêrrnii uâz nát âz lông âz uíi ikspéktid."
       }
     ]
   },
@@ -27765,6 +28246,9344 @@ const WORDS_DB = [
         "en": "There's a lot of traffic on this street.",
         "pt": "Há muito trânsito nesta rua.",
         "phonetic_pt": "Dhêrz â lát óv tráfik ôn dhís striit."
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "rank": 207,
+    "en": "book",
+    "pt": "o livro (substantivo)",
+    "phonetic": "/bʊk/",
+    "phonetic_br": "búk",
+    "key": "Book",
+    "phrases": [
+      {
+        "en": "I'm reading a really good book right now.",
+        "pt": "Estou lendo um livro muito bom agora.",
+        "phonetic_pt": "Áim ríiding ê rrêali gúd búk rrâit náu."
+      },
+      {
+        "en": "Can you pass me that book on the table?",
+        "pt": "Você pode me passar aquele livro na mesa?",
+        "phonetic_pt": "Kén iú pês mii dhét búk ôn dhê têibâl?"
+      },
+      {
+        "en": "I need to book a flight for next month.",
+        "pt": "Preciso reservar um voo para o próximo mês.",
+        "phonetic_pt": "Ái niid tchu búk ê fláit fôr nékst mânth."
+      },
+      {
+        "en": "Have you read this book before? It's a classic.",
+        "pt": "Você já leu este livro antes? É um clássico.",
+        "phonetic_pt": "Hév iú rrêd dhis búk bifôr? Its ê klésik."
+      },
+      {
+        "en": "Let's book a table for dinner tonight.",
+        "pt": "Vamos reservar uma mesa para o jantar hoje à noite.",
+        "phonetic_pt": "Léts búk ê têibâl fôr dínêr tchunáit."
+      },
+      {
+        "en": "She loves to curl up with a good book.",
+        "pt": "Ela adora se aconchegar com um bom livro.",
+        "phonetic_pt": "Shii lâvs tchu kârrâl âp uith ê gúd búk."
+      },
+      {
+        "en": "The library has a huge collection of books.",
+        "pt": "A biblioteca tem uma enorme coleção de livros.",
+        "phonetic_pt": "Dhê láibrêrri hés ê rriúj kâlékshân âv búks."
+      },
+      {
+        "en": "We're fully booked for the weekend.",
+        "pt": "Estamos com a agenda lotada para o fim de semana.",
+        "phonetic_pt": "Uírr fúli búkd fôr dhê uíikénd."
+      },
+      {
+        "en": "Don't judge a book by its cover.",
+        "pt": "Não julgue um livro pela capa.",
+        "phonetic_pt": "Dônt djâdj ê búk bái its kâvêr."
+      },
+      {
+        "en": "He's writing a new book about history.",
+        "pt": "Ele está escrevendo um novo livro sobre história.",
+        "phonetic_pt": "Hiis rrâiting ê niú búk âbáut rríistôrri."
+      },
+      {
+        "en": "I accidentally left my book on the bus.",
+        "pt": "Eu acidentalmente deixei meu livro no ônibus.",
+        "phonetic_pt": "Ái éksidêntâli léft mái búk ôn dhê bâs."
+      },
+      {
+        "en": "Can I book an appointment with the doctor?",
+        "pt": "Posso agendar uma consulta com o médico?",
+        "phonetic_pt": "Kén ái búk ân âpôintmênt uith dhê dôktôr?"
+      },
+      {
+        "en": "This cookbook has amazing recipes.",
+        "pt": "Este livro de receitas tem receitas incríveis.",
+        "phonetic_pt": "Dhis kúk-búk hés âmeizing rrêsipíis."
+      },
+      {
+        "en": "They booked the entire restaurant for the party.",
+        "pt": "Eles reservaram o restaurante inteiro para a festa.",
+        "phonetic_pt": "Dhêi búkd dhê entáir rrêstôrânt fôr dhê párrdi."
+      },
+      {
+        "en": "My favorite book is \"To Kill a Mockingbird.\"",
+        "pt": "Meu livro favorito é \"O Sol é para Todos\".",
+        "phonetic_pt": "Mái fêivârit búk iz \"Tchu Kil ê Môkingbârd.\""
+      },
+      {
+        "en": "Please close your books and put them away.",
+        "pt": "Por favor, fechem seus livros e guardem-nos.",
+        "phonetic_pt": "Plíiz klôuz iúrr búks énd pút dhêm âuêi."
+      },
+      {
+        "en": "We need to book a hotel for our vacation.",
+        "pt": "Precisamos reservar um hotel para nossas férias.",
+        "phonetic_pt": "Uii niid tchu búk ê rroutél fôr áuêrr vêikeishân."
+      },
+      {
+        "en": "She's a member of a book club.",
+        "pt": "Ela é membro de um clube do livro.",
+        "phonetic_pt": "Shiis ê mêmbêr âv ê búk klâb."
+      },
+      {
+        "en": "Did you remember to book your tickets?",
+        "pt": "Você se lembrou de reservar seus ingressos?",
+        "phonetic_pt": "Díd iú rrêmêmbêr tchu búk iúrr tíkêts?"
+      },
+      {
+        "en": "I prefer physical books over e-books.",
+        "pt": "Prefiro livros físicos a e-books.",
+        "phonetic_pt": "Ái prifêrr fízikâl búks ôuvêr íi-búks."
+      },
+      {
+        "en": "This textbook is really expensive.",
+        "pt": "Este livro didático é muito caro.",
+        "phonetic_pt": "Dhis tékst-búk iz rrêali ekspênsiv."
+      },
+      {
+        "en": "Let's book a weekend getaway.",
+        "pt": "Vamos reservar uma escapada de fim de semana.",
+        "phonetic_pt": "Léts búk ê uíikénd guetâuei."
+      },
+      {
+        "en": "I spent all afternoon in the bookstore.",
+        "pt": "Passei a tarde toda na livraria.",
+        "phonetic_pt": "Ái spênt ôl éftêrnún in dhê búk-stôr."
+      },
+      {
+        "en": "He usually carries a small notebook in his book bag.",
+        "pt": "Ele geralmente carrega um pequeno caderno na mochila.",
+        "phonetic_pt": "Hii iújúâli kerríis ê smôl nôt-búk in rríis búk bég."
+      },
+      {
+        "en": "The movie was based on a popular book.",
+        "pt": "O filme foi baseado em um livro popular.",
+        "phonetic_pt": "Dhê múvii uâz bêisd ôn ê pôpiulêr búk."
+      },
+      {
+        "en": "You can book tickets online or at the box office.",
+        "pt": "Você pode reservar ingressos online ou na bilheteria.",
+        "phonetic_pt": "Iú kén búk tíkêts ônláin ôr ét dhê bôks ôfis."
+      },
+      {
+        "en": "My kids love to read comic books.",
+        "pt": "Meus filhos adoram ler gibis (histórias em quadrinhos).",
+        "phonetic_pt": "Mái kídz lâv tchu rriid kômic búks."
+      },
+      {
+        "en": "The event was completely booked within an hour.",
+        "pt": "O evento foi completamente reservado em uma hora.",
+        "phonetic_pt": "Dhê ivênt uâz kâmplíitli búkd uithin ân áuêr."
+      },
+      {
+        "en": "She's working on her next book.",
+        "pt": "Ela está trabalhando em seu próximo livro.",
+        "phonetic_pt": "Shiis uêrrking ôn rrêr nékst búk."
+      },
+      {
+        "en": "I always keep a good book by my bedside.",
+        "pt": "Eu sempre mantenho um bom livro ao lado da minha cama.",
+        "phonetic_pt": "Ái ôlueis kiip ê gúd búk bái mái bêdsáid."
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "rank": 208,
+    "en": "wait",
+    "pt": "esperar / aguardar (verbo transitivo direto ou intransitivo)",
+    "phonetic": "/weɪt/",
+    "phonetic_br": "uêit",
+    "key": "Wait",
+    "phrases": [
+      {
+        "en": "Wait for me.",
+        "pt": "Espere por mim.",
+        "phonetic_pt": "Uêit fôrr mii."
+      },
+      {
+        "en": "Can you wait a moment?",
+        "pt": "Você pode esperar um momento?",
+        "phonetic_pt": "Kên iú uêit â môumênt?"
+      },
+      {
+        "en": "I'll wait in the car.",
+        "pt": "Vou esperar no carro.",
+        "phonetic_pt": "Áil uêit in dhâ karr."
+      },
+      {
+        "en": "We had to wait a long time.",
+        "pt": "Tivemos que esperar muito tempo.",
+        "phonetic_pt": "Uii rád tchu uêit â lông táim."
+      },
+      {
+        "en": "Don't wait up for me.",
+        "pt": "Não me espere acordado.",
+        "phonetic_pt": "Dôunt uêit âp fôrr mii."
+      },
+      {
+        "en": "I can't wait to see you!",
+        "pt": "Mal posso esperar para te ver!",
+        "phonetic_pt": "Ái kânt uêit tchu sii iú!"
+      },
+      {
+        "en": "Let's wait and see.",
+        "pt": "Vamos esperar para ver.",
+        "phonetic_pt": "Lêts uêit ênd sii."
+      },
+      {
+        "en": "Please wait your turn.",
+        "pt": "Por favor, espere sua vez.",
+        "phonetic_pt": "Pliiz uêit iôrr têrrn."
+      },
+      {
+        "en": "Are you waiting for someone?",
+        "pt": "Você está esperando alguém?",
+        "phonetic_pt": "Arr iú uêiting fôrr sâm_uân?"
+      },
+      {
+        "en": "The waiting room was full.",
+        "pt": "A sala de espera estava cheia.",
+        "phonetic_pt": "Dhâ uêiting rrúm uâz fúl."
+      },
+      {
+        "en": "Just wait a second.",
+        "pt": "Espere só um segundo.",
+        "phonetic_pt": "Jâst uêit â sékând."
+      },
+      {
+        "en": "She's been waiting all day.",
+        "pt": "Ela está esperando o dia todo.",
+        "phonetic_pt": "Shiiz bin uêiting ôl dêi."
+      },
+      {
+        "en": "We'll have to wait until tomorrow.",
+        "pt": "Teremos que esperar até amanhã.",
+        "phonetic_pt": "Uíil rráv tchu uêit ântíl tchu_môrrôu."
+      },
+      {
+        "en": "I hate waiting in line.",
+        "pt": "Eu odeio esperar na fila.",
+        "phonetic_pt": "Ái rêit uêiting in láin."
+      },
+      {
+        "en": "Wait for the green light.",
+        "pt": "Espere pelo sinal verde.",
+        "phonetic_pt": "Uêit fôrr dhâ griin láit."
+      },
+      {
+        "en": "How long have you been waiting?",
+        "pt": "Há quanto tempo você está esperando?",
+        "phonetic_pt": "Rráu lông rráv iú bin uêiting?"
+      },
+      {
+        "en": "He couldn't wait any longer.",
+        "pt": "Ele não podia esperar mais.",
+        "phonetic_pt": "Hii kúdênt uêit éni lônguerr."
+      },
+      {
+        "en": "They decided to wait it out.",
+        "pt": "Eles decidiram esperar passar.",
+        "phonetic_pt": "Dhei di_sáidid tchu uêit it áut."
+      },
+      {
+        "en": "Wait a minute, I forgot my keys!",
+        "pt": "Espere um minuto, esqueci minhas chaves!",
+        "phonetic_pt": "Uêit â mínit, ái fôrr_gót mái kiiz!"
+      },
+      {
+        "en": "You'll just have to wait.",
+        "pt": "Você vai ter que esperar.",
+        "phonetic_pt": "Iúul jâst rráv tchu uêit."
+      },
+      {
+        "en": "The doctor will see you in a moment; please wait.",
+        "pt": "O médico o atenderá em um momento; por favor, espere.",
+        "phonetic_pt": "Dhâ dóktôrr uíl sii iú in â môumênt; pliiz uêit."
+      },
+      {
+        "en": "I'm tired of waiting.",
+        "pt": "Estou cansado de esperar.",
+        "phonetic_pt": "Áim táirrd âv uêiting."
+      },
+      {
+        "en": "We can't wait for the weekend.",
+        "pt": "Não vemos a hora do fim de semana.",
+        "phonetic_pt": "Uii kânt uêit fôrr dhâ uiik_ênd."
+      },
+      {
+        "en": "Did you have to wait long?",
+        "pt": "Você teve que esperar muito?",
+        "phonetic_pt": "Díd iú rráv tchu uêit lông?"
+      },
+      {
+        "en": "The train is delayed, so we'll have to wait.",
+        "pt": "O trem está atrasado, então teremos que esperar.",
+        "phonetic_pt": "Dhâ trêin iz di_lêid, sôu uíil rráv tchu uêit."
+      },
+      {
+        "en": "Wait right here.",
+        "pt": "Espere bem aqui.",
+        "phonetic_pt": "Uêit rrâit hiirr."
+      },
+      {
+        "en": "He made me wait for an hour.",
+        "pt": "Ele me fez esperar por uma hora.",
+        "phonetic_pt": "Hii mêid mii uêit fôrr ên áu_uerr."
+      },
+      {
+        "en": "Don't wait until the last minute.",
+        "pt": "Não espere até o último minuto.",
+        "phonetic_pt": "Dôunt uêit ântíl dhâ lâst mínit."
+      },
+      {
+        "en": "I'll be waiting for your call.",
+        "pt": "Estarei esperando sua ligação.",
+        "phonetic_pt": "Áil bii uêiting fôrr iôrr kôl."
+      },
+      {
+        "en": "We need to wait for the results.",
+        "pt": "Precisamos esperar pelos resultados.",
+        "phonetic_pt": "Uii niid tchu uêit fôrr dhâ ri_zâlts."
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "rank": 209,
+    "en": "learn",
+    "pt": "aprender (verbo de ação)",
+    "phonetic": "/lɜːrn/",
+    "phonetic_br": "lêrrn",
+    "key": "learn",
+    "phrases": [
+      {
+        "en": "I want to learn how to play the guitar.",
+        "pt": "Eu quero aprender a tocar violão.",
+        "phonetic_pt": "ái uónt tu lêrrn ráu tu plêi dhê guitárr."
+      },
+      {
+        "en": "She's learning to drive right now.",
+        "pt": "Ela está aprendendo a dirigir agora.",
+        "phonetic_pt": "shiz lêrrnin tu dráiv ráit náu."
+      },
+      {
+        "en": "We learned a lot from that mistake.",
+        "pt": "Nós aprendemos muito com aquele erro.",
+        "phonetic_pt": "ui lêrrnd â lóht frôm dhét mistêik."
+      },
+      {
+        "en": "He will learn the truth eventually.",
+        "pt": "Ele vai descobrir a verdade eventualmente.",
+        "phonetic_pt": "hii uíl lêrrn dhê trúth ivênchuâli."
+      },
+      {
+        "en": "Did you learn anything new today?",
+        "pt": "Você aprendeu algo novo hoje?",
+        "phonetic_pt": "díd iú lêrrn ênythíng niú tudêi?"
+      },
+      {
+        "en": "It takes time to learn a new language.",
+        "pt": "Leva tempo para aprender uma nova língua.",
+        "phonetic_pt": "it têiks táim tu lêrrn â niú lénguêdj."
+      },
+      {
+        "en": "They are eager to learn about different cultures.",
+        "pt": "Eles estão ansiosos para aprender sobre diferentes culturas.",
+        "phonetic_pt": "dhêi árr iigêrr tu lêrrn âbáut dífrênt kâlchêrrz."
+      },
+      {
+        "en": "I'm trying to learn some basic Spanish phrases.",
+        "pt": "Estou tentando aprender algumas frases básicas em espanhol.",
+        "phonetic_pt": "áim tráin tu lêrrn sâm bêisik spánish frêiziz."
+      },
+      {
+        "en": "You can learn a lot by just observing.",
+        "pt": "Você pode aprender muito apenas observando.",
+        "phonetic_pt": "iú kân lêrrn â lóht bái jâst obzêrrvin."
+      },
+      {
+        "en": "She always wants to learn more.",
+        "pt": "Ela sempre quer aprender mais.",
+        "phonetic_pt": "shii ólueiz uónts tu lêrrn môrr."
+      },
+      {
+        "en": "What did you learn in school today?",
+        "pt": "O que você aprendeu na escola hoje?",
+        "phonetic_pt": "uót díd iú lêrrn ín skúul tudêi?"
+      },
+      {
+        "en": "He's learning to cook Italian food.",
+        "pt": "Ele está aprendendo a cozinhar comida italiana.",
+        "phonetic_pt": "hiz lêrrnin tu kúuk itáliân fúud."
+      },
+      {
+        "en": "I hope to learn from my mistakes.",
+        "pt": "Espero aprender com meus erros.",
+        "phonetic_pt": "ái hôup tu lêrrn frôm mái mistêiks."
+      },
+      {
+        "en": "Have you learned how to use the new software yet?",
+        "pt": "Você já aprendeu a usar o novo software?",
+        "phonetic_pt": "háv iú lêrrnd ráu tu iúz dhê niú sóftuêrr iét?"
+      },
+      {
+        "en": "We need to learn to forgive sometimes.",
+        "pt": "Precisamos aprender a perdoar às vezes.",
+        "phonetic_pt": "ui niid tu lêrrn tu fôrrguív sâmtáimz."
+      },
+      {
+        "en": "It's never too late to learn something new.",
+        "pt": "Nunca é tarde demais para aprender algo novo.",
+        "phonetic_pt": "its nêvêrr tuu lêit tu lêrrn sâmthíng niú."
+      },
+      {
+        "en": "My kids are learning to ride bikes.",
+        "pt": "Meus filhos estão aprendendo a andar de bicicleta.",
+        "phonetic_pt": "mái kídz árr lêrrnin tu ráid báiks."
+      },
+      {
+        "en": "He learned a valuable lesson that day.",
+        "pt": "Ele aprendeu uma lição valiosa naquele dia.",
+        "phonetic_pt": "hii lêrrnd â váliuâbâl lêssân dhét dêi."
+      },
+      {
+        "en": "I'm always open to learning new skills.",
+        "pt": "Estou sempre aberto a aprender novas habilidades.",
+        "phonetic_pt": "áim ólueiz ôupên tu lêrrnin niú skílz."
+      },
+      {
+        "en": "She wants to learn more about her family history.",
+        "pt": "Ela quer aprender mais sobre a história de sua família.",
+        "phonetic_pt": "shii uónts tu lêrrn môrr âbáut hêrr fámili hístorii."
+      },
+      {
+        "en": "You'll learn quickly if you practice every day.",
+        "pt": "Você aprenderá rapidamente se praticar todos os dias.",
+        "phonetic_pt": "iúl lêrrn kuíklii if iú práktis êvrii dêi."
+      },
+      {
+        "en": "Have you ever tried to learn a musical instrument?",
+        "pt": "Você já tentou aprender um instrumento musical?",
+        "phonetic_pt": "háv iú êvêrr tráid tu lêrrn â miúzicâl ínstrumênt?"
+      },
+      {
+        "en": "They are learning about ancient civilizations.",
+        "pt": "Eles estão aprendendo sobre civilizações antigas.",
+        "phonetic_pt": "dhêi árr lêrrnin âbáut ênshênt sívilizêishânz."
+      },
+      {
+        "en": "I need to learn how to manage my time better.",
+        "pt": "Preciso aprender a gerenciar meu tempo melhor.",
+        "phonetic_pt": "ái niid tu lêrrn ráu tu mánêdj mái táim bêtêrr."
+      },
+      {
+        "en": "What's the best way to learn a foreign language?",
+        "pt": "Qual é a melhor maneira de aprender uma língua estrangeira?",
+        "phonetic_pt": "uóts dhê bêst uêi tu lêrrn â fórên lénguêdj?"
+      },
+      {
+        "en": "He's been learning English for five years.",
+        "pt": "Ele tem aprendido inglês por cinco anos.",
+        "phonetic_pt": "hiz bín lêrrnin ínglish fôrr fáiv yiirz."
+      },
+      {
+        "en": "We can learn so much from nature.",
+        "pt": "Podemos aprender muito com a natureza.",
+        "phonetic_pt": "ui kân lêrrn sôu mâch frôm nêichêrr."
+      },
+      {
+        "en": "Did you learn anything useful at the conference?",
+        "pt": "Você aprendeu algo útil na conferência?",
+        "phonetic_pt": "díd iú lêrrn ênythíng iúsfâl ât dhê kónfêrêns?"
+      },
+      {
+        "en": "I'm excited to learn about your project.",
+        "pt": "Estou animado para aprender sobre seu projeto.",
+        "phonetic_pt": "áim exsáitêd tu lêrrn âbáut iôrr prójêkt."
+      },
+      {
+        "en": "She's determined to learn how to knit.",
+        "pt": "Ela está determinada a aprender a tricotar.",
+        "phonetic_pt": "shiz ditêrrrmínd tu lêrrn ráu tu nít."
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "rank": 210,
+    "en": "side",
+    "pt": "o lado (substantivo masculino)",
+    "phonetic": "/saɪd/",
+    "phonetic_br": "sáid",
+    "key": "Side",
+    "phrases": [
+      {
+        "en": "He sat on the other side of the table.",
+        "pt": "Ele sentou do outro lado da mesa.",
+        "phonetic_pt": "Rii sát ôn dhê âdhêr sáid âv dhê têibâl."
+      },
+      {
+        "en": "Can you pass me the remote? It's on your side.",
+        "pt": "Você pode me passar o controle? Está do seu lado.",
+        "phonetic_pt": "Kén iú pás mii dhê rrimôut? Its ôn iôr sáid."
+      },
+      {
+        "en": "Always look on the bright side of life.",
+        "pt": "Sempre veja o lado bom da vida.",
+        "phonetic_pt": "Oluêis lúk ôn dhê brráit sáid âv láif."
+      },
+      {
+        "en": "Whose side are you on in this argument?",
+        "pt": "De que lado você está nesta discussão?",
+        "phonetic_pt": "Rruuz sáid ár iú ôn ín dhís árgiúmênt?"
+      },
+      {
+        "en": "My stomach hurts on my left side.",
+        "pt": "Minha barriga dói do meu lado esquerdo.",
+        "phonetic_pt": "Mái stâmâk hêrts ôn mái léft sáid."
+      },
+      {
+        "en": "Let's walk on the sunny side of the street.",
+        "pt": "Vamos andar no lado ensolarado da rua.",
+        "phonetic_pt": "Léts uók ôn dhê sâni sáid âv dhê stríit."
+      },
+      {
+        "en": "There's a different side to every story.",
+        "pt": "Há um lado diferente para cada história.",
+        "phonetic_pt": "Dhêrz ê dífrênt sáid tuu évrri stôrri."
+      },
+      {
+        "en": "He lives on the other side of town.",
+        "pt": "Ele mora do outro lado da cidade.",
+        "phonetic_pt": "Rii lívz ôn dhê âdhêr sáid âv táun."
+      },
+      {
+        "en": "Don't forget to check both sides of the paper.",
+        "pt": "Não se esqueça de verificar os dois lados do papel.",
+        "phonetic_pt": "Dôunt fôrgét tuu tchêk bôuth sáids âv dhê pêipêr."
+      },
+      {
+        "en": "I'll have a burger with a side of fries.",
+        "pt": "Vou querer um hambúrguer com uma porção de batatas fritas.",
+        "phonetic_pt": "Áil ráv ê bérgêr uíth ê sáid âv fráiz."
+      },
+      {
+        "en": "She always sees the good side in people.",
+        "pt": "Ela sempre vê o lado bom nas pessoas.",
+        "phonetic_pt": "Shii oluêis siiz dhê gúd sáid ín piipl."
+      },
+      {
+        "en": "The dog slept by my side all night.",
+        "pt": "O cachorro dormiu ao meu lado a noite toda.",
+        "phonetic_pt": "Dhê dôg slépt bái mái sáid ól náit."
+      },
+      {
+        "en": "They built a fence on the property line, on their side.",
+        "pt": "Eles construíram uma cerca na linha da propriedade, do lado deles.",
+        "phonetic_pt": "Dhêi bílt ê féns ôn dhê prrópêrttii láin, ôn dhêr sáid."
+      },
+      {
+        "en": "Please turn the box over to its other side.",
+        "pt": "Por favor, vire a caixa para o outro lado.",
+        "phonetic_pt": "Pliiz têrn dhê bóks ôuvêr tuu íts âdhêr sáid."
+      },
+      {
+        "en": "I'm on your side, no matter what.",
+        "pt": "Estou do seu lado, não importa o quê.",
+        "phonetic_pt": "Áim ôn iôr sáid, nôu mátêr uót."
+      },
+      {
+        "en": "The coin landed on its flat side.",
+        "pt": "A moeda caiu com o lado plano para cima.",
+        "phonetic_pt": "Dhê kóin léndêd ôn íts flát sáid."
+      },
+      {
+        "en": "Let's explore the quieter side of the city.",
+        "pt": "Vamos explorar o lado mais tranquilo da cidade.",
+        "phonetic_pt": "Léts eksplôr dhê kuáiêtêr sáid âv dhê síttii."
+      },
+      {
+        "en": "She took a step to the side to let him pass.",
+        "pt": "Ela deu um passo para o lado para deixá-lo passar.",
+        "phonetic_pt": "Shii túk ê stép tuu dhê sáid tuu lét rím pás."
+      },
+      {
+        "en": "There's a beautiful lake on the east side of the mountains.",
+        "pt": "Há um lindo lago no lado leste das montanhas.",
+        "phonetic_pt": "Dhêrz ê biútifâl lêik ôn dhê iist sáid âv dhê máuntênz."
+      },
+      {
+        "en": "He has a playful side that not many people see.",
+        "pt": "Ele tem um lado brincalhão que poucas pessoas veem.",
+        "phonetic_pt": "Rii rráz ê plêifâl sáid dhát nót ménii piipl sii."
+      },
+      {
+        "en": "We camped on the river side.",
+        "pt": "Nós acampamos à beira do rio.",
+        "phonetic_pt": "Wii kámpt ôn dhê rrívr sáid."
+      },
+      {
+        "en": "The car was parked on the wrong side of the road.",
+        "pt": "O carro estava estacionado no lado errado da rua.",
+        "phonetic_pt": "Dhê cárr uóz párkt ôn dhê rrông sáid âv dhê rrôud."
+      },
+      {
+        "en": "He always tries to see things from my side.",
+        "pt": "Ele sempre tenta ver as coisas do meu ponto de vista.",
+        "phonetic_pt": "Rii oluêis tráiz tuu sii thíñz frôm mái sáid."
+      },
+      {
+        "en": "My parents live on the countryside.",
+        "pt": "Meus pais moram no interior.",
+        "phonetic_pt": "Mái pêrêntss lív ôn dhê kântrriisáid."
+      },
+      {
+        "en": "Can we put this on the side for now?",
+        "pt": "Podemos deixar isso de lado por enquanto?",
+        "phonetic_pt": "Kén wii pút dhís ôn dhê sáid fôr náu?"
+      },
+      {
+        "en": "The new restaurant is on the far side of the mall.",
+        "pt": "O novo restaurante fica no lado mais distante do shopping.",
+        "phonetic_pt": "Dhê niú rrêstârrânt íz ôn dhê fár sáid âv dhê móul."
+      },
+      {
+        "en": "She had a side job to make extra money.",
+        "pt": "Ela tinha um trabalho extra para ganhar dinheiro a mais.",
+        "phonetic_pt": "Shii rád ê sáid djób tuu mêik ékstrâ mánii."
+      },
+      {
+        "en": "The house has a nice garden on its south side.",
+        "pt": "A casa tem um belo jardim no seu lado sul.",
+        "phonetic_pt": "Dhê ráus rráz ê náis gárdên ôn íts sáuth sáid."
+      },
+      {
+        "en": "I prefer the smooth side of the fabric.",
+        "pt": "Eu prefiro o lado liso do tecido.",
+        "phonetic_pt": "Ái prrîfêrr dhê smúudh sáid âv dhê fébrrik."
+      },
+      {
+        "en": "Let's get a table by the window side.",
+        "pt": "Vamos pegar uma mesa ao lado da janela.",
+        "phonetic_pt": "Léts guét ê têibâl bái dhê uíndou sáid."
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "rank": 211,
+    "en": "pay",
+    "pt": "pagar (verbo)",
+    "phonetic": "/peɪ/",
+    "phonetic_br": "pêi",
+    "key": "Pay",
+    "phrases": [
+      {
+        "en": "I need to pay the rent by Friday.",
+        "pt": "Preciso pagar o aluguel até sexta-feira.",
+        "phonetic_pt": "ái niid tchu pêi dhâ rênt báii frái-dêi."
+      },
+      {
+        "en": "Did you pay for the groceries?",
+        "pt": "Você pagou pelas compras?",
+        "phonetic_pt": "díd iú pêi fôr dhâ grôu-sê-riis?"
+      },
+      {
+        "en": "She always pays attention in class.",
+        "pt": "Ela sempre presta atenção na aula.",
+        "phonetic_pt": "shii ól-uêiz pêiz â-tên-shân in cláss."
+      },
+      {
+        "en": "He has to pay back the money he borrowed.",
+        "pt": "Ele tem que devolver o dinheiro que pegou emprestado.",
+        "phonetic_pt": "hii rás tchu pêi bék dhâ mâ-nii hii bó-rroud."
+      },
+      {
+        "en": "We can pay with a credit card.",
+        "pt": "Podemos pagar com cartão de crédito.",
+        "phonetic_pt": "uii kân pêi uíth â krê-dít cárd."
+      },
+      {
+        "en": "How much do I owe? I'll pay now.",
+        "pt": "Quanto eu devo? Vou pagar agora.",
+        "phonetic_pt": "ráu mâtch duu ái ôu? áil pêi náu."
+      },
+      {
+        "en": "Don't forget to pay your electric bill.",
+        "pt": "Não se esqueça de pagar sua conta de luz.",
+        "phonetic_pt": "dônt fôr-guêt tchu pêi iôr ii-lêk-trik bíl."
+      },
+      {
+        "en": "They're going to pay us next week.",
+        "pt": "Eles vão nos pagar na próxima semana.",
+        "phonetic_pt": "dhêr gôu-íng tchu pêi âs nêkst uíik."
+      },
+      {
+        "en": "It pays to be polite.",
+        "pt": "Vale a pena ser educado.",
+        "phonetic_pt": "ít pêiz tchu bii pô-láit."
+      },
+      {
+        "en": "I'm willing to pay any price for it.",
+        "pt": "Estou disposto a pagar qualquer preço por isso.",
+        "phonetic_pt": "áim uí-líng tchu pêi ê-nii práis fôr ít."
+      },
+      {
+        "en": "He paid a visit to his old teacher.",
+        "pt": "Ele fez uma visita ao seu antigo professor.",
+        "phonetic_pt": "hii pêid â ví-zít tchu ríz ôuld tii-tchêrr."
+      },
+      {
+        "en": "We need to pay more attention to details.",
+        "pt": "Precisamos prestar mais atenção aos detalhes.",
+        "phonetic_pt": "uii niid tchu pêi môrr â-tên-shân tchu dii-têilz."
+      },
+      {
+        "en": "The company offers good pay and benefits.",
+        "pt": "A empresa oferece bom salário e benefícios.",
+        "phonetic_pt": "dhâ kâm-pâ-nii ó-fêrrs gúd pêi ênd bê-nâ-fíts."
+      },
+      {
+        "en": "You'll pay for that, mark my words!",
+        "pt": "Você vai pagar por isso, anote minhas palavras!",
+        "phonetic_pt": "iúl pêi fôr dhát, márk mái uêrrds!"
+      },
+      {
+        "en": "Can I pay in installments?",
+        "pt": "Posso pagar em prestações?",
+        "phonetic_pt": "kân ái pêi in in-stól-mânts?"
+      },
+      {
+        "en": "She got a pay raise last month.",
+        "pt": "Ela recebeu um aumento de salário no mês passado.",
+        "phonetic_pt": "shii gót â pêi rêiz lást mânth."
+      },
+      {
+        "en": "I'll pay you back on Friday.",
+        "pt": "Te pago de volta na sexta-feira.",
+        "phonetic_pt": "áil pêi iú bék ôn frái-dêi."
+      },
+      {
+        "en": "We always pay our taxes on time.",
+        "pt": "Nós sempre pagamos nossos impostos em dia.",
+        "phonetic_pt": "uii ól-uêiz pêi áu-rr têk-síz ôn táim."
+      },
+      {
+        "en": "He's going to pay the bill for everyone.",
+        "pt": "Ele vai pagar a conta para todo mundo.",
+        "phonetic_pt": "hiiz gôu-íng tchu pêi dhâ bíl fôr ê-vrii-uân."
+      },
+      {
+        "en": "You don't have to pay for parking here.",
+        "pt": "Você não precisa pagar pelo estacionamento aqui.",
+        "phonetic_pt": "iú dônt ráv tchu pêi fôr pár-kíng hiirr."
+      },
+      {
+        "en": "It's time to pay the piper.",
+        "pt": "É hora de arcar com as consequências.",
+        "phonetic_pt": "íts táim tchu pêi dhâ pái-pêrr."
+      },
+      {
+        "en": "Did you pay attention to what I said?",
+        "pt": "Você prestou atenção no que eu disse?",
+        "phonetic_pt": "díd iú pêi â-tên-shân tchu uât ái sêd?"
+      },
+      {
+        "en": "I'm happy to pay for your meal.",
+        "pt": "Fico feliz em pagar pela sua refeição.",
+        "phonetic_pt": "áim ráp-ii tchu pêi fôr iôr miil."
+      },
+      {
+        "en": "They had to pay a fine for speeding.",
+        "pt": "Eles tiveram que pagar uma multa por excesso de velocidade.",
+        "phonetic_pt": "dhêi rád tchu pêi â fáin fôr spii-díng."
+      },
+      {
+        "en": "Will you pay cash or card?",
+        "pt": "Você vai pagar em dinheiro ou cartão?",
+        "phonetic_pt": "uíll iú pêi kâsh ôrr cárd?"
+      },
+      {
+        "en": "He never pays his debts.",
+        "pt": "Ele nunca paga suas dívidas.",
+        "phonetic_pt": "hii nê-vêrr pêiz ríz dêts."
+      },
+      {
+        "en": "You get what you pay for.",
+        "pt": "Você recebe o que paga.",
+        "phonetic_pt": "iú guêt uât iú pêi fôr."
+      },
+      {
+        "en": "I'm going to pay off my student loan soon.",
+        "pt": "Vou quitar meu empréstimo estudantil em breve.",
+        "phonetic_pt": "áim gôu-íng tchu pêi óf mái stiu-dênt lôun suun."
+      },
+      {
+        "en": "Could you pay for my ticket, please?",
+        "pt": "Você poderia pagar minha passagem, por favor?",
+        "phonetic_pt": "kúd iú pêi fôr mái tí-kêt, pliiz?"
+      },
+      {
+        "en": "We paid a lot for this house.",
+        "pt": "Nós pagamos muito por esta casa.",
+        "phonetic_pt": "uii pêid â lát fôr dhís ráus."
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "rank": 212,
+    "en": "meet",
+    "pt": "encontrar / conhecer (verbo)",
+    "phonetic": "/miːt/",
+    "phonetic_br": "miit",
+    "key": "Meet",
+    "phrases": [
+      {
+        "en": "It was a pleasure to meet you.",
+        "pt": "Foi um prazer te conhecer.",
+        "phonetic_pt": "Its uós ê pléjrr tu miit iú."
+      },
+      {
+        "en": "Let's meet for coffee tomorrow.",
+        "pt": "Vamos nos encontrar para um café amanhã.",
+        "phonetic_pt": "Léts miit fôr kófii tu-mó-rrôu."
+      },
+      {
+        "en": "Where should we meet?",
+        "pt": "Onde devemos nos encontrar?",
+        "phonetic_pt": "Uér shúd uii miit?"
+      },
+      {
+        "en": "Does this project meet the client's needs?",
+        "pt": "Este projeto atende às necessidades do cliente?",
+        "phonetic_pt": "Dâz dhis prójêkt miit dhê cláiênt's niidz?"
+      },
+      {
+        "en": "I met an old friend at the supermarket.",
+        "pt": "Encontrei um velho amigo no supermercado.",
+        "phonetic_pt": "Ái mét ân ôuld frênd át dhê súprr-már-kêt."
+      },
+      {
+        "en": "The team will meet to discuss the new strategy.",
+        "pt": "A equipe se reunirá para discutir a nova estratégia.",
+        "phonetic_pt": "Dhê tiim uíl miit tu disscâss dhê niú strátêdji."
+      },
+      {
+        "en": "She couldn't meet his gaze.",
+        "pt": "Ela não conseguia encarar o olhar dele.",
+        "phonetic_pt": "Shii cúdênt miit híz guêiz."
+      },
+      {
+        "en": "His proposals met with strong resistance.",
+        "pt": "Suas propostas encontraram forte resistência.",
+        "phonetic_pt": "Híz prô-pôu-zâlz mét uíth strông ri-zíztâns."
+      },
+      {
+        "en": "We need to meet the deadline by Friday.",
+        "pt": "Precisamos cumprir o prazo até sexta-feira.",
+        "phonetic_pt": "Uii niid tu miit dhê dêd-láin bái frái-dêi."
+      },
+      {
+        "en": "Would you like to meet for lunch next week?",
+        "pt": "Você gostaria de almoçar comigo na próxima semana?",
+        "phonetic_pt": "Uúd iú láik tu miit fôr lânch nêxt uiik?"
+      },
+      {
+        "en": "I'm excited to meet the CEO tomorrow.",
+        "pt": "Estou animado para conhecer o CEO amanhã.",
+        "phonetic_pt": "Áim êx-sái-têd tu miit dhê sii-ii-ôu tu-mó-rrôu."
+      },
+      {
+        "en": "They are ready to meet any challenge.",
+        "pt": "Eles estão prontos para enfrentar qualquer desafio.",
+        "phonetic_pt": "Dhêi árr rê-dii tu miit ê-nii chál-ênj."
+      },
+      {
+        "en": "I hope we meet again soon.",
+        "pt": "Espero que nos encontremos novamente em breve.",
+        "phonetic_pt": "Ái rôup uii miit ê-guén suun."
+      },
+      {
+        "en": "Have we met before?",
+        "pt": "Nós já nos conhecemos antes?",
+        "phonetic_pt": "Háv uii mét bi-fórr?"
+      },
+      {
+        "en": "Let's arrange to meet sometime next month.",
+        "pt": "Vamos combinar de nos encontrar em algum momento no próximo mês.",
+        "phonetic_pt": "Léts ê-rrêinj tu miit sâm-táim nêxt mânth."
+      },
+      {
+        "en": "I enjoy meeting new people.",
+        "pt": "Eu gosto de conhecer pessoas novas.",
+        "phonetic_pt": "Ái ên-jói miitíng niú pii-pl."
+      },
+      {
+        "en": "I have to meet with my advisor this afternoon.",
+        "pt": "Tenho que me encontrar com meu orientador esta tarde.",
+        "phonetic_pt": "Ái háv tu miit uíth mái êd-váizrr dhis áftrr-nuun."
+      },
+      {
+        "en": "All candidates must meet the eligibility criteria.",
+        "pt": "Todos os candidatos devem atender aos critérios de elegibilidade.",
+        "phonetic_pt": "Ól kân-dê-dêts mâst miit dhê ê-lê-djibíli-tii crái-tii-rr-ii-â."
+      },
+      {
+        "en": "Are you meeting anyone at the party?",
+        "pt": "Você vai encontrar alguém na festa?",
+        "phonetic_pt": "Árr iú miitíng ê-nii-uân át dhê párr-tii?"
+      },
+      {
+        "en": "How will we meet these unexpected costs?",
+        "pt": "Como vamos arcar com esses custos inesperados?",
+        "phonetic_pt": "Ráu uíl uii miit dhiiz ân-êx-pêk-têd kósts?"
+      },
+      {
+        "en": "We'll meet at 7 PM sharp.",
+        "pt": "Vamos nos encontrar às 19h em ponto.",
+        "phonetic_pt": "Uii-l miit át sêvên pii-êm shárp."
+      },
+      {
+        "en": "It was pure coincidence that we met there.",
+        "pt": "Foi pura coincidência que nos encontramos lá.",
+        "phonetic_pt": "It uós piúrr co-ín-sii-dênss dhât uii mét dhêrr."
+      },
+      {
+        "en": "The company couldn't meet the union's demands.",
+        "pt": "A empresa não conseguiu atender às exigências do sindicato.",
+        "phonetic_pt": "Dhê kâm-pê-nii cúdênt miit dhê iú-niâns di-mândz."
+      },
+      {
+        "en": "They often meet difficulties when expanding.",
+        "pt": "Eles frequentemente encontram dificuldades ao expandir.",
+        "phonetic_pt": "Dhêi óf-tên miit dí-fê-câl-tiiz uên êx-pândíng."
+      },
+      {
+        "en": "His work always meets my approval.",
+        "pt": "O trabalho dele sempre tem a minha aprovação.",
+        "phonetic_pt": "Híz uêrk ól-uêiz miits mái ê-pruuv-âl."
+      },
+      {
+        "en": "This new service aims to meet a growing demand.",
+        "pt": "Este novo serviço visa atender a uma demanda crescente.",
+        "phonetic_pt": "Dhis niú sêrr-víss êimz tu miit ê grôu-íng di-mând."
+      },
+      {
+        "en": "Let's meet up later for a drink.",
+        "pt": "Vamos nos encontrar mais tarde para uma bebida.",
+        "phonetic_pt": "Léts miit âp lêi-trr fôr ê drínk."
+      },
+      {
+        "en": "I have a business meeting with a client tomorrow.",
+        "pt": "Tenho uma reunião de negócios com um cliente amanhã.",
+        "phonetic_pt": "Ái háv ê bízniss miitíng uíth ê cláiênt tu-mó-rrôu."
+      },
+      {
+        "en": "Did you meet your sales targets this quarter?",
+        "pt": "Você atingiu suas metas de vendas neste trimestre?",
+        "phonetic_pt": "Díd iú miit iúrr sêilz tár-gêts dhis quórr-trr?"
+      },
+      {
+        "en": "It was great meeting all of you.",
+        "pt": "Foi ótimo conhecer todos vocês.",
+        "phonetic_pt": "It uós grêit miitíng ól âv iú."
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "rank": 213,
+    "en": "story",
+    "pt": "a história (substantivo feminino)",
+    "phonetic": "/ˈstɔːri/",
+    "phonetic_br": "stórri",
+    "key": "story",
+    "phrases": [
+      {
+        "en": "Tell me a story.",
+        "pt": "Conte-me uma história.",
+        "phonetic_pt": "Tél mii â stórri."
+      },
+      {
+        "en": "That's a long story.",
+        "pt": "Essa é uma longa história.",
+        "phonetic_pt": "Dháts â lóng stórri."
+      },
+      {
+        "en": "I don't believe your story.",
+        "pt": "Não acredito na sua história.",
+        "phonetic_pt": "Ái dônt bilíiv iór stórri."
+      },
+      {
+        "en": "My daughter loves bedtime stories.",
+        "pt": "Minha filha adora histórias de ninar.",
+        "phonetic_pt": "Mái dórrer lâvs bédtáim stórriz."
+      },
+      {
+        "en": "Did you read the news story?",
+        "pt": "Você leu a notícia?",
+        "phonetic_pt": "Díd iú riid dhê niús stórri?"
+      },
+      {
+        "en": "I have a funny story about that.",
+        "pt": "Tenho uma história engraçada sobre isso.",
+        "phonetic_pt": "Ái hâv â fânni stórri âbáut dhát."
+      },
+      {
+        "en": "Don't make up stories.",
+        "pt": "Não invente histórias.",
+        "phonetic_pt": "Dônt mêik âp stórriz."
+      },
+      {
+        "en": "The movie has a great story.",
+        "pt": "O filme tem uma ótima história.",
+        "phonetic_pt": "Dhê múvii hâz â grêit stórri."
+      },
+      {
+        "en": "Our office is on the third story.",
+        "pt": "Nosso escritório fica no terceiro andar.",
+        "phonetic_pt": "Áu-ârr óffis iz ôn dhê thêrd stórri."
+      },
+      {
+        "en": "What's the rest of the story?",
+        "pt": "Qual é o resto da história?",
+        "phonetic_pt": "Uâtz dhê rést âv dhê stórri?"
+      },
+      {
+        "en": "He told us his whole life story.",
+        "pt": "Ele nos contou a história de toda a sua vida.",
+        "phonetic_pt": "Hii tôld âs hiz hôul láif stórri."
+      },
+      {
+        "en": "I can relate to her story.",
+        "pt": "Consigo me identificar com a história dela.",
+        "phonetic_pt": "Ái kân rilêit tuu hêrr stórri."
+      },
+      {
+        "en": "My grandma always told us folk stories.",
+        "pt": "Minha avó sempre nos contava histórias folclóricas.",
+        "phonetic_pt": "Mái grénmáa ólueiz tôld âs fôuk stórriz."
+      },
+      {
+        "en": "Is that story true or false?",
+        "pt": "Essa história é verdadeira ou falsa?",
+        "phonetic_pt": "Iz dhát stórri trúu ôrr fóls?"
+      },
+      {
+        "en": "She's writing a short story for class.",
+        "pt": "Ela está escrevendo um conto para a aula.",
+        "phonetic_pt": "Shiz ráiting â shórt stórri fôrr klâs."
+      },
+      {
+        "en": "There are two sides to every story.",
+        "pt": "Há dois lados em toda história.",
+        "phonetic_pt": "Dhêrr árr tuu sáids tuu évrri stórri."
+      },
+      {
+        "en": "That's the main story on the news tonight.",
+        "pt": "Essa é a principal notícia no jornal de hoje à noite.",
+        "phonetic_pt": "Dháts dhê mêin stórri ôn dhê niúz tunáit."
+      },
+      {
+        "en": "This building has a rich history, many stories.",
+        "pt": "Este prédio tem uma história rica, muitas histórias.",
+        "phonetic_pt": "Dhis bílding hâz â ritch hístorri, ménni stórriz."
+      },
+      {
+        "en": "You're stretching the story a bit.",
+        "pt": "Você está exagerando um pouco a história.",
+        "phonetic_pt": "Iúrr strétching dhê stórri â bít."
+      },
+      {
+        "en": "What's his backstory?",
+        "pt": "Qual é a história de fundo dele?",
+        "phonetic_pt": "Uâtz hiz békstórri?"
+      },
+      {
+        "en": "The plot twist really changed the whole story.",
+        "pt": "A reviravolta realmente mudou toda a história.",
+        "phonetic_pt": "Dhê plót tuíst ríili chêinjd dhê hôul stórri."
+      },
+      {
+        "en": "I love hearing travel stories.",
+        "pt": "Adoro ouvir histórias de viagem.",
+        "phonetic_pt": "Ái lâv híirring trávâl stórriz."
+      },
+      {
+        "en": "Please don't share my story with anyone.",
+        "pt": "Por favor, não compartilhe minha história com ninguém.",
+        "phonetic_pt": "Plíiz dônt shêrr mái stórri uíth éniuân."
+      },
+      {
+        "en": "Let's finish this story another day.",
+        "pt": "Vamos terminar essa história outro dia.",
+        "phonetic_pt": "Léts fínish dhis stórri âna-dhêr dêi."
+      },
+      {
+        "en": "Did you see her Instagram story?",
+        "pt": "Você viu o story dela no Instagram?",
+        "phonetic_pt": "Díd iú sii hêrr Ínstâgrâm stórri?"
+      },
+      {
+        "en": "The building has five stories.",
+        "pt": "O prédio tem cinco andares.",
+        "phonetic_pt": "Dhê bílding hâz fáiv stórriz."
+      },
+      {
+        "en": "Can you give me the full story?",
+        "pt": "Você pode me dar a história completa?",
+        "phonetic_pt": "Kân iú guív mii dhê fúl stórri?"
+      },
+      {
+        "en": "That's a classic rags-to-riches story.",
+        "pt": "Essa é uma clássica história de superação.",
+        "phonetic_pt": "Dháts â klásik rágs-tuu-rítchiz stórri."
+      },
+      {
+        "en": "He kept telling us one fantastic story after another.",
+        "pt": "Ele continuou nos contando uma história fantástica após a outra.",
+        "phonetic_pt": "Hii képt télling âs uân fântástik stórri áftêr âna-dhêr."
+      },
+      {
+        "en": "Her story moved everyone to tears.",
+        "pt": "A história dela emocionou a todos às lágrimas.",
+        "phonetic_pt": "Hêrr stórri múuvd évrriuân tuu tíirz."
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "rank": 214,
+    "en": "sure",
+    "pt": "Certo / certa (adjetivo); com certeza / claro (advérbio/interjeição)",
+    "phonetic": "/ʃʊər/",
+    "phonetic_br": "xurr",
+    "key": "Sure",
+    "phrases": [
+      {
+        "en": "Are you sure you want to go?",
+        "pt": "Você tem certeza que quer ir?",
+        "phonetic_pt": "Ár iú xurr iú uónt tuu gou?"
+      },
+      {
+        "en": "Sure, I can help you with that.",
+        "pt": "Claro, posso te ajudar com isso.",
+        "phonetic_pt": "Xurr, ái kén hélp iú uith dhét."
+      },
+      {
+        "en": "Make sure to turn off the lights.",
+        "pt": "Certifique-se de apagar as luzes.",
+        "phonetic_pt": "Mêik xurr tuu têrn óff dhâ láits."
+      },
+      {
+        "en": "For sure, that was the best movie ever.",
+        "pt": "Com certeza, aquele foi o melhor filme de todos.",
+        "phonetic_pt": "Fôrr xurr, dhét uóz dhâ bést muuvii évêrr."
+      },
+      {
+        "en": "I'm not so sure about that idea.",
+        "pt": "Não tenho tanta certeza sobre essa ideia.",
+        "phonetic_pt": "Áim nót sou xurr âbáut dhét áidíiâ."
+      },
+      {
+        "en": "Can you be absolutely sure?",
+        "pt": "Você pode ter certeza absoluta?",
+        "phonetic_pt": "Kén iú bii ébsâluutlii xurr?"
+      },
+      {
+        "en": "She's sure to succeed in her career.",
+        "pt": "Ela tem certeza de que terá sucesso na carreira dela.",
+        "phonetic_pt": "Xiiz xurr tuu sâksiid in hêrr kârríiêrr."
+      },
+      {
+        "en": "Sure thing, I'll meet you there.",
+        "pt": "Combinado, te encontro lá.",
+        "phonetic_pt": "Xurr thing, áil miit iú dhér."
+      },
+      {
+        "en": "He wasn't sure what to do next.",
+        "pt": "Ele não tinha certeza do que fazer em seguida.",
+        "phonetic_pt": "Hii uózn't xurr uót tuu duu nékst."
+      },
+      {
+        "en": "Are you sure this is the right way?",
+        "pt": "Você tem certeza que este é o caminho certo?",
+        "phonetic_pt": "Ár iú xurr dhis iz dhâ ráit uêi?"
+      },
+      {
+        "en": "I feel sure that everything will be fine.",
+        "pt": "Tenho certeza de que tudo ficará bem.",
+        "phonetic_pt": "Ái fiil xurr dhét évrrithing uíl bii fáin."
+      },
+      {
+        "en": "Sure, why not? Let's give it a try.",
+        "pt": "Claro, por que não? Vamos tentar.",
+        "phonetic_pt": "Xurr, uái nót? Léts guiv it â trái."
+      },
+      {
+        "en": "Make sure you eat something before you leave.",
+        "pt": "Certifique-se de comer algo antes de sair.",
+        "phonetic_pt": "Mêik xurr iú iit sâmthing bifôrr iú liiv."
+      },
+      {
+        "en": "They're sure to be late, as usual.",
+        "pt": "Com certeza eles vão se atrasar, como de costume.",
+        "phonetic_pt": "Dhêrr xurr tuu bii lêit, az iújuâl."
+      },
+      {
+        "en": "We're not sure if it's going to rain.",
+        "pt": "Não temos certeza se vai chover.",
+        "phonetic_pt": "Uirr nót xurr if its gouin tuu rêin."
+      },
+      {
+        "en": "I'm sure I left my keys on the table.",
+        "pt": "Tenho certeza que deixei minhas chaves na mesa.",
+        "phonetic_pt": "Áim xurr ái léft mái kiiz ôn dhâ têibâl."
+      },
+      {
+        "en": "Sure, go ahead and ask.",
+        "pt": "Claro, vá em frente e pergunte.",
+        "phonetic_pt": "Xurr, gou âhéd énd ésk."
+      },
+      {
+        "en": "He's a sure winner in any competition.",
+        "pt": "Ele é um vencedor certo em qualquer competição.",
+        "phonetic_pt": "Hiz â xurr uínnêrr in éni kômpâtíxân."
+      },
+      {
+        "en": "Are you sure you locked the car?",
+        "pt": "Você tem certeza que trancou o carro?",
+        "phonetic_pt": "Ár iú xurr iú lóckt dhâ karr?"
+      },
+      {
+        "en": "I'm pretty sure I saw him yesterday.",
+        "pt": "Tenho quase certeza que o vi ontem.",
+        "phonetic_pt": "Áim prítii xurr ái sô him iéstêrdei."
+      },
+      {
+        "en": "Sure, that sounds like a good plan.",
+        "pt": "Claro, parece um bom plano.",
+        "phonetic_pt": "Xurr, dhét sáundz láik â guud plén."
+      },
+      {
+        "en": "You can be sure of my support.",
+        "pt": "Você pode ter certeza do meu apoio.",
+        "phonetic_pt": "Iú kén bii xurr âv mái sâpôrt."
+      },
+      {
+        "en": "Make sure you have all your documents.",
+        "pt": "Certifique-se de ter todos os seus documentos.",
+        "phonetic_pt": "Mêik xurr iú hév ól iurr dókiûments."
+      },
+      {
+        "en": "It's a sure sign of spring when the flowers bloom.",
+        "pt": "É um sinal certo da primavera quando as flores desabrocham.",
+        "phonetic_pt": "Its â xurr sáin âv spríng uén dhâ fláueerrz bluum."
+      },
+      {
+        "en": "Are you sure you're feeling okay?",
+        "pt": "Você tem certeza que está se sentindo bem?",
+        "phonetic_pt": "Ár iú xurr iurr fiiling ôukêi?"
+      },
+      {
+        "en": "I'll be sure to call you later.",
+        "pt": "Vou ter certeza de te ligar mais tarde.",
+        "phonetic_pt": "Áil bii xurr tuu kól iú lêitêrr."
+      },
+      {
+        "en": "Sure, I'd love another slice of pizza.",
+        "pt": "Claro, adoraria outra fatia de pizza.",
+        "phonetic_pt": "Xurr, áid lâv ânâdhêrr sláis âv piitsâ."
+      },
+      {
+        "en": "He walked with a sure step.",
+        "pt": "Ele caminhou com um passo firme.",
+        "phonetic_pt": "Hii uókt uith â xurr stép."
+      },
+      {
+        "en": "We're almost sure we'll make it on time.",
+        "pt": "Temos quase certeza que chegaremos a tempo.",
+        "phonetic_pt": "Uirr ólmôust xurr uíll mêik it ôn táim."
+      },
+      {
+        "en": "Sure, I guess I can do that.",
+        "pt": "Claro, acho que posso fazer isso.",
+        "phonetic_pt": "Xurr, ái gués ái kén duu dhét."
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "rank": 215,
+    "en": "window",
+    "pt": "a janela (substantivo feminino)",
+    "phonetic": "/wɪndoʊ/",
+    "phonetic_br": "uíndôu",
+    "key": "Window",
+    "phrases": [
+      {
+        "en": "Open the window.",
+        "pt": "Abra a janela.",
+        "phonetic_pt": "Ôupân dhê uíndôu."
+      },
+      {
+        "en": "Close the window.",
+        "pt": "Feche a janela.",
+        "phonetic_pt": "Clôuz dhê uíndôu."
+      },
+      {
+        "en": "Look out the window.",
+        "pt": "Olhe pela janela.",
+        "phonetic_pt": "Lúk áut dhê uíndôu."
+      },
+      {
+        "en": "The window is dirty.",
+        "pt": "A janela está suja.",
+        "phonetic_pt": "Dhê uíndôu iz dêrr-tii."
+      },
+      {
+        "en": "I need to clean the windows.",
+        "pt": "Preciso limpar as janelas.",
+        "phonetic_pt": "Ái niid tchu clíin dhê uíndôuz."
+      },
+      {
+        "en": "There's a bird at the window.",
+        "pt": "Tem um pássaro na janela.",
+        "phonetic_pt": "Dhêrrz â bêrrd ét dhê uíndôu."
+      },
+      {
+        "en": "The sun shines through the window.",
+        "pt": "O sol brilha pela janela.",
+        "phonetic_pt": "Dhê sân sháinns thrúu dhê uíndôu."
+      },
+      {
+        "en": "My cat loves sitting by the window.",
+        "pt": "Meu gato adora sentar-se na janela.",
+        "phonetic_pt": "Mái két lâvs síring bái dhê uíndôu."
+      },
+      {
+        "en": "Can you open the window a little?",
+        "pt": "Você pode abrir a janela um pouco?",
+        "phonetic_pt": "Kén iú ôupân dhê uíndôu â lírâl?"
+      },
+      {
+        "en": "The window pane is broken.",
+        "pt": "O vidro da janela está quebrado.",
+        "phonetic_pt": "Dhê uíndôu pêin iz brôukân."
+      },
+      {
+        "en": "My office has a great window view.",
+        "pt": "Meu escritório tem uma ótima vista da janela.",
+        "phonetic_pt": "Mái ófiss héz â grêit uíndôu viú."
+      },
+      {
+        "en": "I keep my window open for fresh air.",
+        "pt": "Mantenho minha janela aberta para o ar fresco.",
+        "phonetic_pt": "Ái kiipp mái uíndôu ôupân fôrr frésh êrr."
+      },
+      {
+        "en": "The window in the conference room is huge.",
+        "pt": "A janela na sala de conferências é enorme.",
+        "phonetic_pt": "Dhê uíndôu ín dhê kónfêrênss rûum iz riúdj."
+      },
+      {
+        "en": "We need to install new windows in the building.",
+        "pt": "Precisamos instalar novas janelas no prédio.",
+        "phonetic_pt": "Uí niid tchu instól niú uíndôuz ín dhê bílding."
+      },
+      {
+        "en": "The computer program has multiple windows open.",
+        "pt": "O programa de computador tem várias janelas abertas.",
+        "phonetic_pt": "Dhê kâmpiúrâr prôugrám héz múltipâl uíndôuz ôupân."
+      },
+      {
+        "en": "I always ask for a window seat on the plane.",
+        "pt": "Sempre peço um assento na janela no avião.",
+        "phonetic_pt": "Ái ól-uêiz ésk fôrr â uíndôu siit ôn dhê plêin."
+      },
+      {
+        "en": "The train window offered stunning views.",
+        "pt": "A janela do trem oferecia vistas deslumbrantes.",
+        "phonetic_pt": "Dhê trêin uíndôu ófêrrd stâning viúz."
+      },
+      {
+        "en": "From the hotel window, you can see the ocean.",
+        "pt": "Da janela do hotel, você pode ver o oceano.",
+        "phonetic_pt": "Frôm dhê rôutél uíndôu, iú kên sii dhê ôushân."
+      },
+      {
+        "en": "It's nice to have a window to the world.",
+        "pt": "É bom ter uma janela para o mundo.",
+        "phonetic_pt": "Íts náiss tchu hév â uíndôu tchu dhê uêrrld."
+      },
+      {
+        "en": "She gazed out the window, lost in thought.",
+        "pt": "Ela olhou pela janela, perdida em pensamentos.",
+        "phonetic_pt": "Shii guêizd áut dhê uíndôu, lóst ín thót."
+      },
+      {
+        "en": "A window of opportunity opened.",
+        "pt": "Uma janela de oportunidade se abriu.",
+        "phonetic_pt": "Â uíndôu âv ópôrtchúnitii ôupênd."
+      },
+      {
+        "en": "He closed the window on that conversation.",
+        "pt": "Ele encerrou aquela conversa.",
+        "phonetic_pt": "Hii clôuzd dhê uíndôu ôn dhét kónvêrsêishân."
+      },
+      {
+        "en": "The shop window displayed beautiful dresses.",
+        "pt": "A vitrine da loja exibia lindos vestidos.",
+        "phonetic_pt": "Dhê shóp uíndôu displêid biúrifâl dréssis."
+      },
+      {
+        "en": "The car window was fogged up.",
+        "pt": "O vidro do carro estava embaçado.",
+        "phonetic_pt": "Dhê kár uíndôu uâz fógd âp."
+      },
+      {
+        "en": "She tapped on the window to get his attention.",
+        "pt": "Ela bateu na janela para chamar a atenção dele.",
+        "phonetic_pt": "Shii tépt ôn dhê uíndôu tchu guét híz âténshân."
+      },
+      {
+        "en": "The storm rattled the windows.",
+        "pt": "A tempestade sacudia as janelas.",
+        "phonetic_pt": "Dhê stôrm rárâld dhê uíndôuz."
+      },
+      {
+        "en": "We bought new window blinds.",
+        "pt": "Compramos persianas novas.",
+        "phonetic_pt": "Uí bót niú uíndôu bláinds."
+      },
+      {
+        "en": "There's a sticker on the car window.",
+        "pt": "Tem um adesivo no vidro do carro.",
+        "phonetic_pt": "Dhêrrz â stíkêrr ôn dhê kár uíndôu."
+      },
+      {
+        "en": "He watched the rain stream down the window.",
+        "pt": "Ele observou a chuva escorrer pela janela.",
+        "phonetic_pt": "Hii uótchd dhê rêin stríim dáun dhê uíndôu."
+      },
+      {
+        "en": "The house has many large windows.",
+        "pt": "A casa tem muitas janelas grandes.",
+        "phonetic_pt": "Dhê ráus héz ménii lárdj uíndôuz."
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "rank": 216,
+    "en": "idea",
+    "pt": "ideia (substantivo feminino)",
+    "phonetic": "/aɪˈdiːə/",
+    "phonetic_br": "áidiia",
+    "key": "Idea",
+    "phrases": [
+      {
+        "en": "That's a great idea!",
+        "pt": "Essa é uma ótima ideia!",
+        "phonetic_pt": "Dhéts â grêit áidiia!"
+      },
+      {
+        "en": "Do you have any ideas?",
+        "pt": "Você tem alguma ideia?",
+        "phonetic_pt": "Dú iú révi éni áidiiaz?"
+      },
+      {
+        "en": "I have no idea what to do.",
+        "pt": "Não faço ideia do que fazer.",
+        "phonetic_pt": "Ái rév nôu áidiia uât tu dú."
+      },
+      {
+        "en": "It was his idea to go.",
+        "pt": "Foi ideia dele ir.",
+        "phonetic_pt": "It uâz ríz áidiia tu gôu."
+      },
+      {
+        "en": "The idea sounds good to me.",
+        "pt": "A ideia me parece boa.",
+        "phonetic_pt": "Dhê áidiia sáundz gúud tu mii."
+      },
+      {
+        "en": "What's your idea of a perfect day?",
+        "pt": "Qual é a sua ideia de um dia perfeito?",
+        "phonetic_pt": "Uâts iur áidiia âv â pêrfikt dêi?"
+      },
+      {
+        "en": "I just had a brilliant idea!",
+        "pt": "Acabei de ter uma ideia brilhante!",
+        "phonetic_pt": "Ái djâst rrédd â bríliânt áidiia!"
+      },
+      {
+        "en": "The whole idea is to save money.",
+        "pt": "A ideia toda é economizar dinheiro.",
+        "phonetic_pt": "Dhê hôul áidiia iz tu sêiv mâni."
+      },
+      {
+        "en": "Can you give me an idea of the cost?",
+        "pt": "Você pode me dar uma ideia do custo?",
+        "phonetic_pt": "Kén iú guív mii én áidiia âv dhê kôst?"
+      },
+      {
+        "en": "It's a crazy idea, but it might work.",
+        "pt": "É uma ideia louca, mas pode funcionar.",
+        "phonetic_pt": "Its â krêizi áidiia, bât it máit uêrk."
+      },
+      {
+        "en": "I don't like the idea of working late.",
+        "pt": "Não gosto da ideia de trabalhar até tarde.",
+        "phonetic_pt": "Ái dôunt láik dhê áidiia âv uêrking lêit."
+      },
+      {
+        "en": "Where did you get that idea?",
+        "pt": "Onde você tirou essa ideia?",
+        "phonetic_pt": "Uér did iú guét dhét áidiia?"
+      },
+      {
+        "en": "Let's brainstorm some new ideas.",
+        "pt": "Vamos fazer um brainstorming para novas ideias.",
+        "phonetic_pt": "Léts brêinstôrm sâm niú áidiiaz."
+      },
+      {
+        "en": "The idea of moving abroad excites me.",
+        "pt": "A ideia de morar no exterior me excita.",
+        "phonetic_pt": "Dhê áidiia âv múving âbrrôd iksáits mii."
+      },
+      {
+        "en": "That's not a bad idea at all.",
+        "pt": "Essa não é uma ideia ruim de jeito nenhum.",
+        "phonetic_pt": "Dhéts nât â béd áidiia ét ôl."
+      },
+      {
+        "en": "He has some interesting ideas.",
+        "pt": "Ele tem algumas ideias interessantes.",
+        "phonetic_pt": "Hii réz sâm ínterrêsting áidiiaz."
+      },
+      {
+        "en": "The main idea of the book is simple.",
+        "pt": "A ideia principal do livro é simples.",
+        "phonetic_pt": "Dhê mêin áidiia âv dhê búk iz símpl."
+      },
+      {
+        "en": "What an awful idea!",
+        "pt": "Que ideia horrível!",
+        "phonetic_pt": "Uât én ôful áidiia!"
+      },
+      {
+        "en": "I'm open to new ideas.",
+        "pt": "Estou aberto a novas ideias.",
+        "phonetic_pt": "Áim ôupn tu niú áidiiaz."
+      },
+      {
+        "en": "It was a spur-of-the-moment idea.",
+        "pt": "Foi uma ideia de última hora.",
+        "phonetic_pt": "It uâz â spêr-âv-dhê-môumênt áidiia."
+      },
+      {
+        "en": "The idea of a vacation is appealing.",
+        "pt": "A ideia de férias é atraente.",
+        "phonetic_pt": "Dhê áidiia âv â vêikêichân iz âpiiling."
+      },
+      {
+        "en": "Whose idea was it to paint the room blue?",
+        "pt": "De quem foi a ideia de pintar o quarto de azul?",
+        "phonetic_pt": "Rrúz áidiia uâz it tu pêint dhê rrúm blú?"
+      },
+      {
+        "en": "I can't shake the idea that something is wrong.",
+        "pt": "Não consigo tirar da cabeça a ideia de que algo está errado.",
+        "phonetic_pt": "Ái ként shêik dhê áidiia dhât sâmthing iz rrông."
+      },
+      {
+        "en": "That's a clever idea for a gift.",
+        "pt": "Essa é uma ideia inteligente para um presente.",
+        "phonetic_pt": "Dhéts â kléver áidiia fôr â guíft."
+      },
+      {
+        "en": "The idea of universal healthcare is complex.",
+        "pt": "A ideia de saúde universal é complexa.",
+        "phonetic_pt": "Dhê áidiia âv iúnívêrsl hélthkér iz kômpléks."
+      },
+      {
+        "en": "He's full of good ideas.",
+        "pt": "Ele é cheio de boas ideias.",
+        "phonetic_pt": "Hiiz fúl âv gúud áidiiaz."
+      },
+      {
+        "en": "It seemed like a good idea at the time.",
+        "pt": "Pareceu uma boa ideia na hora.",
+        "phonetic_pt": "It siimd láik â gúud áidiia ét dhê táim."
+      },
+      {
+        "en": "The best idea often comes unexpectedly.",
+        "pt": "A melhor ideia muitas vezes vem inesperadamente.",
+        "phonetic_pt": "Dhê bést áidiia ôftn kâmz ânikspéktedli."
+      },
+      {
+        "en": "I had no idea you were coming!",
+        "pt": "Eu não tinha ideia de que você viria!",
+        "phonetic_pt": "Ái rrédd nôu áidiia iú uêr kâming!"
+      },
+      {
+        "en": "Is that your final idea?",
+        "pt": "Essa é a sua ideia final?",
+        "phonetic_pt": "Iz dhét iur fáinl áidiia?"
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "rank": 217,
+    "en": "table",
+    "pt": "mesa (substantivo feminino)",
+    "phonetic": "/ˈteɪbəl/",
+    "phonetic_br": "têibol",
+    "key": "Table",
+    "phrases": [
+      {
+        "en": "Please set the table for dinner tonight.",
+        "pt": "Por favor, arrume a mesa para o jantar hoje à noite.",
+        "phonetic_pt": "Pliiz sét dhâ têibol fôrr dínârr tunáit."
+      },
+      {
+        "en": "The coffee table needs to be dusted.",
+        "pt": "A mesa de centro precisa ser espanada.",
+        "phonetic_pt": "Dhâ kôfii têibol niids tu bii dâstâd."
+      },
+      {
+        "en": "I left my keys on the kitchen table.",
+        "pt": "Deixei minhas chaves na mesa da cozinha.",
+        "phonetic_pt": "Ái léft mái kiiz ôn dhâ kítchân têibol."
+      },
+      {
+        "en": "Can you move that chair closer to the table?",
+        "pt": "Você pode mover aquela cadeira para mais perto da mesa?",
+        "phonetic_pt": "Kán iú muuv dhát tchérr klôusârr tu dhâ têibol?"
+      },
+      {
+        "en": "We booked a table for four at the restaurant.",
+        "pt": "Reservamos uma mesa para quatro no restaurante.",
+        "phonetic_pt": "Uii búkt â têibol fôrr fôrr át dhâ réstârraunt."
+      },
+      {
+        "en": "There's a beautiful vase of flowers on the dining table.",
+        "pt": "Há um lindo vaso de flores na mesa de jantar.",
+        "phonetic_pt": "Dhérz â biiutifúl vêis âv flárrwêrz ôn dhâ dáining têibol."
+      },
+      {
+        "en": "He accidentally knocked over the side table.",
+        "pt": "Ele acidentalmente derrubou a mesinha lateral.",
+        "phonetic_pt": "Hii áksidéntâlii nókt ôuvârr dhâ sáid têibol."
+      },
+      {
+        "en": "Let's put all the snacks on the picnic table.",
+        "pt": "Vamos colocar todos os lanches na mesa de piquenique.",
+        "phonetic_pt": "Léts pút ól dhâ snáks ôn dhâ píknik têibol."
+      },
+      {
+        "en": "The report includes a detailed table of contents.",
+        "pt": "O relatório inclui uma tabela de conteúdo detalhada.",
+        "phonetic_pt": "Dhâ riipôrt inklúds â diitéild têibol âv kônténts."
+      },
+      {
+        "en": "She cleared the table after everyone finished eating.",
+        "pt": "Ela limpou a mesa depois que todos terminaram de comer.",
+        "phonetic_pt": "Shii klírrrd dhâ têibol áftârr évriiuân fínisht íiting."
+      },
+      {
+        "en": "We spent hours talking around the kitchen table.",
+        "pt": "Passamos horas conversando em volta da mesa da cozinha.",
+        "phonetic_pt": "Uii spént áuârrz tóking ârráund dhâ kítchân têibol."
+      },
+      {
+        "en": "Could you hand me the salt shaker from the table?",
+        "pt": "Você poderia me passar o saleiro da mesa?",
+        "phonetic_pt": "Kúd iú hánd mii dhâ sólt shêikârr frôm dhâ têibol?"
+      },
+      {
+        "en": "The waiter asked if we preferred a window table.",
+        "pt": "O garçom perguntou se preferíamos uma mesa na janela.",
+        "phonetic_pt": "Dhâ uêitârr áskt if uii priférrrd â uíndôu têibol."
+      },
+      {
+        "en": "Don't forget to wipe down the table.",
+        "pt": "Não se esqueça de limpar a mesa.",
+        "phonetic_pt": "Dôunt fôrrguét tu uáip dáun dhâ têibol."
+      },
+      {
+        "en": "He always has a stack of books on his bedside table.",
+        "pt": "Ele sempre tem uma pilha de livros na mesinha de cabeceira.",
+        "phonetic_pt": "Hii ólueiz ház â sták âv búks ôn hiz bédsáid têibol."
+      },
+      {
+        "en": "The children were playing under the table.",
+        "pt": "As crianças estavam brincando debaixo da mesa.",
+        "phonetic_pt": "Dhâ tchíldrren uêrr plêiing ândârr dhâ têibol."
+      },
+      {
+        "en": "Let's gather around the table for a game.",
+        "pt": "Vamos nos reunir em volta da mesa para um jogo.",
+        "phonetic_pt": "Léts gádhârr ârráund dhâ têibol fôrr â guêim."
+      },
+      {
+        "en": "The restaurant had a special offer for a table of six.",
+        "pt": "O restaurante tinha uma oferta especial para uma mesa de seis.",
+        "phonetic_pt": "Dhâ réstârraunt hád â spéshâl óffârr fôrr â têibol âv síks."
+      },
+      {
+        "en": "She arranged the documents neatly on the table.",
+        "pt": "Ela arrumou os documentos cuidadosamente na mesa.",
+        "phonetic_pt": "Shii ârrêinjd dhâ dókiiuménts niitlii ôn dhâ têibol."
+      },
+      {
+        "en": "We need to buy a new tablecloth for the dining table.",
+        "pt": "Precisamos comprar uma toalha de mesa nova para a mesa de jantar.",
+        "phonetic_pt": "Uii niid tu bái â niú têibolklohth fôrr dhâ dáining têibol."
+      },
+      {
+        "en": "The meeting agenda was laid out on the conference table.",
+        "pt": "A pauta da reunião estava disposta na mesa de conferência.",
+        "phonetic_pt": "Dhâ míiting âdjéndâ uâz lêid áut ôn dhâ kônfârrêns têibol."
+      },
+      {
+        "en": "He uses a standing desk, not a regular table.",
+        "pt": "Ele usa uma mesa de pé, não uma mesa comum.",
+        "phonetic_pt": "Hii iúsez â stánding désk, nót â réggiulârr têibol."
+      },
+      {
+        "en": "Please don't put your feet on the coffee table.",
+        "pt": "Por favor, não coloque os pés na mesa de centro.",
+        "phonetic_pt": "Pliiz dôunt pút iôrr fiit ôn dhâ kôfii têibol."
+      },
+      {
+        "en": "The magician performed a trick right on the table.",
+        "pt": "O mágico realizou um truque bem na mesa.",
+        "phonetic_pt": "Dhâ mâdjíshân pârrfôrrrmd â trík ráit ôn dhâ têibol."
+      },
+      {
+        "en": "They decided to table the discussion until next week.",
+        "pt": "Eles decidiram adiar a discussão até a próxima semana.",
+        "phonetic_pt": "Dhêi disáidâd tu têibol dhâ diskâshân ântíl nékst uiik."
+      },
+      {
+        "en": "I spilled my drink all over the table.",
+        "pt": "Derramei minha bebida por toda a mesa.",
+        "phonetic_pt": "Ái spíld mái drínk ól ôuvârr dhâ têibol."
+      },
+      {
+        "en": "There's a small table and two chairs on the balcony.",
+        "pt": "Há uma mesinha e duas cadeiras na varanda.",
+        "phonetic_pt": "Dhérz â smól têibol ánd tuu tchérrz ôn dhâ bálkânii."
+      },
+      {
+        "en": "Make sure to check the train schedule table online.",
+        "pt": "Certifique-se de verificar a tabela de horários do trem online.",
+        "phonetic_pt": "Mêik shúrr tu tchék dhâ trêin skédjûl têibol ônláin."
+      },
+      {
+        "en": "The cat jumped onto the table and knocked things off.",
+        "pt": "O gato pulou na mesa e derrubou as coisas.",
+        "phonetic_pt": "Dhâ kát jâmpt ôntu dhâ têibol ánd nókt thíngs óf."
+      },
+      {
+        "en": "We need to get a bigger table if we're having more guests.",
+        "pt": "Precisamos de uma mesa maior se teremos mais convidados.",
+        "phonetic_pt": "Uii niid tu guét â bígârr têibol if uírr hávving môrr guésts."
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "rank": 218,
+    "en": "baby",
+    "pt": "o / a bebê (substantivo)",
+    "phonetic": "/ˈbeɪbi/",
+    "phonetic_br": "bêibi",
+    "key": "Baby",
+    "phrases": [
+      {
+        "en": "The baby is sleeping soundly in its crib.",
+        "pt": "O bebê está dormindo profundamente no berço.",
+        "phonetic_pt": "Dhê bêibi iz sliiping sáundlii in its kríb."
+      },
+      {
+        "en": "Can you hold the baby for a minute?",
+        "pt": "Você pode segurar o bebê por um minuto?",
+        "phonetic_pt": "Kén iú rôuld dhê bêibi fór ê mínit?"
+      },
+      {
+        "en": "She just had a baby girl last week.",
+        "pt": "Ela acabou de ter uma menina na semana passada.",
+        "phonetic_pt": "Shii djâst rrád ê bêibi gêrl lást uiik."
+      },
+      {
+        "en": "Don't cry, baby, everything will be alright.",
+        "pt": "Não chore, meu amor, tudo vai ficar bem.",
+        "phonetic_pt": "Dôunt krái, bêibi, évrithiing uíl bii ólráit."
+      },
+      {
+        "en": "My car is my baby; I wash it every weekend.",
+        "pt": "Meu carro é meu xodó; eu o lavo todo fim de semana.",
+        "phonetic_pt": "Mái kár iz mái bêibi; ái uósh it évrii uiikênd."
+      },
+      {
+        "en": "We need to buy some new baby clothes.",
+        "pt": "Precisamos comprar algumas roupas de bebê novas.",
+        "phonetic_pt": "Uii niid tu bái sâm niú bêibi klôudhz."
+      },
+      {
+        "en": "He always babies his youngest son.",
+        "pt": "Ele sempre mima o filho mais novo.",
+        "phonetic_pt": "Hii óluêis bêibiz hiz iânguêst sân."
+      },
+      {
+        "en": "Happy birthday, baby! I love you.",
+        "pt": "Feliz aniversário, meu bem! Eu te amo.",
+        "phonetic_pt": "Rápii bérthdêi, bêibi! ái lâv iú."
+      },
+      {
+        "en": "The doctor said the baby is healthy.",
+        "pt": "O médico disse que o bebê está saudável.",
+        "phonetic_pt": "Dhê dóktêr séd dhê bêibi iz rréldhii."
+      },
+      {
+        "en": "She's still a baby, just a few months old.",
+        "pt": "Ela ainda é um bebê, tem apenas alguns meses.",
+        "phonetic_pt": "Shiiz stíl ê bêibi, djâst ê fiú mânths ôuld."
+      },
+      {
+        "en": "We heard the baby crying from the next room.",
+        "pt": "Ouvimos o bebê chorando do quarto ao lado.",
+        "phonetic_pt": "Uii hêrd dhê bêibi kráiing frôm dhê nékst rrum."
+      },
+      {
+        "en": "Don't be a baby; stand up for yourself!",
+        "pt": "Não seja um bebê; defenda-se!",
+        "phonetic_pt": "Dôunt bii ê bêibi; stând âp fór iurssélf!"
+      },
+      {
+        "en": "Is the baby awake yet?",
+        "pt": "O bebê já acordou?",
+        "phonetic_pt": "Iz dhê bêibi êuêik iét?"
+      },
+      {
+        "en": "My sister is expecting a baby next spring.",
+        "pt": "Minha irmã está esperando um bebê na próxima primavera.",
+        "phonetic_pt": "Mái sistêr iz exppékting ê bêibi nékst spríng."
+      },
+      {
+        "en": "Look at this cute baby elephant!",
+        "pt": "Olhe este elefante bebê fofo!",
+        "phonetic_pt": "Lúk át dhis kiút bêibi éllifânt!"
+      },
+      {
+        "en": "He treats his new phone like a baby.",
+        "pt": "Ele trata o telefone novo dele como um bebê.",
+        "phonetic_pt": "Hii triits hiz niú fôun láik ê bêibi."
+      },
+      {
+        "en": "The baby needs a diaper change.",
+        "pt": "O bebê precisa trocar a fralda.",
+        "phonetic_pt": "Dhê bêibi niids ê dáipêr chêindj."
+      },
+      {
+        "en": "They named their baby Maya.",
+        "pt": "Eles deram o nome de Maya ao bebê deles.",
+        "phonetic_pt": "Dhêi nêimd dhêr bêibi Máia."
+      },
+      {
+        "en": "Come on, baby, let's go out tonight!",
+        "pt": "Vamos, meu bem, vamos sair hoje à noite!",
+        "phonetic_pt": "Kâm ón, bêibi, léts gôu áut tunáit!"
+      },
+      {
+        "en": "She's a new mom learning how to care for her baby.",
+        "pt": "Ela é uma mãe de primeira viagem aprendendo a cuidar do seu bebê.",
+        "phonetic_pt": "Shiiz ê niú móm lérning ráu tu kér fór hêr bêibi."
+      },
+      {
+        "en": "My baby brother just started walking.",
+        "pt": "Meu irmão caçula acabou de começar a andar.",
+        "phonetic_pt": "Mái bêibi brrâdhêr djâst stárted uóking."
+      },
+      {
+        "en": "We bought a baby stroller for the park.",
+        "pt": "Compramos um carrinho de bebê para o parque.",
+        "phonetic_pt": "Uii bót ê bêibi strôulêr fór dhê párk."
+      },
+      {
+        "en": "Don't baby him; he's old enough to do it himself.",
+        "pt": "Não o mime; ele já tem idade suficiente para fazer sozinho.",
+        "phonetic_pt": "Dôunt bêibi rrim; hiiz ôuld inâf tu duu it himssélf."
+      },
+      {
+        "en": "The baby smiled at me.",
+        "pt": "O bebê sorriu para mim.",
+        "phonetic_pt": "Dhê bêibi smáild át mii."
+      },
+      {
+        "en": "He's such a baby when he's sick.",
+        "pt": "Ele é tão chorão quando está doente.",
+        "phonetic_pt": "Hiiz sâch ê bêibi uén hiiz sík."
+      },
+      {
+        "en": "Is the baby food ready?",
+        "pt": "A papinha do bebê está pronta?",
+        "phonetic_pt": "Iz dhê bêibi fuud rréddii?"
+      },
+      {
+        "en": "We need to get a baby monitor.",
+        "pt": "Precisamos de uma babá eletrônica.",
+        "phonetic_pt": "Uii niid tu guét ê bêibi mónitêr."
+      },
+      {
+        "en": "She held the tiny baby close.",
+        "pt": "Ela segurou o bebê minúsculo perto.",
+        "phonetic_pt": "Shii rrêld dhê táini bêibi klôus."
+      },
+      {
+        "en": "You're my baby, and I'll always protect you.",
+        "pt": "Você é meu amor, e eu sempre vou te proteger.",
+        "phonetic_pt": "Iurr mái bêibi, énd áil óluêis prrôtékt iú."
+      },
+      {
+        "en": "The baby slept through the entire night.",
+        "pt": "O bebê dormiu a noite inteira.",
+        "phonetic_pt": "Dhê bêibi slépt thruu dhê entáir náit."
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "rank": 219,
+    "en": "walk",
+    "pt": "andar / caminhar (verbo de movimento), caminhada / passeio (substantivo)",
+    "phonetic": "/wɑːk/",
+    "phonetic_br": "uók",
+    "key": "Walk",
+    "phrases": [
+      {
+        "en": "I like to walk in the park.",
+        "pt": "Eu gosto de caminhar no parque.",
+        "phonetic_pt": "Ái láik tu uók in dhê pârrk."
+      },
+      {
+        "en": "She's walking the dog right now.",
+        "pt": "Ela está passeando com o cachorro agora.",
+        "phonetic_pt": "Shiiz uóking dhê dôg ráit náu."
+      },
+      {
+        "en": "We walked home after the party.",
+        "pt": "Nós fomos a pé para casa depois da festa.",
+        "phonetic_pt": "Uii uókt rôm áftêrr dhê pârrdi."
+      },
+      {
+        "en": "Will you walk with me to the store?",
+        "pt": "Você vai caminhar comigo até a loja?",
+        "phonetic_pt": "Uil iú uók uidh mii tu dhê stôrr?"
+      },
+      {
+        "en": "Let's take a walk by the lake.",
+        "pt": "Vamos dar uma caminhada perto do lago.",
+        "phonetic_pt": "Léts têik â uók bái dhê lêik."
+      },
+      {
+        "en": "Walk straight ahead and turn left.",
+        "pt": "Vá reto e vire à esquerda.",
+        "phonetic_pt": "Uók strêit âréd ând têrrn léft."
+      },
+      {
+        "en": "I've walked this path many times.",
+        "pt": "Já caminhei por este caminho muitas vezes.",
+        "phonetic_pt": "Áiv uókt dhis pâth méni táims."
+      },
+      {
+        "en": "He had to walk away from the argument.",
+        "pt": "Ele teve que se afastar da discussão.",
+        "phonetic_pt": "Hii rrád tu uók âuêi frâm dhê ârrgiúmênt."
+      },
+      {
+        "en": "That was a long walk to freedom.",
+        "pt": "Aquela foi uma longa jornada para a liberdade.",
+        "phonetic_pt": "Dhét uóz â lôg uók tu friidâm."
+      },
+      {
+        "en": "You should walk more often.",
+        "pt": "Você deveria caminhar com mais frequência.",
+        "phonetic_pt": "Iú shud uók môrr ófân."
+      },
+      {
+        "en": "I've been walking all day.",
+        "pt": "Eu estive caminhando o dia todo.",
+        "phonetic_pt": "Áiv biin uóking ól dêi."
+      },
+      {
+        "en": "Can you walk me through the steps?",
+        "pt": "Você pode me explicar os passos?",
+        "phonetic_pt": "Kén iú uók mii thruu dhê stéps?"
+      },
+      {
+        "en": "It's just a short walk from here.",
+        "pt": "É apenas uma curta caminhada daqui.",
+        "phonetic_pt": "Its jâst â shôrrrt uók frâm hiir."
+      },
+      {
+        "en": "Let's walk around the neighborhood.",
+        "pt": "Vamos passear pelo bairro.",
+        "phonetic_pt": "Léts uók ârráund dhê nêibârrhud."
+      },
+      {
+        "en": "She had walked miles before finding help.",
+        "pt": "Ela tinha caminhado milhas antes de encontrar ajuda.",
+        "phonetic_pt": "Shii rrâd uókt máils bifôrr fáinding hélp."
+      },
+      {
+        "en": "He needs to learn to walk before he can run.",
+        "pt": "Ele precisa aprender a andar antes de correr.",
+        "phonetic_pt": "Hii niids tu lêrrn tu uók bifôrr hii kén rrân."
+      },
+      {
+        "en": "The charity walk raised a lot of money.",
+        "pt": "A caminhada beneficente arrecadou muito dinheiro.",
+        "phonetic_pt": "Dhê tchérrâdi uók rêizd â lát âv mâni."
+      },
+      {
+        "en": "Do you want to walk or drive?",
+        "pt": "Você quer ir a pé ou de carro?",
+        "phonetic_pt": "Duu iú uónt tu uók ôrr dráiv?"
+      },
+      {
+        "en": "We enjoyed a leisurely walk.",
+        "pt": "Nós desfrutamos de uma caminhada tranquila.",
+        "phonetic_pt": "Uii enjôid â liizhârrli uók."
+      },
+      {
+        "en": "Don't walk on the grass.",
+        "pt": "Não pise na grama.",
+        "phonetic_pt": "Dônt uók ôn dhê grrás."
+      },
+      {
+        "en": "My grandfather always takes a walk after dinner.",
+        "pt": "Meu avô sempre faz uma caminhada depois do jantar.",
+        "phonetic_pt": "Mái grrândfâdhêrr ólueiz têiks â uók áftêrr dinêrr."
+      },
+      {
+        "en": "If it wasn't raining, we could walk to the beach.",
+        "pt": "Se não estivesse chovendo, poderíamos ir a pé até a praia.",
+        "phonetic_pt": "If it uózn't rrêining, uii kud uók tu dhê biitch."
+      },
+      {
+        "en": "The dog needs to be walked every day.",
+        "pt": "O cachorro precisa ser passeado todos os dias.",
+        "phonetic_pt": "Dhê dôg niids tu bii uókt évri dêi."
+      },
+      {
+        "en": "People from all walks of life were present.",
+        "pt": "Pessoas de todas as classes sociais estavam presentes.",
+        "phonetic_pt": "Piipâl frâm ól uóks âv láif uêrr prézânt."
+      },
+      {
+        "en": "She decided to walk out of the meeting.",
+        "pt": "Ela decidiu sair da reunião.",
+        "phonetic_pt": "Shii disáidid tu uók áut âv dhê miiting."
+      },
+      {
+        "en": "By noon, I will have walked ten miles.",
+        "pt": "Ao meio-dia, eu terei caminhado dez milhas.",
+        "phonetic_pt": "Bái nuun, Ái uil hâv uókt tén máils."
+      },
+      {
+        "en": "Could you walk me to my car?",
+        "pt": "Você poderia me acompanhar até meu carro?",
+        "phonetic_pt": "Kud iú uók mii tu mái kârr?"
+      },
+      {
+        "en": "It's a nice day for a walk.",
+        "pt": "É um bom dia para uma caminhada.",
+        "phonetic_pt": "Its â náis dêi fôrr â uók."
+      },
+      {
+        "en": "Let's go for a walk.",
+        "pt": "Vamos dar uma volta.",
+        "phonetic_pt": "Léts gôu fôrr â uók."
+      },
+      {
+        "en": "He walks his dog every morning.",
+        "pt": "Ele passeia com o cachorro todas as manhãs.",
+        "phonetic_pt": "Hii uóks hiz dôg évri môrrning."
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "rank": 220,
+    "en": "morning",
+    "pt": "manhã (substantivo feminino)",
+    "phonetic": "/ˈmɔːrnɪŋ/",
+    "phonetic_br": "môrrnîng",
+    "key": "Morning",
+    "phrases": [
+      {
+        "en": "Good morning!",
+        "pt": "Bom dia!",
+        "phonetic_pt": "Gûd môrrnîng!"
+      },
+      {
+        "en": "I wake up early every morning.",
+        "pt": "Eu acordo cedo toda manhã.",
+        "phonetic_pt": "Ái uêik âp êrrli êvri môrrnîng."
+      },
+      {
+        "en": "What are your plans for this morning?",
+        "pt": "Quais são seus planos para esta manhã?",
+        "phonetic_pt": "Uât ârr iúrr plâns fôrr dhís môrrnîng?"
+      },
+      {
+        "en": "The coffee tastes great in the morning.",
+        "pt": "O café tem um ótimo sabor pela manhã.",
+        "phonetic_pt": "Dhê cófi têists grêit in dhê môrrnîng."
+      },
+      {
+        "en": "She goes for a run most mornings.",
+        "pt": "Ela sai para correr na maioria das manhãs.",
+        "phonetic_pt": "Shii gôus fôrr â rrân môust môrrnîngs."
+      },
+      {
+        "en": "We have a meeting at 9 AM tomorrow morning.",
+        "pt": "Temos uma reunião às 9h da manhã amanhã.",
+        "phonetic_pt": "Uii rrév â mii-tîng át náin êi-ém tûmôrrôu môrrnîng."
+      },
+      {
+        "en": "I felt a bit tired this morning.",
+        "pt": "Eu me senti um pouco cansado esta manhã.",
+        "phonetic_pt": "Ái félt â bít táirrâd dhís môrrnîng."
+      },
+      {
+        "en": "The birds start singing very early in the morning.",
+        "pt": "Os pássaros começam a cantar bem cedo pela manhã.",
+        "phonetic_pt": "Dhê bêrrds stârt síngîng vêrri êrrli in dhê môrrnîng."
+      },
+      {
+        "en": "Don't forget to take your medicine this morning.",
+        "pt": "Não se esqueça de tomar seu remédio esta manhã.",
+        "phonetic_pt": "Dôunt fôrrguét tû têik iúrr médissîn dhís môrrnîng."
+      },
+      {
+        "en": "He usually reads the newspaper in the morning.",
+        "pt": "Ele geralmente lê o jornal pela manhã.",
+        "phonetic_pt": "Hii iújuâli rriids dhê niúspêipârr in dhê môrrnîng."
+      },
+      {
+        "en": "My flight departs early Saturday morning.",
+        "pt": "Meu voo parte cedo no sábado de manhã.",
+        "phonetic_pt": "Mái fláit dîpârts êrrli sátârdêi môrrnîng."
+      },
+      {
+        "en": "The morning light is beautiful.",
+        "pt": "A luz da manhã é linda.",
+        "phonetic_pt": "Dhê môrrnîng láit iz biúti-fûl."
+      },
+      {
+        "en": "Can you pick up some milk in the morning?",
+        "pt": "Você pode pegar um pouco de leite pela manhã?",
+        "phonetic_pt": "Kân iú pík âp sâm mílk in dhê môrrnîng?"
+      },
+      {
+        "en": "She prefers to work in the quiet of the morning.",
+        "pt": "Ela prefere trabalhar no silêncio da manhã.",
+        "phonetic_pt": "Shii prrîfêrrs tû uêrk in dhê kuái-ât âv dhê môrrnîng."
+      },
+      {
+        "en": "I had a huge breakfast this morning.",
+        "pt": "Eu tomei um café da manhã enorme esta manhã.",
+        "phonetic_pt": "Ái rrád â rriúj brrékfâst dhís môrrnîng."
+      },
+      {
+        "en": "The morning routine helps me feel organized.",
+        "pt": "A rotina matinal me ajuda a me sentir organizado.",
+        "phonetic_pt": "Dhê môrrnîng rrû-tíin hêlps mii fiil ôrrgânáizd."
+      },
+      {
+        "en": "It was a cold morning, so I wore a jacket.",
+        "pt": "Estava uma manhã fria, então usei uma jaqueta.",
+        "phonetic_pt": "It uâz â côuld môrrnîng, sôu ái uôrr â djákît."
+      },
+      {
+        "en": "They spent the whole morning cleaning the house.",
+        "pt": "Eles passaram a manhã inteira limpando a casa.",
+        "phonetic_pt": "Dhêi spênt dhê rôul môrrnîng klii-nîng dhê rráus."
+      },
+      {
+        "en": "We're going hiking early tomorrow morning.",
+        "pt": "Vamos fazer trilha cedo amanhã de manhã.",
+        "phonetic_pt": "Uii-rr gôu-îng rráikîng êrrli tûmôrrôu môrrnîng."
+      },
+      {
+        "en": "My car wouldn't start this morning.",
+        "pt": "Meu carro não pegou esta manhã.",
+        "phonetic_pt": "Mái kârr uúdênt stârt dhís môrrnîng."
+      },
+      {
+        "en": "She gets a lot done before noon every morning.",
+        "pt": "Ela faz muita coisa antes do meio-dia toda manhã.",
+        "phonetic_pt": "Shii guéts â lát dân bî-fôrr núun êvri môrrnîng."
+      },
+      {
+        "en": "The forecast says sunny skies for the morning.",
+        "pt": "A previsão diz céu ensolarado para a manhã.",
+        "phonetic_pt": "Dhê fôrrkâst séis sâni skáis fôrr dhê môrrnîng."
+      },
+      {
+        "en": "I usually drink a glass of water first thing in the morning.",
+        "pt": "Eu geralmente bebo um copo de água logo de manhã.",
+        "phonetic_pt": "Ái iújuâli drrínk â glâss âv uó-têrr fêrst thîng in dhê môrrnîng."
+      },
+      {
+        "en": "What time do you typically open in the morning?",
+        "pt": "A que horas vocês geralmente abrem pela manhã?",
+        "phonetic_pt": "Uât táim dâ iú tí-pî-kâli ôupên in dhê môrrnîng?"
+      },
+      {
+        "en": "He always seems to be in a good mood in the morning.",
+        "pt": "Ele sempre parece estar de bom humor pela manhã.",
+        "phonetic_pt": "Hii ól-uêis siims tû bii in â gûd múud in dhê môrrnîng."
+      },
+      {
+        "en": "The early morning fog made driving difficult.",
+        "pt": "A neblina da manhã cedo dificultou a direção.",
+        "phonetic_pt": "Dhê êrrli môrrnîng fóg mêid drrái-vîng dí-fî-kâlt."
+      },
+      {
+        "en": "I'll call you back first thing tomorrow morning.",
+        "pt": "Eu te ligo de volta logo amanhã de manhã.",
+        "phonetic_pt": "Áil cól iú bák fêrst thîng tûmôrrôu môrrnîng."
+      },
+      {
+        "en": "She doesn't like to talk much before her morning coffee.",
+        "pt": "Ela não gosta de conversar muito antes do café da manhã dela.",
+        "phonetic_pt": "Shii dâzênt láik tû tóck mâtch bî-fôrr rrr môrrnîng cófi."
+      },
+      {
+        "en": "We watched the sunrise this morning from the beach.",
+        "pt": "Assistimos ao nascer do sol esta manhã da praia.",
+        "phonetic_pt": "Uii uátchd dhê sân-rráiz dhís môrrnîng frrôm dhê biitch."
+      },
+      {
+        "en": "Have a good morning!",
+        "pt": "Tenha um bom dia!",
+        "phonetic_pt": "Háv â gûd môrrnîng!"
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "rank": 221,
+    "en": "week",
+    "pt": "a semana (substantivo feminino)",
+    "phonetic": "/wiːk/",
+    "phonetic_br": "uík",
+    "key": "Week",
+    "phrases": [
+      {
+        "en": "I'll see you next week.",
+        "pt": "Vejo você na próxima semana.",
+        "phonetic_pt": "Áil sii iú nékst uík."
+      },
+      {
+        "en": "How was your week?",
+        "pt": "Como foi sua semana?",
+        "phonetic_pt": "Ráu uóz iôr uík?"
+      },
+      {
+        "en": "I'm so tired, I've worked all week.",
+        "pt": "Estou tão cansado, trabalhei a semana inteira.",
+        "phonetic_pt": "Áim sô táird, áiv uêrkt ôl uík."
+      },
+      {
+        "en": "We're going on vacation in two weeks.",
+        "pt": "Vamos sair de férias em duas semanas.",
+        "phonetic_pt": "Uírr gôuing ôn vêikêichân in tuu uíks."
+      },
+      {
+        "en": "She visits her parents once a week.",
+        "pt": "Ela visita os pais uma vez por semana.",
+        "phonetic_pt": "Shii vízits hêrr pêrânts uâns â uík."
+      },
+      {
+        "en": "This is the busiest week of the year.",
+        "pt": "Esta é a semana mais movimentada do ano.",
+        "phonetic_pt": "Dhís iz dhâ bíziêst uík âv dhâ iírr."
+      },
+      {
+        "en": "Can you finish this report by the end of the week?",
+        "pt": "Você consegue terminar este relatório até o fim da semana?",
+        "phonetic_pt": "Kân iú fínich dhís rriipôrt bái dhí ênd âv dhâ uík?"
+      },
+      {
+        "en": "I haven't seen him for weeks.",
+        "pt": "Não o vejo há semanas.",
+        "phonetic_pt": "Ái rrévânt siin rrim fôr uíks."
+      },
+      {
+        "en": "What are your plans for the week?",
+        "pt": "Quais são seus planos para a semana?",
+        "phonetic_pt": "Uót arr iôr plâns fôr dhâ uík?"
+      },
+      {
+        "en": "The store is open seven days a week.",
+        "pt": "A loja abre sete dias por semana.",
+        "phonetic_pt": "Dhâ stôrr iz ôupân sévân dêis â uík."
+      },
+      {
+        "en": "I need a break; this week has been crazy.",
+        "pt": "Preciso de uma pausa; esta semana foi uma loucura.",
+        "phonetic_pt": "Ái niid â brrêik; dhís uík râz biin crrêizi."
+      },
+      {
+        "en": "He's been feeling sick all week.",
+        "pt": "Ele está se sentindo doente a semana toda.",
+        "phonetic_pt": "Hiiz biin fiiling sík ôl uík."
+      },
+      {
+        "en": "Let's catch up sometime next week.",
+        "pt": "Vamos nos encontrar em algum momento na próxima semana.",
+        "phonetic_pt": "Léts kétch âp sâmtáim nékst uík."
+      },
+      {
+        "en": "My car broke down last week.",
+        "pt": "Meu carro quebrou semana passada.",
+        "phonetic_pt": "Mái cárr brrôuk dáun lást uík."
+      },
+      {
+        "en": "They announced the new policy earlier this week.",
+        "pt": "Eles anunciaram a nova política no início desta semana.",
+        "phonetic_pt": "Dhêi ânáunst dhâ niú póliisii êrliêrr dhís uík."
+      },
+      {
+        "en": "We're having dinner with them this week.",
+        "pt": "Vamos jantar com eles esta semana.",
+        "phonetic_pt": "Uírr rréving dínêrr uíth dhêm dhís uík."
+      },
+      {
+        "en": "The project is due in about a week.",
+        "pt": "O projeto vence em cerca de uma semana.",
+        "phonetic_pt": "Dhâ prrójéct iz diú in âbáut â uík."
+      },
+      {
+        "en": "I usually go to the gym three times a week.",
+        "pt": "Eu geralmente vou à academia três vezes por semana.",
+        "phonetic_pt": "Ái iújuâlii gôu tuu dhâ jím thríi táims â uík."
+      },
+      {
+        "en": "Are you free any day next week?",
+        "pt": "Você está livre algum dia na próxima semana?",
+        "phonetic_pt": "Árr iú frrii êny dêi nékst uík?"
+      },
+      {
+        "en": "I'm really looking forward to the weekend after this long week.",
+        "pt": "Estou realmente ansioso para o fim de semana depois desta longa semana.",
+        "phonetic_pt": "Áim rríili lúking fôruêrd tuu dhâ uíkênd áftêrr dhís lóng uík."
+      },
+      {
+        "en": "This has been the best week of my life.",
+        "pt": "Esta foi a melhor semana da minha vida.",
+        "phonetic_pt": "Dhís râz biin dhâ bêst uík âv mái láif."
+      },
+      {
+        "en": "He travels for work almost every other week.",
+        "pt": "Ele viaja a trabalho quase a cada duas semanas.",
+        "phonetic_pt": "Hii trrêvâlz fôr uêrk ôlmôust êvrii âdhêrr uík."
+      },
+      {
+        "en": "We had a fantastic time last week.",
+        "pt": "Nos divertimos muito semana passada.",
+        "phonetic_pt": "Uii râd â fântástik táim lást uík."
+      },
+      {
+        "en": "The new exhibition opens next week.",
+        "pt": "A nova exposição abre na próxima semana.",
+        "phonetic_pt": "Dhâ niú êksibíchân ôupâns nékst uík."
+      },
+      {
+        "en": "I need to buy groceries for the week.",
+        "pt": "Preciso comprar mantimentos para a semana.",
+        "phonetic_pt": "Ái niid tuu bái grrôussêrriis fôr dhâ uík."
+      },
+      {
+        "en": "This time next week, I'll be on a beach.",
+        "pt": "Nesta época na próxima semana, estarei na praia.",
+        "phonetic_pt": "Dhís táim nékst uík, áil bii ôn â biitch."
+      },
+      {
+        "en": "They're planning a surprise party for him later this week.",
+        "pt": "Eles estão planejando uma festa surpresa para ele ainda esta semana.",
+        "phonetic_pt": "Dhêirr plâning â sêrprráiz pártii fôr rrim lêtêrr dhís uík."
+      },
+      {
+        "en": "I usually work five days a week.",
+        "pt": "Eu geralmente trabalho cinco dias por semana.",
+        "phonetic_pt": "Ái iújuâlii uêrk fáiv dêis â uík."
+      },
+      {
+        "en": "The deadline is just a week away.",
+        "pt": "O prazo final está a apenas uma semana.",
+        "phonetic_pt": "Dhâ dédláin iz jâst â uík âwêi."
+      },
+      {
+        "en": "What did you do last week?",
+        "pt": "O que você fez semana passada?",
+        "phonetic_pt": "Uót díd iú duu lást uík."
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "rank": 222,
+    "en": "hour",
+    "pt": "hora (substantivo feminino)",
+    "phonetic": "/aʊər/",
+    "phonetic_br": "áuer",
+    "key": "Hour",
+    "phrases": [
+      {
+        "en": "I'll be there in an hour.",
+        "pt": "Eu estarei lá em uma hora.",
+        "phonetic_pt": "Áil bii dhér in ân áuer."
+      },
+      {
+        "en": "The meeting lasted two hours.",
+        "pt": "A reunião durou duas horas.",
+        "phonetic_pt": "Dhê míiting lásted tuu áuers."
+      },
+      {
+        "en": "She works an eight-hour day.",
+        "pt": "Ela trabalha um dia de oito horas.",
+        "phonetic_pt": "Shii uêrks ân êit-áuer dêi."
+      },
+      {
+        "en": "It's an hour's drive from here.",
+        "pt": "É uma hora de carro daqui.",
+        "phonetic_pt": "Its ân áuers dráiv frôm rriir."
+      },
+      {
+        "en": "Can you spare an hour?",
+        "pt": "Você pode poupar uma hora?",
+        "phonetic_pt": "Kân iú spér ân áuer?"
+      },
+      {
+        "en": "We waited for an hour.",
+        "pt": "Nós esperamos por uma hora.",
+        "phonetic_pt": "Wii uêited fôr ân áuer."
+      },
+      {
+        "en": "Every hour counts.",
+        "pt": "Cada hora conta.",
+        "phonetic_pt": "Évri áuer káunts."
+      },
+      {
+        "en": "He gets paid by the hour.",
+        "pt": "Ele é pago por hora.",
+        "phonetic_pt": "Hii guéts pêid bái dhê áuer."
+      },
+      {
+        "en": "The store is open 24 hours a day.",
+        "pt": "A loja fica aberta 24 horas por dia.",
+        "phonetic_pt": "Dhê stôr is ôupen tuêni-fôr áuers â dêi."
+      },
+      {
+        "en": "I've been studying for hours.",
+        "pt": "Eu estou estudando há horas.",
+        "phonetic_pt": "Áiv biin stâdiing fôr áuers."
+      },
+      {
+        "en": "What time is it? It's almost an hour past midnight.",
+        "pt": "Que horas são? É quase uma hora depois da meia-noite.",
+        "phonetic_pt": "Uát táim is it? Its ôumôust ân áuer pást mídnait."
+      },
+      {
+        "en": "The train leaves in half an hour.",
+        "pt": "O trem parte em meia hora.",
+        "phonetic_pt": "Dhê trêin liivs in rráf ân áuer."
+      },
+      {
+        "en": "I need an hour to myself.",
+        "pt": "Eu preciso de uma hora para mim.",
+        "phonetic_pt": "Ái niid ân áuer tuu mái-séLf."
+      },
+      {
+        "en": "She spent an hour on the phone.",
+        "pt": "Ela passou uma hora no telefone.",
+        "phonetic_pt": "Shii spént ân áuer ôn dhê fôun."
+      },
+      {
+        "en": "We're losing an hour of daylight.",
+        "pt": "Estamos perdendo uma hora de luz do dia.",
+        "phonetic_pt": "Uí rr líuzing ân áuer âv dêiláit."
+      },
+      {
+        "en": "The doctor's appointment is in an hour.",
+        "pt": "A consulta médica é em uma hora.",
+        "phonetic_pt": "Dhê dóktôrs âpôintment is in ân áuer."
+      },
+      {
+        "en": "Traffic added another hour to my commute.",
+        "pt": "O trânsito adicionou mais uma hora ao meu trajeto.",
+        "phonetic_pt": "Trráfik áded â'nâdhêr áuer tuu mái kâmiút."
+      },
+      {
+        "en": "This task will take at least an hour.",
+        "pt": "Esta tarefa levará pelo menos uma hora.",
+        "phonetic_pt": "Dhis tásk uil têik ât liist ân áuer."
+      },
+      {
+        "en": "I'll call you back in an hour or so.",
+        "pt": "Eu te ligo de volta em uma hora ou mais.",
+        "phonetic_pt": "Áil kôl iú báck in ân áuer ôr sôu."
+      },
+      {
+        "en": "They work long hours.",
+        "pt": "Eles trabalham muitas horas.",
+        "phonetic_pt": "Dhêi uêrk lông áuers."
+      },
+      {
+        "en": "It's happy hour at the bar.",
+        "pt": "É happy hour no bar.",
+        "phonetic_pt": "Its rápi áuer ât dhê bárr."
+      },
+      {
+        "en": "Can you give me an hour of your time?",
+        "pt": "Você pode me dar uma hora do seu tempo?",
+        "phonetic_pt": "Kân iú guiv mii ân áuer âv iurr táim?"
+      },
+      {
+        "en": "The movie is two hours long.",
+        "pt": "O filme tem duas horas de duração.",
+        "phonetic_pt": "Dhê muuvi is tuu áuers lông."
+      },
+      {
+        "en": "I only slept for a couple of hours.",
+        "pt": "Eu dormi apenas por algumas horas.",
+        "phonetic_pt": "Ái ôunli slépt fôr â kâpl âv áuers."
+      },
+      {
+        "en": "He arrived an hour late.",
+        "pt": "Ele chegou uma hora atrasado.",
+        "phonetic_pt": "Hii âráivd ân áuer lêit."
+      },
+      {
+        "en": "The flight was delayed by an hour.",
+        "pt": "O voo foi atrasado em uma hora.",
+        "phonetic_pt": "Dhê fláit uâs dilêid bái ân áuer."
+      },
+      {
+        "en": "We talked for a good hour.",
+        "pt": "Nós conversamos por uma boa hora.",
+        "phonetic_pt": "Wii tôkd fôr â guud áuer."
+      },
+      {
+        "en": "The baby cries every hour.",
+        "pt": "O bebê chora a cada hora.",
+        "phonetic_pt": "Dhê bêibi kráis évri áuer."
+      },
+      {
+        "en": "I need to recharge for an hour.",
+        "pt": "Eu preciso recarregar por uma hora.",
+        "phonetic_pt": "Ái niid tuu riichárj fôr ân áuer."
+      },
+      {
+        "en": "She spends hours volunteering.",
+        "pt": "Ela passa horas sendo voluntária.",
+        "phonetic_pt": "Shii spénds áuers volântiiring."
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "rank": 223,
+    "en": "game",
+    "pt": "o jogo (substantivo masculino)",
+    "phonetic": "/ɡeɪm/",
+    "phonetic_br": "gêim",
+    "key": "Game",
+    "phrases": [
+      {
+        "en": "Let's play a board game tonight.",
+        "pt": "Vamos jogar um jogo de tabuleiro hoje à noite.",
+        "phonetic_pt": "Lêts plêi â bôrrrd guêim tunáit."
+      },
+      {
+        "en": "The soccer game was really exciting.",
+        "pt": "O jogo de futebol foi muito emocionante.",
+        "phonetic_pt": "Dhê sókêrr guêim uâz rríilii iksáiting."
+      },
+      {
+        "en": "Do you want to play a video game?",
+        "pt": "Você quer jogar um videogame?",
+        "phonetic_pt": "Dú iú uânt tu plêi â vídiou guêim?"
+      },
+      {
+        "en": "She's always game for an adventure.",
+        "pt": "Ela está sempre disposta para uma aventura.",
+        "phonetic_pt": "Shiiz óluêiz guêim fôrr ân âdvêntchêrr."
+      },
+      {
+        "en": "It's all part of the game, I guess.",
+        "pt": "É tudo parte do jogo, eu acho.",
+        "phonetic_pt": "Its ól pârrrt âv dhê guêim, ái guês."
+      },
+      {
+        "en": "He's got a strong basketball game.",
+        "pt": "Ele tem um bom desempenho no basquete.",
+        "phonetic_pt": "Hiiz gót â strrông báskitbôl guêim."
+      },
+      {
+        "en": "The final score of the game was 3-2.",
+        "pt": "O placar final do jogo foi 3 a 2.",
+        "phonetic_pt": "Dhê fáinâl skôrr âv dhê guêim uâz thrrii tú."
+      },
+      {
+        "en": "Don't play games with my heart.",
+        "pt": "Não brinque com o meu coração.",
+        "phonetic_pt": "Dônt plêi guêims uidh mái rrârrrt."
+      },
+      {
+        "en": "Are you game to try that new restaurant?",
+        "pt": "Você está a fim de experimentar aquele restaurante novo?",
+        "phonetic_pt": "Árr iú guêim tu trái dhât niú rrêstârrônt?"
+      },
+      {
+        "en": "The children are playing a game in the yard.",
+        "pt": "As crianças estão jogando um jogo no quintal.",
+        "phonetic_pt": "Dhê tchíldrên ârr plêiing â guêim in dhê iárrrd."
+      },
+      {
+        "en": "This chess game is taking forever.",
+        "pt": "Este jogo de xadrez está demorando uma eternidade.",
+        "phonetic_pt": "Dhis tchês guêim iz têiking fôrrêvêrr."
+      },
+      {
+        "en": "We need to step up our game.",
+        "pt": "Precisamos melhorar nosso desempenho.",
+        "phonetic_pt": "Uii niid tu stêp âp áuêrr guêim."
+      },
+      {
+        "en": "Game over, you lost.",
+        "pt": "Fim de jogo, você perdeu.",
+        "phonetic_pt": "Guêim ôuvêrr, iú lôst."
+      },
+      {
+        "en": "Did you watch the big game yesterday?",
+        "pt": "Você assistiu ao grande jogo ontem?",
+        "phonetic_pt": "Did iú uótch dhê big guêim iêstêrrdei?"
+      },
+      {
+        "en": "It's a dangerous game to play with fire.",
+        "pt": "É um jogo perigoso brincar com fogo.",
+        "phonetic_pt": "Its â dêindjêrrâs guêim tu plêi uidh fáierr."
+      },
+      {
+        "en": "She has her own game plan for success.",
+        "pt": "Ela tem seu próprio plano de jogo para o sucesso.",
+        "phonetic_pt": "Shii hâz hêrr ôun guêim plân fôrr sâksês."
+      },
+      {
+        "en": "What's your favorite board game?",
+        "pt": "Qual é o seu jogo de tabuleiro favorito?",
+        "phonetic_pt": "Uôts iôrr fêivrrit bôrrrd guêim?"
+      },
+      {
+        "en": "I'm not in the mood for games right now.",
+        "pt": "Não estou com vontade de jogos agora.",
+        "phonetic_pt": "Áim nót in dhê muud fôrr guêims rráit náu."
+      },
+      {
+        "en": "The hunting game is regulated by law.",
+        "pt": "A caça é regulamentada por lei.",
+        "phonetic_pt": "Dhê hânting guêim iz rrêguiulêitid bái lô."
+      },
+      {
+        "en": "Let's make this a friendly game.",
+        "pt": "Vamos fazer deste um jogo amigável.",
+        "phonetic_pt": "Lêts mêik dhis â frêndlii guêim."
+      },
+      {
+        "en": "He's always trying to play mind games.",
+        "pt": "Ele está sempre tentando fazer jogos mentais.",
+        "phonetic_pt": "Hiiz óluêiz tráing tu plêi máind guêims."
+      },
+      {
+        "en": "The game was postponed due to bad weather.",
+        "pt": "O jogo foi adiado devido ao mau tempo.",
+        "phonetic_pt": "Dhê guêim uâz pôustpôund diú tu bâd uêdhêrr."
+      },
+      {
+        "en": "I've got a new game on my phone.",
+        "pt": "Eu tenho um jogo novo no meu celular.",
+        "phonetic_pt": "Áiv gót â niú guêim ôn mái fôun."
+      },
+      {
+        "en": "It's a waiting game to see who wins.",
+        "pt": "É um jogo de espera para ver quem ganha.",
+        "phonetic_pt": "Its â uêiting guêim tu sii hú uins."
+      },
+      {
+        "en": "Are you ready for game night?",
+        "pt": "Você está pronto para a noite de jogos?",
+        "phonetic_pt": "Árr iú rrêdii fôrr guêim náit?"
+      },
+      {
+        "en": "He knows how to play the political game.",
+        "pt": "Ele sabe como jogar o jogo político.",
+        "phonetic_pt": "Hii nôuz ráu tu plêi dhê pôlítikâl guêim."
+      },
+      {
+        "en": "The team needs to bring their A-game.",
+        "pt": "O time precisa dar o seu melhor.",
+        "phonetic_pt": "Dhê tiim niids tu brring dhêrr êi-guêim."
+      },
+      {
+        "en": "This feels like a rigged game.",
+        "pt": "Isso parece um jogo manipulado.",
+        "phonetic_pt": "Dhis fiils láik â rrígd guêim."
+      },
+      {
+        "en": "I usually play one game of cards before bed.",
+        "pt": "Eu geralmente jogo uma partida de cartas antes de dormir.",
+        "phonetic_pt": "Ái iújuâlii plêi uân guêim âv kârrds bifôrr béd."
+      },
+      {
+        "en": "Good game, everyone!",
+        "pt": "Bom jogo, pessoal!",
+        "phonetic_pt": "Guud guêim, êvrríuan!"
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "rank": 224,
+    "en": "sit",
+    "pt": "sentar (verbo de ação)",
+    "phonetic": "/sɪt/",
+    "phonetic_br": "sít",
+    "key": "sit",
+    "phrases": [
+      {
+        "en": "Please sit down.",
+        "pt": "Por favor, sente-se.",
+        "phonetic_pt": "Pliiz sít dáun."
+      },
+      {
+        "en": "Can I sit here?",
+        "pt": "Posso sentar aqui?",
+        "phonetic_pt": "Kân ái sít rriir?"
+      },
+      {
+        "en": "He sat on the couch.",
+        "pt": "Ele sentou no sofá.",
+        "phonetic_pt": "Rrii sát ôn dhâ káuch."
+      },
+      {
+        "en": "She's sitting by the window.",
+        "pt": "Ela está sentada perto da janela.",
+        "phonetic_pt": "Shiiz síring bái dhâ uíndou."
+      },
+      {
+        "en": "We'll sit together at the concert.",
+        "pt": "Vamos sentar juntos no show.",
+        "phonetic_pt": "Uíil sít tuguédhârr át dhâ kônsêrt."
+      },
+      {
+        "en": "Where do you usually sit?",
+        "pt": "Onde você costuma sentar?",
+        "phonetic_pt": "Uérr duu iú iújuâli sít?"
+      },
+      {
+        "en": "Don't sit on the wet paint.",
+        "pt": "Não sente na tinta molhada.",
+        "phonetic_pt": "Dônt sít ôn dhâ uét pêint."
+      },
+      {
+        "en": "Would you like to sit?",
+        "pt": "Gostaria de se sentar?",
+        "phonetic_pt": "Uud iú láik tuu sít?"
+      },
+      {
+        "en": "I was sitting when you called.",
+        "pt": "Eu estava sentado quando você ligou.",
+        "phonetic_pt": "Ái uás síring uén iú kôld."
+      },
+      {
+        "en": "The cat always sits on my lap.",
+        "pt": "O gato sempre senta no meu colo.",
+        "phonetic_pt": "Dhâ kát ólueiz síts ôn mái láp."
+      },
+      {
+        "en": "Don't just sit there, help me!",
+        "pt": "Não fique aí parado, me ajude!",
+        "phonetic_pt": "Dônt jâst sít dhêrr, rélp mii!"
+      },
+      {
+        "en": "Let's sit down and talk.",
+        "pt": "Vamos sentar e conversar.",
+        "phonetic_pt": "Léts sít dáun ând tóók."
+      },
+      {
+        "en": "You can sit wherever you want.",
+        "pt": "Você pode sentar onde quiser.",
+        "phonetic_pt": "Iú kân sít uêrrévârr iú uônt."
+      },
+      {
+        "en": "Why don't we sit outside?",
+        "pt": "Por que não sentamos lá fora?",
+        "phonetic_pt": "Uái dônt uii sít áutsáid?"
+      },
+      {
+        "en": "Look, he's sitting alone.",
+        "pt": "Olha, ele está sentado sozinho.",
+        "phonetic_pt": "Lúk, hiiz síring âlôun."
+      },
+      {
+        "en": "We used to sit here every day.",
+        "pt": "Nós costumávamos sentar aqui todo dia.",
+        "phonetic_pt": "Uii iúzd tuu sít rriir évrii dêi."
+      },
+      {
+        "en": "Could you sit still for a minute?",
+        "pt": "Você poderia ficar parado por um minuto?",
+        "phonetic_pt": "Kúd iú sít stíl fôrr â mínet?"
+      },
+      {
+        "en": "Students must sit in their assigned seats.",
+        "pt": "Os alunos devem sentar em seus assentos designados.",
+        "phonetic_pt": "Stúudents mâst sít ín dhêrr âsáind siits."
+      },
+      {
+        "en": "We had to sit and wait for hours.",
+        "pt": "Tivemos que sentar e esperar por horas.",
+        "phonetic_pt": "Uii hâd tuu sít ând uêit fôrr áuârrz."
+      },
+      {
+        "en": "It's better to sit up straight.",
+        "pt": "É melhor sentar-se reto.",
+        "phonetic_pt": "Its bétârr tuu sít âp strêit."
+      },
+      {
+        "en": "I might sit out this game.",
+        "pt": "Talvez eu não jogue este jogo (fique de fora).",
+        "phonetic_pt": "Ái máit sít áut dhís guêim."
+      },
+      {
+        "en": "I haven't sat there before.",
+        "pt": "Eu nunca sentei lá antes.",
+        "phonetic_pt": "Ái hâvênt sát dhêrr bifôrr."
+      },
+      {
+        "en": "The dog was told to sit.",
+        "pt": "O cachorro foi mandado sentar.",
+        "phonetic_pt": "Dhâ dôg uás tôuld tuu sít."
+      },
+      {
+        "en": "Let's sit on that idea for a while.",
+        "pt": "Vamos pensar nessa ideia por um tempo.",
+        "phonetic_pt": "Léts sít ôn dhât áidiiâ fôrr â uáil."
+      },
+      {
+        "en": "Take a seat, please.",
+        "pt": "Por favor, sente-se.",
+        "phonetic_pt": "Têik â sít, pliiz."
+      },
+      {
+        "en": "Do you prefer to sit or stand?",
+        "pt": "Você prefere sentar ou ficar em pé?",
+        "phonetic_pt": "Duu iú prifêrr tuu sít ôrr stând?"
+      },
+      {
+        "en": "Come sit with us.",
+        "pt": "Venha sentar-se conosco.",
+        "phonetic_pt": "Kâm sít uíth âs."
+      },
+      {
+        "en": "I saw him sit next to her.",
+        "pt": "Eu o vi sentar ao lado dela.",
+        "phonetic_pt": "Ái sóó rrim sít nékst tuu rrârr."
+      },
+      {
+        "en": "I can't just sit around all day.",
+        "pt": "Não posso ficar parado o dia todo.",
+        "phonetic_pt": "Ái kânt jâst sít ârráund ól dêi."
+      },
+      {
+        "en": "If you sit too long, your legs will get stiff.",
+        "pt": "Se você sentar por muito tempo, suas pernas ficarão duras.",
+        "phonetic_pt": "Íf iú sít tuu lóng, iórr légs uíl guét stíf."
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "rank": 225,
+    "en": "something",
+    "pt": "algo / alguma coisa (pronome indefinido)",
+    "phonetic": "/ˈsʌmθɪŋ/",
+    "phonetic_br": "sâmthíng",
+    "key": "something",
+    "phrases": [
+      {
+        "en": "I need something to drink.",
+        "pt": "Preciso de algo para beber.",
+        "phonetic_pt": "Ái niid sâmthíng tchu drínk."
+      },
+      {
+        "en": "There's something wrong with the car.",
+        "pt": "Há algo errado com o carro.",
+        "phonetic_pt": "Dhêrz sâmthíng rrông uídh dhê cárr."
+      },
+      {
+        "en": "Did you say something?",
+        "pt": "Você disse algo?",
+        "phonetic_pt": "Díd iú sêi sâmthíng?"
+      },
+      {
+        "en": "Let's do something fun this weekend.",
+        "pt": "Vamos fazer algo divertido neste fim de semana.",
+        "phonetic_pt": "Léts duu sâmthíng fân dhís uíikênd."
+      },
+      {
+        "en": "She's always cooking something delicious.",
+        "pt": "Ela está sempre cozinhando algo delicioso.",
+        "phonetic_pt": "Shiiz ólueiz cúking sâmthíng dilíshâs."
+      },
+      {
+        "en": "I feel like something good is about to happen.",
+        "pt": "Sinto que algo bom está prestes a acontecer.",
+        "phonetic_pt": "Ái fiil láik sâmthíng gúd iz bâut tchu rápân."
+      },
+      {
+        "en": "Can I get you something?",
+        "pt": "Posso te trazer algo?",
+        "phonetic_pt": "Kân ái guét iú sâmthíng?"
+      },
+      {
+        "en": "He wants something more from life.",
+        "pt": "Ele quer algo mais da vida.",
+        "phonetic_pt": "Hii uânts sâmthíng môrr frôm láif."
+      },
+      {
+        "en": "There must be something we can do.",
+        "pt": "Deve haver algo que possamos fazer.",
+        "phonetic_pt": "Dhêrr mâst bii sâmthíng uii kân duu."
+      },
+      {
+        "en": "I heard something strange last night.",
+        "pt": "Ouvi algo estranho ontem à noite.",
+        "phonetic_pt": "Ái hêrd sâmthíng strêindj lâst náit."
+      },
+      {
+        "en": "Do you have something to write with?",
+        "pt": "Você tem algo para escrever?",
+        "phonetic_pt": "Dú iú hâv sâmthíng tchu rráit uídh?"
+      },
+      {
+        "en": "Something tells me it's going to rain.",
+        "pt": "Algo me diz que vai chover.",
+        "phonetic_pt": "Sâmthíng téls mii its gôuing tchu rrêin."
+      },
+      {
+        "en": "We need something to cover the table.",
+        "pt": "Precisamos de algo para cobrir a mesa.",
+        "phonetic_pt": "Uii niid sâmthíng tchu câvârr dhê têibâl."
+      },
+      {
+        "en": "Is there something bothering you?",
+        "pt": "Há algo te incomodando?",
+        "phonetic_pt": "Iz dhêrr sâmthíng bódhârríng iú?"
+      },
+      {
+        "en": "Let me show you something interesting.",
+        "pt": "Deixe-me te mostrar algo interessante.",
+        "phonetic_pt": "Lét mii shôu iú sâmthíng íntrêstíng."
+      },
+      {
+        "en": "They found something valuable at the site.",
+        "pt": "Eles encontraram algo valioso no local.",
+        "phonetic_pt": "Dhêi fâund sâmthíng váliúâbâl ât dhê sáit."
+      },
+      {
+        "en": "I'd like something sweet, please.",
+        "pt": "Eu gostaria de algo doce, por favor.",
+        "phonetic_pt": "Áid láik sâmthíng suíit, pliiz."
+      },
+      {
+        "en": "There's always something new to learn.",
+        "pt": "Sempre há algo novo para aprender.",
+        "phonetic_pt": "Dhêrz ólueiz sâmthíng niú tchu lêrrn."
+      },
+      {
+        "en": "He's working on something important.",
+        "pt": "Ele está trabalhando em algo importante.",
+        "phonetic_pt": "Hiiz uêrrking ôn sâmthíng imprrórtânt."
+      },
+      {
+        "en": "Could you pass me something to eat?",
+        "pt": "Você poderia me passar algo para comer?",
+        "phonetic_pt": "Cúd iú pâs mii sâmthíng tchu iit?"
+      },
+      {
+        "en": "Something has to change.",
+        "pt": "Algo tem que mudar.",
+        "phonetic_pt": "Sâmthíng hâs tchu chêindj."
+      },
+      {
+        "en": "Don't you have something else to do?",
+        "pt": "Você não tem algo mais para fazer?",
+        "phonetic_pt": "Dônt iú hâv sâmthíng éls tchu duu?"
+      },
+      {
+        "en": "She always brings something to the party.",
+        "pt": "Ela sempre traz algo para a festa.",
+        "phonetic_pt": "Shii ólueiz brríngs sâmthíng tchu dhê párrdi."
+      },
+      {
+        "en": "We need something quick for dinner.",
+        "pt": "Precisamos de algo rápido para o jantar.",
+        "phonetic_pt": "Uii niid sâmthíng cuíck fôrr dínârr."
+      },
+      {
+        "en": "Something about his story didn't add up.",
+        "pt": "Algo na história dele não batia.",
+        "phonetic_pt": "Sâmthíng bâut híz stórri díndnt âd âp."
+      },
+      {
+        "en": "I picked up something interesting at the market.",
+        "pt": "Peguei algo interessante no mercado.",
+        "phonetic_pt": "Ái píckd âp sâmthíng íntrêstíng ât dhê márrkêt."
+      },
+      {
+        "en": "Have you seen something like this before?",
+        "pt": "Você já viu algo assim antes?",
+        "phonetic_pt": "Hâv iú siin sâmthíng láik dhís bifôrr?"
+      },
+      {
+        "en": "I'm looking for something specific.",
+        "pt": "Estou procurando por algo específico.",
+        "phonetic_pt": "Áim lúking fôrr sâmthíng spêsífick."
+      },
+      {
+        "en": "There's something special about this place.",
+        "pt": "Há algo especial sobre este lugar.",
+        "phonetic_pt": "Dhêrz sâmthíng spêshâl bâut dhís plêis."
+      },
+      {
+        "en": "Something tells me we'll meet again.",
+        "pt": "Algo me diz que nos encontraremos novamente.",
+        "phonetic_pt": "Sâmthíng téls mii uíil miit âgên."
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "rank": 226,
+    "en": "nothing",
+    "pt": "nada (pronome indefinido)",
+    "phonetic": "/ˈnʌθɪŋ/",
+    "phonetic_br": "nâthing",
+    "key": "Nothing",
+    "phrases": [
+      {
+        "en": "There's nothing to worry about.",
+        "pt": "Não há nada com que se preocupar.",
+        "phonetic_pt": "Dhérs nâthing tu uârrí abáut."
+      },
+      {
+        "en": "I have nothing left to say.",
+        "pt": "Não tenho mais nada a dizer.",
+        "phonetic_pt": "Ái rrév nâthing léft tu sêi."
+      },
+      {
+        "en": "Nothing happened at all.",
+        "pt": "Não aconteceu absolutamente nada.",
+        "phonetic_pt": "Nâthing rrépând át ól."
+      },
+      {
+        "en": "It means nothing to me.",
+        "pt": "Não significa nada para mim.",
+        "phonetic_pt": "It miins nâthing tu mii."
+      },
+      {
+        "en": "He did nothing wrong.",
+        "pt": "Ele não fez nada de errado.",
+        "phonetic_pt": "Hii did nâthing rrông."
+      },
+      {
+        "en": "We found nothing in the box.",
+        "pt": "Não encontramos nada na caixa.",
+        "phonetic_pt": "Uii fáund nâthing in dhê bôks."
+      },
+      {
+        "en": "Nothing can stop us now.",
+        "pt": "Nada pode nos parar agora.",
+        "phonetic_pt": "Nâthing kén stôp âs náu."
+      },
+      {
+        "en": "She said nothing about it.",
+        "pt": "Ela não disse nada sobre isso.",
+        "phonetic_pt": "Shii sed nâthing abáut it."
+      },
+      {
+        "en": "Don't worry, it's nothing.",
+        "pt": "Não se preocupe, não é nada.",
+        "phonetic_pt": "Dônt uârrí, its nâthing."
+      },
+      {
+        "en": "There's nothing new under the sun.",
+        "pt": "Não há nada de novo debaixo do sol.",
+        "phonetic_pt": "Dhérs nâthing niú ândêr dhê sân."
+      },
+      {
+        "en": "I want nothing but the truth.",
+        "pt": "Não quero nada além da verdade.",
+        "phonetic_pt": "Ái uânt nâthing bât dhê truuth."
+      },
+      {
+        "en": "Nothing beats a good cup of coffee.",
+        "pt": "Nada supera uma boa xícara de café.",
+        "phonetic_pt": "Nâthing biits ê gûd kâp óv kófii."
+      },
+      {
+        "en": "He knows nothing about cars.",
+        "pt": "Ele não sabe nada sobre carros.",
+        "phonetic_pt": "Hii nôuz nâthing abáut kárrs."
+      },
+      {
+        "en": "It was nothing short of a miracle.",
+        "pt": "Foi nada menos que um milagre.",
+        "phonetic_pt": "It uâz nâthing shôrt óv ê mírrâkâl."
+      },
+      {
+        "en": "I've got nothing to hide.",
+        "pt": "Não tenho nada a esconder.",
+        "phonetic_pt": "Áiv gôt nâthing tu rráid."
+      },
+      {
+        "en": "Nothing is impossible.",
+        "pt": "Nada é impossível.",
+        "phonetic_pt": "Nâthing iz impóssibâl."
+      },
+      {
+        "en": "What's for dinner? Nothing.",
+        "pt": "O que tem para o jantar? Nada.",
+        "phonetic_pt": "Uâts fôrr dínêr? Nâthing."
+      },
+      {
+        "en": "We achieved nothing today.",
+        "pt": "Não realizamos nada hoje.",
+        "phonetic_pt": "Uii âchiivd nâthing tudei."
+      },
+      {
+        "en": "It's nothing personal, just business.",
+        "pt": "Não é nada pessoal, apenas negócios.",
+        "phonetic_pt": "Its nâthing pêrrsânâl, jâst bízness."
+      },
+      {
+        "en": "There's nothing more I can do.",
+        "pt": "Não há mais nada que eu possa fazer.",
+        "phonetic_pt": "Dhérs nâthing môrr ái kén duu."
+      },
+      {
+        "en": "The cupboard was completely nothing.",
+        "pt": "O armário estava completamente vazio.",
+        "phonetic_pt": "Dhê kâbêrd uâz kâmpliitlí nâthing."
+      },
+      {
+        "en": "Nothing ventured, nothing gained.",
+        "pt": "Quem não arrisca, não petisca.",
+        "phonetic_pt": "Nâthing vênchêrd, nâthing gêind."
+      },
+      {
+        "en": "I heard nothing from him.",
+        "pt": "Não ouvi nada dele.",
+        "phonetic_pt": "Ái hêrrd nâthing frôm rrim."
+      },
+      {
+        "en": "It's nothing to be ashamed of.",
+        "pt": "Não é nada para se envergonhar.",
+        "phonetic_pt": "Its nâthing tu bii âsheimd óv."
+      },
+      {
+        "en": "Nothing feels better than a hot shower.",
+        "pt": "Nada é melhor do que um banho quente.",
+        "phonetic_pt": "Nâthing fiils bétêrr dhén ê rrót sháuêrr."
+      },
+      {
+        "en": "They had nothing in common.",
+        "pt": "Eles não tinham nada em comum.",
+        "phonetic_pt": "Dhei rrád nâthing in kómân."
+      },
+      {
+        "en": "From nothing, comes nothing.",
+        "pt": "Do nada, nada vem.",
+        "phonetic_pt": "Frôm nâthing, kâms nâthing."
+      },
+      {
+        "en": "I'm doing nothing special tonight.",
+        "pt": "Não vou fazer nada de especial esta noite.",
+        "phonetic_pt": "Áim duuing nâthing spêshâl tunáit."
+      },
+      {
+        "en": "Nothing surprises me anymore.",
+        "pt": "Nada me surpreende mais.",
+        "phonetic_pt": "Nâthing sêrprráiziz mii êniimôrr."
+      },
+      {
+        "en": "He built the company from nothing.",
+        "pt": "Ele construiu a empresa do zero.",
+        "phonetic_pt": "Hii bílt dhê kâmpânii frôm nâthing."
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "rank": 227,
+    "en": "town",
+    "pt": "a cidade pequena (substantivo feminino)",
+    "phonetic": "/taʊn/",
+    "phonetic_br": "táun",
+    "key": "Town",
+    "phrases": [
+      {
+        "en": "I'm going to town this afternoon.",
+        "pt": "Vou para a cidade esta tarde.",
+        "phonetic_pt": "Áim gôu-in tchu táun dhis éftêr-nún."
+      },
+      {
+        "en": "She grew up in a small town.",
+        "pt": "Ela cresceu em uma cidade pequena.",
+        "phonetic_pt": "Shii grúu âp in â smól táun."
+      },
+      {
+        "en": "Let's meet up in town later.",
+        "pt": "Vamos nos encontrar na cidade mais tarde.",
+        "phonetic_pt": "Lêts mii-t âp in táun lêi-têrr."
+      },
+      {
+        "en": "The whole town was talking about it.",
+        "pt": "A cidade inteira estava falando sobre isso.",
+        "phonetic_pt": "Dhâ rôul táun uâz tó-kin â-báut it."
+      },
+      {
+        "en": "Is there a good restaurant in town?",
+        "pt": "Tem um bom restaurante na cidade?",
+        "phonetic_pt": "Iz dhêrr â gúd rêstâ-rrânt in táun?"
+      },
+      {
+        "en": "He's the mayor of our town.",
+        "pt": "Ele é o prefeito da nossa cidade.",
+        "phonetic_pt": "Hiiz dhâ mêi-ôrr âv áu-rr táun."
+      },
+      {
+        "en": "They're new to town.",
+        "pt": "Eles são novos na cidade.",
+        "phonetic_pt": "Dhêrr núu tchu táun."
+      },
+      {
+        "en": "We drove through several towns on our road trip.",
+        "pt": "Nós passamos por várias cidades na nossa viagem de carro.",
+        "phonetic_pt": "Uii drôuv thrúu sê-vê-rrâl táuns on áu-rr rôud trîp."
+      },
+      {
+        "en": "This is the best coffee shop in town.",
+        "pt": "Esta é a melhor cafeteria da cidade.",
+        "phonetic_pt": "Dhîs iz dhâ bêst kó-fii shóp in táun."
+      },
+      {
+        "en": "The town square is beautiful.",
+        "pt": "A praça da cidade é linda.",
+        "phonetic_pt": "Dhâ táun skuêrr iz biú-tii-fûl."
+      },
+      {
+        "en": "I love visiting historical towns.",
+        "pt": "Eu adoro visitar cidades históricas.",
+        "phonetic_pt": "Ái lâv vî-zî-ting hîs-tó-rrî-kâl táuns."
+      },
+      {
+        "en": "What's the biggest town around here?",
+        "pt": "Qual é a maior cidade por aqui?",
+        "phonetic_pt": "Uâts dhâ bí-gêst táun â-ráund hîrr?"
+      },
+      {
+        "en": "The town was founded in 1750.",
+        "pt": "A cidade foi fundada em 1750.",
+        "phonetic_pt": "Dhâ táun uâz fáun-dêd in sê-vên-tiin fíf-tii."
+      },
+      {
+        "en": "Every summer, the town hosts a festival.",
+        "pt": "Todo verão, a cidade organiza um festival.",
+        "phonetic_pt": "Ê-vrrî sâ-mêrr, dhâ táun rôusts â fês-tî-vâl."
+      },
+      {
+        "en": "I need to run some errands in town.",
+        "pt": "Preciso resolver algumas coisas na cidade.",
+        "phonetic_pt": "Ái niid tchu rrân sâm ê-rrândz in táun."
+      },
+      {
+        "en": "He owns the only bookstore in town.",
+        "pt": "Ele é dono da única livraria na cidade.",
+        "phonetic_pt": "Hii ôunz dhî ôun-lii búk-stôrr in táun."
+      },
+      {
+        "en": "It's a quiet town, not much happens.",
+        "pt": "É uma cidade tranquila, não acontece muita coisa.",
+        "phonetic_pt": "Its â kuái-êt táun, nót mâtch hâ-pêns."
+      },
+      {
+        "en": "We're having friends over from out of town.",
+        "pt": "Vamos receber amigos de fora da cidade.",
+        "phonetic_pt": "Uîrr hâ-ving frêndz ôu-vêrr frôm áut âv táun."
+      },
+      {
+        "en": "Have you ever been to that town?",
+        "pt": "Você já foi àquela cidade?",
+        "phonetic_pt": "Hâv iú ê-vêrr bîn tchu dhât táun?"
+      },
+      {
+        "en": "The storm hit the town hard.",
+        "pt": "A tempestade atingiu a cidade com força.",
+        "phonetic_pt": "Dhâ stôrm hît dhâ táun hârd."
+      },
+      {
+        "en": "Our town has a great community spirit.",
+        "pt": "Nossa cidade tem um ótimo espírito comunitário.",
+        "phonetic_pt": "Áu-rr táun hâz â grêit kâ-miú-nî-tii spí-rît."
+      },
+      {
+        "en": "I prefer living in a town to a big city.",
+        "pt": "Prefiro morar em uma cidade pequena do que em uma cidade grande.",
+        "phonetic_pt": "Ái prî-fêrr lí-ving in â táun tchu â bîg sí-tii."
+      },
+      {
+        "en": "They're trying to revitalize the downtown area.",
+        "pt": "Eles estão tentando revitalizar a área central da cidade.",
+        "phonetic_pt": "Dhêrr trái-ing tchu rrii-váit-âl-áiz dhâ dáun-táun ê-rrî-â."
+      },
+      {
+        "en": "The news spread quickly through town.",
+        "pt": "A notícia se espalhou rapidamente pela cidade.",
+        "phonetic_pt": "Dhâ núuz sprêd kuík-lii thrúu táun."
+      },
+      {
+        "en": "Where do you go when you want to have fun in town?",
+        "pt": "Onde você vai quando quer se divertir na cidade?",
+        "phonetic_pt": "Uêrr duu iú gôu uên iú uânt tchu hâv fân in táun?"
+      },
+      {
+        "en": "This town reminds me of my hometown.",
+        "pt": "Esta cidade me lembra minha cidade natal.",
+        "phonetic_pt": "Dhîs táun rrii-máindz mii âv mái hôum-táun."
+      },
+      {
+        "en": "The town council meets next Tuesday.",
+        "pt": "O conselho da cidade se reúne na próxima terça-feira.",
+        "phonetic_pt": "Dhâ táun káun-sâl mii-ts nêkst tiúz-dêi."
+      },
+      {
+        "en": "She's the talk of the town.",
+        "pt": "Ela é o assunto da cidade.",
+        "phonetic_pt": "Shiiz dhâ tó-k âv dhâ táun."
+      },
+      {
+        "en": "We're just passing through town.",
+        "pt": "Estamos apenas de passagem pela cidade.",
+        "phonetic_pt": "Uîrr jâst pâ-sing thrúu táun."
+      },
+      {
+        "en": "The town celebrated its anniversary.",
+        "pt": "A cidade comemorou seu aniversário.",
+        "phonetic_pt": "Dhâ táun sê-lâ-brêi-têd îts â-nî-vêr-sâ-rii."
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "rank": 228,
+    "en": "soon",
+    "pt": "em breve / logo (advérbio de tempo)",
+    "phonetic": "/suːn/",
+    "phonetic_br": "suun",
+    "key": "soon",
+    "phrases": [
+      {
+        "en": "See you soon.",
+        "pt": "Até breve.",
+        "phonetic_pt": "Sii iú suun."
+      },
+      {
+        "en": "I'll be there soon.",
+        "pt": "Estarei lá em breve.",
+        "phonetic_pt": "Áil bii dhér suun."
+      },
+      {
+        "en": "It'll be over soon.",
+        "pt": "Vai acabar logo.",
+        "phonetic_pt": "Ítl bii ôuvêr suun."
+      },
+      {
+        "en": "Hopefully, it will rain soon.",
+        "pt": "Tomara que chova logo.",
+        "phonetic_pt": "Rôupfúli, ít uíl rêin suun."
+      },
+      {
+        "en": "The package should arrive soon.",
+        "pt": "A encomenda deve chegar em breve.",
+        "phonetic_pt": "Dhê páckêdj shúd arráiv suun."
+      },
+      {
+        "en": "Are you leaving soon?",
+        "pt": "Você vai sair logo?",
+        "phonetic_pt": "Ár iú liivíng suun?"
+      },
+      {
+        "en": "She's coming home soon.",
+        "pt": "Ela está voltando para casa em breve.",
+        "phonetic_pt": "Shiiz câming rôum suun."
+      },
+      {
+        "en": "We need to finish this soon.",
+        "pt": "Precisamos terminar isso logo.",
+        "phonetic_pt": "Uii niid tuu fínish dhís suun."
+      },
+      {
+        "en": "Don't worry, help is coming soon.",
+        "pt": "Não se preocupe, a ajuda está chegando em breve.",
+        "phonetic_pt": "Dôunt uârri, rélp is câming suun."
+      },
+      {
+        "en": "The movie starts soon.",
+        "pt": "O filme começa em breve.",
+        "phonetic_pt": "Dhê muuvii stárrts suun."
+      },
+      {
+        "en": "I hope to hear from you soon.",
+        "pt": "Espero ter notícias suas em breve.",
+        "phonetic_pt": "Ái rôup tuu hírr frâm iú suun."
+      },
+      {
+        "en": "They're getting married soon.",
+        "pt": "Eles vão se casar em breve.",
+        "phonetic_pt": "Dhér guéting mérrid suun."
+      },
+      {
+        "en": "It's getting dark soon.",
+        "pt": "Vai escurecer em breve.",
+        "phonetic_pt": "Íts guéting dárk suun."
+      },
+      {
+        "en": "We should eat dinner soon.",
+        "pt": "Devíamos jantar logo.",
+        "phonetic_pt": "Uii shúd iit dínnêr suun."
+      },
+      {
+        "en": "I'll call you soon.",
+        "pt": "Te ligo em breve.",
+        "phonetic_pt": "Áil cól iú suun."
+      },
+      {
+        "en": "The bus will be here soon.",
+        "pt": "O ônibus estará aqui em breve.",
+        "phonetic_pt": "Dhê bâs uíl bii hírr suun."
+      },
+      {
+        "en": "It's not soon enough.",
+        "pt": "Não é logo o suficiente.",
+        "phonetic_pt": "Íts nót suun inâf."
+      },
+      {
+        "en": "He'll be back soon.",
+        "pt": "Ele voltará em breve.",
+        "phonetic_pt": "Hiil bii báck suun."
+      },
+      {
+        "en": "We can start the project soon.",
+        "pt": "Podemos começar o projeto em breve.",
+        "phonetic_pt": "Uii cân stárrtt dhê pródjêct suun."
+      },
+      {
+        "en": "The baby is due soon.",
+        "pt": "O bebê deve nascer em breve.",
+        "phonetic_pt": "Dhê bêibi iz diú suun."
+      },
+      {
+        "en": "I need to leave soon.",
+        "pt": "Preciso sair logo.",
+        "phonetic_pt": "Ái niid tuu liiv suun."
+      },
+      {
+        "en": "Let's talk soon.",
+        "pt": "Vamos conversar em breve.",
+        "phonetic_pt": "Léts tók suun."
+      },
+      {
+        "en": "The new store opens soon.",
+        "pt": "A nova loja abre em breve.",
+        "phonetic_pt": "Dhê niú stórr ôupêns suun."
+      },
+      {
+        "en": "I'm going on vacation soon.",
+        "pt": "Vou sair de férias em breve.",
+        "phonetic_pt": "Áim gôuing ôn vêikêishân suun."
+      },
+      {
+        "en": "Will you be ready soon?",
+        "pt": "Você estará pronto em breve?",
+        "phonetic_pt": "Uíl iú bii rédi suun?"
+      },
+      {
+        "en": "The food will be ready soon.",
+        "pt": "A comida estará pronta em breve.",
+        "phonetic_pt": "Dhê fuud uíl bii rédi suun."
+      },
+      {
+        "en": "She'll feel better soon.",
+        "pt": "Ela se sentirá melhor em breve.",
+        "phonetic_pt": "Shiil fiil bétêr suun."
+      },
+      {
+        "en": "We're moving soon.",
+        "pt": "Vamos nos mudar em breve.",
+        "phonetic_pt": "Uírr muuvíng suun."
+      },
+      {
+        "en": "I hope to see you again soon.",
+        "pt": "Espero vê-lo(a) novamente em breve.",
+        "phonetic_pt": "Ái rôup tuu sii iú êguén suun."
+      },
+      {
+        "en": "The results will be announced soon.",
+        "pt": "Os resultados serão anunciados em breve.",
+        "phonetic_pt": "Dhê riizâlts uíl bii annáunssd suun."
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "rank": 229,
+    "en": "miss",
+    "pt": "sentir falta / perder / errar (verbo), senhorita (substantivo feminino)",
+    "phonetic": "/mɪs/",
+    "phonetic_br": "mís",
+    "key": "miss",
+    "phrases": [
+      {
+        "en": "I miss you so much.",
+        "pt": "Eu sinto tanto a sua falta.",
+        "phonetic_pt": "Ái mís iú sôu mâtch."
+      },
+      {
+        "en": "Don't miss this opportunity.",
+        "pt": "Não perca esta oportunidade.",
+        "phonetic_pt": "Dôunt mís dhís opôrtiúnirii."
+      },
+      {
+        "en": "He aimed carefully but still missed the target.",
+        "pt": "Ele mirou com cuidado, mas ainda errou o alvo.",
+        "phonetic_pt": "Hii êimd kerrfúlii bât stíl mísd dhâ tarrguet."
+      },
+      {
+        "en": "I hope I don't miss my flight.",
+        "pt": "Espero não perder meu voo.",
+        "phonetic_pt": "Ái rôup ái dôunt mís mái fláit."
+      },
+      {
+        "en": "She really missed her family when she moved away.",
+        "pt": "Ela sentiu muita falta da família quando se mudou.",
+        "phonetic_pt": "Shii ríilii mísd hêrr fêmilii uên shii múvd âuêi."
+      },
+      {
+        "en": "Did you miss anything important in the meeting?",
+        "pt": "Você perdeu algo importante na reunião?",
+        "phonetic_pt": "Díd iú mís éniithíng impôrrtânt in dhâ míiríng?"
+      },
+      {
+        "en": "Miss Johnson will be teaching the class today.",
+        "pt": "A Senhorita Johnson vai dar aula hoje.",
+        "phonetic_pt": "Mís Djónsân uíl bii tiitchíng dhâ kláss tudei."
+      },
+      {
+        "en": "We will miss you when you leave.",
+        "pt": "Sentiremos sua falta quando você for embora.",
+        "phonetic_pt": "Uii uíl mís iú uên iú liiv."
+      },
+      {
+        "en": "I can't believe I missed the beginning of the movie.",
+        "pt": "Não acredito que perdi o começo do filme.",
+        "phonetic_pt": "Ái kênt bilíiv ái mísd dhâ biguínning âv dhâ múvii."
+      },
+      {
+        "en": "He took a difficult shot and unfortunately missed.",
+        "pt": "Ele fez um arremesso difícil e infelizmente errou.",
+        "phonetic_pt": "Hii túk â dífiikâlt shót ênd ânfôrtchânâtlii mísd."
+      },
+      {
+        "en": "I really miss my mom's home cooking.",
+        "pt": "Sinto muita falta da comida caseira da minha mãe.",
+        "phonetic_pt": "Ái ríilii mís mái mám's rôum kukiing."
+      },
+      {
+        "en": "Sorry, I missed your call earlier.",
+        "pt": "Desculpe, perdi sua ligação mais cedo.",
+        "phonetic_pt": "Sórrii, ái mísd iôrr kól êrrliêrr."
+      },
+      {
+        "en": "Do you ever miss living in your hometown?",
+        "pt": "Você alguma vez sente falta de morar na sua cidade natal?",
+        "phonetic_pt": "Duu iú évêrr mís líving in iôrr rôumtáun?"
+      },
+      {
+        "en": "Don't miss your chance to see the concert.",
+        "pt": "Não perca sua chance de ver o show.",
+        "phonetic_pt": "Dôunt mís iôrr tchâns tuu sii dhâ kônsêrrt."
+      },
+      {
+        "en": "Be careful not to miss a step on the stairs.",
+        "pt": "Tenha cuidado para não perder o passo na escada.",
+        "phonetic_pt": "Bii kerrfûl nót tuu mís â stép ôn dhâ stêrrs."
+      },
+      {
+        "en": "I miss the simpler times.",
+        "pt": "Sinto falta dos tempos mais simples.",
+        "phonetic_pt": "Ái mís dhâ símplêrr táims."
+      },
+      {
+        "en": "I think you missed the point of what I was saying.",
+        "pt": "Acho que você não entendeu o ponto do que eu estava dizendo.",
+        "phonetic_pt": "Ái think iú mísd dhâ póint âv uât ái uâz sêiing."
+      },
+      {
+        "en": "You don't want to miss out on this deal.",
+        "pt": "Você não vai querer perder essa oferta.",
+        "phonetic_pt": "Iú dôunt uônt tuu mís áut ôn dhís diil."
+      },
+      {
+        "en": "We all miss his sense of humor.",
+        "pt": "Todos nós sentimos falta do senso de humor dele.",
+        "phonetic_pt": "Uii ól mís rís séns âv hiúmôrr."
+      },
+      {
+        "en": "Make sure you don't miss the submission deadline.",
+        "pt": "Certifique-se de não perder o prazo de envio.",
+        "phonetic_pt": "Mêik shúrr iú dôunt mís dhâ sâbmíshân dêdláin."
+      },
+      {
+        "en": "I already miss my vacation in Hawaii.",
+        "pt": "Já sinto falta das minhas férias no Havaí.",
+        "phonetic_pt": "Ái olrrédi mís mái vêikêishân in Hâuái."
+      },
+      {
+        "en": "Hurry up, or we'll miss the bus!",
+        "pt": "Depressa, ou vamos perder o ônibus!",
+        "phonetic_pt": "Hârrii âp, ôrr uíil mís dhâ bâs!"
+      },
+      {
+        "en": "I looked everywhere, but I must have missed her.",
+        "pt": "Procurei em todo lugar, mas devo tê-la perdido de vista.",
+        "phonetic_pt": "Ái lúkt évrii-uêrr, bât ái mâst hâv mísd hêrr."
+      },
+      {
+        "en": "His attempt to be funny completely missed the mark.",
+        "pt": "A tentativa dele de ser engraçado errou completamente o alvo.",
+        "phonetic_pt": "Hís âtêmpt tuu bii fânii kâmplíitlii mísd dhâ mârrk."
+      },
+      {
+        "en": "Sometimes I miss my childhood days.",
+        "pt": "Às vezes sinto falta dos meus dias de infância.",
+        "phonetic_pt": "Sâmtáims ái mís mái tcháild-hûd dêiz."
+      },
+      {
+        "en": "The drummer didn't miss a beat during the whole song.",
+        "pt": "O baterista não perdeu o ritmo durante a música inteira.",
+        "phonetic_pt": "Dhâ drâmêrr dídânt mís â biit diúring dhâ rôul sôong."
+      },
+      {
+        "en": "Text me when you get there, I'll miss you!",
+        "pt": "Me mande uma mensagem quando chegar, vou sentir sua falta!",
+        "phonetic_pt": "Têkst mii uên iú guet dhêrr, ái'l mís iú!"
+      },
+      {
+        "en": "I had to miss work yesterday because I was sick.",
+        "pt": "Tive que faltar ao trabalho ontem porque estava doente.",
+        "phonetic_pt": "Ái hâd tuu mís uêrrk iéstêrdêi bikóz ái uâz sík."
+      },
+      {
+        "en": "He never misses a chance to complain.",
+        "pt": "Ele nunca perde uma chance de reclamar.",
+        "phonetic_pt": "Hii nevêrr míssiz â tchâns tuu kâmplêin."
+      },
+      {
+        "en": "I have two missed calls from an unknown number.",
+        "pt": "Tenho duas chamadas perdidas de um número desconhecido.",
+        "phonetic_pt": "Ái hâv tuu mísd kóls frôm ân ânnôun nâmbêrr."
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "rank": 230,
+    "en": "enough",
+    "pt": "Suficiente / Bastante (adjetivo, advérbio, pronome)",
+    "phonetic": "/ɪˈnʌf/",
+    "phonetic_br": "i-nâf",
+    "key": "Enough",
+    "phrases": [
+      {
+        "en": "Is there enough coffee for everyone?",
+        "pt": "Tem café suficiente para todo mundo?",
+        "phonetic_pt": "Is dhêrr i-nâf cófi fôrr évrri-uân?"
+      },
+      {
+        "en": "I don't have enough time.",
+        "pt": "Eu não tenho tempo suficiente.",
+        "phonetic_pt": "Ái dônt rév i-nâf táim."
+      },
+      {
+        "en": "That's enough, thank you.",
+        "pt": "É o suficiente, obrigado.",
+        "phonetic_pt": "Dhâts i-nâf, thénk iú."
+      },
+      {
+        "en": "Are you warm enough?",
+        "pt": "Você está aquecido o suficiente?",
+        "phonetic_pt": "Árr iú uôrm i-nâf?"
+      },
+      {
+        "en": "She's tall enough to reach the shelf.",
+        "pt": "Ela é alta o suficiente para alcançar a prateleira.",
+        "phonetic_pt": "Shiiz tôl i-nâf tuu riitch dhê shélf."
+      },
+      {
+        "en": "We have enough food for the party.",
+        "pt": "Temos comida suficiente para a festa.",
+        "phonetic_pt": "Uii rév i-nâf fuud fôrr dhê párr-tii."
+      },
+      {
+        "en": "He didn't study enough for the test.",
+        "pt": "Ele não estudou o suficiente para a prova.",
+        "phonetic_pt": "Hii dídnt stâdii i-nâf fôrr dhê tést."
+      },
+      {
+        "en": "I've had enough of this nonsense.",
+        "pt": "Já tive o suficiente dessa bobagem.",
+        "phonetic_pt": "Áiv rád i-nâf âv dhís nonséns."
+      },
+      {
+        "en": "Do you earn enough money?",
+        "pt": "Você ganha dinheiro suficiente?",
+        "phonetic_pt": "Duu iú êrrn i-nâf mânii?"
+      },
+      {
+        "en": "This car isn't big enough for our family.",
+        "pt": "Este carro não é grande o suficiente para nossa família.",
+        "phonetic_pt": "Dhís cárr íznt bíg i-nâf fôrr áurr fámilii."
+      },
+      {
+        "en": "They didn't bring enough chairs.",
+        "pt": "Eles não trouxeram cadeiras suficientes.",
+        "phonetic_pt": "Dhêi dídnt bríng i-nâf tchêrrs."
+      },
+      {
+        "en": "I think I've said enough.",
+        "pt": "Acho que já disse o suficiente.",
+        "phonetic_pt": "Ái thínk Áiv séd i-nâf."
+      },
+      {
+        "en": "Is the volume loud enough?",
+        "pt": "O volume está alto o suficiente?",
+        "phonetic_pt": "Is dhê vôlium láud i-nâf?"
+      },
+      {
+        "en": "There's not enough space in the closet.",
+        "pt": "Não há espaço suficiente no armário.",
+        "phonetic_pt": "Dhêrrs nót i-nâf spêis ín dhê clôzêt."
+      },
+      {
+        "en": "He's old enough to drive.",
+        "pt": "Ele é velho o suficiente para dirigir.",
+        "phonetic_pt": "Hiiz ôld i-nâf tuu dráiv."
+      },
+      {
+        "en": "We didn't get enough sleep last night.",
+        "pt": "Não dormimos o suficiente na noite passada.",
+        "phonetic_pt": "Uii dídnt guét i-nâf sliip lást náit."
+      },
+      {
+        "en": "She wasn't careful enough.",
+        "pt": "Ela não foi cuidadosa o suficiente.",
+        "phonetic_pt": "Shii uóznt kêrr-fâl i-nâf."
+      },
+      {
+        "en": "You're strong enough to lift that box.",
+        "pt": "Você é forte o suficiente para levantar aquela caixa.",
+        "phonetic_pt": "Iúrr stróng i-nâf tuu líft dhât bóx."
+      },
+      {
+        "en": "Have you saved enough for a down payment?",
+        "pt": "Você economizou o suficiente para uma entrada?",
+        "phonetic_pt": "Hév iú sêivd i-nâf fôrr â dáun pêi-mênt?"
+      },
+      {
+        "en": "That's enough information for now.",
+        "pt": "É informação suficiente por enquanto.",
+        "phonetic_pt": "Dhâts i-nâf în-fôrr-mêi-shân fôrr náu."
+      },
+      {
+        "en": "Don't worry, you're good enough.",
+        "pt": "Não se preocupe, você é bom o suficiente.",
+        "phonetic_pt": "Dônt uôrri, iúrr gûd i-nâf."
+      },
+      {
+        "en": "Is the water hot enough for a bath?",
+        "pt": "A água está quente o suficiente para um banho?",
+        "phonetic_pt": "Is dhê uóterr rót i-nâf fôrr â báth?"
+      },
+      {
+        "en": "I can't get enough of this song.",
+        "pt": "Não me canso dessa música (não consigo ter o suficiente).",
+        "phonetic_pt": "Ái ként guét i-nâf âv dhís sóng."
+      },
+      {
+        "en": "We need enough volunteers to run the event.",
+        "pt": "Precisamos de voluntários suficientes para realizar o evento.",
+        "phonetic_pt": "Uii niid i-nâf volân-tiirrs tuu rân dhê i-vént."
+      },
+      {
+        "en": "Are these batteries charged enough?",
+        "pt": "Estas baterias estão carregadas o suficiente?",
+        "phonetic_pt": "Árr dhiiz bét-têrriiz tchárrjd i-nâf?"
+      },
+      {
+        "en": "He's not fast enough to win the race.",
+        "pt": "Ele não é rápido o suficiente para vencer a corrida.",
+        "phonetic_pt": "Hiiz nót fést i-nâf tuu uín dhê rêis."
+      },
+      {
+        "en": "There isn't enough light to read.",
+        "pt": "Não há luz suficiente para ler.",
+        "phonetic_pt": "Dhêrr íznt i-nâf láit tuu riid."
+      },
+      {
+        "en": "I hope you have enough fun.",
+        "pt": "Espero que você se divirta o suficiente.",
+        "phonetic_pt": "Ái rôup iú rév i-nâf fân."
+      },
+      {
+        "en": "Is your coffee sweet enough?",
+        "pt": "Seu café está doce o suficiente?",
+        "phonetic_pt": "Is iúrr cófi suíit i-nâf?"
+      },
+      {
+        "en": "We've talked enough about this.",
+        "pt": "Já conversamos o suficiente sobre isso.",
+        "phonetic_pt": "Uíiv tôkt i-nâf â-báut dhís."
+      }
+    ]
+  },
+  {
+    "id": 231,
+    "rank": 231,
+    "en": "still",
+    "pt": "ainda (advérbio de tempo ou modo); parado / imóvel / calmo (adjetivo)",
+    "phonetic": "/stɪl/",
+    "phonetic_br": "stíl",
+    "key": "Still",
+    "phrases": [
+      {
+        "en": "Are you still here?",
+        "pt": "Você ainda está aqui?",
+        "phonetic_pt": "Arr iú stíl hiir?"
+      },
+      {
+        "en": "It's still early.",
+        "pt": "Ainda é cedo.",
+        "phonetic_pt": "Its stíl êrrli."
+      },
+      {
+        "en": "I still don't understand.",
+        "pt": "Eu ainda não entendo.",
+        "phonetic_pt": "Ái stíl dônt ânderrsténd."
+      },
+      {
+        "en": "She still loves him.",
+        "pt": "Ela ainda o ama.",
+        "phonetic_pt": "Shii stíl lâvs rrim."
+      },
+      {
+        "en": "He's still asleep.",
+        "pt": "Ele ainda está dormindo.",
+        "phonetic_pt": "Hiz stíl âsliip."
+      },
+      {
+        "en": "We're still waiting.",
+        "pt": "Nós ainda estamos esperando.",
+        "phonetic_pt": "Uirr stíl uêiting."
+      },
+      {
+        "en": "The car is still running.",
+        "pt": "O carro ainda está funcionando.",
+        "phonetic_pt": "Dhâ caarrr iz stíl rrânning."
+      },
+      {
+        "en": "Can you hold still for a second?",
+        "pt": "Você pode ficar parado por um segundo?",
+        "phonetic_pt": "Kén iú hôld stíl fôr â sékând?"
+      },
+      {
+        "en": "The lake was perfectly still.",
+        "pt": "O lago estava perfeitamente calmo.",
+        "phonetic_pt": "Dhâ lêik uâz pêrrfiktli stíl."
+      },
+      {
+        "en": "I still remember that day.",
+        "pt": "Eu ainda me lembro daquele dia.",
+        "phonetic_pt": "Ái stíl rrimêmbrr dhét dêi."
+      },
+      {
+        "en": "He's still recovering from his injury.",
+        "pt": "Ele ainda está se recuperando da lesão.",
+        "phonetic_pt": "Hiz stíl rrikâvrrring frrôm hiz ínjâri."
+      },
+      {
+        "en": "Are you still going to the party?",
+        "pt": "Você ainda vai à festa?",
+        "phonetic_pt": "Arr iú stíl gôuing tu dhâ paarrrti?"
+      },
+      {
+        "en": "I'm still trying to learn Spanish.",
+        "pt": "Eu ainda estou tentando aprender espanhol.",
+        "phonetic_pt": "Áim stíl tráing tu lêrrn Spánish."
+      },
+      {
+        "en": "It's still a secret, don't tell anyone.",
+        "pt": "Ainda é segredo, não conte a ninguém.",
+        "phonetic_pt": "Its stíl â siikrrrit, dônt tél éniuân."
+      },
+      {
+        "en": "My phone is still charging.",
+        "pt": "Meu telefone ainda está carregando.",
+        "phonetic_pt": "Mái fôn iz stíl chaarrrjíng."
+      },
+      {
+        "en": "Even after all this time, I still miss my grandmother.",
+        "pt": "Mesmo depois de todo esse tempo, eu ainda sinto falta da minha avó.",
+        "phonetic_pt": "Iivên éftrr ôl dhis táim, ái stíl mis mái grréndmâdhrr."
+      },
+      {
+        "en": "She's still the fastest runner.",
+        "pt": "Ela ainda é a corredora mais rápida.",
+        "phonetic_pt": "Shiiz stíl dhâ fêstêst rrânnerrr."
+      },
+      {
+        "en": "Is the restaurant still open for dinner?",
+        "pt": "O restaurante ainda está aberto para o jantar?",
+        "phonetic_pt": "Iz dhâ rréstârrânt stíl ôupên fôr dínnerrr?"
+      },
+      {
+        "en": "They still haven't arrived.",
+        "pt": "Eles ainda não chegaram.",
+        "phonetic_pt": "Dhei stíl hévent ârráivd."
+      },
+      {
+        "en": "I still have hope.",
+        "pt": "Eu ainda tenho esperança.",
+        "phonetic_pt": "Ái stíl hév hôup."
+      },
+      {
+        "en": "Please keep still while I take your picture.",
+        "pt": "Por favor, fique parado enquanto tiro sua foto.",
+        "phonetic_pt": "Pliiz kiip stíl uáil ái têik iórr píktchârr."
+      },
+      {
+        "en": "The air was still and quiet.",
+        "pt": "O ar estava parado e silencioso.",
+        "phonetic_pt": "Dhâ êrr uâz stíl ênd kuáiêt."
+      },
+      {
+        "en": "He still works at the same company.",
+        "pt": "Ele ainda trabalha na mesma empresa.",
+        "phonetic_pt": "Hii stíl uêrrks ét dhâ sêim kâmpâni."
+      },
+      {
+        "en": "I was tired, but I still managed to finish the task.",
+        "pt": "Eu estava cansado, mas ainda consegui terminar a tarefa.",
+        "phonetic_pt": "Ái uâz táirrd, bâr ái stíl ménidjd tu fínish dhâ téssk."
+      },
+      {
+        "en": "She said no, but I still asked her again.",
+        "pt": "Ela disse não, mas eu ainda perguntei a ela novamente.",
+        "phonetic_pt": "Shii sed nôu, bâr ái stíl éskd hêrr âgên."
+      },
+      {
+        "en": "Do you still want to watch that movie?",
+        "pt": "Você ainda quer assistir àquele filme?",
+        "phonetic_pt": "Dú iú stíl uânt tu uótch dhét muuvii?"
+      },
+      {
+        "en": "We still need to buy groceries.",
+        "pt": "Nós ainda precisamos comprar mantimentos.",
+        "phonetic_pt": "Uii stíl niid tu bái grrôusserrriiz."
+      },
+      {
+        "en": "The baby is still sleeping soundly.",
+        "pt": "O bebê ainda está dormindo profundamente.",
+        "phonetic_pt": "Dhâ bêibi iz stíl sliiping sáundli."
+      },
+      {
+        "en": "I still can't believe it happened.",
+        "pt": "Eu ainda não consigo acreditar que aconteceu.",
+        "phonetic_pt": "Ái stíl ként bâliiv it héppênd."
+      },
+      {
+        "en": "Sit still and listen.",
+        "pt": "Sente-se quieto e ouça.",
+        "phonetic_pt": "Sít stíl ênd líssên."
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "rank": 232,
+    "en": "lose",
+    "pt": "perder (verbo transitivo direto ou intransitivo). Significa não ter mais algo, não ganhar, ou diminuir de peso.",
+    "phonetic": "/luːz/",
+    "phonetic_br": "luuz",
+    "key": "lose",
+    "phrases": [
+      {
+        "en": "I always lose my keys.",
+        "pt": "Eu sempre perco minhas chaves.",
+        "phonetic_pt": "ái ólueiz luuz mái kiiz."
+      },
+      {
+        "en": "Don't lose hope, things will get better.",
+        "pt": "Não perca a esperança, as coisas vão melhorar.",
+        "phonetic_pt": "dônt luuz rôup, thíngs uíl guet bétterr."
+      },
+      {
+        "en": "She wants to lose some weight before summer.",
+        "pt": "Ela quer perder um pouco de peso antes do verão.",
+        "phonetic_pt": "shii uónts tuu luuz sâm uêit bifôr sâmmer."
+      },
+      {
+        "en": "We can't afford to lose this contract.",
+        "pt": "Não podemos nos dar ao luxo de perder este contrato.",
+        "phonetic_pt": "uii kéent afôrd tuu luuz dhís cóntreckt."
+      },
+      {
+        "en": "He tends to lose his temper easily.",
+        "pt": "Ele tende a perder a paciência facilmente.",
+        "phonetic_pt": "hii ténds tuu luuz his témper íizilii."
+      },
+      {
+        "en": "Did you lose your phone again?",
+        "pt": "Você perdeu seu telefone de novo?",
+        "phonetic_pt": "díd iú luuz iórr fôun aguén?"
+      },
+      {
+        "en": "I'm afraid we're going to lose the game.",
+        "pt": "Tenho medo de que vamos perder o jogo.",
+        "phonetic_pt": "áim afrêid uírr gôuing tuu luuz dhâ guêim."
+      },
+      {
+        "en": "Never lose sight of your goals.",
+        "pt": "Nunca perca de vista seus objetivos.",
+        "phonetic_pt": "néverr luuz sáit âv iórr gôulz."
+      },
+      {
+        "en": "They had to lose a lot of money in the market crash.",
+        "pt": "Eles tiveram que perder muito dinheiro na queda do mercado.",
+        "phonetic_pt": "dhêi hed tuu luuz â lát âv mâni in dhâ márrket crésh."
+      },
+      {
+        "en": "Don't lose this opportunity to travel.",
+        "pt": "Não perca esta oportunidade de viajar.",
+        "phonetic_pt": "dônt luuz dhís óportiúniti tuu trável."
+      },
+      {
+        "en": "I always lose track of time when I'm reading.",
+        "pt": "Eu sempre perco a noção do tempo quando estou lendo.",
+        "phonetic_pt": "ái ólueiz luuz tréck âv táim uen áim ríiding."
+      },
+      {
+        "en": "She's trying not to lose her cool.",
+        "pt": "Ela está tentando não perder a calma.",
+        "phonetic_pt": "shíiz tráing nót tuu luuz herr kuul."
+      },
+      {
+        "en": "You'll lose your deposit if you cancel now.",
+        "pt": "Você vai perder seu depósito se cancelar agora.",
+        "phonetic_pt": "iúl luuz iórr dipózit if iú kénsel náu."
+      },
+      {
+        "en": "He's starting to lose his hair.",
+        "pt": "Ele está começando a perder o cabelo.",
+        "phonetic_pt": "híiz stárting tuu luuz his hêrr."
+      },
+      {
+        "en": "We can't afford to lose another customer.",
+        "pt": "Não podemos nos dar ao luxo de perder outro cliente.",
+        "phonetic_pt": "uii kéent afôrd tuu luuz anâdherr kâstomer."
+      },
+      {
+        "en": "I sometimes lose my voice after singing.",
+        "pt": "Às vezes perco a voz depois de cantar.",
+        "phonetic_pt": "ái sâmtáimz luuz mái vóis áfterr sínging."
+      },
+      {
+        "en": "He would always lose his way in new cities.",
+        "pt": "Ele sempre se perdia em cidades novas.",
+        "phonetic_pt": "hii uúd ólueiz luuz his uêi in niú sítiiz."
+      },
+      {
+        "en": "Don't ever lose your passion for art.",
+        "pt": "Nunca perca sua paixão pela arte.",
+        "phonetic_pt": "dônt éverr luuz iórr péshân fôr árt."
+      },
+      {
+        "en": "They're going to lose their house if they don't pay the mortgage.",
+        "pt": "Eles vão perder a casa se não pagarem a hipoteca.",
+        "phonetic_pt": "dhêirr gôuing tuu luuz dhêrr ráus if dhêi dônt pêi dhâ mórrguêdj."
+      },
+      {
+        "en": "I hate to lose an argument.",
+        "pt": "Eu odeio perder uma discussão.",
+        "phonetic_pt": "ái hêit tuu luuz an árguiument."
+      },
+      {
+        "en": "She was afraid to lose her job.",
+        "pt": "Ela estava com medo de perder o emprego.",
+        "phonetic_pt": "shii uâz afrêid tuu luuz herr djób."
+      },
+      {
+        "en": "You must not lose your concentration.",
+        "pt": "Você não deve perder sua concentração.",
+        "phonetic_pt": "iú mâst nót luuz iórr consentrêishân."
+      },
+      {
+        "en": "It's easy to lose yourself in a good book.",
+        "pt": "É fácil se perder em um bom livro.",
+        "phonetic_pt": "íts íizii tuu luuz iorrssélf in â gud buk."
+      },
+      {
+        "en": "He's trying to lose bad habits.",
+        "pt": "Ele está tentando perder maus hábitos.",
+        "phonetic_pt": "híiz tráing tuu luuz bed hébits."
+      },
+      {
+        "en": "We can't afford to lose precious time.",
+        "pt": "Não podemos nos dar ao luxo de perder tempo precioso.",
+        "phonetic_pt": "uii kéent afôrd tuu luuz préshâs táim."
+      },
+      {
+        "en": "I hope I don't lose my way in the forest.",
+        "pt": "Espero não me perder na floresta.",
+        "phonetic_pt": "ái hôup ái dônt luuz mái uêi in dhâ fórrrest."
+      },
+      {
+        "en": "She didn't want to lose touch with her old friends.",
+        "pt": "Ela não queria perder contato com seus velhos amigos.",
+        "phonetic_pt": "shii dídânt uónt tuu luuz tâtch uith herr ôuld fréndz."
+      },
+      {
+        "en": "I'm going to lose this bet, I just know it.",
+        "pt": "Vou perder esta aposta, eu sei disso.",
+        "phonetic_pt": "áim gôuing tuu luuz dhís bet, ái djâst nôu it."
+      },
+      {
+        "en": "He's afraid to lose control of the situation.",
+        "pt": "Ele tem medo de perder o controle da situação.",
+        "phonetic_pt": "híiz afrêid tuu luuz contrôul âv dhâ sichuêishân."
+      },
+      {
+        "en": "Don't lose sleep over small problems.",
+        "pt": "Não perca o sono por pequenos problemas.",
+        "phonetic_pt": "dônt luuz sliip ôuverr smól próblemz."
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "rank": 233,
+    "en": "cut",
+    "pt": "Cortar (verbo transitivo direto)",
+    "phonetic": "/kʌt/",
+    "phonetic_br": "kât",
+    "key": "cut",
+    "phrases": [
+      {
+        "en": "I need to cut my hair soon.",
+        "pt": "Preciso cortar meu cabelo logo.",
+        "phonetic_pt": "Ái niid tchu kât mái réir suun."
+      },
+      {
+        "en": "She cut the cake into perfect slices.",
+        "pt": "Ela cortou o bolo em fatias perfeitas.",
+        "phonetic_pt": "Shii kât dhê kêik íntu pêrfikt sláisiz."
+      },
+      {
+        "en": "Be careful, you might cut yourself with that knife.",
+        "pt": "Cuidado, você pode se cortar com essa faca.",
+        "phonetic_pt": "Bii kêrful, iú máit kât iurssélf uíth dhét náif."
+      },
+      {
+        "en": "They're cutting down trees to build new houses.",
+        "pt": "Eles estão derrubando árvores para construir casas novas.",
+        "phonetic_pt": "Dhêi âr kâting dáun triiz tchu bíld niu ráusiz."
+      },
+      {
+        "en": "Can you cut me a deal on this car?",
+        "pt": "Você pode me dar um desconto neste carro?",
+        "phonetic_pt": "Kén iú kât mii â diil ôn dhis kár?"
+      },
+      {
+        "en": "We had to cut our vacation short due to an emergency.",
+        "pt": "Tivemos que encurtar nossas férias devido a uma emergência.",
+        "phonetic_pt": "Wii héd tchu kât áu-rr vêikêishân shôrt duu tchu én imêrjiênssi."
+      },
+      {
+        "en": "Don't cut in line, that's not polite.",
+        "pt": "Não fure a fila, isso não é educado.",
+        "phonetic_pt": "Dônt kât ín láin, dhéts nát poláit."
+      },
+      {
+        "en": "He got a deep cut on his arm from the broken glass.",
+        "pt": "Ele teve um corte profundo no braço por causa do vidro quebrado.",
+        "phonetic_pt": "Hii gát â diip kât ôn híz árm frôm dhê brôukân gléss."
+      },
+      {
+        "en": "The government plans to cut taxes next year.",
+        "pt": "O governo planeja cortar impostos no próximo ano.",
+        "phonetic_pt": "Dhê gâvêrnmênt plénz tchu kât téksiz néxt iír."
+      },
+      {
+        "en": "I'm trying to cut back on caffeine.",
+        "pt": "Estou tentando reduzir o consumo de cafeína.",
+        "phonetic_pt": "Áim tráing tchu kât bék ôn kéfiin."
+      },
+      {
+        "en": "Could you cut the grass this weekend?",
+        "pt": "Você poderia cortar a grama neste fim de semana?",
+        "phonetic_pt": "Kúd iú kât dhê gréss dhis uíikênd?"
+      },
+      {
+        "en": "They cut the power during the storm.",
+        "pt": "Eles cortaram a energia durante a tempestade.",
+        "phonetic_pt": "Dhêi kât dhê páu-rr dúring dhê stôrm."
+      },
+      {
+        "en": "Let's cut to the chase and discuss the main point.",
+        "pt": "Vamos direto ao ponto e discutir a questão principal.",
+        "phonetic_pt": "Léts kât tchu dhê chêis énd diskâss dhê mêin póint."
+      },
+      {
+        "en": "She had her hair cut in a new style.",
+        "pt": "Ela cortou o cabelo em um novo estilo.",
+        "phonetic_pt": "Shii héd hêr réir kât ín â niu stáil."
+      },
+      {
+        "en": "The editor decided to cut that scene from the movie.",
+        "pt": "O editor decidiu cortar aquela cena do filme.",
+        "phonetic_pt": "Dhê éditor disáidid tchu kât dhét siin frôm dhê muuvii."
+      },
+      {
+        "en": "This steak is a really good cut of meat.",
+        "pt": "Este bife é um corte de carne muito bom.",
+        "phonetic_pt": "Dhis stêik iz â riialii gud kât âv miit."
+      },
+      {
+        "en": "He was cut from the team after a poor performance.",
+        "pt": "Ele foi cortado do time depois de um desempenho ruim.",
+        "phonetic_pt": "Hii uâz kât frôm dhê tiim éftêr â pôr pêrfôrmânss."
+      },
+      {
+        "en": "I accidentally cut my finger with the bread knife.",
+        "pt": "Eu acidentalmente cortei meu dedo com a faca de pão.",
+        "phonetic_pt": "Ái éksidêntâlii kât mái fínguêr uíth dhê bréd náif."
+      },
+      {
+        "en": "The new policy will cut costs significantly.",
+        "pt": "A nova política reduzirá os custos significativamente.",
+        "phonetic_pt": "Dhê niu pólisi uíll kât kôsts signífikântlii."
+      },
+      {
+        "en": "They're going to cut off our water if we don't pay the bill.",
+        "pt": "Eles vão cortar nossa água se não pagarmos a conta.",
+        "phonetic_pt": "Dhêi âr gôuing tchu kât óf áu-rr uóter if wii dônt pêi dhê bíll."
+      },
+      {
+        "en": "She gave him a cold cut after their argument.",
+        "pt": "Ela o ignorou friamente depois da discussão deles.",
+        "phonetic_pt": "Shii gêiv him â kôuld kât éftêr dhêir árghiument."
+      },
+      {
+        "en": "Can you cut a piece of pie for me?",
+        "pt": "Você pode cortar um pedaço de torta para mim?",
+        "phonetic_pt": "Kén iú kât â piis âv pái fôr mii?"
+      },
+      {
+        "en": "I took a shortcut through the park to save time.",
+        "pt": "Peguei um atalho pelo parque para economizar tempo.",
+        "phonetic_pt": "Ái tuk â shôrtkât thruu dhê párk tchu sêiv táim."
+      },
+      {
+        "en": "The budget cuts will impact public services.",
+        "pt": "Os cortes no orçamento impactarão os serviços públicos.",
+        "phonetic_pt": "Dhê bâdjet kâts uíll ímpékt pâblik sêrvisiz."
+      },
+      {
+        "en": "They decided to cut ties with their old business partner.",
+        "pt": "Eles decidiram romper laços com seu antigo parceiro de negócios.",
+        "phonetic_pt": "Dhêi disáidid tchu kât táiz uíth dhêir ôuld bízniss pártnêr."
+      },
+      {
+        "en": "The sharp edges can cut your skin.",
+        "pt": "As bordas afiadas podem cortar sua pele.",
+        "phonetic_pt": "Dhê shárp édjiz kén kât iur skín."
+      },
+      {
+        "en": "There was a power cut, so we used candles.",
+        "pt": "Houve um corte de energia, então usamos velas.",
+        "phonetic_pt": "Dhêr uâz â páu-rr kât, sou wii iúzd kéndlz."
+      },
+      {
+        "en": "He always tries to cut corners to finish faster.",
+        "pt": "Ele sempre tenta cortar caminho para terminar mais rápido.",
+        "phonetic_pt": "Hii ólueiz tráiz tchu kât kôrnêrz tchu fínish féstêr."
+      },
+      {
+        "en": "Don't cut me off when I'm speaking.",
+        "pt": "Não me interrompa quando estou falando.",
+        "phonetic_pt": "Dônt kât mii óf uén áim spiiking."
+      },
+      {
+        "en": "The doctor had to cut the bandage off carefully.",
+        "pt": "O médico teve que cortar a bandagem com cuidado.",
+        "phonetic_pt": "Dhê dóktêr héd tchu kât dhê béndij óf kêrfulii."
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "rank": 234,
+    "en": "break",
+    "pt": "quebrar (verbo), pausa (substantivo)",
+    "phonetic": "/breɪk/",
+    "phonetic_br": "brêik",
+    "key": "Break",
+    "phrases": [
+      {
+        "en": "Be careful not to break that vase.",
+        "pt": "Tome cuidado para não quebrar aquele vaso.",
+        "phonetic_pt": "Bii kérful nát tu brêik dhát vêis."
+      },
+      {
+        "en": "Let's take a five-minute break.",
+        "pt": "Vamos fazer uma pausa de cinco minutos.",
+        "phonetic_pt": "Léts têik â fáiv-mínit brêik."
+      },
+      {
+        "en": "Did you hear about their break-up?",
+        "pt": "Você soube da separação deles?",
+        "phonetic_pt": "Díd iú híir âbáut dhérr brêik-âp?"
+      },
+      {
+        "en": "My old car always breaks down.",
+        "pt": "Meu carro velho sempre quebra (para de funcionar).",
+        "phonetic_pt": "Mái ôld kárr ólueis brêiks dáun."
+      },
+      {
+        "en": "I need a break from studying.",
+        "pt": "Preciso de uma pausa nos estudos.",
+        "phonetic_pt": "Ái niid â brêik frâm stâdiin."
+      },
+      {
+        "en": "Can you break this hundred-dollar bill?",
+        "pt": "Você pode trocar esta nota de cem dólares?",
+        "phonetic_pt": "Kén iú brêik dhís rrándrêd-dólarr bíl?"
+      },
+      {
+        "en": "Don't break the rules, please.",
+        "pt": "Não quebre as regras, por favor.",
+        "phonetic_pt": "Dônt brêik dhâ rúuls, plíiz."
+      },
+      {
+        "en": "He got a lucky break with that job.",
+        "pt": "Ele teve uma sorte grande com aquele emprego.",
+        "phonetic_pt": "Hii gát â lâki brêik uíth dhát djób."
+      },
+      {
+        "en": "The waves break on the shore.",
+        "pt": "As ondas quebram na praia.",
+        "phonetic_pt": "Dhâ uêivs brêik ôn dhâ shórr."
+      },
+      {
+        "en": "We should break for lunch soon.",
+        "pt": "Deveríamos parar para almoçar logo.",
+        "phonetic_pt": "Uii shúd brêik fórr lânch súun."
+      },
+      {
+        "en": "The news just broke this morning.",
+        "pt": "A notícia acabou de sair esta manhã.",
+        "phonetic_pt": "Dhâ niúuz djâst brôuk dhís mórrnin."
+      },
+      {
+        "en": "I hope the weather doesn't break.",
+        "pt": "Espero que o tempo não mude (piore).",
+        "phonetic_pt": "Ái hôup dhâ uédhârr dâznt brêik."
+      },
+      {
+        "en": "She had a complete nervous break-down.",
+        "pt": "Ela teve um colapso nervoso completo.",
+        "phonetic_pt": "Shii rrád â kâmplíit nêrrvâs brêik-dáun."
+      },
+      {
+        "en": "They decided to break the ice with a joke.",
+        "pt": "Eles decidiram quebrar o gelo com uma piada.",
+        "phonetic_pt": "Dhêi disáidid tu brêik dhê áis uíth â djôuk."
+      },
+      {
+        "en": "The prisoner tried to break out of jail.",
+        "pt": "O prisioneiro tentou escapar da prisão.",
+        "phonetic_pt": "Dhâ príznârr tráid tu brêik áut âv djêil."
+      },
+      {
+        "en": "Don't break your promise to me.",
+        "pt": "Não quebre sua promessa para mim.",
+        "phonetic_pt": "Dônt brêik iúrr prámis tu mii."
+      },
+      {
+        "en": "My heart will break if you leave.",
+        "pt": "Meu coração vai partir se você for embora.",
+        "phonetic_pt": "Mái rrárt uíl brêik if iú líiv."
+      },
+      {
+        "en": "We need to break this cycle of negativity.",
+        "pt": "Precisamos quebrar este ciclo de negatividade.",
+        "phonetic_pt": "Uii niid tu brêik dhís sáikl âv nêgâdívâdii."
+      },
+      {
+        "en": "The police had to break into the house.",
+        "pt": "A polícia teve que arrombar a casa.",
+        "phonetic_pt": "Dhâ pâlíis rrád tu brêik íntu dhâ rráus."
+      },
+      {
+        "en": "It's time for a spring break trip!",
+        "pt": "É hora de uma viagem de férias de primavera!",
+        "phonetic_pt": "Its táim fórr â sprín brêik tríp!"
+      },
+      {
+        "en": "Did you get a break on the price?",
+        "pt": "Você conseguiu um desconto no preço?",
+        "phonetic_pt": "Díd iú gét â brêik ôn dhâ práis?"
+      },
+      {
+        "en": "I'm going to take a long break next year.",
+        "pt": "Vou tirar umas férias longas no próximo ano.",
+        "phonetic_pt": "Áim gôuin tu têik â lóng brêik nékst iírr."
+      },
+      {
+        "en": "The new semester will break in September.",
+        "pt": "O novo semestre começará em setembro.",
+        "phonetic_pt": "Dhâ niú seméstârr uíl brêik ín septémbârr."
+      },
+      {
+        "en": "He's trying to break a world record.",
+        "pt": "Ele está tentando quebrar um recorde mundial.",
+        "phonetic_pt": "Híiz tráiiin tu brêik â uêrrld rékrrrd."
+      },
+      {
+        "en": "Don't just stand there, break a leg!",
+        "pt": "Não fique aí parado, boa sorte!",
+        "phonetic_pt": "Dônt djâst stând dhérr, brêik â lég!"
+      },
+      {
+        "en": "The sun will break through the clouds soon.",
+        "pt": "O sol vai romper as nuvens em breve.",
+        "phonetic_pt": "Dhâ sân uíl brêik thrúu dhâ kláuds súun."
+      },
+      {
+        "en": "They had to break up the fight.",
+        "pt": "Eles tiveram que apartar a briga.",
+        "phonetic_pt": "Dhêi rrád tu brêik âp dhâ fáit."
+      },
+      {
+        "en": "I need to break this habit of procrastination.",
+        "pt": "Preciso quebrar este hábito de procrastinação.",
+        "phonetic_pt": "Ái niid tu brêik dhís rrábit âv prôukrâstinêishân."
+      },
+      {
+        "en": "There was a break in the conversation.",
+        "pt": "Houve uma pausa na conversa.",
+        "phonetic_pt": "Dhêrr uâz â brêik ín dhâ konvêrsêishân."
+      },
+      {
+        "en": "She decided to break free from her past.",
+        "pt": "Ela decidiu se libertar do seu passado.",
+        "phonetic_pt": "Shii disáidid tu brêik fríi frâm rrr pâst."
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "rank": 235,
+    "en": "send",
+    "pt": "enviar (verbo transitivo)",
+    "phonetic": "/sɛnd/",
+    "phonetic_br": "sénd",
+    "key": "send",
+    "phrases": [
+      {
+        "en": "Can you send me the report?",
+        "pt": "Você pode me enviar o relatório?",
+        "phonetic_pt": "Kén iú sénd mii dhê rrí-pôrt?"
+      },
+      {
+        "en": "I'll send you an email later.",
+        "pt": "Eu te envio um e-mail mais tarde.",
+        "phonetic_pt": "Áil sénd iú ân ii-mêil lêitêr."
+      },
+      {
+        "en": "She sent a text message to her mom.",
+        "pt": "Ela enviou uma mensagem de texto para a mãe dela.",
+        "phonetic_pt": "Shii sént â tékst mésidj tuu hêr môm."
+      },
+      {
+        "en": "We need to send this package tomorrow.",
+        "pt": "Precisamos enviar este pacote amanhã.",
+        "phonetic_pt": "Uii niid tuu sénd dhís pékidj tuu-mórrou."
+      },
+      {
+        "en": "They sent their kids to summer camp.",
+        "pt": "Eles mandaram os filhos deles para o acampamento de verão.",
+        "phonetic_pt": "Dhêi sént dhêr kídz tuu sâmêr kemp."
+      },
+      {
+        "en": "Don't forget to send a thank-you note.",
+        "pt": "Não se esqueça de enviar um cartão de agradecimento.",
+        "phonetic_pt": "Dônt fôrr-guét tuu sénd â thénk-iú nôt."
+      },
+      {
+        "en": "He's sending flowers to his wife.",
+        "pt": "Ele está enviando flores para a esposa dele.",
+        "phonetic_pt": "Hii's sénding fláuêrz tuu híz uáif."
+      },
+      {
+        "en": "Have you sent out the invitations yet?",
+        "pt": "Você já enviou os convites?",
+        "phonetic_pt": "Hév iú sént áut dhê ín-vi-têi-shânz iét?"
+      },
+      {
+        "en": "I sent a complaint to customer service.",
+        "pt": "Enviei uma reclamação ao atendimento ao cliente.",
+        "phonetic_pt": "Ái sént â kâm-plêint tuu kâstômêr sêr-vis."
+      },
+      {
+        "en": "Could you send me a link to that article?",
+        "pt": "Você poderia me enviar um link para aquele artigo?",
+        "phonetic_pt": "Kúd iú sénd mii â línk tuu dhét árr-tikâl?"
+      },
+      {
+        "en": "The company will send you a confirmation.",
+        "pt": "A empresa vai te enviar uma confirmação.",
+        "phonetic_pt": "Dhê kâmpânii uíl sénd iú â kôn-fêr-mêi-shân."
+      },
+      {
+        "en": "Please send your feedback by Friday.",
+        "pt": "Por favor, envie seu feedback até sexta-feira.",
+        "phonetic_pt": "Pliiz sénd iórr fiid-bék bái frái-dêi."
+      },
+      {
+        "en": "My boss sent me on a business trip.",
+        "pt": "Meu chefe me mandou para uma viagem de negócios.",
+        "phonetic_pt": "Mái bôs sént mii ôn â bíznis tríp."
+      },
+      {
+        "en": "We sent for a doctor immediately.",
+        "pt": "Chamamos um médico imediatamente.",
+        "phonetic_pt": "Uii sént fôrr â dôktôr im-mii-dii-êt-lii."
+      },
+      {
+        "en": "Who sent you that gift?",
+        "pt": "Quem te enviou aquele presente?",
+        "phonetic_pt": "Húu sént iú dhét guíft?"
+      },
+      {
+        "en": "I'm going to send this back to the store.",
+        "pt": "Eu vou devolver isso para a loja.",
+        "phonetic_pt": "Áim gô-ing tuu sénd dhís bék tuu dhê stôrr."
+      },
+      {
+        "en": "Let's send her a card to cheer her up.",
+        "pt": "Vamos enviar um cartão para animá-la.",
+        "phonetic_pt": "Léts sénd hêr â kárr-d tuu chiir hêr âp."
+      },
+      {
+        "en": "Did you send the kids to bed?",
+        "pt": "Você mandou as crianças para a cama?",
+        "phonetic_pt": "Díd iú sénd dhê kídz tuu béd?"
+      },
+      {
+        "en": "They're planning to send a rocket to Mars.",
+        "pt": "Eles estão planejando enviar um foguete para Marte.",
+        "phonetic_pt": "Dhêr pléning tuu sénd â rôkêt tuu Márrz."
+      },
+      {
+        "en": "I'll send you my love.",
+        "pt": "Eu te envio meu amor.",
+        "phonetic_pt": "Áil sénd iú mái lâv."
+      },
+      {
+        "en": "The teacher sent the naughty student to the principal's office.",
+        "pt": "O professor mandou o aluno malcriado para a sala do diretor.",
+        "phonetic_pt": "Dhê tiichêr sént dhê nô-tii stiú-dênt tuu dhê prín-sâ-pâlz ô-fis."
+      },
+      {
+        "en": "My parents sent me money for my birthday.",
+        "pt": "Meus pais me enviaram dinheiro para o meu aniversário.",
+        "phonetic_pt": "Mái pérr-êntss sént mii mâ-nii fôrr mái bérrth-dêi."
+      },
+      {
+        "en": "Can you send a reply by the end of the day?",
+        "pt": "Você pode enviar uma resposta até o final do dia?",
+        "phonetic_pt": "Kén iú sénd â rrí-plái bái dhê énd âv dhê dêi?"
+      },
+      {
+        "en": "We're sending out Christmas cards this week.",
+        "pt": "Estamos enviando cartões de Natal esta semana.",
+        "phonetic_pt": "Uii'rr sénding áut Krís-mâs kárr-ds dhís uiik."
+      },
+      {
+        "en": "He forgot to send the document.",
+        "pt": "Ele esqueceu de enviar o documento.",
+        "phonetic_pt": "Hii fôrr-gôt tuu sénd dhê dô-kiu-mênt."
+      },
+      {
+        "en": "The news sent shockwaves through the country.",
+        "pt": "A notícia enviou ondas de choque pelo país.",
+        "phonetic_pt": "Dhê niúz sént shók-uêivs thrúu dhê kân-trii."
+      },
+      {
+        "en": "I need to send an urgent message.",
+        "pt": "Preciso enviar uma mensagem urgente.",
+        "phonetic_pt": "Ái niid tuu sénd ân êr-djênt mésidj."
+      },
+      {
+        "en": "They're always sending me junk mail.",
+        "pt": "Eles estão sempre me enviando lixo eletrônico.",
+        "phonetic_pt": "Dhêr ôl-uêiz sénding mii djânk mêil."
+      },
+      {
+        "en": "Will you send me a postcard from your trip?",
+        "pt": "Você vai me enviar um cartão postal da sua viagem?",
+        "phonetic_pt": "Uíl iú sénd mii â pôst-kárr-d frôm iórr tríp?"
+      },
+      {
+        "en": "Please send help!",
+        "pt": "Por favor, enviem ajuda!",
+        "phonetic_pt": "Pliiz sénd hélp!"
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "rank": 236,
+    "en": "leave",
+    "pt": "sair / partir / deixar (verbo)",
+    "phonetic": "/liːv/",
+    "phonetic_br": "lii-v",
+    "key": "Leave",
+    "phrases": [
+      {
+        "en": "I need to leave now.",
+        "pt": "Preciso sair agora.",
+        "phonetic_pt": "ái nii-d tchu lii-v náu."
+      },
+      {
+        "en": "When do you leave for work?",
+        "pt": "Quando você sai para o trabalho?",
+        "phonetic_pt": "uén du iú lii-v fôr uêrk?"
+      },
+      {
+        "en": "She left her keys on the counter.",
+        "pt": "Ela deixou as chaves dela no balcão.",
+        "phonetic_pt": "shii léft rêr kii-z ôn dhê cáun-têr."
+      },
+      {
+        "en": "Don't leave the door unlocked.",
+        "pt": "Não deixe a porta destrancada.",
+        "phonetic_pt": "dônt lii-v dhê dôr ân-lókt."
+      },
+      {
+        "en": "He's leaving for vacation next week.",
+        "pt": "Ele está saindo de férias na próxima semana.",
+        "phonetic_pt": "rii-z lii-vin fôr vê-kêi-shân nékst uii-k."
+      },
+      {
+        "en": "Can I leave a message?",
+        "pt": "Posso deixar uma mensagem?",
+        "phonetic_pt": "kén ái lii-v ê mé-sâdj?"
+      },
+      {
+        "en": "We should leave early to avoid traffic.",
+        "pt": "Devíamos sair cedo para evitar o trânsito.",
+        "phonetic_pt": "ui shud lii-v êr-lii tchu â-vóid trá-fik."
+      },
+      {
+        "en": "They left us a nice note.",
+        "pt": "Eles nos deixaram um bilhete legal.",
+        "phonetic_pt": "dhêi léft âs ê náis nôt."
+      },
+      {
+        "en": "Please don't leave me alone.",
+        "pt": "Por favor, não me deixe sozinho(a).",
+        "phonetic_pt": "plii-z dônt lii-v mii â-lôn."
+      },
+      {
+        "en": "What time did you leave yesterday?",
+        "pt": "Que horas você saiu ontem?",
+        "phonetic_pt": "uát táim did iú lii-v iés-têr-dêi?"
+      },
+      {
+        "en": "I'll leave it up to you.",
+        "pt": "Vou deixar por sua conta.",
+        "phonetic_pt": "áil lii-v ít âp tchu iú."
+      },
+      {
+        "en": "She's on maternity leave.",
+        "pt": "Ela está de licença-maternidade.",
+        "phonetic_pt": "shii-z ôn mâ-têr-nâ-tii lii-v."
+      },
+      {
+        "en": "Don't leave your dirty dishes in the sink.",
+        "pt": "Não deixe sua louça suja na pia.",
+        "phonetic_pt": "dônt lii-v iôr dêr-tii di-shiz in dhê síngk."
+      },
+      {
+        "en": "We have to leave a tip for the waiter.",
+        "pt": "Temos que deixar uma gorjeta para o garçom.",
+        "phonetic_pt": "ui rrá-v tchu lii-v ê típ fôr dhê uêi-têr."
+      },
+      {
+        "en": "He left the company after ten years.",
+        "pt": "Ele saiu da empresa depois de dez anos.",
+        "phonetic_pt": "rii léft dhê kâm-pâ-nii áf-têr tén ii-êrz."
+      },
+      {
+        "en": "Are you leaving for good?",
+        "pt": "Você está indo embora para sempre?",
+        "phonetic_pt": "ár iú lii-vin fôr gúd?"
+      },
+      {
+        "en": "The thought of leaving makes me sad.",
+        "pt": "A ideia de ir embora me deixa triste.",
+        "phonetic_pt": "dhê thót âv lii-vin mêi-ks mii sád."
+      },
+      {
+        "en": "Leave your worries behind.",
+        "pt": "Deixe suas preocupações para trás.",
+        "phonetic_pt": "lii-v iôr uâ-riiz bi-ráind."
+      },
+      {
+        "en": "How much money do we have left?",
+        "pt": "Quanto dinheiro nos resta?",
+        "phonetic_pt": "ráu mâtch mâ-nii du ui rrá-v léft?"
+      },
+      {
+        "en": "I can't believe you're leaving!",
+        "pt": "Não acredito que você está indo embora!",
+        "phonetic_pt": "ái ként bi-lii-v iúr lii-vin!"
+      },
+      {
+        "en": "She left the lights on.",
+        "pt": "Ela deixou as luzes acesas.",
+        "phonetic_pt": "shii léft dhê láits ôn."
+      },
+      {
+        "en": "Don't leave without saying goodbye.",
+        "pt": "Não vá embora sem se despedir.",
+        "phonetic_pt": "dônt lii-v ui-dháut sêi-in gúd-bái."
+      },
+      {
+        "en": "He was left speechless.",
+        "pt": "Ele ficou sem palavras.",
+        "phonetic_pt": "rii uâz léft spii-tch-lês."
+      },
+      {
+        "en": "The train leaves at 7 PM.",
+        "pt": "O trem parte às 19h.",
+        "phonetic_pt": "dhê trêin lii-vz át sé-vân pii-ém."
+      },
+      {
+        "en": "Can you leave a note for him?",
+        "pt": "Você pode deixar um bilhete para ele?",
+        "phonetic_pt": "kén iú lii-v ê nôt fôr rím?"
+      },
+      {
+        "en": "I usually leave home around 8 AM.",
+        "pt": "Eu geralmente saio de casa por volta das 8h da manhã.",
+        "phonetic_pt": "ái iú-zho-lii lii-v hôm â-ráund êit êi-ém."
+      },
+      {
+        "en": "He decided to leave his past behind.",
+        "pt": "Ele decidiu deixar seu passado para trás.",
+        "phonetic_pt": "rii di-sáid-id tchu lii-v riz pást bi-ráind."
+      },
+      {
+        "en": "We need to leave this place.",
+        "pt": "Precisamos sair deste lugar.",
+        "phonetic_pt": "ui nii-d tchu lii-v dhis plêis."
+      },
+      {
+        "en": "She took a leave of absence for personal reasons.",
+        "pt": "Ela tirou uma licença para assuntos pessoais.",
+        "phonetic_pt": "shii tuk ê lii-v âv áb-sâns fôr pêr-sâ-nâl rii-zânz."
+      },
+      {
+        "en": "Just leave it there, I'll pick it up later.",
+        "pt": "Deixe aí, eu pego depois.",
+        "phonetic_pt": "djâst lii-v ít dhêr, áil pí-kít âp lêi-têr."
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "rank": 237,
+    "en": "spend",
+    "pt": "gastar / passar (verbo)",
+    "phonetic": "/spɛnd/",
+    "phonetic_br": "spênd",
+    "key": "Spend",
+    "phrases": [
+      {
+        "en": "I like to spend time with my family on weekends.",
+        "pt": "Gosto de passar tempo com minha família nos fins de semana.",
+        "phonetic_pt": "Ái láik tchu spênd táim uith mái fâm-li ôn uíi-kênds."
+      },
+      {
+        "en": "How much do you usually spend on groceries?",
+        "pt": "Quanto você geralmente gasta em compras de supermercado?",
+        "phonetic_pt": "Ráu mâtch dhu iú iú-jú-a-lii spênd ôn grôu-sâ-riis?"
+      },
+      {
+        "en": "We spent our vacation on a beautiful island.",
+        "pt": "Passamos nossas férias em uma ilha linda.",
+        "phonetic_pt": "Uii spênt áu-ârr vêi-kêi-shân ôn â biú-tii-fûl ái-lând."
+      },
+      {
+        "en": "Don't spend all your money at once.",
+        "pt": "Não gaste todo o seu dinheiro de uma vez.",
+        "phonetic_pt": "Dôunt spênd ôl yórr mâ-nii ât uâns."
+      },
+      {
+        "en": "She decided to spend the day volunteering.",
+        "pt": "Ela decidiu passar o dia como voluntária.",
+        "phonetic_pt": "Shii di-sáid-id tchu spênd dhâ dêi vô-lân-tii-ring."
+      },
+      {
+        "en": "They will spend a lot of effort on this project.",
+        "pt": "Eles vão gastar muito esforço neste projeto.",
+        "phonetic_pt": "Dhêi uíl spênd â lót âv é-fârr-t ôn dhís prô-jêkt."
+      },
+      {
+        "en": "I wish I could spend more time reading.",
+        "pt": "Eu queria poder passar mais tempo lendo.",
+        "phonetic_pt": "Ái uísh ái kûd spênd môr táim rii-ding."
+      },
+      {
+        "en": "He spends too much money on gadgets.",
+        "pt": "Ele gasta muito dinheiro com aparelhos eletrônicos.",
+        "phonetic_pt": "Hii spênds tchu mâ-tsh mâ-nii ôn gá-djêts."
+      },
+      {
+        "en": "We're planning to spend the holidays at home.",
+        "pt": "Estamos planejando passar os feriados em casa.",
+        "phonetic_pt": "Uírr plá-ning tchu spênd dhâ hó-li-dêis ât hôum."
+      },
+      {
+        "en": "Did you spend a good amount of time studying?",
+        "pt": "Você passou bastante tempo estudando?",
+        "phonetic_pt": "Díd iú spênd â gûd â-máunt âv táim stâ-dii-ing?"
+      },
+      {
+        "en": "My kids spend hours playing video games.",
+        "pt": "Meus filhos passam horas jogando videogame.",
+        "phonetic_pt": "Mái kîdz spênd áu-ârrz plêi-ing ví-dii-ou guêims."
+      },
+      {
+        "en": "How much time do you spend commuting every day?",
+        "pt": "Quanto tempo você gasta se deslocando todos os dias?",
+        "phonetic_pt": "Ráu mâtch táim dhu iú spênd kâ-miú-ting é-vrii dêi?"
+      },
+      {
+        "en": "Let's not spend too long on this topic.",
+        "pt": "Não vamos gastar muito tempo neste tópico.",
+        "phonetic_pt": "Lêts nôt spênd tchu lông ôn dhís tô-pik."
+      },
+      {
+        "en": "She had to spend a night in the hospital.",
+        "pt": "Ela teve que passar uma noite no hospital.",
+        "phonetic_pt": "Shii hâd tchu spênd â náit în dhâ hôs-pi-tâl."
+      },
+      {
+        "en": "I usually spend my lunch break walking around.",
+        "pt": "Eu geralmente passo meu intervalo de almoço caminhando por aí.",
+        "phonetic_pt": "Ái iú-jú-a-lii spênd mái lântsh brêik uô-king â-ráund."
+      },
+      {
+        "en": "They spent their savings on a down payment for a house.",
+        "pt": "Eles gastaram suas economias no pagamento inicial de uma casa.",
+        "phonetic_pt": "Dhêi spênt dhêrr sêi-vings ôn â dáun pêi-mênt fôrr â ráus."
+      },
+      {
+        "en": "You shouldn't spend money you don't have.",
+        "pt": "Você não deveria gastar dinheiro que não tem.",
+        "phonetic_pt": "Iú shûd-ênt spênd mâ-nii iú dôunt hâv."
+      },
+      {
+        "en": "I'm going to spend the afternoon cleaning the house.",
+        "pt": "Vou passar a tarde limpando a casa.",
+        "phonetic_pt": "Áim gôu-ing tchu spênd dhâ âf-têrr-núun klii-ning dhâ ráus."
+      },
+      {
+        "en": "We could spend less if we cooked at home more often.",
+        "pt": "Poderíamos gastar menos se cozinhássemos em casa com mais frequência.",
+        "phonetic_pt": "Uii kûd spênd lês îf uii kûkd ât hôum môr ô-fên."
+      },
+      {
+        "en": "He spends a lot of energy worrying about small things.",
+        "pt": "Ele gasta muita energia se preocupando com coisas pequenas.",
+        "phonetic_pt": "Hii spênds â lót âv ê-nârr-jii uâ-rii-ing â-báut smôl thíngs."
+      },
+      {
+        "en": "Will you spend Christmas with us this year?",
+        "pt": "Você vai passar o Natal conosco este ano?",
+        "phonetic_pt": "Uíl iú spênd krís-mâs uith âs dhís yírr?"
+      },
+      {
+        "en": "She's trying not to spend too much on clothes.",
+        "pt": "Ela está tentando não gastar muito com roupas.",
+        "phonetic_pt": "Shiiz trái-ing nôt tchu spênd tchu mâ-tsh ôn klôudhs."
+      },
+      {
+        "en": "I've spent years learning this language.",
+        "pt": "Passei anos aprendendo esta língua.",
+        "phonetic_pt": "Áiv spênt yírrz lêrr-ning dhís lâng-gwêdj."
+      },
+      {
+        "en": "They often spend their evenings watching TV.",
+        "pt": "Eles frequentemente passam as noites assistindo TV.",
+        "phonetic_pt": "Dhêi ô-fên spênd dhêrr íiv-nings uâ-tching tii-vii."
+      },
+      {
+        "en": "Let's spend some quality time together this weekend.",
+        "pt": "Vamos passar um tempo de qualidade juntos neste fim de semana.",
+        "phonetic_pt": "Lêts spênd sâm kuô-li-tii táim tchu-gê-dhêrr dhís uíi-kêd."
+      },
+      {
+        "en": "How much did you spend on your last trip?",
+        "pt": "Quanto você gastou na sua última viagem?",
+        "phonetic_pt": "Ráu mâtch díd iú spênd ôn yórr lâst tríp?"
+      },
+      {
+        "en": "I don't want to spend my life regretting things.",
+        "pt": "Não quero passar minha vida me arrependendo de coisas.",
+        "phonetic_pt": "Ái dôunt uânt tchu spênd mái láif ri-grê-ting thíngs."
+      },
+      {
+        "en": "He likes to spend his free time hiking.",
+        "pt": "Ele gosta de passar seu tempo livre fazendo trilhas.",
+        "phonetic_pt": "Hii láiks tchu spênd híz frii táim rrái-king."
+      },
+      {
+        "en": "We should spend more time listening to each other.",
+        "pt": "Deveríamos passar mais tempo ouvindo um ao outro.",
+        "phonetic_pt": "Uii shûd spênd môr táim lîs-â-ning tchu íitsh â-dhêrr."
+      },
+      {
+        "en": "They will spend the summer working on a farm.",
+        "pt": "Eles vão passar o verão trabalhando em uma fazenda.",
+        "phonetic_pt": "Dhêi uíl spênd dhâ sâ-mêrr uêrr-king ôn â fârm."
+      }
+    ]
+  },
+  {
+    "id": 238,
+    "rank": 238,
+    "en": "fall",
+    "pt": "cair (verbo intransitivo ou de ligação); queda (substantivo feminino); outono (substantivo masculino)",
+    "phonetic": "/fɑːl/",
+    "phonetic_br": "fál",
+    "key": "fall",
+    "phrases": [
+      {
+        "en": "Be careful not to fall on the icy sidewalk.",
+        "pt": "Tome cuidado para não cair na calçada escorregadia.",
+        "phonetic_pt": "Bii kérful nót tu fál ôn dhê áisi sáiduók."
+      },
+      {
+        "en": "I saw him fall down the stairs.",
+        "pt": "Eu o vi cair da escada.",
+        "phonetic_pt": "Ái sóu rím fál dáun dhê stéarz."
+      },
+      {
+        "en": "The leaves start to fall in autumn.",
+        "pt": "As folhas começam a cair no outono.",
+        "phonetic_pt": "Dhê liiivz stárt tu fál in ótâm."
+      },
+      {
+        "en": "Don't let your grades fall this semester.",
+        "pt": "Não deixe suas notas caírem neste semestre.",
+        "phonetic_pt": "Dônt lét iôr grêidz fál dhis seméster."
+      },
+      {
+        "en": "She took a bad fall and broke her arm.",
+        "pt": "Ela teve uma queda feia e quebrou o braço.",
+        "phonetic_pt": "Shii tuk â béd fál end brôuk her árm."
+      },
+      {
+        "en": "I love watching the waterfalls in the mountains.",
+        "pt": "Eu amo assistir às cachoeiras nas montanhas.",
+        "phonetic_pt": "Ái lâv uótching dhê uóterfólz in dhê máuntinz."
+      },
+      {
+        "en": "The price of gas is expected to fall soon.",
+        "pt": "O preço da gasolina deve cair em breve.",
+        "phonetic_pt": "Dhê práis ôv gâs iz expékted tu fál suun."
+      },
+      {
+        "en": "He's afraid to fall in love again.",
+        "pt": "Ele tem medo de se apaixonar de novo.",
+        "phonetic_pt": "Hii'z âfrêid tu fál in lâv âguén."
+      },
+      {
+        "en": "It's easy to fall asleep during a long lecture.",
+        "pt": "É fácil pegar no sono durante uma palestra longa.",
+        "phonetic_pt": "Its iizi tu fál âsliiip díuring â lông lékchur."
+      },
+      {
+        "en": "The Roman Empire eventually began to fall.",
+        "pt": "O Império Romano eventualmente começou a cair.",
+        "phonetic_pt": "Dhê Rôumân Empáir ivénchuali bigán tu fál."
+      },
+      {
+        "en": "Did you see the snow fall last night?",
+        "pt": "Você viu a neve cair ontem à noite?",
+        "phonetic_pt": "Did iú sii dhê snôu fál lást náit?"
+      },
+      {
+        "en": "My birthday always falls in the summer.",
+        "pt": "Meu aniversário sempre cai no verão.",
+        "phonetic_pt": "Mái bérthdêi ólueiz fálz in dhê sâmer."
+      },
+      {
+        "en": "Don't fall for that old trick.",
+        "pt": "Não caia nesse truque velho.",
+        "phonetic_pt": "Dônt fál fôr dhât ôuld trik."
+      },
+      {
+        "en": "He's prone to fall sick when the weather changes.",
+        "pt": "Ele tem propensão a ficar doente quando o tempo muda.",
+        "phonetic_pt": "Hii'z prôun tu fál sik uén dhê uédher chêinjiz."
+      },
+      {
+        "en": "We'll have a picnic in the fall.",
+        "pt": "Nós faremos um piquenique no outono.",
+        "phonetic_pt": "Uii'l hâv â pík-nik in dhê fál."
+      },
+      {
+        "en": "The stock market took a big fall yesterday.",
+        "pt": "A bolsa de valores teve uma grande queda ontem.",
+        "phonetic_pt": "Dhê stók márkêt tuk â big fál iésterdêi."
+      },
+      {
+        "en": "I almost fell off my chair laughing.",
+        "pt": "Eu quase caí da minha cadeira de tanto rir.",
+        "phonetic_pt": "Ái ólmôust fél óf mái chér láfing."
+      },
+      {
+        "en": "She's worried her hair will fall out.",
+        "pt": "Ela está preocupada que o cabelo dela caia.",
+        "phonetic_pt": "Shii'z uêrid her hér uil fál áut."
+      },
+      {
+        "en": "Let's watch the sunset as it falls below the horizon.",
+        "pt": "Vamos assistir ao pôr do sol enquanto ele cai abaixo do horizonte.",
+        "phonetic_pt": "Lets uótch dhê sânsét âz it fálz bilôu dhê horáizân."
+      },
+      {
+        "en": "His plans began to fall apart.",
+        "pt": "Os planos dele começaram a desmoronar.",
+        "phonetic_pt": "Hiz plânz bigân tu fál âpáart."
+      },
+      {
+        "en": "The responsibility will fall on you.",
+        "pt": "A responsabilidade vai cair sobre você.",
+        "phonetic_pt": "Dhê rispônsibíliti uil fál ôn iú."
+      },
+      {
+        "en": "Don't let the ball fall!",
+        "pt": "Não deixe a bola cair!",
+        "phonetic_pt": "Dônt lét dhê ból fál!"
+      },
+      {
+        "en": "He had a bad fall while hiking.",
+        "pt": "Ele teve uma queda feia enquanto fazia trilha.",
+        "phonetic_pt": "Hii hâd â béd fál uáil háiking."
+      },
+      {
+        "en": "The city lights began to fall away behind us.",
+        "pt": "As luzes da cidade começaram a desaparecer atrás de nós.",
+        "phonetic_pt": "Dhê síti láits bigân tu fál âuêi biháind âs."
+      },
+      {
+        "en": "I love the colors of Fall foliage.",
+        "pt": "Eu amo as cores da folhagem de outono.",
+        "phonetic_pt": "Ái lâv dhê kâlerz ôv fál fôulij."
+      },
+      {
+        "en": "His voice would fall at the end of every sentence.",
+        "pt": "A voz dele caía no final de cada frase.",
+        "phonetic_pt": "Hiz vóis uuld fál ât dhê énd ôv évri séntens."
+      },
+      {
+        "en": "The children often fall behind in their studies.",
+        "pt": "As crianças frequentemente ficam para trás nos estudos.",
+        "phonetic_pt": "Dhê chíldrên ófên fál biháind in dhér stâdiz."
+      },
+      {
+        "en": "If you fall, I'll catch you.",
+        "pt": "Se você cair, eu te pego.",
+        "phonetic_pt": "If iú fál, ái'l kâch iú."
+      },
+      {
+        "en": "A sense of calm began to fall over the room.",
+        "pt": "Uma sensação de calma começou a tomar conta da sala.",
+        "phonetic_pt": "Â séns ôv kám bigân tu fál ôuver dhê ruum."
+      },
+      {
+        "en": "We watched the rain fall softly on the window.",
+        "pt": "Nós assistimos a chuva cair suavemente na janela.",
+        "phonetic_pt": "Uii uótchd dhê rêin fál sóftli ôn dhê uíndôu."
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "rank": 239,
+    "en": "raise",
+    "pt": "levantar / erguer / aumentar (verbo)",
+    "phonetic": "/reɪz/",
+    "phonetic_br": "rêiz",
+    "key": "Raise",
+    "phrases": [
+      {
+        "en": "Please raise your hand if you have a question.",
+        "pt": "Por favor, levante a mão se tiver uma pergunta.",
+        "phonetic_pt": "Pliiz rêiz iurr rránd if iú rráv ê cuéstchân."
+      },
+      {
+        "en": "They decided to raise the prices next month.",
+        "pt": "Eles decidiram aumentar os preços no próximo mês.",
+        "phonetic_pt": "Dhei disáidid tu rêiz dhê práisiz nékst mânth."
+      },
+      {
+        "en": "She worked hard to raise her children.",
+        "pt": "Ela trabalhou duro para criar seus filhos.",
+        "phonetic_pt": "Shii uêrkt rrárrd tu rêiz rrêr tchildrên."
+      },
+      {
+        "en": "We need to raise funds for the new project.",
+        "pt": "Precisamos arrecadar fundos para o novo projeto.",
+        "phonetic_pt": "Uii niid tu rêiz fândz fôrr dhê niú prrádject."
+      },
+      {
+        "en": "Don't raise your voice at me.",
+        "pt": "Não levante a voz para mim.",
+        "phonetic_pt": "Dônt rêiz iurr vôis át mii."
+      },
+      {
+        "en": "I'd like to raise a point about the budget.",
+        "pt": "Gostaria de levantar um ponto sobre o orçamento.",
+        "phonetic_pt": "Áid láik tu rêiz ê póint abáut dhê bâdjet."
+      },
+      {
+        "en": "The loud noise raised me from my sleep.",
+        "pt": "O barulho alto me tirou do sono.",
+        "phonetic_pt": "Dhê láud nôiz rêizd mii frrôm mái sliip."
+      },
+      {
+        "en": "He's hoping for a raise next year.",
+        "pt": "Ele está esperando um aumento no próximo ano.",
+        "phonetic_pt": "Hiiz rôuping fôrr ê rêiz nékst iirr."
+      },
+      {
+        "en": "They will raise the flag at dawn.",
+        "pt": "Eles vão hastear a bandeira ao amanhecer.",
+        "phonetic_pt": "Dhei uil rêiz dhê flég át dón."
+      },
+      {
+        "en": "We need to raise awareness about climate change.",
+        "pt": "Precisamos aumentar a conscientização sobre as mudanças climáticas.",
+        "phonetic_pt": "Uii niid tu rêiz auérnês abáut cláimêt tchêindj."
+      },
+      {
+        "en": "The heater will raise the room temperature quickly.",
+        "pt": "O aquecedor vai aumentar a temperatura do quarto rapidamente.",
+        "phonetic_pt": "Dhê hiitêrr uil rêiz dhê rrúm témprâtchêrr cuiklii."
+      },
+      {
+        "en": "Farmers in this region mostly raise corn and soybeans.",
+        "pt": "Os fazendeiros nesta região cultivam principalmente milho e soja.",
+        "phonetic_pt": "Fárrmêrrz in dhís rriidjân môustlii rêiz côrrn énd sóibiiinz."
+      },
+      {
+        "en": "Does anyone want to raise an objection?",
+        "pt": "Alguém quer levantar uma objeção?",
+        "phonetic_pt": "Dâz éniuan uânt tu rêiz ên abdjékshân?"
+      },
+      {
+        "en": "My grandparents raised ten children on a farm.",
+        "pt": "Meus avós criaram dez filhos em uma fazenda.",
+        "phonetic_pt": "Mái grréndpêrrânts rêizd tén tchildrên ôn ê fárrm."
+      },
+      {
+        "en": "We'll raise enough money for the trip by summer.",
+        "pt": "Nós vamos arrecadar dinheiro suficiente para a viagem até o verão.",
+        "phonetic_pt": "Uil rêiz inâf mâni fôrr dhê trríp bái sâmêrr."
+      },
+      {
+        "en": "She was raised to be polite and respectful.",
+        "pt": "Ela foi criada para ser educada e respeitosa.",
+        "phonetic_pt": "Shii uâz rêizd tu bii poláit énd rrespéktfâl."
+      },
+      {
+        "en": "Can we raise the volume a little bit?",
+        "pt": "Podemos aumentar o volume um pouco?",
+        "phonetic_pt": "Kân uii rêiz dhê vólium ê lírâl bit?"
+      },
+      {
+        "en": "That comment might raise some eyebrows.",
+        "pt": "Esse comentário pode levantar algumas sobrancelhas.",
+        "phonetic_pt": "Dhét cóment máit rêiz sâm áibráuz."
+      },
+      {
+        "en": "I'll raise my offer if you can guarantee delivery.",
+        "pt": "Vou aumentar minha oferta se você puder garantir a entrega.",
+        "phonetic_pt": "Áil rêiz mái ófêrr if iú kân gârrântii dilívrrii."
+      },
+      {
+        "en": "He raised his glass in a toast.",
+        "pt": "Ele levantou o copo para um brinde.",
+        "phonetic_pt": "Hii rêizd hiz glés in ê tôust."
+      },
+      {
+        "en": "They are raising their family in the countryside.",
+        "pt": "Eles estão criando a família no interior.",
+        "phonetic_pt": "Dhei árr rêizing dhérr fámili in dhê kântrrisáid."
+      },
+      {
+        "en": "I'll see your bet and raise you ten dollars.",
+        "pt": "Eu vejo a sua aposta e aumento em dez dólares.",
+        "phonetic_pt": "Áil sii iurr bét énd rêiz iú tén dóllârrz."
+      },
+      {
+        "en": "We need to raise our standards of service.",
+        "pt": "Precisamos elevar nossos padrões de serviço.",
+        "phonetic_pt": "Uii niid tu rêiz áuêrr sténdârrds âv sêrrvis."
+      },
+      {
+        "en": "The vegetables were organically raised.",
+        "pt": "Os vegetais foram cultivados organicamente.",
+        "phonetic_pt": "Dhê védjetâbâlz uêrr orrgánikli rêizd."
+      },
+      {
+        "en": "Can I raise the blinds a bit?",
+        "pt": "Posso levantar as persianas um pouco?",
+        "phonetic_pt": "Kân ái rêiz dhê bláindz ê bit."
+      },
+      {
+        "en": "The new policy could raise a lot of problems.",
+        "pt": "A nova política pode levantar muitos problemas.",
+        "phonetic_pt": "Dhê niú pólisi kúd rêiz ê lát âv práblêmz."
+      },
+      {
+        "en": "They raise chickens for eggs and meat.",
+        "pt": "Eles criam galinhas para ovos e carne.",
+        "phonetic_pt": "Dhei rêiz tchikênz fôrr égz énd miit."
+      },
+      {
+        "en": "I wish to raise a formal proposal.",
+        "pt": "Desejo apresentar uma proposta formal.",
+        "phonetic_pt": "Ái uísh tu rêiz ê fórrmâl prrôpôuzâl."
+      },
+      {
+        "en": "The charity raised over a million dollars last year.",
+        "pt": "A caridade arrecadou mais de um milhão de dólares no ano passado.",
+        "phonetic_pt": "Dhê tchérriti rêizd ôuvêrr ê míliân dóllârrz lést iirr."
+      },
+      {
+        "en": "My boss said I'm due for a raise soon.",
+        "pt": "Meu chefe disse que em breve terei um aumento.",
+        "phonetic_pt": "Mái bós sed áim dû fôrr ê rêiz sûn."
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "rank": 240,
+    "en": "reach",
+    "pt": "alcançar / chegar a / atingir (verbo de ação)",
+    "phonetic": "/riːtʃ/",
+    "phonetic_br": "riitch",
+    "key": "Reach",
+    "phrases": [
+      {
+        "en": "Can you reach the top shelf?",
+        "pt": "Você consegue alcançar a prateleira de cima?",
+        "phonetic_pt": "Kén iú riitch dhâ tôp shélf?"
+      },
+      {
+        "en": "We finally reached the summit.",
+        "pt": "Nós finalmente alcançamos o cume.",
+        "phonetic_pt": "Uii fáinalii riitcht dhâ sâmit."
+      },
+      {
+        "en": "She wants to reach her full potential.",
+        "pt": "Ela quer alcançar todo o seu potencial.",
+        "phonetic_pt": "Shii uónts tû riitch hêr fúl poténshâl."
+      },
+      {
+        "en": "Please reach out if you need help.",
+        "pt": "Por favor, entre em contato se precisar de ajuda.",
+        "phonetic_pt": "Plíiz riitch áut if iú niid hélp."
+      },
+      {
+        "en": "The remote is out of my reach.",
+        "pt": "O controle remoto está fora do meu alcance.",
+        "phonetic_pt": "Dhâ rrimôut iz áut âv mái riitch."
+      },
+      {
+        "en": "They couldn't reach an agreement.",
+        "pt": "Eles não conseguiram chegar a um acordo.",
+        "phonetic_pt": "Dhêi kúdênt riitch én âgrrímênt."
+      },
+      {
+        "en": "He reached for his phone.",
+        "pt": "Ele estendeu a mão para pegar o telefone.",
+        "phonetic_pt": "Hii riitcht fôr hiz fôun."
+      },
+      {
+        "en": "I hope to reach my weight goal soon.",
+        "pt": "Espero alcançar meu objetivo de peso em breve.",
+        "phonetic_pt": "Ái hôup tû riitch mái uêit gôul súun."
+      },
+      {
+        "en": "Did you reach the office on time?",
+        "pt": "Você chegou ao escritório a tempo?",
+        "phonetic_pt": "Díd iú riitch dhâ ófis ôn táim?"
+      },
+      {
+        "en": "The news reached us quickly.",
+        "pt": "A notícia chegou até nós rapidamente.",
+        "phonetic_pt": "Dhâ niúz riitcht âs kuíklii."
+      },
+      {
+        "en": "Don't let fear reach you.",
+        "pt": "Não deixe o medo te atingir.",
+        "phonetic_pt": "Dôunt lét fírr riitch iú."
+      },
+      {
+        "en": "This project could reach millions of people.",
+        "pt": "Este projeto poderia alcançar milhões de pessoas.",
+        "phonetic_pt": "Dhis prójéct kúd riitch míliôns âv píipâl."
+      },
+      {
+        "en": "Can you reach me by email?",
+        "pt": "Você consegue me contatar por e-mail?",
+        "phonetic_pt": "Kén iú riitch mii bái íi-mêil?"
+      },
+      {
+        "en": "The cat couldn't reach the bird.",
+        "pt": "O gato não conseguiu alcançar o pássaro.",
+        "phonetic_pt": "Dhâ kát kúdênt riitch dhâ berrd."
+      },
+      {
+        "en": "We need to reach a compromise.",
+        "pt": "Precisamos chegar a um acordo.",
+        "phonetic_pt": "Uii niid tû riitch â kómprrômáis."
+      },
+      {
+        "en": "The temperature reached 30 degrees today.",
+        "pt": "A temperatura atingiu 30 graus hoje.",
+        "phonetic_pt": "Dhâ témprrâchârr riitcht thêrr-tii dîgrriis tûdêi."
+      },
+      {
+        "en": "I'll reach out to them tomorrow.",
+        "pt": "Eu vou entrar em contato com eles amanhã.",
+        "phonetic_pt": "Áil riitch áut tû dhém tûmórrôu."
+      },
+      {
+        "en": "It's important to reach your customers.",
+        "pt": "É importante alcançar seus clientes.",
+        "phonetic_pt": "Its impórr-tânt tû riitch iórr kâstômêrrz."
+      },
+      {
+        "en": "The child tried to reach for the cookie jar.",
+        "pt": "A criança tentou alcançar o pote de biscoitos.",
+        "phonetic_pt": "Dhâ tcháild tráid tû riitch fôr dhâ kúkii djárr."
+      },
+      {
+        "en": "They reached a crossroads in their lives.",
+        "pt": "Eles chegaram a uma encruzilhada em suas vidas.",
+        "phonetic_pt": "Dhêi riitcht â króssrrôudz in dhêrr láivz."
+      },
+      {
+        "en": "My arm isn't long enough to reach.",
+        "pt": "Meu braço não é longo o suficiente para alcançar.",
+        "phonetic_pt": "Máii árm ízênt lóng înâf tû riitch."
+      },
+      {
+        "en": "The message didn't reach him.",
+        "pt": "A mensagem não o alcançou.",
+        "phonetic_pt": "Dhâ mésâdj dídênt riitch him."
+      },
+      {
+        "en": "We must reach a decision soon.",
+        "pt": "Devemos chegar a uma decisão em breve.",
+        "phonetic_pt": "Uii mâst riitch â dîsíjân súun."
+      },
+      {
+        "en": "The company hopes to reach new markets.",
+        "pt": "A empresa espera alcançar novos mercados.",
+        "phonetic_pt": "Dhâ kâmpânii hôups tû riitch niú márrkíts."
+      },
+      {
+        "en": "He reached into his pocket.",
+        "pt": "Ele enfiou a mão no bolso.",
+        "phonetic_pt": "Hii riitcht íntû hiz pókit."
+      },
+      {
+        "en": "How do I reach the train station?",
+        "pt": "Como eu chego à estação de trem?",
+        "phonetic_pt": "Ráu dúu ái riitch dhâ trrêin stêishân?"
+      },
+      {
+        "en": "She reached her hand out to help.",
+        "pt": "Ela estendeu a mão para ajudar.",
+        "phonetic_pt": "Shii riitcht hêr hánd áut tû hélp."
+      },
+      {
+        "en": "The sound didn't reach this far.",
+        "pt": "O som não chegou até aqui.",
+        "phonetic_pt": "Dhâ sáund dídênt riitch dhis fárr."
+      },
+      {
+        "en": "I'm trying to reach him on his cell phone.",
+        "pt": "Estou tentando contatá-lo no celular dele.",
+        "phonetic_pt": "Áim tráing tû riitch him ôn hiz sél fôun."
+      },
+      {
+        "en": "We need to reach consensus on this.",
+        "pt": "Precisamos chegar a um consenso sobre isso.",
+        "phonetic_pt": "Uii niid tû riitch kânsénsâs ôn dhis."
+      }
+    ]
+  },
+  {
+    "id": 241,
+    "rank": 241,
+    "en": "remain",
+    "pt": "permanecer / ficar / restar (verbo)",
+    "phonetic": "/rɪˈmeɪn/",
+    "phonetic_br": "rrêmein",
+    "key": "Remain",
+    "phrases": [
+      {
+        "en": "Some questions will always remain unanswered.",
+        "pt": "Algumas perguntas sempre permanecerão sem resposta.",
+        "phonetic_pt": "Sâm kuéstchâns uíl ólueis rrimein an-ânsêrd."
+      },
+      {
+        "en": "Please remain seated until the plane comes to a complete stop.",
+        "pt": "Por favor, permaneçam sentados até que o avião pare completamente.",
+        "phonetic_pt": "Pliiz rrimein siitêd antíl dhê plêin kâms tu ê compliit stóp."
+      },
+      {
+        "en": "After the storm, only a few houses remained standing.",
+        "pt": "Após a tempestade, apenas algumas casas permaneceram de pé.",
+        "phonetic_pt": "Áftêr dhê stôrm, ôunli ê fiú ráusês rrimeind stánding."
+      },
+      {
+        "en": "I hope we can remain friends for many years to come.",
+        "pt": "Espero que possamos permanecer amigos por muitos anos ainda.",
+        "phonetic_pt": "Ái rôup uii kân rrimein frêndz fôr mêni iiêrz tu kâm."
+      },
+      {
+        "en": "He has remained silent about his plans so far.",
+        "pt": "Ele permaneceu em silêncio sobre seus planos até agora.",
+        "phonetic_pt": "Hii rráz rrimeind sáilênt abáut rriz plânz sôu fár."
+      },
+      {
+        "en": "She remained calm despite the chaos around her.",
+        "pt": "Ela permaneceu calma apesar do caos ao redor dela.",
+        "phonetic_pt": "Shii rrimeind kâm dispáit dhê kêi-ós aráund rrêr."
+      },
+      {
+        "en": "Remaining focused is key to achieving your goals.",
+        "pt": "Manter o foco é crucial para alcançar seus objetivos.",
+        "phonetic_pt": "Rrimeining fôukêsd iz kii tu atchiiving iôr gôulz."
+      },
+      {
+        "en": "The mystery of the missing jewels still remains unsolved.",
+        "pt": "O mistério das joias desaparecidas ainda permanece sem solução.",
+        "phonetic_pt": "Dhê místêri ôv dhê míssing djuuêlz stil rrimeinz ansólvd."
+      },
+      {
+        "en": "Some traditions remain important even in modern times.",
+        "pt": "Algumas tradições permanecem importantes mesmo nos tempos modernos.",
+        "phonetic_pt": "Sâm tradíchâns rrimein impôrtânt iivên in môdêrn táimz."
+      },
+      {
+        "en": "We will remain at the hotel for another night.",
+        "pt": "Nós vamos ficar no hotel por mais uma noite.",
+        "phonetic_pt": "Uii uíl rrimein at dhê rrou-têl fôr anâdhêr náit."
+      },
+      {
+        "en": "He remained vigilant throughout the night.",
+        "pt": "Ele permaneceu vigilante durante toda a noite.",
+        "phonetic_pt": "Hii rrimeind vídjilânt thru-áut dhê náit."
+      },
+      {
+        "en": "Have you ever remained awake for 24 hours?",
+        "pt": "Você já ficou acordado por 24 horas?",
+        "phonetic_pt": "Rráv iú êvêr rrimeind auêik fôr tuêntii-fôr áuêrz?"
+      },
+      {
+        "en": "If you remain silent, they might never know the truth.",
+        "pt": "Se você permanecer em silêncio, eles talvez nunca saibam a verdade.",
+        "phonetic_pt": "If iú rrimein sáilênt, dhêi máit nêvêr nôu dhê truuth."
+      },
+      {
+        "en": "Please remain in your seats until the captain turns off the seatbelt sign.",
+        "pt": "Por favor, permaneçam em seus assentos até que o capitão desligue o sinal de cinto de segurança.",
+        "phonetic_pt": "Pliiz rrimein in iôr siits antíl dhê káptên têrns óf dhê siitbêlt sáin."
+      },
+      {
+        "en": "She was remaining optimistic despite the bad news.",
+        "pt": "Ela estava permanecendo otimista apesar das más notícias.",
+        "phonetic_pt": "Shii uóz rrimeining óptimístik dispáit dhê bâd nuuz."
+      },
+      {
+        "en": "The ruins of the ancient city still remain visible today.",
+        "pt": "As ruínas da cidade antiga ainda permanecem visíveis hoje.",
+        "phonetic_pt": "Dhê rruuínz ôv dhê ênchênt síti stil rrimein vízibâl tudêi."
+      },
+      {
+        "en": "I'm sure the memories of this trip will remain with us forever.",
+        "pt": "Tenho certeza de que as lembranças desta viagem permanecerão conosco para sempre.",
+        "phonetic_pt": "Áim shurr dhê mêmôriiz ôv dhís trrip uíl rrimein uíth âs fôrrêvêr."
+      },
+      {
+        "en": "Can you remain here while I go get the car?",
+        "pt": "Você pode ficar aqui enquanto eu vou pegar o carro?",
+        "phonetic_pt": "Kân iú rrimein hiir uáil ái gôu guêt dhê kár?"
+      },
+      {
+        "en": "He had remained loyal to his principles throughout his life.",
+        "pt": "Ele havia permanecido leal aos seus princípios por toda a vida.",
+        "phonetic_pt": "Hii rrád rrimeind lóiâl tu rriz prrínsipâlz thru-áut rriz láif."
+      },
+      {
+        "en": "It's important to remain hydrated, especially in hot weather.",
+        "pt": "É importante permanecer hidratado, especialmente em clima quente.",
+        "phonetic_pt": "Its impôrtânt tu rrimein ráidrêitêd, êspêchâli in rrót uêdhêr."
+      },
+      {
+        "en": "By tomorrow, the decision will have remained unchanged.",
+        "pt": "Até amanhã, a decisão terá permanecido inalterada.",
+        "phonetic_pt": "Bái tumórrôu, dhê disíjân uíl rráv rrimeind anchêindjd."
+      },
+      {
+        "en": "Try to remain positive, even when things are tough.",
+        "pt": "Tente manter-se positivo, mesmo quando as coisas estão difíceis.",
+        "phonetic_pt": "Trái tu rrimein pózitív, iivên uên thíings arr tâf."
+      },
+      {
+        "en": "The gate remained locked all night.",
+        "pt": "O portão permaneceu trancado a noite toda.",
+        "phonetic_pt": "Dhê guêit rrimeind lókt ól náit."
+      },
+      {
+        "en": "Very little of the original forest still remains.",
+        "pt": "Muito pouco da floresta original ainda resta.",
+        "phonetic_pt": "Vêri lítâl ôv dhê orrídjênâl fôrrêst stil rrimeinz."
+      },
+      {
+        "en": "I expect you to remain professional at all times.",
+        "pt": "Espero que você permaneça profissional o tempo todo.",
+        "phonetic_pt": "Ái ex-pêkt iú tu rrimein prrôfêshânâl at ól táimz."
+      },
+      {
+        "en": "We remained silent, listening to the rain outside.",
+        "pt": "Nós permanecemos em silêncio, ouvindo a chuva lá fora.",
+        "phonetic_pt": "Uii rrimeind sáilênt, líssêning tu dhê rrein autsáid."
+      },
+      {
+        "en": "Some mysteries simply remain unsolved.",
+        "pt": "Alguns mistérios simplesmente permanecem sem solução.",
+        "phonetic_pt": "Sâm místêriiz sîmplii rrimein ansólvd."
+      },
+      {
+        "en": "Remain calm and follow the exit signs.",
+        "pt": "Permaneça calmo e siga as placas de saída.",
+        "phonetic_pt": "Rrimein kâm and fóllôu dhê êgzit sáinns."
+      },
+      {
+        "en": "She has been remaining strong throughout her recovery.",
+        "pt": "Ela tem permanecido forte durante toda a sua recuperação.",
+        "phonetic_pt": "Shii rráz bin rrimeining strrông thru-áut rrêr rríkâvêri."
+      },
+      {
+        "en": "The rules of the game remain the same.",
+        "pt": "As regras do jogo permanecem as mesmas.",
+        "phonetic_pt": "Dhê rruulz ôv dhê guêim rrimein dhê sêim."
+      }
+    ]
+  },
+  {
+    "id": 242,
+    "rank": 242,
+    "en": "happen",
+    "pt": "acontecer / ocorrer / suceder (verbo de ocorrência ou evento)",
+    "phonetic": "/ˈhæpən/",
+    "phonetic_br": "hápân",
+    "key": "happen",
+    "phrases": [
+      {
+        "en": "What's going to happen next?",
+        "pt": "O que vai acontecer em seguida?",
+        "phonetic_pt": "Uóts gôuing tchu hápân nékst?"
+      },
+      {
+        "en": "I hope nothing bad happens.",
+        "pt": "Espero que nada de ruim aconteça.",
+        "phonetic_pt": "Ái rôup náthíng béd háppânz."
+      },
+      {
+        "en": "It happened so fast, I barely saw it.",
+        "pt": "Aconteceu tão rápido, mal consegui ver.",
+        "phonetic_pt": "It háppând sôu fást, ái bérrlii sáw it."
+      },
+      {
+        "en": "How did that happen?",
+        "pt": "Como aquilo aconteceu?",
+        "phonetic_pt": "Ráu did dhét háppân?"
+      },
+      {
+        "en": "Things like that happen all the time.",
+        "pt": "Coisas assim acontecem o tempo todo.",
+        "phonetic_pt": "Thíngz láik dhét háppân ól dhê táim."
+      },
+      {
+        "en": "We need to figure out what happened.",
+        "pt": "Precisamos descobrir o que aconteceu.",
+        "phonetic_pt": "Uii niid tchu fígyurr áut uót háppând."
+      },
+      {
+        "en": "Don't let it happen again.",
+        "pt": "Não deixe acontecer de novo.",
+        "phonetic_pt": "Dônt lét it háppân âguén."
+      },
+      {
+        "en": "If that happens, call me immediately.",
+        "pt": "Se isso acontecer, me ligue imediatamente.",
+        "phonetic_pt": "If dhét háppânz, cól mii immídiiâtlii."
+      },
+      {
+        "en": "I wonder what will happen tomorrow.",
+        "pt": "Eu me pergunto o que vai acontecer amanhã.",
+        "phonetic_pt": "Ái uândârr uót uíll háppân tchu-mórrôu."
+      },
+      {
+        "en": "This is the worst thing that could happen.",
+        "pt": "Esta é a pior coisa que poderia acontecer.",
+        "phonetic_pt": "Dhís iz dhê uêrst thíng dhát kúd háppân."
+      },
+      {
+        "en": "Accidents happen, it's nobody's fault.",
+        "pt": "Acidentes acontecem, não é culpa de ninguém.",
+        "phonetic_pt": "Áksidânts háppân, its nôubâdiiz fólt."
+      },
+      {
+        "en": "What happens if I press this button?",
+        "pt": "O que acontece se eu apertar este botão?",
+        "phonetic_pt": "Uót háppânz if ái préss dhís báttân?"
+      },
+      {
+        "en": "It just so happens that I'm free tonight.",
+        "pt": "Acontece que estou livre esta noite.",
+        "phonetic_pt": "It djâst sôu háppânz dhát áim frii tchu-náit."
+      },
+      {
+        "en": "Whatever happens, we'll face it together.",
+        "pt": "Aconteça o que acontecer, vamos enfrentar juntos.",
+        "phonetic_pt": "Uátévârr háppânz, uíll fêis it tchu-guédhârr."
+      },
+      {
+        "en": "I never thought this would happen to me.",
+        "pt": "Nunca pensei que isso aconteceria comigo.",
+        "phonetic_pt": "Ái névârr thót dhís uúd háppân tchu mii."
+      },
+      {
+        "en": "Did anything interesting happen at work today?",
+        "pt": "Aconteceu algo interessante no trabalho hoje?",
+        "phonetic_pt": "Díd éniithíng ínntrâstíng háppân ât uêrk tchu-dêi?"
+      },
+      {
+        "en": "I can't believe this is happening.",
+        "pt": "Não consigo acreditar que isso está acontecendo.",
+        "phonetic_pt": "Ái kánt bî-liiv dhís iz háppânnîng."
+      },
+      {
+        "en": "We'll make sure it doesn't happen.",
+        "pt": "Vamos garantir que não aconteça.",
+        "phonetic_pt": "Uíll mêik shurr it dâzânt háppân."
+      },
+      {
+        "en": "What happened to your car?",
+        "pt": "O que aconteceu com o seu carro?",
+        "phonetic_pt": "Uót háppând tchu yurr cárr?"
+      },
+      {
+        "en": "I was just there when it happened.",
+        "pt": "Eu estava bem ali quando aconteceu.",
+        "phonetic_pt": "Ái uâz djâst dhérr uén it háppând."
+      },
+      {
+        "en": "Let's see what happens.",
+        "pt": "Vamos ver o que acontece.",
+        "phonetic_pt": "Léts sii uót háppânz."
+      },
+      {
+        "en": "Is something happening outside?",
+        "pt": "Algo está acontecendo lá fora?",
+        "phonetic_pt": "Iz sâmthíng háppânnîng áut-sáid?"
+      },
+      {
+        "en": "Nobody knows how it happened.",
+        "pt": "Ninguém sabe como aconteceu.",
+        "phonetic_pt": "Nôubâdii nôuz ráu it háppând."
+      },
+      {
+        "en": "This happens every time I try to cook.",
+        "pt": "Isso acontece toda vez que tento cozinhar.",
+        "phonetic_pt": "Dhís háppânz évrii táim ái trái tchu cúk."
+      },
+      {
+        "en": "They say these things happen for a reason.",
+        "pt": "Dizem que essas coisas acontecem por uma razão.",
+        "phonetic_pt": "Dhêi sêi dhiiz thíngz háppân fôrr â riizân."
+      },
+      {
+        "en": "What do you think will happen?",
+        "pt": "O que você acha que vai acontecer?",
+        "phonetic_pt": "Uót duu iú thínk uíll háppân?"
+      },
+      {
+        "en": "It's likely to happen soon.",
+        "pt": "É provável que aconteça em breve.",
+        "phonetic_pt": "Its láikli tchu háppân suun."
+      },
+      {
+        "en": "Don't worry, it won't happen.",
+        "pt": "Não se preocupe, não vai acontecer.",
+        "phonetic_pt": "Dônt uârrî, it uônt háppân."
+      },
+      {
+        "en": "I just wanted to know what happened.",
+        "pt": "Eu só queria saber o que aconteceu.",
+        "phonetic_pt": "Ái djâst uôntîd tchu nôu uót háppând."
+      },
+      {
+        "en": "Could it happen again?",
+        "pt": "Poderia acontecer de novo?",
+        "phonetic_pt": "Cúld it háppân âguén?"
+      }
+    ]
+  },
+  {
+    "id": 243,
+    "rank": 243,
+    "en": "believe",
+    "pt": "acreditar (verbo)",
+    "phonetic": "/bɪˈliːv/",
+    "phonetic_br": "bi-liiv",
+    "key": "Believe",
+    "phrases": [
+      {
+        "en": "I believe you.",
+        "pt": "Eu acredito em você.",
+        "phonetic_pt": "Ái bi-liiv iú."
+      },
+      {
+        "en": "Do you believe in ghosts?",
+        "pt": "Você acredita em fantasmas?",
+        "phonetic_pt": "Du iú bi-liiv in gôusts?"
+      },
+      {
+        "en": "She believes in karma.",
+        "pt": "Ela acredita em carma.",
+        "phonetic_pt": "Shii bi-liivs in cár-mâ."
+      },
+      {
+        "en": "We believe they will win.",
+        "pt": "Nós acreditamos que eles vão vencer.",
+        "phonetic_pt": "Uii bi-liiv dhêi uil uín."
+      },
+      {
+        "en": "He didn't believe my story.",
+        "pt": "Ele não acreditou na minha história.",
+        "phonetic_pt": "Hii dídnt bi-liiv mái stó-rii."
+      },
+      {
+        "en": "I can't believe it's Monday again.",
+        "pt": "Não consigo acreditar que é segunda-feira de novo.",
+        "phonetic_pt": "Ái ként bi-liiv its mân-dêi â-guén."
+      },
+      {
+        "en": "They truly believe in justice.",
+        "pt": "Eles realmente acreditam na justiça.",
+        "phonetic_pt": "Dhêi trú-lii bi-liiv in djâs-tis."
+      },
+      {
+        "en": "You have to believe in yourself.",
+        "pt": "Você tem que acreditar em si mesmo.",
+        "phonetic_pt": "Iú rév tu bi-liiv in iur-sélf."
+      },
+      {
+        "en": "I'll believe it when I see it.",
+        "pt": "Eu só vou acreditar quando vir.",
+        "phonetic_pt": "Áil bi-liiv it uén ái sii it."
+      },
+      {
+        "en": "Many people believe in fate.",
+        "pt": "Muitas pessoas acreditam no destino.",
+        "phonetic_pt": "Mé-nii pii-pôl bi-liiv in fêit."
+      },
+      {
+        "en": "Do you believe what he said?",
+        "pt": "Você acredita no que ele disse?",
+        "phonetic_pt": "Du iú bi-liiv uât hii sed?"
+      },
+      {
+        "en": "She used to believe everything.",
+        "pt": "Ela costumava acreditar em tudo.",
+        "phonetic_pt": "Shii iúzd tu bi-liiv é-vrii-thíng."
+      },
+      {
+        "en": "We all believe in freedom of speech.",
+        "pt": "Todos nós acreditamos na liberdade de expressão.",
+        "phonetic_pt": "Uii ól bi-liiv in frii-dâm âv spiitch."
+      },
+      {
+        "en": "I believe this is the right path.",
+        "pt": "Eu acredito que este é o caminho certo.",
+        "phonetic_pt": "Ái bi-liiv dhís iz dhâ ráit pæth."
+      },
+      {
+        "en": "Would you believe I saw a celebrity?",
+        "pt": "Você acreditaria se eu dissesse que vi uma celebridade?",
+        "phonetic_pt": "Uúd iú bi-liiv ái só â sâ-lé-brâ-tii?"
+      },
+      {
+        "en": "He believes in working hard.",
+        "pt": "Ele acredita em trabalhar duro.",
+        "phonetic_pt": "Hii bi-liivs in uêr-kíng hárd."
+      },
+      {
+        "en": "I didn't believe the weather forecast.",
+        "pt": "Eu não acreditei na previsão do tempo.",
+        "phonetic_pt": "Ái dídnt bi-liiv dhâ ué-dhêr fôr-cæst."
+      },
+      {
+        "en": "Do you believe in love at first sight?",
+        "pt": "Você acredita em amor à primeira vista?",
+        "phonetic_pt": "Du iú bi-liiv in lâv æt fêrst sáit?"
+      },
+      {
+        "en": "She still believes in Santa Claus.",
+        "pt": "Ela ainda acredita no Papai Noel.",
+        "phonetic_pt": "Shii stíl bi-liivs in sén-tâ clóz."
+      },
+      {
+        "en": "We must believe in our potential.",
+        "pt": "Devemos acreditar em nosso potencial.",
+        "phonetic_pt": "Uii mâst bi-liiv in áu-rr pô-tén-shâl."
+      },
+      {
+        "en": "I believe we've met before.",
+        "pt": "Eu acredito que já nos encontramos antes.",
+        "phonetic_pt": "Ái bi-liiv uii-v met bi-fôr."
+      },
+      {
+        "en": "Don't believe everything you hear.",
+        "pt": "Não acredite em tudo o que você ouve.",
+        "phonetic_pt": "Dônt bi-liiv é-vrii-thíng iú hir."
+      },
+      {
+        "en": "He couldn't believe his luck.",
+        "pt": "Ele não conseguia acreditar na sua sorte.",
+        "phonetic_pt": "Hii cú-dnt bi-liiv hiz lâk."
+      },
+      {
+        "en": "I believe the train leaves soon.",
+        "pt": "Eu acredito que o trem parte em breve.",
+        "phonetic_pt": "Ái bi-liiv dhâ trêin liivs suun."
+      },
+      {
+        "en": "Do you believe in second chances?",
+        "pt": "Você acredita em segundas chances?",
+        "phonetic_pt": "Du iú bi-liiv in sé-când chæn-sês?"
+      },
+      {
+        "en": "She made me believe in magic.",
+        "pt": "Ela me fez acreditar em magia.",
+        "phonetic_pt": "Shii mêid mii bi-liiv in mæ-djik."
+      },
+      {
+        "en": "We believe in a better future.",
+        "pt": "Nós acreditamos em um futuro melhor.",
+        "phonetic_pt": "Uii bi-liiv in â bé-têr fiú-chur."
+      },
+      {
+        "en": "I truly believe in the power of kindness.",
+        "pt": "Eu realmente acredito no poder da gentileza.",
+        "phonetic_pt": "Ái trú-lii bi-liiv in dhâ páu-êr âv káind-nês."
+      },
+      {
+        "en": "He's hard to believe sometimes.",
+        "pt": "Ele é difícil de acreditar às vezes.",
+        "phonetic_pt": "Hiiz hárd tu bi-liiv sâm-táims."
+      },
+      {
+        "en": "I believe we can solve this problem.",
+        "pt": "Eu acredito que podemos resolver este problema.",
+        "phonetic_pt": "Ái bi-liiv uii kén sólv dhís pró-blêm."
+      }
+    ]
+  },
+  {
+    "id": 244,
+    "rank": 244,
+    "en": "hold",
+    "pt": "segurar / manter / deter (verbo transitivo)",
+    "phonetic": "/hoʊld/",
+    "phonetic_br": "rôuld",
+    "key": "Hold",
+    "phrases": [
+      {
+        "en": "Can you hold this for me?",
+        "pt": "Você pode segurar isto para mim?",
+        "phonetic_pt": "Kên iú rôuld dhis fôr mii?"
+      },
+      {
+        "en": "Hold my hand.",
+        "pt": "Segure minha mão.",
+        "phonetic_pt": "Rôuld mái rránd."
+      },
+      {
+        "en": "She holds a high position in the company.",
+        "pt": "Ela ocupa uma alta posição na empresa.",
+        "phonetic_pt": "Shii rôulds ê rái pôzíshân ín dhê kâmpânii."
+      },
+      {
+        "en": "They will hold a meeting next week.",
+        "pt": "Eles farão uma reunião na próxima semana.",
+        "phonetic_pt": "Dhéi uíl rôuld ê mii-ting nêkst uíik."
+      },
+      {
+        "en": "Hold on, I'm coming!",
+        "pt": "Espere, estou chegando!",
+        "phonetic_pt": "Rôuld ôn, áim kâming!"
+      },
+      {
+        "en": "This box won't hold much.",
+        "pt": "Esta caixa não vai caber muita coisa.",
+        "phonetic_pt": "Dhis bôks uôunt rôuld mâch."
+      },
+      {
+        "en": "He couldn't hold back his tears.",
+        "pt": "Ele não conseguiu conter as lágrimas.",
+        "phonetic_pt": "Hii kud-ênt rôuld bâk híz tíirs."
+      },
+      {
+        "en": "Do you still hold that opinion?",
+        "pt": "Você ainda mantém essa opinião?",
+        "phonetic_pt": "Dú iú stíl rôuld dhât ôpíniân?"
+      },
+      {
+        "en": "The bridge can hold a lot of weight.",
+        "pt": "A ponte pode suportar muito peso.",
+        "phonetic_pt": "Dhê brídj kên rôuld ê lôt âv uêit."
+      },
+      {
+        "en": "I need to hold my breath.",
+        "pt": "Preciso prender a respiração.",
+        "phonetic_pt": "Ái níid tú rôuld mái brêth."
+      },
+      {
+        "en": "Hold the door open, please.",
+        "pt": "Mantenha a porta aberta, por favor.",
+        "phonetic_pt": "Rôuld dhê dôr ôupên, plíiz."
+      },
+      {
+        "en": "She's holding a baby.",
+        "pt": "Ela está segurando um bebê.",
+        "phonetic_pt": "Shiiz rôulding ê bêibii."
+      },
+      {
+        "en": "This memory will hold a special place in my heart.",
+        "pt": "Esta memória terá um lugar especial no meu coração.",
+        "phonetic_pt": "Dhis mêmôrii uíl rôuld ê spêshâl plêis ín mái rrârt."
+      },
+      {
+        "en": "They held him captive.",
+        "pt": "Eles o mantiveram cativo.",
+        "phonetic_pt": "Dhéi rrêld him kâptiv."
+      },
+      {
+        "en": "The police held the suspect.",
+        "pt": "A polícia deteve o suspeito.",
+        "phonetic_pt": "Dhê pôlíis rrêld dhê sâspêkt."
+      },
+      {
+        "en": "Hold your horses!",
+        "pt": "Calma! / Espere um pouco!",
+        "phonetic_pt": "Rôuld iúr rrôr-síz!"
+      },
+      {
+        "en": "The party was held at her house.",
+        "pt": "A festa foi realizada na casa dela.",
+        "phonetic_pt": "Dhê pârtii uâz rrêld ât rrêr rrâus."
+      },
+      {
+        "en": "I can't hold all these bags.",
+        "pt": "Não consigo carregar todas essas sacolas.",
+        "phonetic_pt": "Ái kânt rôuld ôl dhíiz bâgs."
+      },
+      {
+        "en": "We need to hold onto hope.",
+        "pt": "Precisamos manter a esperança.",
+        "phonetic_pt": "Uí níid tú rôuld ântú hôup."
+      },
+      {
+        "en": "The fort held against the attack.",
+        "pt": "O forte resistiu ao ataque.",
+        "phonetic_pt": "Dhê fôrt rrêld âgênst dhê âtâk."
+      },
+      {
+        "en": "What does the future hold for us?",
+        "pt": "O que o futuro nos reserva?",
+        "phonetic_pt": "Uât dâz dhê fiúchur rôuld fôr âs?"
+      },
+      {
+        "en": "Hold your tongue!",
+        "pt": "Cale a boca! / Segure sua língua!",
+        "phonetic_pt": "Rôuld iúr tâng!"
+      },
+      {
+        "en": "She holds the record for the fastest sprint.",
+        "pt": "Ela detém o recorde de corrida mais rápida.",
+        "phonetic_pt": "Shii rôulds dhê rêkôrd fôr dhê fâstêst sprínt."
+      },
+      {
+        "en": "Please hold the line.",
+        "pt": "Por favor, aguarde na linha.",
+        "phonetic_pt": "Plíiz rôuld dhê láin."
+      },
+      {
+        "en": "He's holding a grudge.",
+        "pt": "Ele está guardando rancor.",
+        "phonetic_pt": "Hiiz rôulding ê grâdj."
+      },
+      {
+        "en": "The argument doesn't hold water.",
+        "pt": "O argumento não se sustenta.",
+        "phonetic_pt": "Dhê ârg-iúmênt dâzênt rôuld uótêr."
+      },
+      {
+        "en": "They decided to hold an election.",
+        "pt": "Eles decidiram realizar uma eleição.",
+        "phonetic_pt": "Dhéi disáidêd tú rôuld ên ilêkshân."
+      },
+      {
+        "en": "Can this small branch hold my weight?",
+        "pt": "Este pequeno galho pode aguentar meu peso?",
+        "phonetic_pt": "Kên dhis smôl brânch rôuld mái uêit?"
+      },
+      {
+        "en": "I'm holding a secret.",
+        "pt": "Estou guardando um segredo.",
+        "phonetic_pt": "Áim rôulding ê síikrêt."
+      },
+      {
+        "en": "The glue didn't hold.",
+        "pt": "A cola não segurou.",
+        "phonetic_pt": "Dhê glúu did-ênt rôuld."
+      }
+    ]
+  },
+  {
+    "id": 245,
+    "rank": 245,
+    "en": "begin",
+    "pt": "começar / iniciar (verbo)",
+    "phonetic": "/bɪˈɡɪn/",
+    "phonetic_br": "bi-guín",
+    "key": "Begin",
+    "phrases": [
+      {
+        "en": "I always begin my day with coffee.",
+        "pt": "Eu sempre começo meu dia com café.",
+        "phonetic_pt": "Ái óluêis biiguín mái dêi uíth cófi."
+      },
+      {
+        "en": "Let's begin the meeting now.",
+        "pt": "Vamos começar a reunião agora.",
+        "phonetic_pt": "Léts biiguín dhâ mííting náu."
+      },
+      {
+        "en": "When did you begin learning English?",
+        "pt": "Quando você começou a aprender inglês?",
+        "phonetic_pt": "Uén did iúu biiguín lêrning ínglish?"
+      },
+      {
+        "en": "The concert will begin at 8 PM.",
+        "pt": "O show vai começar às 20h.",
+        "phonetic_pt": "Dhâ cónssêrt uíl biiguín ét êit píi ém."
+      },
+      {
+        "en": "She's going to begin her new job next week.",
+        "pt": "Ela vai começar o novo emprego dela semana que vem.",
+        "phonetic_pt": "Shíis gôuing tchu biiguín hêr niúu djób nékst uíík."
+      },
+      {
+        "en": "Don't begin without me!",
+        "pt": "Não comece sem mim!",
+        "phonetic_pt": "Dônt biiguín uidháut mii!"
+      },
+      {
+        "en": "He began to feel tired after the long walk.",
+        "pt": "Ele começou a se sentir cansado depois da longa caminhada.",
+        "phonetic_pt": "Hii biiguén tchu fííl táird áftêr dhâ lóng uóók."
+      },
+      {
+        "en": "We can begin writing the report tomorrow.",
+        "pt": "Podemos começar a escrever o relatório amanhã.",
+        "phonetic_pt": "Uíi kén biiguín ráiting dhâ rriipórt tchu-mórrou."
+      },
+      {
+        "en": "Where does the trail begin?",
+        "pt": "Onde a trilha começa?",
+        "phonetic_pt": "Uér dâz dhâ trêil biiguín?"
+      },
+      {
+        "en": "It's time to begin a new chapter in your life.",
+        "pt": "É hora de começar um novo capítulo na sua vida.",
+        "phonetic_pt": "Íts táim tchu biiguín â niúu tcháptêr ín iúr láif."
+      },
+      {
+        "en": "They began their journey early in the morning.",
+        "pt": "Eles começaram a viagem deles cedo de manhã.",
+        "phonetic_pt": "Dhêi biiguén dhêr djêrni êrli ín dhâ mórning."
+      },
+      {
+        "en": "Let the games begin!",
+        "pt": "Que os jogos comecem!",
+        "phonetic_pt": "Léts dhâ guêims biiguín!"
+      },
+      {
+        "en": "I'm ready to begin whenever you are.",
+        "pt": "Estou pronto para começar quando você estiver.",
+        "phonetic_pt": "Áim rrêdi tchu biiguín uênévêr iúu ár."
+      },
+      {
+        "en": "The rain began to fall just as we left.",
+        "pt": "A chuva começou a cair assim que saímos.",
+        "phonetic_pt": "Dhâ rrêin biiguén tchu fóól djâst âz uíi léft."
+      },
+      {
+        "en": "This project will begin with a planning phase.",
+        "pt": "Este projeto vai começar com uma fase de planejamento.",
+        "phonetic_pt": "Dhís pródjékt uíl biiguín uíth â pláning fêiz."
+      },
+      {
+        "en": "How do I begin to learn coding?",
+        "pt": "Como eu começo a aprender programação?",
+        "phonetic_pt": "Ráu duu ái biiguín tchu lêrn côuding?"
+      },
+      {
+        "en": "The movie is about to begin.",
+        "pt": "O filme está prestes a começar.",
+        "phonetic_pt": "Dhâ múvii íz âbáut tchu biiguín."
+      },
+      {
+        "en": "She has begun to show signs of recovery.",
+        "pt": "Ela começou a mostrar sinais de recuperação.",
+        "phonetic_pt": "Shii hâz biigân tchu shôu sáins óv rriicâvêri."
+      },
+      {
+        "en": "Did you begin reading the book yet?",
+        "pt": "Você já começou a ler o livro?",
+        "phonetic_pt": "Díd iúu biiguín rrídíng dhâ bûk iét?"
+      },
+      {
+        "en": "We must begin to address these issues.",
+        "pt": "Nós devemos começar a abordar essas questões.",
+        "phonetic_pt": "Uíi mâst biiguín tchu âdréss dhiiz íshúus."
+      },
+      {
+        "en": "The class usually begins with a warm-up.",
+        "pt": "A aula geralmente começa com um aquecimento.",
+        "phonetic_pt": "Dhâ clâss iúzhúali biiguíns uíth â uórm-âp."
+      },
+      {
+        "en": "I'm going to begin cooking dinner now.",
+        "pt": "Vou começar a cozinhar o jantar agora.",
+        "phonetic_pt": "Áim gôuing tchu biiguín cúking dinnêr náu."
+      },
+      {
+        "en": "They began arguing over a trivial matter.",
+        "pt": "Eles começaram a discutir por um assunto trivial.",
+        "phonetic_pt": "Dhêi biiguén árgiuing ôuvêr â trívial mâtêr."
+      },
+      {
+        "en": "Please begin on page ten.",
+        "pt": "Por favor, comece na página dez.",
+        "phonetic_pt": "Plííz biiguín ôn pêidj tén."
+      },
+      {
+        "en": "It's never too late to begin something new.",
+        "pt": "Nunca é tarde demais para começar algo novo.",
+        "phonetic_pt": "Íts nêvêr tchuú lêit tchu biiguín sâmthing niúu."
+      },
+      {
+        "en": "The construction will begin next month.",
+        "pt": "A construção vai começar no próximo mês.",
+        "phonetic_pt": "Dhâ cênstrâkshân uíl biiguín nékst mânth."
+      },
+      {
+        "en": "She began her career as a journalist.",
+        "pt": "Ela começou a carreira dela como jornalista.",
+        "phonetic_pt": "Shii biiguén hêr cârriír âz â djêrnalist."
+      },
+      {
+        "en": "We need to begin saving money for our trip.",
+        "pt": "Precisamos começar a economizar dinheiro para nossa viagem.",
+        "phonetic_pt": "Uíi nííd tchu biiguín sêiving mâni fór áuêr trríp."
+      },
+      {
+        "en": "The story begins in a small village.",
+        "pt": "A história começa em uma pequena vila.",
+        "phonetic_pt": "Dhâ stórri biiguíns ín â smóól vílâdj."
+      },
+      {
+        "en": "Let's not begin by blaming each other.",
+        "pt": "Não vamos começar culpando um ao outro.",
+        "phonetic_pt": "Léts nót biiguín bái blêiming íítch âdhêr."
+      }
+    ]
+  },
+  {
+    "id": 246,
+    "rank": 246,
+    "en": "eat",
+    "pt": "comer (verbo)",
+    "phonetic": "/iːt/",
+    "phonetic_br": "iit",
+    "key": "eat",
+    "phrases": [
+      {
+        "en": "I want to eat pizza tonight.",
+        "pt": "Eu quero comer pizza hoje à noite.",
+        "phonetic_pt": "Ái uónt tu iit pítsa tunáit."
+      },
+      {
+        "en": "Did you eat breakfast yet?",
+        "pt": "Você já comeu o café da manhã?",
+        "phonetic_pt": "Díd iú iit brrékfast iét?"
+      },
+      {
+        "en": "She loves to eat healthy food.",
+        "pt": "Ela adora comer comida saudável.",
+        "phonetic_pt": "Shii lâvs tu iit rélthii fuud."
+      },
+      {
+        "en": "We usually eat dinner around 7 PM.",
+        "pt": "Nós geralmente jantamos por volta das 19h.",
+        "phonetic_pt": "Uii iúzhualii iit dínerr arráund séven Pii Ém."
+      },
+      {
+        "en": "Don't eat that, it looks old.",
+        "pt": "Não coma isso, parece velho.",
+        "phonetic_pt": "Dônt iit dhât, ít luks ôuld."
+      },
+      {
+        "en": "He's eating an apple right now.",
+        "pt": "Ele está comendo uma maçã agora.",
+        "phonetic_pt": "Hiiz iiting ân ápâl ráit náu."
+      },
+      {
+        "en": "They had eaten all the cookies before I arrived.",
+        "pt": "Eles tinham comido todos os biscoitos antes de eu chegar.",
+        "phonetic_pt": "Dhêi rád íitân ól dhâ kukiiz bifôrr ái arráivd."
+      },
+      {
+        "en": "Will you eat with us tomorrow?",
+        "pt": "Você vai comer com a gente amanhã?",
+        "phonetic_pt": "Uíl iú iit uídh âs tumórrou?"
+      },
+      {
+        "en": "I haven't eaten anything all day.",
+        "pt": "Eu não comi nada o dia todo.",
+        "phonetic_pt": "Ái rrévânt íitân énitheng ól dêi."
+      },
+      {
+        "en": "Let's eat out tonight.",
+        "pt": "Vamos comer fora hoje à noite.",
+        "phonetic_pt": "Léts iit áut tunáit."
+      },
+      {
+        "en": "What do you like to eat for lunch?",
+        "pt": "O que você gosta de comer no almoço?",
+        "phonetic_pt": "Uât duu iú láik tu iit fôrr lânch?"
+      },
+      {
+        "en": "My dog eats kibble twice a day.",
+        "pt": "Meu cachorro come ração duas vezes ao dia.",
+        "phonetic_pt": "Mái dôg iits kíbel tuáis â dêi."
+      },
+      {
+        "en": "She eats like a bird.",
+        "pt": "Ela come como um passarinho.",
+        "phonetic_pt": "Shii iits láik â bêrd."
+      },
+      {
+        "en": "We used to eat at that restaurant often.",
+        "pt": "Nós costumávamos comer naquele restaurante frequentemente.",
+        "phonetic_pt": "Uii iúzd tu iit ât dhât réstorrânt ófân."
+      },
+      {
+        "en": "I'm trying not to eat too much sugar.",
+        "pt": "Estou tentando não comer muito açúcar.",
+        "phonetic_pt": "Áim tráing nót tu iit tuu mâtch shúgarr."
+      },
+      {
+        "en": "He eats very quickly when he's hungry.",
+        "pt": "Ele come muito rápido quando está com fome.",
+        "phonetic_pt": "Hii iits vérrii kuíklí uén hiiz rrángrrii."
+      },
+      {
+        "en": "Have you ever eaten sushi?",
+        "pt": "Você já comeu sushi?",
+        "phonetic_pt": "Rrév iú évrr íitân suushii?"
+      },
+      {
+        "en": "They are going to eat at the new cafe.",
+        "pt": "Eles vão comer no novo café.",
+        "phonetic_pt": "Dhêi arr gôing tu iit ât dhâ niiu kâfêi."
+      },
+      {
+        "en": "We should eat our vegetables.",
+        "pt": "Nós deveríamos comer nossos vegetais.",
+        "phonetic_pt": "Uii shud iit áuerr védzhtâbâlz."
+      },
+      {
+        "en": "I can't eat another bite.",
+        "pt": "Eu não consigo comer mais uma mordida.",
+        "phonetic_pt": "Ái kânt iit ânâdhârr báit."
+      },
+      {
+        "en": "What did you eat for dinner yesterday?",
+        "pt": "O que você comeu no jantar ontem?",
+        "phonetic_pt": "Uât díd iú iit fôrr dínerr iésterdêi?"
+      },
+      {
+        "en": "She often eats alone.",
+        "pt": "Ela frequentemente come sozinha.",
+        "phonetic_pt": "Shii ófân iits âlôun."
+      },
+      {
+        "en": "The kids are eating ice cream.",
+        "pt": "As crianças estão comendo sorvete.",
+        "phonetic_pt": "Dhâ kídz arr iiting áis kriim."
+      },
+      {
+        "en": "Don't let the baby eat that.",
+        "pt": "Não deixe o bebê comer isso.",
+        "phonetic_pt": "Dônt lét dhâ bêibii iit dhât."
+      },
+      {
+        "en": "I'd rather eat at home.",
+        "pt": "Eu preferiria comer em casa.",
+        "phonetic_pt": "Áid rrâdhârr iit ât hôum."
+      },
+      {
+        "en": "He's learning to eat with chopsticks.",
+        "pt": "Ele está aprendendo a comer com hashis.",
+        "phonetic_pt": "Hiiz lêrning tu iit uíth chópstiks."
+      },
+      {
+        "en": "We eat organic food whenever possible.",
+        "pt": "Nós comemos comida orgânica sempre que possível.",
+        "phonetic_pt": "Uii iit orrgánik fuud uênevrr pósibâl."
+      },
+      {
+        "en": "Are you going to eat all of that?",
+        "pt": "Você vai comer tudo isso?",
+        "phonetic_pt": "Arr iú gôing tu iit ól âv dhât?"
+      },
+      {
+        "en": "I really need to eat something.",
+        "pt": "Eu realmente preciso comer alguma coisa.",
+        "phonetic_pt": "Ái rrilii niid tu iit sâmthing."
+      },
+      {
+        "en": "They will have eaten by the time we get there.",
+        "pt": "Eles já terão comido quando chegarmos lá.",
+        "phonetic_pt": "Dhêi uíl rrév íitân bái dhâ táim uii gét dhérr."
+      }
+    ]
+  },
+  {
+    "id": 247,
+    "rank": 247,
+    "en": "grow",
+    "pt": "crescer (verbo)",
+    "phonetic": "/ɡroʊ/",
+    "phonetic_br": "grôu",
+    "key": "Grow",
+    "phrases": [
+      {
+        "en": "Children grow so fast.",
+        "pt": "Crianças crescem tão rápido.",
+        "phonetic_pt": "Chíldrren grôu sôu fâst."
+      },
+      {
+        "en": "The plants are growing well.",
+        "pt": "As plantas estão crescendo bem.",
+        "phonetic_pt": "Dhê plânts ârr grôuing uél."
+      },
+      {
+        "en": "I want to grow my own vegetables.",
+        "pt": "Eu quero cultivar meus próprios vegetais.",
+        "phonetic_pt": "Ái uânt tu grôu mái ôun véjetâbls."
+      },
+      {
+        "en": "He grew a beard over the summer.",
+        "pt": "Ele deixou a barba crescer durante o verão.",
+        "phonetic_pt": "Hii grúu â biird ôuvêr dhê sâmêr."
+      },
+      {
+        "en": "Our business is growing steadily.",
+        "pt": "Nosso negócio está crescendo constantemente.",
+        "phonetic_pt": "Áuêr bíznês iz grôuing stédili."
+      },
+      {
+        "en": "She's starting to grow out of her clothes.",
+        "pt": "Ela está começando a perder as roupas.",
+        "phonetic_pt": "Shíiz stârrting tu grôu áut âv hêr klôudhs."
+      },
+      {
+        "en": "We need to grow as a team.",
+        "pt": "Precisamos crescer como equipe.",
+        "phonetic_pt": "Uii niid tu grôu âz â tiim."
+      },
+      {
+        "en": "The city has grown a lot in recent years.",
+        "pt": "A cidade cresceu muito nos últimos anos.",
+        "phonetic_pt": "Dhê síti hâz grôun â lát in ríisênt yíirz."
+      },
+      {
+        "en": "Don't forget to water the flowers so they can grow.",
+        "pt": "Não se esqueça de regar as flores para que elas possam crescer.",
+        "phonetic_pt": "Dôunt fôrgét tu uátêr dhê fláuêrz sôu dhêi kân grôu."
+      },
+      {
+        "en": "My hair grows very quickly.",
+        "pt": "Meu cabelo cresce muito rápido.",
+        "phonetic_pt": "Mái hêr grôus vérri kuíkli."
+      },
+      {
+        "en": "He's trying to grow his savings.",
+        "pt": "Ele está tentando aumentar suas economias.",
+        "phonetic_pt": "Híiz tráing tu grôu hiz sêivings."
+      },
+      {
+        "en": "You'll grow to love this place.",
+        "pt": "Você vai acabar amando este lugar.",
+        "phonetic_pt": "Yúul grôu tu lâv dhis plêis."
+      },
+      {
+        "en": "The population continues to grow.",
+        "pt": "A população continua a crescer.",
+        "phonetic_pt": "Dhê pápulêishân kântínius tu grôu."
+      },
+      {
+        "en": "It's important to grow from your mistakes.",
+        "pt": "É importante aprender com seus erros.",
+        "phonetic_pt": "Íts impôrtânt tu grôu frrâm yôrr mistêiks."
+      },
+      {
+        "en": "The company plans to grow its market share.",
+        "pt": "A empresa planeja aumentar sua participação de mercado.",
+        "phonetic_pt": "Dhê kâmpâni plâns tu grôu its mârrkêt shêr."
+      },
+      {
+        "en": "Did you grow up in this town?",
+        "pt": "Você cresceu nesta cidade?",
+        "phonetic_pt": "Díd iú grôu âp in dhis táun?"
+      },
+      {
+        "en": "The rumors started to grow.",
+        "pt": "Os rumores começaram a crescer.",
+        "phonetic_pt": "Dhê rrumôrz stârrtd tu grôu."
+      },
+      {
+        "en": "We hope to see our community grow stronger.",
+        "pt": "Esperamos ver nossa comunidade crescer mais forte.",
+        "phonetic_pt": "Uii hôup tu sii áuêr kâmiúniti grôu strrôngêr."
+      },
+      {
+        "en": "He wants to grow as an artist.",
+        "pt": "Ele quer crescer como artista.",
+        "phonetic_pt": "Hii uânts tu grôu âz ân ârrtist."
+      },
+      {
+        "en": "These flowers grow best in the shade.",
+        "pt": "Estas flores crescem melhor na sombra.",
+        "phonetic_pt": "Dhiiz fláuêrz grôu bést in dhê shêid."
+      },
+      {
+        "en": "Her confidence started to grow.",
+        "pt": "A confiança dela começou a crescer.",
+        "phonetic_pt": "Hêr kânfidêns stârrtd tu grôu."
+      },
+      {
+        "en": "We need to grow more food locally.",
+        "pt": "Precisamos cultivar mais alimentos localmente.",
+        "phonetic_pt": "Uii niid tu grôu môrr fuud lôukâli."
+      },
+      {
+        "en": "My understanding of the topic has grown.",
+        "pt": "Minha compreensão do tópico cresceu.",
+        "phonetic_pt": "Mái ândêrstandíng âv dhê tápik hâz grôun."
+      },
+      {
+        "en": "They're planning to grow their family.",
+        "pt": "Eles estão planejando aumentar a família.",
+        "phonetic_pt": "Dhêrr plâning tu grôu dhêr fâmili."
+      },
+      {
+        "en": "It takes time for trust to grow.",
+        "pt": "Leva tempo para a confiança crescer.",
+        "phonetic_pt": "Ít têiks táim fôrr trrâst tu grôu."
+      },
+      {
+        "en": "The new features will help the app grow.",
+        "pt": "As novas funcionalidades ajudarão o aplicativo a crescer.",
+        "phonetic_pt": "Dhê niú fíichêrz uíl hêlp dhê âp grôu."
+      },
+      {
+        "en": "I've watched my nieces and nephews grow up.",
+        "pt": "Eu vi meus sobrinhos e sobrinhas crescerem.",
+        "phonetic_pt": "Áiv uátchd mái níisiz ând néfius grôu âp."
+      },
+      {
+        "en": "This type of tree can grow very tall.",
+        "pt": "Este tipo de árvore pode crescer muito alto.",
+        "phonetic_pt": "Dhis táip âv trrii kân grôu vérri tál."
+      },
+      {
+        "en": "We should always strive to grow as individuals.",
+        "pt": "Devemos sempre nos esforçar para crescer como indivíduos.",
+        "phonetic_pt": "Uii shud ólueiz strráiv tu grôu âz índivíjuâls."
+      },
+      {
+        "en": "The economy is expected to grow next quarter.",
+        "pt": "A economia deve crescer no próximo trimestre.",
+        "phonetic_pt": "Dhê ikánâmi iz exspéktêd tu grôu nékst kuórtêr."
+      }
+    ]
+  },
+  {
+    "id": 248,
+    "rank": 248,
+    "en": "stay",
+    "pt": "ficar (verbo intransitivo)",
+    "phonetic": "/steɪ/",
+    "phonetic_br": "stêi",
+    "key": "stay",
+    "phrases": [
+      {
+        "en": "I need to stay home tonight.",
+        "pt": "Preciso ficar em casa hoje à noite.",
+        "phonetic_pt": "ái niid tchu stêi rôum tchunáit."
+      },
+      {
+        "en": "Can you stay a bit longer?",
+        "pt": "Você pode ficar um pouco mais?",
+        "phonetic_pt": "kân iú stêi â bit lônguêr?"
+      },
+      {
+        "en": "Let's stay positive, no matter what.",
+        "pt": "Vamos manter o pensamento positivo, aconteça o que acontecer.",
+        "phonetic_pt": "léts stêi pâzitiv, nôu madêr uât."
+      },
+      {
+        "en": "She decided to stay at a hotel.",
+        "pt": "Ela decidiu se hospedar em um hotel.",
+        "phonetic_pt": "shii disáidid tchu stêi ât â rôutél."
+      },
+      {
+        "en": "We should stay in touch.",
+        "pt": "Deveríamos manter contato.",
+        "phonetic_pt": "ui shud stêi in tâtch."
+      },
+      {
+        "en": "He has to stay late at work today.",
+        "pt": "Ele tem que ficar até tarde no trabalho hoje.",
+        "phonetic_pt": "hii hâz tchu stêi lêit ât uêrk tchu-dêi."
+      },
+      {
+        "en": "Please stay calm.",
+        "pt": "Por favor, mantenha a calma.",
+        "phonetic_pt": "pliiz stêi kâm."
+      },
+      {
+        "en": "It's important to stay hydrated.",
+        "pt": "É importante se manter hidratado.",
+        "phonetic_pt": "íts impôrtânt tchu stêi háidrêitid."
+      },
+      {
+        "en": "They want to stay for dinner.",
+        "pt": "Eles querem ficar para o jantar.",
+        "phonetic_pt": "dhêi uânt tchu stêi fôr dínêr."
+      },
+      {
+        "en": "I'm going to stay up and watch the game.",
+        "pt": "Vou ficar acordado para assistir ao jogo.",
+        "phonetic_pt": "áim gôuin tchu stêi âp ând uâtch dhâ gêm."
+      },
+      {
+        "en": "You need to stay focused on your goals.",
+        "pt": "Você precisa se manter focado em seus objetivos.",
+        "phonetic_pt": "iú niid tchu stêi fôucâsd ôn iôr gôulz."
+      },
+      {
+        "en": "Let's stay inside; it's raining.",
+        "pt": "Vamos ficar dentro de casa; está chovendo.",
+        "phonetic_pt": "léts stêi insáid; íts rrêinin."
+      },
+      {
+        "en": "The doctor told him to stay off his feet.",
+        "pt": "O médico disse a ele para ficar de repouso.",
+        "phonetic_pt": "dhâ dôktôr tôuld rrim tchu stêi ôf rriz fiit."
+      },
+      {
+        "en": "She managed to stay awake during the long lecture.",
+        "pt": "Ela conseguiu ficar acordada durante a longa palestra.",
+        "phonetic_pt": "shii mânij'd tchu stêi â-uêik diúrin dhâ lông léktchur."
+      },
+      {
+        "en": "We decided to stay another night.",
+        "pt": "Decidimos ficar mais uma noite.",
+        "phonetic_pt": "ui disáidid tchu stêi ânâdhêr náit."
+      },
+      {
+        "en": "Try to stay out of trouble.",
+        "pt": "Tente ficar longe de problemas.",
+        "phonetic_pt": "trái tchu stêi áut ôv trrâbul."
+      },
+      {
+        "en": "He wants to stay fit and healthy.",
+        "pt": "Ele quer se manter em forma e saudável.",
+        "phonetic_pt": "hii uânts tchu stêi fit ând hélthii."
+      },
+      {
+        "en": "I hope you can stay for the party.",
+        "pt": "Espero que você possa ficar para a festa.",
+        "phonetic_pt": "ái hôup iú kân stêi fôr dhâ pártii."
+      },
+      {
+        "en": "They're planning to stay with relatives.",
+        "pt": "Eles estão planejando ficar com parentes.",
+        "phonetic_pt": "dhêi-rr plânin tchu stêi uith rrélâtivz."
+      },
+      {
+        "en": "Please stay on the path.",
+        "pt": "Por favor, permaneça no caminho.",
+        "phonetic_pt": "pliiz stêi ôn dhâ pâth."
+      },
+      {
+        "en": "How long are you planning to stay?",
+        "pt": "Por quanto tempo você planeja ficar?",
+        "phonetic_pt": "ráu lông ar iú plânin tchu stêi?"
+      },
+      {
+        "en": "I need to stay within my budget.",
+        "pt": "Preciso me manter dentro do meu orçamento.",
+        "phonetic_pt": "ái niid tchu stêi uithin mái bâjit."
+      },
+      {
+        "en": "She always tries to stay true to herself.",
+        "pt": "Ela sempre tenta permanecer fiel a si mesma.",
+        "phonetic_pt": "shii ôl-uêiz tráiz tchu stêi trru tchu hrr-sélf."
+      },
+      {
+        "en": "We should stay away from that area.",
+        "pt": "Deveríamos ficar longe daquela área.",
+        "phonetic_pt": "ui shud stêi â-uêi frrôm dhât érr-ii-â."
+      },
+      {
+        "en": "Can you stay quiet for a moment?",
+        "pt": "Você pode ficar em silêncio por um momento?",
+        "phonetic_pt": "kân iú stêi kuáiât fôr â môumênt?"
+      },
+      {
+        "en": "It's hard to stay focused when you're tired.",
+        "pt": "É difícil se manter focado quando você está cansado.",
+        "phonetic_pt": "íts harrd tchu stêi fôucâsd uén iú-rr táird."
+      },
+      {
+        "en": "I like to stay active, even on weekends.",
+        "pt": "Gosto de me manter ativo, mesmo nos fins de semana.",
+        "phonetic_pt": "ái láik tchu stêi âktiv, iivên ôn uiik-éndz."
+      },
+      {
+        "en": "Let's stay in and order pizza.",
+        "pt": "Vamos ficar em casa e pedir pizza.",
+        "phonetic_pt": "léts stêi in ând ôrdêr piitzâ."
+      },
+      {
+        "en": "He asked me to stay put while he checked something.",
+        "pt": "Ele me pediu para ficar parado enquanto verificava algo.",
+        "phonetic_pt": "hii âskd mii tchu stêi pût uáil hii tchêkd sâmthin."
+      },
+      {
+        "en": "They decided to stay friends after the breakup.",
+        "pt": "Eles decidiram continuar amigos após o término.",
+        "phonetic_pt": "dhêi disáidid tchu stêi frrêndz âftêr dhâ brrêik-âp."
+      }
+    ]
+  },
+  {
+    "id": 249,
+    "rank": 249,
+    "en": "pick",
+    "pt": "escolher / pegar (verbo de ação)",
+    "phonetic": "/pɪk/",
+    "phonetic_br": "Píki",
+    "key": "Pick",
+    "phrases": [
+      {
+        "en": "Can you help me pick out a new shirt?",
+        "pt": "Você pode me ajudar a escolher uma camisa nova?",
+        "phonetic_pt": "Kên iú rrép mii píik áut â niú shêrt?"
+      },
+      {
+        "en": "I need to pick up the kids from school.",
+        "pt": "Eu preciso buscar as crianças na escola.",
+        "phonetic_pt": "Ái niid tuu píik âp dhâ kídz frôm skúul."
+      },
+      {
+        "en": "She's really good at picking up new languages.",
+        "pt": "Ela é muito boa em aprender novos idiomas.",
+        "phonetic_pt": "Shiiz rríli gúud ât píiking âp niú lénguêjidz."
+      },
+      {
+        "en": "Don't pick at your food, just eat it.",
+        "pt": "Não fique beliscando sua comida, apenas coma.",
+        "phonetic_pt": "Dônt píik ât iurr fúud, djâst iit it."
+      },
+      {
+        "en": "Let's pick a date for the party.",
+        "pt": "Vamos escolher uma data para a festa.",
+        "phonetic_pt": "Léts píik â dêit fôrr dhâ párti."
+      },
+      {
+        "en": "He always tries to pick a fight with me.",
+        "pt": "Ele sempre tenta arrumar briga comigo.",
+        "phonetic_pt": "Hii ólueiz tráiz tuu píik â fáit uíth mii."
+      },
+      {
+        "en": "Please pick up your toys.",
+        "pt": "Por favor, recolha seus brinquedos.",
+        "phonetic_pt": "Plíiz píik âp iurr tóiz."
+      },
+      {
+        "en": "I'll pick you up at 7 PM.",
+        "pt": "Eu te pego às 7 da noite.",
+        "phonetic_pt": "Áil píik iú âp ât sévân Pii Em."
+      },
+      {
+        "en": "Which color should I pick?",
+        "pt": "Qual cor eu deveria escolher?",
+        "phonetic_pt": "Uítch kâlârr shúud ái píik?"
+      },
+      {
+        "en": "The dog can pick up a scent from miles away.",
+        "pt": "O cachorro consegue sentir um cheiro a quilômetros de distância.",
+        "phonetic_pt": "Dhâ dôg kên píik âp â sênt frôm máilz âuêi."
+      },
+      {
+        "en": "We have to pick the best candidate.",
+        "pt": "Nós temos que escolher o melhor candidato.",
+        "phonetic_pt": "Uii rrév tuu píik dhâ bêst kéndidêit."
+      },
+      {
+        "en": "He was picked for the national team.",
+        "pt": "Ele foi selecionado para a seleção nacional.",
+        "phonetic_pt": "Hii uâz píikd fôrr dhâ néshânâl tiim."
+      },
+      {
+        "en": "Can you pick up some milk on your way home?",
+        "pt": "Você pode pegar um pouco de leite no caminho para casa?",
+        "phonetic_pt": "Kên iú píik âp sâm mílk ôn iurr uêi hôum?"
+      },
+      {
+        "en": "She's always picking on her little brother.",
+        "pt": "Ela está sempre implicando com o irmãozinho dela.",
+        "phonetic_pt": "Shiiz ólueiz píiking ôn hrr lítl brrâdhârr."
+      },
+      {
+        "en": "I'll pick up the tab tonight.",
+        "pt": "Eu pago a conta esta noite.",
+        "phonetic_pt": "Áil píik âp dhâ téb tunáit."
+      },
+      {
+        "en": "It's hard to pick a favorite song.",
+        "pt": "É difícil escolher uma música favorita.",
+        "phonetic_pt": "Its hárd tuu píik â fêivôrrit sôong."
+      },
+      {
+        "en": "They decided to pick up where they left off.",
+        "pt": "Eles decidiram continuar de onde pararam.",
+        "phonetic_pt": "Dhêi disáidid tuu píik âp uêrr dhêi lêft óf."
+      },
+      {
+        "en": "Don't pick the flowers, leave them for everyone.",
+        "pt": "Não colha as flores, deixe-as para todos.",
+        "phonetic_pt": "Dônt píik dhâ fláueerrz, liiv dhêm fôrr êvriiuân."
+      },
+      {
+        "en": "We need to pick up the pace if we want to finish.",
+        "pt": "Precisamos acelerar o ritmo se quisermos terminar.",
+        "phonetic_pt": "Uii niid tuu píik âp dhâ pêis if uii uânt tuu fínish."
+      },
+      {
+        "en": "I like to pick out my own clothes.",
+        "pt": "Eu gosto de escolher minhas próprias roupas.",
+        "phonetic_pt": "Ái láik tuu píik áut mái ôun klôudhz."
+      },
+      {
+        "en": "He can pick a lock in seconds.",
+        "pt": "Ele consegue abrir uma fechadura em segundos.",
+        "phonetic_pt": "Hii kên píik â lák in sékândz."
+      },
+      {
+        "en": "The car is starting to pick up speed.",
+        "pt": "O carro está começando a ganhar velocidade.",
+        "phonetic_pt": "Dhâ kárr iz stárting tuu píik âp spiid."
+      },
+      {
+        "en": "I'm trying to pick up a new hobby.",
+        "pt": "Estou tentando começar um novo hobby.",
+        "phonetic_pt": "Áim tráing tuu píik âp â niú rábi."
+      },
+      {
+        "en": "Let's pick a movie to watch tonight.",
+        "pt": "Vamos escolher um filme para assistir hoje à noite.",
+        "phonetic_pt": "Léts píik â múuvii tuu uátch tunáit."
+      },
+      {
+        "en": "He knows how to pick a guitar.",
+        "pt": "Ele sabe como tocar um violão (dedilhando).",
+        "phonetic_pt": "Hii nôuz ráu tuu píik â guitárr."
+      },
+      {
+        "en": "You need to pick the right moment.",
+        "pt": "Você precisa escolher o momento certo.",
+        "phonetic_pt": "Iú niid tuu píik dhâ ráit môumênt."
+      },
+      {
+        "en": "I'll pick up some groceries later.",
+        "pt": "Eu vou buscar algumas compras mais tarde.",
+        "phonetic_pt": "Áil píik âp sâm grôusâriiz lêitârr."
+      },
+      {
+        "en": "Don't pick at that scab, it won't heal.",
+        "pt": "Não arranque aquela casquinha, não vai cicatrizar.",
+        "phonetic_pt": "Dônt píik ât dhât skéb, it uônt hiil."
+      },
+      {
+        "en": "We need to pick up the pieces after the breakup.",
+        "pt": "Precisamos juntar os cacos depois do término.",
+        "phonetic_pt": "Uii niid tuu píik âp dhâ piisiz éftârr dhâ brêikâp."
+      },
+      {
+        "en": "Can you pick my brain on this topic?",
+        "pt": "Você pode me dar umas ideias sobre este tópico?",
+        "phonetic_pt": "Kên iú píik mái brêin ôn dhís tápik?"
+      }
+    ]
+  },
+  {
+    "id": 250,
+    "rank": 250,
+    "en": "different",
+    "pt": "diferente (adjetivo)",
+    "phonetic": "/ˈdɪfrənt/",
+    "phonetic_br": "Dí-frânt",
+    "key": "Different",
+    "phrases": [
+      {
+        "en": "This coffee tastes different today.",
+        "pt": "Este café está com um gosto diferente hoje.",
+        "phonetic_pt": "Dhís cófi têists dífrânt tudei."
+      },
+      {
+        "en": "She has a completely different opinion.",
+        "pt": "Ela tem uma opinião completamente diferente.",
+        "phonetic_pt": "Shii rrás ê kâmplíitlí dífrânt ôpíniân."
+      },
+      {
+        "en": "We should try something different for dinner.",
+        "pt": "Deveríamos experimentar algo diferente para o jantar.",
+        "phonetic_pt": "Uí shúd trrái sâmthíng dífrânt fôr dínêrr."
+      },
+      {
+        "en": "My new job is very different from my old one.",
+        "pt": "Meu novo emprego é muito diferente do meu antigo.",
+        "phonetic_pt": "Mái niú djób iz vêrri dífrânt frrâm mái ôuld uân."
+      },
+      {
+        "en": "Do you think there's a different way to solve this problem?",
+        "pt": "Você acha que há uma maneira diferente de resolver este problema?",
+        "phonetic_pt": "Dú iú thínk dhêrz ê dífrânt uêi tu sólv dhís próblêm?"
+      },
+      {
+        "en": "He looks totally different with short hair.",
+        "pt": "Ele parece totalmente diferente com cabelo curto.",
+        "phonetic_pt": "Hii lúks tôutâlli dífrânt uí-dh shôrt rrêrr."
+      },
+      {
+        "en": "It's difficult to adjust to a different culture.",
+        "pt": "É difícil se adaptar a uma cultura diferente.",
+        "phonetic_pt": "Its dí-fi-kâlt tu âdjâst tu ê dífrânt kâltchêrr."
+      },
+      {
+        "en": "They decided to take a different route.",
+        "pt": "Eles decidiram pegar uma rota diferente.",
+        "phonetic_pt": "Dhêi disáidid tu têik ê dífrânt rrúut."
+      },
+      {
+        "en": "I feel different after my vacation.",
+        "pt": "Eu me sinto diferente depois das minhas férias.",
+        "phonetic_pt": "Ái fíil dífrânt áftêrr mái vêikeishân."
+      },
+      {
+        "en": "What makes this product different from others?",
+        "pt": "O que torna este produto diferente dos outros?",
+        "phonetic_pt": "Uât mêiks dhís prródâkt dífrânt frrâm âdhêrrz?"
+      },
+      {
+        "en": "We had a very different experience this time.",
+        "pt": "Tivemos uma experiência muito diferente desta vez.",
+        "phonetic_pt": "Uí hâd ê vêrri dífrânt ikspírrriêns dhís táim."
+      },
+      {
+        "en": "Is there a different size available?",
+        "pt": "Tem um tamanho diferente disponível?",
+        "phonetic_pt": "Iz dhêrr ê dífrânt sáiz âvêilâbâl?"
+      },
+      {
+        "en": "My cat and dog have very different personalities.",
+        "pt": "Meu gato e cachorro têm personalidades muito diferentes.",
+        "phonetic_pt": "Mái kât ând dôg hâv vêrri dífrânt pêrrsônálitíiz."
+      },
+      {
+        "en": "She wanted something completely different for her birthday.",
+        "pt": "Ela queria algo completamente diferente para o aniversário dela.",
+        "phonetic_pt": "Shii uântid sâmthíng kâmplíitlí dífrânt fôr hrr pêrthdêi."
+      },
+      {
+        "en": "Let's try a different approach next time.",
+        "pt": "Vamos tentar uma abordagem diferente da próxima vez.",
+        "phonetic_pt": "Lêts trrái ê dífrânt âprrôutch nêkst táim."
+      },
+      {
+        "en": "The weather here is very different from my hometown.",
+        "pt": "O clima aqui é muito diferente da minha cidade natal.",
+        "phonetic_pt": "Dhê uédhêrr hírr iz vêrri dífrânt frrâm mái hôumtáun."
+      },
+      {
+        "en": "He's a different person when he's angry.",
+        "pt": "Ele é uma pessoa diferente quando está com raiva.",
+        "phonetic_pt": "Hiiz ê dífrânt pêrrsân uên hiiz ângrrí."
+      },
+      {
+        "en": "We need to find different solutions.",
+        "pt": "Precisamos encontrar soluções diferentes.",
+        "phonetic_pt": "Uí niid tu fáind dífrânt sôlúushânz."
+      },
+      {
+        "en": "That's a different story altogether.",
+        "pt": "Essa é uma história completamente diferente.",
+        "phonetic_pt": "Dhâts ê dífrânt stôrri ôultuguédhêrr."
+      },
+      {
+        "en": "His new haircut makes him look different.",
+        "pt": "O novo corte de cabelo dele o faz parecer diferente.",
+        "phonetic_pt": "Híz niú hrrêrrkât mêiks rríim lúk dífrânt."
+      },
+      {
+        "en": "I'm looking for a different kind of challenge.",
+        "pt": "Estou procurando um tipo diferente de desafio.",
+        "phonetic_pt": "Áim lúking fôr ê dífrânt káind âv tchâllêndj."
+      },
+      {
+        "en": "These two cars are very different in price.",
+        "pt": "Estes dois carros são muito diferentes no preço.",
+        "phonetic_pt": "Dhíiz túu kárz árr vêrri dífrânt in práis."
+      },
+      {
+        "en": "My perspective on life is quite different now.",
+        "pt": "Minha perspectiva de vida é bem diferente agora.",
+        "phonetic_pt": "Mái pêrrspêktiv ôn láif iz kuáit dífrânt náu."
+      },
+      {
+        "en": "She wore a different dress for each event.",
+        "pt": "Ela usou um vestido diferente para cada evento.",
+        "phonetic_pt": "Shii uôrr ê dífrânt drrês fôr iitch ivênt."
+      },
+      {
+        "en": "Can we discuss this at a different time?",
+        "pt": "Podemos discutir isso em outro momento?",
+        "phonetic_pt": "Kân uí diskâs dhís ât ê dífrânt táim?"
+      },
+      {
+        "en": "The movie had a different ending than the book.",
+        "pt": "O filme teve um final diferente do livro.",
+        "phonetic_pt": "Dhê múuvii hâd ê dífrânt ênding dhân dhê búk."
+      },
+      {
+        "en": "It's no different from what we did before.",
+        "pt": "Não é diferente do que fizemos antes.",
+        "phonetic_pt": "Its nôu dífrânt frrâm uât uí did bifôrr."
+      },
+      {
+        "en": "They offer different services to their clients.",
+        "pt": "Eles oferecem serviços diferentes aos seus clientes.",
+        "phonetic_pt": "Dhêi ôfêrr dífrânt sêrrvisiz tu dhêrr klái-ânts."
+      },
+      {
+        "en": "You'll find a different atmosphere in this neighborhood.",
+        "pt": "Você encontrará uma atmosfera diferente neste bairro.",
+        "phonetic_pt": "Iúl fáind ê dífrânt átmôsfiirr in dhís nêibêrr-húd."
+      },
+      {
+        "en": "We're all different, and that's what makes us unique.",
+        "pt": "Somos todos diferentes, e é isso que nos torna únicos.",
+        "phonetic_pt": "Uírr ôl dífrânt, ând dhâts uât mêiks âs iuníik."
+      }
+    ]
+  },
+  {
+    "id": 251,
+    "rank": 251,
+    "en": "little",
+    "pt": "pequeno / pouca (adjetivo / advérbio)",
+    "phonetic": "/ˈlɪtəl/",
+    "phonetic_br": "lí-râl",
+    "key": "little",
+    "phrases": [
+      {
+        "en": "I have a little dog named Max.",
+        "pt": "Eu tenho um cachorrinho chamado Max.",
+        "phonetic_pt": "ái ráv â lírâl dôg nêimd méks."
+      },
+      {
+        "en": "Could you add a little sugar to my coffee?",
+        "pt": "Você poderia adicionar um pouco de açúcar ao meu café?",
+        "phonetic_pt": "kúd iú éd â lírâl shúgâr tu mái kófi?"
+      },
+      {
+        "en": "She felt a little sad after hearing the news.",
+        "pt": "Ela se sentiu um pouco triste depois de ouvir a notícia.",
+        "phonetic_pt": "shii félt â lírâl séd éftêr rríring dhê niúz."
+      },
+      {
+        "en": "We have very little time left before the deadline.",
+        "pt": "Temos muito pouco tempo antes do prazo final.",
+        "phonetic_pt": "uii rráv vérri lírâl táim léft bifór dhê dédláin."
+      },
+      {
+        "en": "He knows little about the history of the city.",
+        "pt": "Ele sabe pouco sobre a história da cidade.",
+        "phonetic_pt": "hii nôuz lírâl âbáut dhê rístôrri ov dhê síri."
+      },
+      {
+        "en": "Just a little further, and we'll be there.",
+        "pt": "Só mais um pouco, e estaremos lá.",
+        "phonetic_pt": "djâst â lírâl fêrr-dhêr, énd uiiu bii dhér."
+      },
+      {
+        "en": "The baby is so little and cute.",
+        "pt": "O bebê é tão pequeno e fofo.",
+        "phonetic_pt": "dhê bêibi iz sôu lírâl énd kiút."
+      },
+      {
+        "en": "It's a little too expensive for my budget.",
+        "pt": "É um pouco caro demais para o meu orçamento.",
+        "phonetic_pt": "its â lírâl tuu ikspénsiv fôr mái bâdjât."
+      },
+      {
+        "en": "Little did I know that she was planning a surprise party.",
+        "pt": "Mal sabia eu que ela estava planejando uma festa surpresa.",
+        "phonetic_pt": "lírâl did ái nôu dhét shii uâz pléning â sârpráiz párr-ri."
+      },
+      {
+        "en": "Why don't you take a little break?",
+        "pt": "Por que você não tira uma pequena pausa?",
+        "phonetic_pt": "uái dônt iú têik â lírâl brêik?"
+      },
+      {
+        "en": "He's a little clumsy, but he means well.",
+        "pt": "Ele é um pouco desajeitado, mas tem boas intenções.",
+        "phonetic_pt": "hiiz â lírâl klâmzi, bât hii miins uél."
+      },
+      {
+        "en": "Can you give me a little push to get started?",
+        "pt": "Você pode me dar um empurrãozinho para começar?",
+        "phonetic_pt": "kên iú guiv mii â lírâl push tu guet stárr-râd?"
+      },
+      {
+        "en": "There's a little cafe around the corner.",
+        "pt": "Tem um pequeno café virando a esquina.",
+        "phonetic_pt": "dhérz â lírâl kéfei âráund dhê kôrr-nêr."
+      },
+      {
+        "en": "I'm a little bit tired after work today.",
+        "pt": "Estou um pouco cansado depois do trabalho hoje.",
+        "phonetic_pt": "áim â lírâl bit táirrd éftêr uêrrk tudêi."
+      },
+      {
+        "en": "Little by little, we're making progress.",
+        "pt": "Pouco a pouco, estamos progredindo.",
+        "phonetic_pt": "lírâl bái lírâl, uii rr éiking prógrés."
+      },
+      {
+        "en": "Don't worry, it's just a little thing.",
+        "pt": "Não se preocupe, é só uma coisinha.",
+        "phonetic_pt": "dônt uôrri, its djâst â lírâl thing."
+      },
+      {
+        "en": "She has little patience for excuses.",
+        "pt": "Ela tem pouca paciência para desculpas.",
+        "phonetic_pt": "shii rréz lírâl pêishâns fôr ikskiússiz."
+      },
+      {
+        "en": "A little bird told me you're getting married!",
+        "pt": "Um passarinho me contou que você vai se casar!",
+        "phonetic_pt": "â lírâl bêrrd tôuld mii iú rr guéting mérrid!"
+      },
+      {
+        "en": "He bought a little house in the countryside.",
+        "pt": "Ele comprou uma casinha no campo.",
+        "phonetic_pt": "hii bót â lírâl ráus in dhê kântriisáid."
+      },
+      {
+        "en": "Can I have a little water, please?",
+        "pt": "Posso ter um pouco de água, por favor?",
+        "phonetic_pt": "kên ái ráv â lírâl uórr-rêr, pliiz?"
+      },
+      {
+        "en": "I need a little help moving this box.",
+        "pt": "Preciso de uma pequena ajuda para mover esta caixa.",
+        "phonetic_pt": "ái niid â lírâl rélp muúving dhis bóks."
+      },
+      {
+        "en": "It's a little chilly outside today.",
+        "pt": "Está um pouco frio lá fora hoje.",
+        "phonetic_pt": "its â lírâl chíli áutsáid tudêi."
+      },
+      {
+        "en": "He's a little boy now, but he'll grow fast.",
+        "pt": "Ele é um menininho agora, mas vai crescer rápido.",
+        "phonetic_pt": "hiiz â lírâl bói náu, bât rriil grôu fést."
+      },
+      {
+        "en": "We saw a little deer in the woods this morning.",
+        "pt": "Vimos um pequeno cervo na floresta esta manhã.",
+        "phonetic_pt": "uii só â lírâl diir in dhê uúds dhis môrr-ning."
+      },
+      {
+        "en": "Just a little bit more, and it'll be perfect.",
+        "pt": "Só mais um pouquinho, e ficará perfeito.",
+        "phonetic_pt": "djâst â lírâl bit môrr, énd írâl bii pêrr-fikt."
+      },
+      {
+        "en": "I have a little secret to tell you.",
+        "pt": "Tenho um segredinho para te contar.",
+        "phonetic_pt": "ái ráv â lírâl siikrit tu tél iú."
+      },
+      {
+        "en": "She speaks very little English, but she's learning.",
+        "pt": "Ela fala muito pouco inglês, mas está aprendendo.",
+        "phonetic_pt": "shii spiiks vérri lírâl ínglish, bât shiiz lêrr-ning."
+      },
+      {
+        "en": "They made a little mistake on the report.",
+        "pt": "Eles cometeram um pequeno erro no relatório.",
+        "phonetic_pt": "dhêi mêid â lírâl mistêik on dhê rriipôrt."
+      },
+      {
+        "en": "It's a little known fact that he's a talented artist.",
+        "pt": "É um fato pouco conhecido que ele é um artista talentoso.",
+        "phonetic_pt": "its â lírâl nôun fékt dhét hiiz â télântâd árr-tist."
+      },
+      {
+        "en": "Every little bit helps when you're saving money.",
+        "pt": "Cada pequena ajuda conta quando você está economizando dinheiro.",
+        "phonetic_pt": "évri lírâl bit rélps uén iú rr sêiving mâni."
+      }
+    ]
+  },
+  {
+    "id": 252,
+    "rank": 252,
+    "en": "possible",
+    "pt": "possível (adjetivo)",
+    "phonetic": "/ˈpɑːsəbl̩/",
+    "phonetic_br": "póssibâl",
+    "key": "Possible",
+    "phrases": [
+      {
+        "en": "Is it possible to finish this by Friday?",
+        "pt": "É possível terminar isso até sexta-feira?",
+        "phonetic_pt": "Íz it póssibâl tuu fínish dhís bái Frái-dêi?"
+      },
+      {
+        "en": "Anything is possible if you believe.",
+        "pt": "Tudo é possível se você acreditar.",
+        "phonetic_pt": "Énii-thíng íz póssibâl if iú bilíiv."
+      },
+      {
+        "en": "We need to make this possible.",
+        "pt": "Precisamos tornar isso possível.",
+        "phonetic_pt": "Uí niid tuu mêik dhís póssibâl."
+      },
+      {
+        "en": "It's always possible to find a solution.",
+        "pt": "É sempre possível encontrar uma solução.",
+        "phonetic_pt": "Its ól-uêiz póssibâl tuu fáin-dâ sôlú-shân."
+      },
+      {
+        "en": "How is that even possible?",
+        "pt": "Como isso é sequer possível?",
+        "phonetic_pt": "Ráu íz dhét íivân póssibâl?"
+      },
+      {
+        "en": "I did everything possible to help.",
+        "pt": "Eu fiz tudo o que era possível para ajudar.",
+        "phonetic_pt": "Ái díd évri-thíng póssibâl tuu rélp."
+      },
+      {
+        "en": "It might be possible, but it'll be hard.",
+        "pt": "Pode ser possível, mas será difícil.",
+        "phonetic_pt": "It máit bii póssibâl, bâr itâl bii rárd."
+      },
+      {
+        "en": "Keep your options open; anything's possible.",
+        "pt": "Mantenha suas opções abertas; tudo é possível.",
+        "phonetic_pt": "Kíip iôr óp-shânz ôupân; éni-thíngz póssibâl."
+      },
+      {
+        "en": "Is it at all possible for you to come earlier?",
+        "pt": "É de alguma forma possível para você vir mais cedo?",
+        "phonetic_pt": "Íz it êt ól póssibâl fôr iú tuu kâm êr-li-êr?"
+      },
+      {
+        "en": "They made it possible for us to visit.",
+        "pt": "Eles tornaram possível para nós visitarmos.",
+        "phonetic_pt": "Dhêi mêid it póssibâl fôr âs tuu víz-it."
+      },
+      {
+        "en": "Try to arrive as early as possible.",
+        "pt": "Tente chegar o mais cedo possível.",
+        "phonetic_pt": "Trái tuu â-ráiv êz êr-lii êz póssibâl."
+      },
+      {
+        "en": "It's not possible right now.",
+        "pt": "Não é possível agora.",
+        "phonetic_pt": "Its nót póssibâl ráit náu."
+      },
+      {
+        "en": "We explored every possible avenue.",
+        "pt": "Exploramos todas as avenidas possíveis.",
+        "phonetic_pt": "Uí êks-plôrd év-rii póssibâl év-ân-iú."
+      },
+      {
+        "en": "I want to make sure it's possible.",
+        "pt": "Quero ter certeza de que é possível.",
+        "phonetic_pt": "Ái uânt tuu mêik shurrr íts póssibâl."
+      },
+      {
+        "en": "Could you do that, if possible?",
+        "pt": "Você poderia fazer isso, se possível?",
+        "phonetic_pt": "Kúd iú dúu dhét, if póssibâl?"
+      },
+      {
+        "en": "It seems highly unlikely, but still possible.",
+        "pt": "Parece altamente improvável, mas ainda possível.",
+        "phonetic_pt": "It síims rái-lii ân-láik-lii, bâr stíl póssibâl."
+      },
+      {
+        "en": "This wouldn't be possible without your help.",
+        "pt": "Isso não seria possível sem a sua ajuda.",
+        "phonetic_pt": "Dhís uúd-ânt bii póssibâl uí-dháut iôr rélp."
+      },
+      {
+        "en": "We need to consider all possible outcomes.",
+        "pt": "Precisamos considerar todos os resultados possíveis.",
+        "phonetic_pt": "Uí niid tuu kân-síd-êr ól póssibâl áut-kâms."
+      },
+      {
+        "en": "Is it humanly possible to lift that?",
+        "pt": "É humanamente possível levantar aquilo?",
+        "phonetic_pt": "Íz it riú-mân-lii póssibâl tuu líft dhét?"
+      },
+      {
+        "en": "I'll call you as soon as possible.",
+        "pt": "Eu te ligo o mais rápido possível.",
+        "phonetic_pt": "Áil kóll iú êz súun êz póssibâl."
+      },
+      {
+        "en": "It's entirely possible that he forgot.",
+        "pt": "É totalmente possível que ele tenha esquecido.",
+        "phonetic_pt": "Its ên-táir-lii póssibâl dhât rii fôr-gót."
+      },
+      {
+        "en": "Let's explore every possible option.",
+        "pt": "Vamos explorar todas as opções possíveis.",
+        "phonetic_pt": "Lêts êks-plôrr év-rii póssibâl óp-shân."
+      },
+      {
+        "en": "This makes it possible for everyone to participate.",
+        "pt": "Isso torna possível para todos participarem.",
+        "phonetic_pt": "Dhís mêiks it póssibâl fôr év-rii-uân tuu pârtís-i-pêit."
+      },
+      {
+        "en": "I'm doing everything possible to recover.",
+        "pt": "Estou fazendo tudo o que é possível para me recuperar.",
+        "phonetic_pt": "Áim dúu-ing év-rii-thíng póssibâl tuu ri-kâv-êr."
+      },
+      {
+        "en": "It's possible we'll have rain later.",
+        "pt": "É possível que tenhamos chuva mais tarde.",
+        "phonetic_pt": "Its póssibâl uíll ráv rêin lêit-êr."
+      },
+      {
+        "en": "We need to achieve the best possible results.",
+        "pt": "Precisamos alcançar os melhores resultados possíveis.",
+        "phonetic_pt": "Uí niid tuu â-chíiv dhê bêst póssibâl ri-zâlts."
+      },
+      {
+        "en": "He denied any possible involvement.",
+        "pt": "Ele negou qualquer possível envolvimento.",
+        "phonetic_pt": "Rii di-náid é-nii póssibâl în-vólv-mênt."
+      },
+      {
+        "en": "Is there any possible way to fix this?",
+        "pt": "Existe alguma maneira possível de consertar isso?",
+        "phonetic_pt": "Íz dhêr é-nii póssibâl uêi tuu fíks dhís?"
+      },
+      {
+        "en": "I'm open to all possible suggestions.",
+        "pt": "Estou aberto a todas as sugestões possíveis.",
+        "phonetic_pt": "Áim ôupân tuu ól póssibâl sâj-jést-shânz."
+      },
+      {
+        "en": "It was barely possible to see in the fog.",
+        "pt": "Era mal possível ver na neblina.",
+        "phonetic_pt": "It uâz bêr-lii póssibâl tuu síi în dhê fóg."
+      }
+    ]
+  },
+  {
+    "id": 253,
+    "rank": 253,
+    "en": "maybe",
+    "pt": "Talvez (advérbio)",
+    "phonetic": "/ˈmeɪbi/",
+    "phonetic_br": "mêi-bii",
+    "key": "Maybe",
+    "phrases": [
+      {
+        "en": "Maybe we should go home now.",
+        "pt": "Talvez devêssemos ir para casa agora.",
+        "phonetic_pt": "Mêi-bii uii shúud gôu rôum náu."
+      },
+      {
+        "en": "I'll call you later, maybe around seven.",
+        "pt": "Eu te ligo mais tarde, talvez por volta das sete.",
+        "phonetic_pt": "Áil cól iú lêi-rârr, mêi-bii â-ráund sé-vân."
+      },
+      {
+        "en": "Maybe it's going to rain this afternoon.",
+        "pt": "Talvez vá chover esta tarde.",
+        "phonetic_pt": "Mêi-bii its gôn-â rêin dhis áf-têrr-núun."
+      },
+      {
+        "en": "She said maybe she'll join us for dinner.",
+        "pt": "Ela disse que talvez se junte a nós para o jantar.",
+        "phonetic_pt": "Shii séd mêi-bii shii-l djóin âs fôrr dí-nârr."
+      },
+      {
+        "en": "Maybe you're right about that.",
+        "pt": "Talvez você esteja certo sobre isso.",
+        "phonetic_pt": "Mêi-bii iúrr ráit â-báut dhát."
+      },
+      {
+        "en": "We could maybe try a different approach.",
+        "pt": "Talvez pudéssemos tentar uma abordagem diferente.",
+        "phonetic_pt": "Uii kûd mêi-bii trái â dí-frânt â-prôuch."
+      },
+      {
+        "en": "Maybe I should apologize.",
+        "pt": "Talvez eu devesse pedir desculpas.",
+        "phonetic_pt": "Mêi-bii ái shúud â-pó-lâ-djáiz."
+      },
+      {
+        "en": "Do you want some coffee? Maybe later.",
+        "pt": "Você quer um café? Talvez mais tarde.",
+        "phonetic_pt": "Dúu iú uónt sâm có-fii? Mêi-bii lêi-rârr."
+      },
+      {
+        "en": "Maybe he forgot about the meeting.",
+        "pt": "Talvez ele tenha esquecido da reunião.",
+        "phonetic_pt": "Mêi-bii hii fôr-gót â-báut dhâ mii-ring."
+      },
+      {
+        "en": "It's a difficult decision, maybe the hardest one.",
+        "pt": "É uma decisão difícil, talvez a mais difícil.",
+        "phonetic_pt": "Its â dí-fi-kûlt di-sí-jân, mêi-bii dhâ hár-dêst uân."
+      },
+      {
+        "en": "Maybe we should take a break.",
+        "pt": "Talvez devêssemos fazer uma pausa.",
+        "phonetic_pt": "Mêi-bii uii shúud têik â brêik."
+      },
+      {
+        "en": "I'm not sure, maybe.",
+        "pt": "Não tenho certeza, talvez.",
+        "phonetic_pt": "Áim nót shúrr, mêi-bii."
+      },
+      {
+        "en": "Maybe a walk would clear your head.",
+        "pt": "Talvez uma caminhada clareasse sua mente.",
+        "phonetic_pt": "Mêi-bii â uók uûd kliirr iúrr héd."
+      },
+      {
+        "en": "Can you help me? Maybe.",
+        "pt": "Você pode me ajudar? Talvez.",
+        "phonetic_pt": "Kân iú hélp mii? Mêi-bii."
+      },
+      {
+        "en": "Maybe next time we'll have better luck.",
+        "pt": "Talvez da próxima vez tenhamos mais sorte.",
+        "phonetic_pt": "Mêi-bii nékst táim uii-l háv bé-rârr lâk."
+      },
+      {
+        "en": "Maybe it's not such a bad idea after all.",
+        "pt": "Talvez não seja uma ideia tão ruim, afinal.",
+        "phonetic_pt": "Mêi-bii its nót sâch â bád ái-dí-â áf-têrr ól."
+      },
+      {
+        "en": "Maybe I'll have some dessert.",
+        "pt": "Talvez eu coma alguma sobremesa.",
+        "phonetic_pt": "Mêi-bii áil háv sâm di-zêrt."
+      },
+      {
+        "en": "He's maybe the smartest person I know.",
+        "pt": "Ele é talvez a pessoa mais inteligente que conheço.",
+        "phonetic_pt": "Hiiz mêi-bii dhâ smár-têst pêr-sân ái nôu."
+      },
+      {
+        "en": "Maybe we can reschedule for tomorrow.",
+        "pt": "Talvez possamos remarcar para amanhã.",
+        "phonetic_pt": "Mêi-bii uii kân rii-ské-djûl fôrr tû-mór-rôu."
+      },
+      {
+        "en": "Is she coming? Maybe, I'm not sure.",
+        "pt": "Ela vem? Talvez, não tenho certeza.",
+        "phonetic_pt": "Iz shii kâ-ming? Mêi-bii, áim nót shúrr."
+      },
+      {
+        "en": "Maybe it's time to move on.",
+        "pt": "Talvez seja hora de seguir em frente.",
+        "phonetic_pt": "Mêi-bii its táim tû múuv ôn."
+      },
+      {
+        "en": "Maybe I'll buy that new book.",
+        "pt": "Talvez eu compre aquele livro novo.",
+        "phonetic_pt": "Mêi-bii áil bái dhát núu búuk."
+      },
+      {
+        "en": "You should maybe ask her directly.",
+        "pt": "Você deveria talvez perguntar a ela diretamente.",
+        "phonetic_pt": "Iú shúud mêi-bii ásk hêrr di-rék-tlii."
+      },
+      {
+        "en": "Maybe we can find a solution together.",
+        "pt": "Talvez possamos encontrar uma solução juntos.",
+        "phonetic_pt": "Mêi-bii uii kân fáind â sâ-lúu-shân tû-gé-dhêrr."
+      },
+      {
+        "en": "It's a long shot, but maybe worth trying.",
+        "pt": "É uma aposta alta, mas talvez valha a pena tentar.",
+        "phonetic_pt": "Its â lóng shót, bât mêi-bii uêrth trái-ing."
+      },
+      {
+        "en": "Maybe I'm just overthinking this.",
+        "pt": "Talvez eu esteja apenas pensando demais nisso.",
+        "phonetic_pt": "Mêi-bii áim djâst ôu-vârr-thín-king dhis."
+      },
+      {
+        "en": "We could maybe order pizza tonight.",
+        "pt": "Talvez pudéssemos pedir pizza hoje à noite.",
+        "phonetic_pt": "Uii kûd mêi-bii ôr-dêrr pít-sâ tû-náit."
+      },
+      {
+        "en": "Maybe the train is delayed.",
+        "pt": "Talvez o trem esteja atrasado.",
+        "phonetic_pt": "Mêi-bii dhâ trêin iz di-lêid."
+      },
+      {
+        "en": "Maybe you need a vacation.",
+        "pt": "Talvez você precise de férias.",
+        "phonetic_pt": "Mêi-bii iú nii-d â vêi-kêi-shân."
+      },
+      {
+        "en": "I'll think about it, maybe.",
+        "pt": "Vou pensar nisso, talvez.",
+        "phonetic_pt": "Áil thínk â-báut it, mêi-bii."
+      }
+    ]
+  },
+  {
+    "id": 254,
+    "rank": 254,
+    "en": "probably",
+    "pt": "provavelmente (advérbio)",
+    "phonetic": "/prɑbəbli/",
+    "phonetic_br": "prra-bâ-bli",
+    "key": "probably",
+    "phrases": [
+      {
+        "en": "I'll probably be late.",
+        "pt": "Eu provavelmente vou me atrasar.",
+        "phonetic_pt": "Áil prra-bâ-bli bii lêit."
+      },
+      {
+        "en": "She's probably at home.",
+        "pt": "Ela provavelmente está em casa.",
+        "phonetic_pt": "Shiiz prra-bâ-bli ât rôum."
+      },
+      {
+        "en": "He'll probably call you back.",
+        "pt": "Ele provavelmente vai te ligar de volta.",
+        "phonetic_pt": "Hiil prra-bâ-bli cól iú bék."
+      },
+      {
+        "en": "It's probably going to rain.",
+        "pt": "Provavelmente vai chover.",
+        "phonetic_pt": "Its prra-bâ-bli gôu-ing tu rêin."
+      },
+      {
+        "en": "They probably don't know.",
+        "pt": "Eles provavelmente não sabem.",
+        "phonetic_pt": "Dhêi prra-bâ-bli dôunt nôu."
+      },
+      {
+        "en": "You're probably right about that.",
+        "pt": "Você provavelmente está certo sobre isso.",
+        "phonetic_pt": "Iúrr prra-bâ-bli ráit â-báut dhât."
+      },
+      {
+        "en": "We'll probably go out tonight.",
+        "pt": "Nós provavelmente vamos sair hoje à noite.",
+        "phonetic_pt": "Uiil prra-bâ-bli gôu áut tu-náit."
+      },
+      {
+        "en": "That's probably a good idea.",
+        "pt": "Essa é provavelmente uma boa ideia.",
+        "phonetic_pt": "Dhâts prra-bâ-bli â gûd ái-di-â."
+      },
+      {
+        "en": "I probably shouldn't eat this.",
+        "pt": "Eu provavelmente não deveria comer isso.",
+        "phonetic_pt": "Ái prra-bâ-bli shû-dânt iit dhis."
+      },
+      {
+        "en": "He probably forgot about it.",
+        "pt": "Ele provavelmente esqueceu disso.",
+        "phonetic_pt": "Hii prra-bâ-bli fôr-gót â-báut it."
+      },
+      {
+        "en": "She'll probably say yes.",
+        "pt": "Ela provavelmente vai dizer sim.",
+        "phonetic_pt": "Shiil prra-bâ-bli sêi iés."
+      },
+      {
+        "en": "It's probably not worth it.",
+        "pt": "Provavelmente não vale a pena.",
+        "phonetic_pt": "Its prra-bâ-bli nót wârr-th it."
+      },
+      {
+        "en": "They're probably just busy.",
+        "pt": "Eles provavelmente estão apenas ocupados.",
+        "phonetic_pt": "Dhêirr prra-bâ-bli jâst bi-zii."
+      },
+      {
+        "en": "You probably need some rest.",
+        "pt": "Você provavelmente precisa de algum descanso.",
+        "phonetic_pt": "Iú prra-bâ-bli niid sâm rêst."
+      },
+      {
+        "en": "We'll probably finish by noon.",
+        "pt": "Nós provavelmente vamos terminar ao meio-dia.",
+        "phonetic_pt": "Uiil prra-bâ-bli fi-nish bái nuun."
+      },
+      {
+        "en": "He's probably wondering where I am.",
+        "pt": "Ele provavelmente está se perguntando onde estou.",
+        "phonetic_pt": "Hiiz prra-bâ-bli wân-dêr-ing uêrr ái ém."
+      },
+      {
+        "en": "I'll probably just stay in.",
+        "pt": "Eu provavelmente vou ficar em casa.",
+        "phonetic_pt": "Áil prra-bâ-bli jâst stêi in."
+      },
+      {
+        "en": "She probably didn't mean it.",
+        "pt": "Ela provavelmente não quis dizer isso.",
+        "phonetic_pt": "Shii prra-bâ-bli di-dânt miin it."
+      },
+      {
+        "en": "That book is probably really good.",
+        "pt": "Aquele livro é provavelmente muito bom.",
+        "phonetic_pt": "Dhât bûk iz prra-bâ-bli rii-li gûd."
+      },
+      {
+        "en": "They'll probably arrive soon.",
+        "pt": "Eles provavelmente chegarão em breve.",
+        "phonetic_pt": "Dhêil prra-bâ-bli â-ráiv suun."
+      },
+      {
+        "en": "You probably already know this.",
+        "pt": "Você provavelmente já sabe disso.",
+        "phonetic_pt": "Iú prra-bâ-bli ól-rê-di nôu dhis."
+      },
+      {
+        "en": "It's probably colder outside.",
+        "pt": "Provavelmente está mais frio lá fora.",
+        "phonetic_pt": "Its prra-bâ-bli côul-dêrr áut-sáid."
+      },
+      {
+        "en": "I'll probably grab a coffee.",
+        "pt": "Eu provavelmente vou pegar um café.",
+        "phonetic_pt": "Áil prra-bâ-bli grráb â có-fii."
+      },
+      {
+        "en": "He probably works too much.",
+        "pt": "Ele provavelmente trabalha demais.",
+        "phonetic_pt": "Hii prra-bâ-bli wârrks tuu mâch."
+      },
+      {
+        "en": "She's probably feeling better now.",
+        "pt": "Ela provavelmente está se sentindo melhor agora.",
+        "phonetic_pt": "Shiiz prra-bâ-bli fii-ling bê-têrr náu."
+      },
+      {
+        "en": "We'll probably see them there.",
+        "pt": "Nós provavelmente os veremos lá.",
+        "phonetic_pt": "Uiil prra-bâ-bli sii dhêm dhêrr."
+      },
+      {
+        "en": "That's probably why he left.",
+        "pt": "É provavelmente por isso que ele foi embora.",
+        "phonetic_pt": "Dhâts prra-bâ-bli uái hii lêft."
+      },
+      {
+        "en": "I probably won't have time.",
+        "pt": "Eu provavelmente não terei tempo.",
+        "phonetic_pt": "Ái prra-bâ-bli uôunt háv táim."
+      },
+      {
+        "en": "He's probably just tired.",
+        "pt": "Ele provavelmente está apenas cansado.",
+        "phonetic_pt": "Hiiz prra-bâ-bli jâst táirrd."
+      },
+      {
+        "en": "You probably shouldn't worry.",
+        "pt": "Você provavelmente não deveria se preocupar.",
+        "phonetic_pt": "Iú prra-bâ-bli shû-dânt wâ-rii."
+      }
+    ]
+  },
+  {
+    "id": 255,
+    "rank": 255,
+    "en": "perhaps",
+    "pt": "talvez (advérbio de dúvida ou possibilidade)",
+    "phonetic": "/pərˈhæps/",
+    "phonetic_br": "pârráps",
+    "key": "Perhaps",
+    "phrases": [
+      {
+        "en": "Perhaps we should leave now.",
+        "pt": "Talvez devêssemos ir agora.",
+        "phonetic_pt": "Pârráps uii shúd lii-v náu."
+      },
+      {
+        "en": "He's not here, perhaps he went home.",
+        "pt": "Ele não está aqui, talvez tenha ido para casa.",
+        "phonetic_pt": "Hii-z nót hírr, pârráps hii uént hôum."
+      },
+      {
+        "en": "Perhaps it's going to rain later.",
+        "pt": "Talvez vá chover mais tarde.",
+        "phonetic_pt": "Pârráps its gôuin-tú rêin lêitêrr."
+      },
+      {
+        "en": "Can you help me? Perhaps.",
+        "pt": "Você pode me ajudar? Talvez.",
+        "phonetic_pt": "Kén iú hélp mii? Pârráps."
+      },
+      {
+        "en": "Perhaps you're right about that.",
+        "pt": "Talvez você esteja certo sobre isso.",
+        "phonetic_pt": "Pârráps iúrr ráit âbáut dhét."
+      },
+      {
+        "en": "It's a difficult problem, perhaps impossible.",
+        "pt": "É um problema difícil, talvez impossível.",
+        "phonetic_pt": "Its â dífi-kâlt próblêm, pârráps impóssâbâl."
+      },
+      {
+        "en": "Perhaps we could try a different approach.",
+        "pt": "Talvez pudéssemos tentar uma abordagem diferente.",
+        "phonetic_pt": "Pârráps uii kúd trái â dífrânt âprôuch."
+      },
+      {
+        "en": "She looked tired, perhaps she hadn't slept well.",
+        "pt": "Ela parecia cansada, talvez não tivesse dormido bem.",
+        "phonetic_pt": "Shii lúkd táird, pârráps shii hâdânt slépt uél."
+      },
+      {
+        "en": "Perhaps you'd like another cup of coffee?",
+        "pt": "Talvez você queira outra xícara de café?",
+        "phonetic_pt": "Pârráps iúd láik âNâdhêrr kâp âv cófii?"
+      },
+      {
+        "en": "That's a good idea, perhaps the best one yet.",
+        "pt": "Essa é uma boa ideia, talvez a melhor até agora.",
+        "phonetic_pt": "Dhéts â gúd áidii-â, pârráps dhâ bést uân iét."
+      },
+      {
+        "en": "Perhaps I should call her back.",
+        "pt": "Talvez eu devesse ligar para ela de volta.",
+        "phonetic_pt": "Pârráps ái shúd cól hêrr bék."
+      },
+      {
+        "en": "It's getting late, perhaps we should go.",
+        "pt": "Está ficando tarde, talvez devêssemos ir.",
+        "phonetic_pt": "Its guétin lêit, pârráps uii shúd gôu."
+      },
+      {
+        "en": "Perhaps he knows the answer.",
+        "pt": "Talvez ele saiba a resposta.",
+        "phonetic_pt": "Pârráps hii nôuz dhí ánsêrr."
+      },
+      {
+        "en": "We could, perhaps, meet tomorrow instead.",
+        "pt": "Poderíamos, talvez, nos encontrar amanhã em vez disso.",
+        "phonetic_pt": "Uii kúd, pârráps, miit tûmórrôu instéd."
+      },
+      {
+        "en": "Perhaps it's not such a bad thing after all.",
+        "pt": "Talvez não seja algo tão ruim, afinal.",
+        "phonetic_pt": "Pârráps its nót sâch â béd thing áftêrr ól."
+      },
+      {
+        "en": "He might come, perhaps.",
+        "pt": "Ele pode vir, talvez.",
+        "phonetic_pt": "Hii máit kâm, pârráps."
+      },
+      {
+        "en": "Perhaps the most important thing is to be honest.",
+        "pt": "Talvez o mais importante seja ser honesto.",
+        "phonetic_pt": "Pârráps dhâ môust impórtânt thing iz tú bii ó-nêst."
+      },
+      {
+        "en": "Will it work? Perhaps, we'll see.",
+        "pt": "Funcionará? Talvez, veremos.",
+        "phonetic_pt": "Uíl it uêrrk? Pârráps, uii-l sii."
+      },
+      {
+        "en": "Perhaps you missed something in the instructions.",
+        "pt": "Talvez você tenha perdido algo nas instruções.",
+        "phonetic_pt": "Pârráps iú míst sâmthing in dhí instrâk-shânz."
+      },
+      {
+        "en": "It's a long shot, perhaps, but worth trying.",
+        "pt": "É uma aposta arriscada, talvez, mas vale a pena tentar.",
+        "phonetic_pt": "Its â lóng shót, pârráps, bât uêrrth trái-in."
+      },
+      {
+        "en": "Perhaps you could give me a ride home?",
+        "pt": "Talvez você pudesse me dar uma carona para casa?",
+        "phonetic_pt": "Pârráps iú kúd guiv mii â ráid hôum?"
+      },
+      {
+        "en": "He was quiet, perhaps thinking deeply.",
+        "pt": "Ele estava quieto, talvez pensando profundamente.",
+        "phonetic_pt": "Hii uâz kuái-ât, pârráps thin-king diiplii."
+      },
+      {
+        "en": "Perhaps we should get a second opinion.",
+        "pt": "Talvez devêssemos procurar uma segunda opinião.",
+        "phonetic_pt": "Pârráps uii shúd guet â sékând âpíniân."
+      },
+      {
+        "en": "We could, perhaps, reschedule for next week.",
+        "pt": "Poderíamos, talvez, remarcar para a próxima semana.",
+        "phonetic_pt": "Uii kúd, pârráps, rii-shéd-jûl fôrr nékst uiik."
+      },
+      {
+        "en": "Perhaps the best way to learn is by doing.",
+        "pt": "Talvez a melhor maneira de aprender seja fazendo.",
+        "phonetic_pt": "Pârráps dhâ bést uêi tú lêrrn iz bái dú-in."
+      },
+      {
+        "en": "Perhaps it's just a misunderstanding.",
+        "pt": "Talvez seja apenas um mal-entendido.",
+        "phonetic_pt": "Pârráps its jâst â mis-ândêrrsténdin."
+      },
+      {
+        "en": "She smiled, perhaps a little sadly.",
+        "pt": "Ela sorriu, talvez um pouco tristemente.",
+        "phonetic_pt": "Shii smáild, pârráps â lírâl sédlii."
+      },
+      {
+        "en": "Perhaps we should discuss this further.",
+        "pt": "Talvez devêssemos discutir isso mais a fundo.",
+        "phonetic_pt": "Pârráps uii shúd diskâs dhis fêrr-dhêrr."
+      },
+      {
+        "en": "It's a big decision, perhaps too big.",
+        "pt": "É uma grande decisão, talvez grande demais.",
+        "phonetic_pt": "Its â big disí-jân, pârráps tú big."
+      },
+      {
+        "en": "Will you join us? Perhaps, I'll let you know.",
+        "pt": "Você vai se juntar a nós? Talvez, eu te aviso.",
+        "phonetic_pt": "Uíl iú djóin âs? Pârráps, ái-l let iú nôu."
+      }
+    ]
+  },
+  {
+    "id": 256,
+    "rank": 256,
+    "en": "usually",
+    "pt": "geralmente / usualmente (advérbio)",
+    "phonetic": "/ˈjuːʒuəli/",
+    "phonetic_br": "iú-jú-â-li",
+    "key": "usually",
+    "phrases": [
+      {
+        "en": "I usually wake up around 7 AM.",
+        "pt": "Eu geralmente acordo por volta das 7 da manhã.",
+        "phonetic_pt": "Ái iú-jú-â-li uêik âp â-ráund sév-ân êi-êm."
+      },
+      {
+        "en": "She usually walks her dog in the park.",
+        "pt": "Ela geralmente passeia com o cachorro dela no parque.",
+        "phonetic_pt": "Shii iú-jú-â-li uóks hêr dôg in dhâ párrk."
+      },
+      {
+        "en": "We usually have dinner together as a family.",
+        "pt": "Nós geralmente jantamos juntos em família.",
+        "phonetic_pt": "Uii iú-jú-â-li háv dî-nêr tû-gédh-êr âz â fám-â-li."
+      },
+      {
+        "en": "He usually takes the bus to work.",
+        "pt": "Ele geralmente pega o ônibus para o trabalho.",
+        "phonetic_pt": "Hii iú-jú-â-li têiks dhâ bâs tû uêrk."
+      },
+      {
+        "en": "They usually go on vacation in July.",
+        "pt": "Eles geralmente saem de férias em julho.",
+        "phonetic_pt": "Dhêi iú-jú-â-li gôu ôn vêi-kêi-shân in Ju-lái."
+      },
+      {
+        "en": "It's usually sunny here in the summer.",
+        "pt": "Geralmente faz sol aqui no verão.",
+        "phonetic_pt": "Its iú-jú-â-li sâ-nii hiir in dhâ sâ-mêr."
+      },
+      {
+        "en": "What do you usually do on weekends?",
+        "pt": "O que você geralmente faz nos fins de semana?",
+        "phonetic_pt": "Uât dû iú iú-jú-â-li dû ôn uiik-êndz?"
+      },
+      {
+        "en": "I don't usually drink coffee after noon.",
+        "pt": "Eu geralmente não bebo café depois do meio-dia.",
+        "phonetic_pt": "Ái dônt iú-jú-â-li drínk kô-fii áf-têr nún."
+      },
+      {
+        "en": "She usually brings her own lunch to the office.",
+        "pt": "Ela geralmente traz o almoço dela para o escritório.",
+        "phonetic_pt": "Shii iú-jú-â-li bríngs hêr ôn lânch tû dhâ ó-fis."
+      },
+      {
+        "en": "My cat usually sleeps all day long.",
+        "pt": "Meu gato geralmente dorme o dia inteiro.",
+        "phonetic_pt": "Mái kát iú-jú-â-li sliips ól dêi lông."
+      },
+      {
+        "en": "We usually order pizza on Friday nights.",
+        "pt": "Nós geralmente pedimos pizza nas noites de sexta-feira.",
+        "phonetic_pt": "Uii iú-jú-â-li ôr-dêr piit-sâ ôn Frái-dêi náits."
+      },
+      {
+        "en": "He usually checks his email first thing in the morning.",
+        "pt": "Ele geralmente verifica o e-mail dele logo de manhã.",
+        "phonetic_pt": "Hii iú-jú-â-li chêks hiz ii-mêil fêrst thíing in dhâ môr-níng."
+      },
+      {
+        "en": "They usually meet for coffee at that cafe.",
+        "pt": "Eles geralmente se encontram para tomar café naquele café.",
+        "phonetic_pt": "Dhêi iú-jú-â-li miit fôr kô-fii ât dhát ká-fêi."
+      },
+      {
+        "en": "The store usually closes at 9 PM.",
+        "pt": "A loja geralmente fecha às 9 da noite.",
+        "phonetic_pt": "Dhâ stôr iú-jú-â-li klôu-ziz ât náin pii-êm."
+      },
+      {
+        "en": "I usually prefer tea over coffee.",
+        "pt": "Eu geralmente prefiro chá a café.",
+        "phonetic_pt": "Ái iú-jú-â-li prî-fêrr tii ôu-vêr kô-fii."
+      },
+      {
+        "en": "She's usually very punctual for appointments.",
+        "pt": "Ela geralmente é muito pontual para os compromissos.",
+        "phonetic_pt": "Shiiz iú-jú-â-li vér-i pânk-chû-âl fôr â-pôint-mênts."
+      },
+      {
+        "en": "We don't usually watch TV during the week.",
+        "pt": "Nós geralmente não assistimos TV durante a semana.",
+        "phonetic_pt": "Uii dônt iú-jú-â-li uâtch tii-vii dû-ríng dhâ uiik."
+      },
+      {
+        "en": "He usually listens to podcasts while commuting.",
+        "pt": "Ele geralmente ouve podcasts enquanto se desloca.",
+        "phonetic_pt": "Hii iú-jú-â-li lís-ânz tû pôd-kásts uáil kâ-miú-ting."
+      },
+      {
+        "en": "They usually spend their holidays abroad.",
+        "pt": "Eles geralmente passam as férias no exterior.",
+        "phonetic_pt": "Dhêi iú-jú-â-li spênd dhêr hô-lâ-dêiz â-bród."
+      },
+      {
+        "en": "It usually rains a lot in the spring.",
+        "pt": "Geralmente chove muito na primavera.",
+        "phonetic_pt": "It iú-jú-â-li rêinz â lót in dhâ spríng."
+      },
+      {
+        "en": "I usually take a shower before bed.",
+        "pt": "Eu geralmente tomo banho antes de dormir.",
+        "phonetic_pt": "Ái iú-jú-â-li têik â sháu-êr bî-fôr bêd."
+      },
+      {
+        "en": "She usually volunteers at the animal shelter.",
+        "pt": "Ela geralmente faz trabalho voluntário no abrigo de animais.",
+        "phonetic_pt": "Shii iú-jú-â-li vô-lân-tîrz ât dhâ án-â-mâl shêl-têr."
+      },
+      {
+        "en": "We usually go hiking on Saturdays.",
+        "pt": "Nós geralmente fazemos trilhas aos sábados.",
+        "phonetic_pt": "Uii iú-jú-â-li gôu hái-king ôn Sát-êr-dêiz."
+      },
+      {
+        "en": "He usually wears a hat when he goes out.",
+        "pt": "Ele geralmente usa um chapéu quando sai.",
+        "phonetic_pt": "Hii iú-jú-â-li uêrz â hát uên hii gôuz áut."
+      },
+      {
+        "en": "They usually eat healthy food.",
+        "pt": "Eles geralmente comem comida saudável.",
+        "phonetic_pt": "Dhêi iú-jú-â-li iit hêl-thii fúúd."
+      },
+      {
+        "en": "The restaurant is usually very busy on weekends.",
+        "pt": "O restaurante geralmente fica muito movimentado nos fins de semana.",
+        "phonetic_pt": "Dhâ rês-tâ-rânt iz iú-jú-â-li vér-i bí-zii ôn uiik-êndz."
+      },
+      {
+        "en": "I usually read a book before falling asleep.",
+        "pt": "Eu geralmente leio um livro antes de adormecer.",
+        "phonetic_pt": "Ái iú-jú-â-li riid â búk bî-fôr fól-íng â-sliip."
+      },
+      {
+        "en": "She usually calls her mom every day.",
+        "pt": "Ela geralmente liga para a mãe dela todos os dias.",
+        "phonetic_pt": "Shii iú-jú-â-li kôlz hêr mám êv-rii dêi."
+      },
+      {
+        "en": "We usually celebrate birthdays with a big party.",
+        "pt": "Nós geralmente celebramos aniversários com uma grande festa.",
+        "phonetic_pt": "Uii iú-jú-â-li sê-lâ-brêit bêrth-dêiz uíth â bíg pár-tii."
+      },
+      {
+        "en": "He usually arrives early to avoid traffic.",
+        "pt": "Ele geralmente chega cedo para evitar o trânsito.",
+        "phonetic_pt": "Hii iú-jú-â-li â-ráivz êr-li tû â-vóid tráf-ik."
+      }
+    ]
+  },
+  {
+    "id": 257,
+    "rank": 257,
+    "en": "already",
+    "pt": "já (advérbio de tempo)",
+    "phonetic": "/ɔːlˈrɛdi/",
+    "phonetic_br": "ólrrédii",
+    "key": "Already",
+    "phrases": [
+      {
+        "en": "I've already eaten lunch.",
+        "pt": "Eu já almocei.",
+        "phonetic_pt": "ái-v ólrrédii íitn lântch."
+      },
+      {
+        "en": "She's already left for work.",
+        "pt": "Ela já saiu para o trabalho.",
+        "phonetic_pt": "shii-z ólrrédii léft fór uêrk."
+      },
+      {
+        "en": "Have you already finished your homework?",
+        "pt": "Você já terminou sua lição de casa?",
+        "phonetic_pt": "háv iú ólrrédii fínisht iór rôum-uêrk?"
+      },
+      {
+        "en": "We're already running late.",
+        "pt": "Nós já estamos atrasados.",
+        "phonetic_pt": "uí-rr ólrrédii rrânin lêit."
+      },
+      {
+        "en": "He already knows the answer.",
+        "pt": "Ele já sabe a resposta.",
+        "phonetic_pt": "hii ólrrédii nôuz dhí ánsêr."
+      },
+      {
+        "en": "The movie has already started.",
+        "pt": "O filme já começou.",
+        "phonetic_pt": "dhâ múvii rráz ólrrédii stárted."
+      },
+      {
+        "en": "I already told you that.",
+        "pt": "Eu já te disse isso.",
+        "phonetic_pt": "ái ólrrédii tôuld iú dhát."
+      },
+      {
+        "en": "It's already dark outside.",
+        "pt": "Já está escuro lá fora.",
+        "phonetic_pt": "its ólrrédii dárrk áutsáid."
+      },
+      {
+        "en": "They've already booked their flights.",
+        "pt": "Eles já reservaram seus voos.",
+        "phonetic_pt": "dhêi-v ólrrédii búkt dhêrr fláits."
+      },
+      {
+        "en": "I'm already tired.",
+        "pt": "Já estou cansado(a).",
+        "phonetic_pt": "ái-m ólrrédii táirrrd."
+      },
+      {
+        "en": "She's already a doctor.",
+        "pt": "Ela já é médica.",
+        "phonetic_pt": "shii-z ólrrédii â dôktêr."
+      },
+      {
+        "en": "The store is already closed.",
+        "pt": "A loja já está fechada.",
+        "phonetic_pt": "dhâ stórr iz ólrrédii klôuzd."
+      },
+      {
+        "en": "We already talked about this.",
+        "pt": "Nós já conversamos sobre isso.",
+        "phonetic_pt": "uí ólrrédii tôkt âbáut dhís."
+      },
+      {
+        "en": "Has he already called you back?",
+        "pt": "Ele já te ligou de volta?",
+        "phonetic_pt": "ráz hii ólrrédii kóld iú bák?"
+      },
+      {
+        "en": "I already have plans tonight.",
+        "pt": "Eu já tenho planos para hoje à noite.",
+        "phonetic_pt": "ái ólrrédii rráv plánz tunáit."
+      },
+      {
+        "en": "It's already October.",
+        "pt": "Já é outubro.",
+        "phonetic_pt": "its ólrrédii ôuktôubêr."
+      },
+      {
+        "en": "They're already here.",
+        "pt": "Eles já estão aqui.",
+        "phonetic_pt": "dhêi-rr ólrrédii hírr."
+      },
+      {
+        "en": "You've already seen this movie.",
+        "pt": "Você já viu este filme.",
+        "phonetic_pt": "iú-v ólrrédii síin dhís múvii."
+      },
+      {
+        "en": "I already regret it.",
+        "pt": "Eu já me arrependo disso.",
+        "phonetic_pt": "ái ólrrédii rrêgrét it."
+      },
+      {
+        "en": "He's already packed his bags.",
+        "pt": "Ele já arrumou as malas.",
+        "phonetic_pt": "hii-z ólrrédii pákt rríiz bágz."
+      },
+      {
+        "en": "We already paid the bill.",
+        "pt": "Nós já pagamos a conta.",
+        "phonetic_pt": "uí ólrrédii pêid dhâ bíl."
+      },
+      {
+        "en": "Is it already time to go?",
+        "pt": "Já é hora de ir?",
+        "phonetic_pt": "iz it ólrrédii táim tu gôu?"
+      },
+      {
+        "en": "She already understands.",
+        "pt": "Ela já entende.",
+        "phonetic_pt": "shii ólrrédii ândêr-stándz."
+      },
+      {
+        "en": "They've already moved to a new house.",
+        "pt": "Eles já se mudaram para uma casa nova.",
+        "phonetic_pt": "dhêi-v ólrrédii múvd tu â niú ráus."
+      },
+      {
+        "en": "I'm already full, thanks.",
+        "pt": "Já estou satisfeito(a), obrigado(a).",
+        "phonetic_pt": "ái-m ólrrédii fúl, thánks."
+      },
+      {
+        "en": "He already knew what to do.",
+        "pt": "Ele já sabia o que fazer.",
+        "phonetic_pt": "hii ólrrédii niú uát tu dú."
+      },
+      {
+        "en": "The kids are already asleep.",
+        "pt": "As crianças já estão dormindo.",
+        "phonetic_pt": "dhâ kídz árr ólrrédii âslíip."
+      },
+      {
+        "en": "You already missed the bus.",
+        "pt": "Você já perdeu o ônibus.",
+        "phonetic_pt": "iú ólrrédii míst dhâ bâs."
+      },
+      {
+        "en": "We've already been there.",
+        "pt": "Nós já estivemos lá.",
+        "phonetic_pt": "uí-v ólrrédii bíin dhêrr."
+      },
+      {
+        "en": "It's already too late.",
+        "pt": "Já é tarde demais.",
+        "phonetic_pt": "its ólrrédii túu lêit."
+      }
+    ]
+  },
+  {
+    "id": 258,
+    "rank": 258,
+    "en": "quite",
+    "pt": "bastante / muito / completamente (advérbio de intensidade)",
+    "phonetic": "/kwaɪt/",
+    "phonetic_br": "kuáit",
+    "key": "quite",
+    "phrases": [
+      {
+        "en": "It's quite cold outside today.",
+        "pt": "Está bastante frio lá fora hoje.",
+        "phonetic_pt": "Its kuáit kôuld áutsáid tudêi."
+      },
+      {
+        "en": "She's quite a good singer, isn't she?",
+        "pt": "Ela é uma cantora muito boa, não é?",
+        "phonetic_pt": "Shiiz kuáit â gúud síngrr, íznt shii?"
+      },
+      {
+        "en": "I quite enjoyed the movie, actually.",
+        "pt": "Eu gostei bastante do filme, na verdade.",
+        "phonetic_pt": "Ái kuáit enjôid dhâ múvii, ékchuâl-li."
+      },
+      {
+        "en": "That's quite an interesting point.",
+        "pt": "Esse é um ponto bem interessante.",
+        "phonetic_pt": "Dhâts kuáit én íntrr-ésting póint."
+      },
+      {
+        "en": "He was quite sure of his decision.",
+        "pt": "Ele estava completamente certo de sua decisão.",
+        "phonetic_pt": "Hii uâz kuáit shúrr âv hiz dêsízhn."
+      },
+      {
+        "en": "Are you quite ready to go?",
+        "pt": "Você está completamente pronto para ir?",
+        "phonetic_pt": "Árr iú kuáit rédi tu gôu?"
+      },
+      {
+        "en": "The food was quite delicious.",
+        "pt": "A comida estava bem deliciosa.",
+        "phonetic_pt": "Dhâ fúud uâz kuáit dêlíshâs."
+      },
+      {
+        "en": "It's quite common to see deer here.",
+        "pt": "É bem comum ver veados aqui.",
+        "phonetic_pt": "Its kuáit kómân tu sii dírr hírr."
+      },
+      {
+        "en": "I'm quite tired after that long drive.",
+        "pt": "Estou bem cansado depois daquela longa viagem de carro.",
+        "phonetic_pt": "Áim kuáit táirrd éftrr dhât lóng dráiv."
+      },
+      {
+        "en": "She's quite tall for her age.",
+        "pt": "Ela é bem alta para a idade dela.",
+        "phonetic_pt": "Shiiz kuáit tól fôrr hrr êidj."
+      },
+      {
+        "en": "He's quite a character, you know.",
+        "pt": "Ele é uma figura e tanto, sabe?",
+        "phonetic_pt": "Hiiz kuáit â kéraktrr, iú nôu."
+      },
+      {
+        "en": "We were quite surprised by the news.",
+        "pt": "Ficamos bem surpresos com a notícia.",
+        "phonetic_pt": "Uii uérr kuáit serrprráizd bái dhâ núuz."
+      },
+      {
+        "en": "It's quite a challenge to learn a new language.",
+        "pt": "É um desafio e tanto aprender um novo idioma.",
+        "phonetic_pt": "Its kuáit â chálênj tu lêrrn â núu lénguêdj."
+      },
+      {
+        "en": "The book was quite long, but worth it.",
+        "pt": "O livro era bem longo, mas valeu a pena.",
+        "phonetic_pt": "Dhâ búuk uâz kuáit lóng, bât uêrrth ít."
+      },
+      {
+        "en": "He's quite knowledgeable about history.",
+        "pt": "Ele é bem entendido em história.",
+        "phonetic_pt": "Hiiz kuáit nólêdjâbl âbáut hístorii."
+      },
+      {
+        "en": "I'm not quite finished with my report.",
+        "pt": "Ainda não terminei completamente meu relatório.",
+        "phonetic_pt": "Áim nót kuáit fínishd uíth mái riipôrt."
+      },
+      {
+        "en": "That's quite alright, don't worry about it.",
+        "pt": "Está tudo bem, não se preocupe com isso.",
+        "phonetic_pt": "Dhâts kuáit ól-ráit, dôunt uêrri âbáut ít."
+      },
+      {
+        "en": "It's quite a distance to the nearest town.",
+        "pt": "É uma distância considerável até a cidade mais próxima.",
+        "phonetic_pt": "Its kuáit â dístâns tu dhâ nírr-êst táun."
+      },
+      {
+        "en": "The project is quite complex.",
+        "pt": "O projeto é bem complexo.",
+        "phonetic_pt": "Dhâ prójêkt iz kuáit kómpéks."
+      },
+      {
+        "en": "She has quite a sense of humor.",
+        "pt": "Ela tem um senso de humor e tanto.",
+        "phonetic_pt": "Shii hâz kuáit â sêns âv hiúmrr."
+      },
+      {
+        "en": "He seems quite happy with his new job.",
+        "pt": "Ele parece bem feliz com o novo emprego dele.",
+        "phonetic_pt": "Hii siims kuáit hépii uíth hiz núu jób."
+      },
+      {
+        "en": "It's quite warm for this time of year.",
+        "pt": "Está bem quente para esta época do ano.",
+        "phonetic_pt": "Its kuáit uôrm fôrr dhís táim âv yírr."
+      },
+      {
+        "en": "I'm quite keen on trying that new restaurant.",
+        "pt": "Estou muito a fim de experimentar aquele novo restaurante.",
+        "phonetic_pt": "Áim kuáit kiin on tráing dhât núu réstrr-ónt."
+      },
+      {
+        "en": "That's quite a difficult question.",
+        "pt": "Essa é uma pergunta bem difícil.",
+        "phonetic_pt": "Dhâts kuáit â dífikâlt kuéstchn."
+      },
+      {
+        "en": "We're quite busy this week.",
+        "pt": "Estamos bem ocupados esta semana.",
+        "phonetic_pt": "Uírr kuáit bízi dhís uiik."
+      },
+      {
+        "en": "He's quite the perfectionist.",
+        "pt": "Ele é um perfeccionista e tanto.",
+        "phonetic_pt": "Hiiz kuáit dhâ perrfékshânist."
+      },
+      {
+        "en": "She's quite articulate when she speaks.",
+        "pt": "Ela é bem articulada quando fala.",
+        "phonetic_pt": "Shiiz kuáit arr-tíkiulêt uên shii spiiks."
+      },
+      {
+        "en": "It's quite a relief to be home.",
+        "pt": "É um alívio e tanto estar em casa.",
+        "phonetic_pt": "Its kuáit â riiliif tu bii hôm."
+      },
+      {
+        "en": "I quite understand what you mean.",
+        "pt": "Eu compreendo perfeitamente o que você quer dizer.",
+        "phonetic_pt": "Ái kuáit ânderrsténd uât iú miin."
+      },
+      {
+        "en": "The view from the top was quite spectacular.",
+        "pt": "A vista do topo era bem espetacular.",
+        "phonetic_pt": "Dhâ viúu frrom dhâ tóp uâz kuáit spéktâkiulrr."
+      }
+    ]
+  },
+  {
+    "id": 259,
+    "rank": 259,
+    "en": "really",
+    "pt": "realmente / de verdade / muito / mesmo (advérbio)",
+    "phonetic": "/ˈriː.li/",
+    "phonetic_br": "rríili",
+    "key": "really",
+    "phrases": [
+      {
+        "en": "I really like this new coffee shop.",
+        "pt": "Eu realmente gosto dessa nova cafeteria.",
+        "phonetic_pt": "ái rríili láik dhis niú cófi shóp."
+      },
+      {
+        "en": "Are you really going to finish all that food?",
+        "pt": "Você realmente vai comer toda essa comida?",
+        "phonetic_pt": "árr iú rríili gôuing tú fínish ól dhát fúud?"
+      },
+      {
+        "en": "It's really cold outside today.",
+        "pt": "Está muito frio lá fora hoje.",
+        "phonetic_pt": "íts rríili côuld áutsáid tudêi."
+      },
+      {
+        "en": "She really helped me out with my project.",
+        "pt": "Ela realmente me ajudou muito com meu projeto.",
+        "phonetic_pt": "shii rríili hélpd mii áut uíth mái prójet."
+      },
+      {
+        "en": "He doesn't really understand what I mean.",
+        "pt": "Ele não entende muito bem o que eu quero dizer.",
+        "phonetic_pt": "hii dâznt rríili ândêrstênd uát ái miin."
+      },
+      {
+        "en": "We really need to talk about this.",
+        "pt": "Nós realmente precisamos conversar sobre isso.",
+        "phonetic_pt": "uí rríili niid tú tóók âbáut dhis."
+      },
+      {
+        "en": "That movie was really good!",
+        "pt": "Aquele filme foi muito bom!",
+        "phonetic_pt": "dhát múvii uâz rríili gúud!"
+      },
+      {
+        "en": "Do you really think that's a good idea?",
+        "pt": "Você realmente acha que é uma boa ideia?",
+        "phonetic_pt": "dú iú rríili thínk dháts â gúud áidia?"
+      },
+      {
+        "en": "I really appreciate your help.",
+        "pt": "Eu realmente agradeço a sua ajuda.",
+        "phonetic_pt": "ái rríili âpríshiêit iúrr hélp."
+      },
+      {
+        "en": "This is really important for our future.",
+        "pt": "Isso é realmente importante para o nosso futuro.",
+        "phonetic_pt": "dhis iz rríili impórtânt fór áuârr fiútchârr."
+      },
+      {
+        "en": "I'm really looking forward to the weekend.",
+        "pt": "Estou realmente ansioso pelo fim de semana.",
+        "phonetic_pt": "áim rríili lúking fóruard tú dhâ uíikênd."
+      },
+      {
+        "en": "It really makes a difference when you try.",
+        "pt": "Realmente faz diferença quando você tenta.",
+        "phonetic_pt": "it rríili mêiks â dífrâns uên iú trrái."
+      },
+      {
+        "en": "Are you really sure about that?",
+        "pt": "Você tem certeza disso?",
+        "phonetic_pt": "árr iú rríili shúrr âbáut dhát?"
+      },
+      {
+        "en": "I really miss my family.",
+        "pt": "Eu realmente sinto falta da minha família.",
+        "phonetic_pt": "ái rríili mís mái fámâli."
+      },
+      {
+        "en": "The concert was really amazing.",
+        "pt": "O show foi realmente incrível.",
+        "phonetic_pt": "dhâ cónssârt uâz rríili âmêizing."
+      },
+      {
+        "en": "He's really talented at playing the guitar.",
+        "pt": "Ele é realmente talentoso tocando violão.",
+        "phonetic_pt": "hiiz rríili tálântid át plêiing dhâ guitárr."
+      },
+      {
+        "en": "Do you really want to go home already?",
+        "pt": "Você realmente quer ir para casa já?",
+        "phonetic_pt": "dú iú rríili uánt tú gôu rôum ólrredi?"
+      },
+      {
+        "en": "This book is really interesting.",
+        "pt": "Este livro é muito interessante.",
+        "phonetic_pt": "dhis búk iz rríili íntrêsting."
+      },
+      {
+        "en": "I really don't know what to do.",
+        "pt": "Eu realmente não sei o que fazer.",
+        "phonetic_pt": "ái rríili dôunt nôu uát tú dúu."
+      },
+      {
+        "en": "She really cares about her friends.",
+        "pt": "Ela realmente se importa com seus amigos.",
+        "phonetic_pt": "shii rríili kêrrs âbáut hêrr frrêndz."
+      },
+      {
+        "en": "We had a really good time at the party.",
+        "pt": "Nós nos divertimos muito na festa.",
+        "phonetic_pt": "uí hâd â rríili gúud táim át dhâ párrdi."
+      },
+      {
+        "en": "It's really difficult to learn a new language.",
+        "pt": "É realmente difícil aprender um novo idioma.",
+        "phonetic_pt": "íts rríili dífikâlt tú lêrrn â niú lánguêdj."
+      },
+      {
+        "en": "Are you really going to move to another city?",
+        "pt": "Você realmente vai se mudar para outra cidade?",
+        "phonetic_pt": "árr iú rríili gôuing tú múuv tú ânâdhêrr síti?"
+      },
+      {
+        "en": "I really hope everything works out.",
+        "pt": "Eu realmente espero que tudo dê certo.",
+        "phonetic_pt": "ái rríili hôup évrriithíng uêrks áut."
+      },
+      {
+        "en": "This coffee is really strong.",
+        "pt": "Este café é muito forte.",
+        "phonetic_pt": "dhis cófi iz rríili strrông."
+      },
+      {
+        "en": "He really needs to calm down.",
+        "pt": "Ele realmente precisa se acalmar.",
+        "phonetic_pt": "hii rríili niidz tú cám dáun."
+      },
+      {
+        "en": "I really enjoyed talking to you.",
+        "pt": "Eu realmente gostei de conversar com você.",
+        "phonetic_pt": "ái rríili enjôid tóóking tú iú."
+      },
+      {
+        "en": "She's really good at solving problems.",
+        "pt": "Ela é realmente boa em resolver problemas.",
+        "phonetic_pt": "shiiz rríili gúud át sólving próblêmz."
+      },
+      {
+        "en": "It really doesn't matter what they think.",
+        "pt": "Realmente não importa o que eles pensam.",
+        "phonetic_pt": "it rríili dâznt mátêrr uát dhêi thínk."
+      },
+      {
+        "en": "We really should go now.",
+        "pt": "Nós realmente deveríamos ir agora.",
+        "phonetic_pt": "uí rríili shúud gôu náu."
+      }
+    ]
+  },
+  {
+    "id": 260,
+    "rank": 260,
+    "en": "almost",
+    "pt": "quase (advérbio)",
+    "phonetic": "/ˈɔːlmoʊst/",
+    "phonetic_br": "ólmôust",
+    "key": "almost",
+    "phrases": [
+      {
+        "en": "I'm almost ready to go.",
+        "pt": "Estou quase pronto para ir.",
+        "phonetic_pt": "Áim ólmôust rédi tu gôu."
+      },
+      {
+        "en": "It's almost midnight.",
+        "pt": "É quase meia-noite.",
+        "phonetic_pt": "Its ólmôust mídnait."
+      },
+      {
+        "en": "We almost missed our flight.",
+        "pt": "Quase perdemos nosso voo.",
+        "phonetic_pt": "Uii ólmôust míst áu-rr fláit."
+      },
+      {
+        "en": "She almost dropped her phone.",
+        "pt": "Ela quase deixou o telefone cair.",
+        "phonetic_pt": "Shii ólmôust drópd hêr fôun."
+      },
+      {
+        "en": "He almost won the race.",
+        "pt": "Ele quase ganhou a corrida.",
+        "phonetic_pt": "Hii ólmôust uân dhê rrêis."
+      },
+      {
+        "en": "I've almost finished my work.",
+        "pt": "Quase terminei meu trabalho.",
+        "phonetic_pt": "Áiv ólmôust fínishd mái uêrk."
+      },
+      {
+        "en": "The cake is almost done.",
+        "pt": "O bolo está quase pronto.",
+        "phonetic_pt": "Dhê kêik iz ólmôust dân."
+      },
+      {
+        "en": "We're almost out of milk.",
+        "pt": "Estamos quase sem leite.",
+        "phonetic_pt": "Uí-rr ólmôust áut âv mílk."
+      },
+      {
+        "en": "It's almost impossible to believe.",
+        "pt": "É quase impossível de acreditar.",
+        "phonetic_pt": "Its ólmôust ímpóssâbâl tu bîlív."
+      },
+      {
+        "en": "I almost forgot your birthday!",
+        "pt": "Quase esqueci seu aniversário!",
+        "phonetic_pt": "Ái ólmôust fôrgót iúr bérthdêi!"
+      },
+      {
+        "en": "They almost convinced me.",
+        "pt": "Eles quase me convenceram.",
+        "phonetic_pt": "Dhêi ólmôust kânvínst mii."
+      },
+      {
+        "en": "This coffee is almost cold.",
+        "pt": "Este café está quase frio.",
+        "phonetic_pt": "Dhís kófi iz ólmôust kôuld."
+      },
+      {
+        "en": "It's almost time for dinner.",
+        "pt": "É quase hora do jantar.",
+        "phonetic_pt": "Its ólmôust táim fór dínêr."
+      },
+      {
+        "en": "I almost didn't recognize you.",
+        "pt": "Quase não te reconheci.",
+        "phonetic_pt": "Ái ólmôust dídânt rrêkâgnáiz iú."
+      },
+      {
+        "en": "She's almost a professional dancer.",
+        "pt": "Ela é quase uma dançarina profissional.",
+        "phonetic_pt": "Shíiz ólmôust â prâféshânâl dânsêr."
+      },
+      {
+        "en": "The car almost ran out of gas.",
+        "pt": "O carro quase ficou sem gasolina.",
+        "phonetic_pt": "Dhê kár ólmôust rrân áut âv gás."
+      },
+      {
+        "en": "I almost slipped on the ice.",
+        "pt": "Quase escorreguei no gelo.",
+        "phonetic_pt": "Ái ólmôust slípd ôn dhê áis."
+      },
+      {
+        "en": "He almost said too much.",
+        "pt": "Ele quase disse demais.",
+        "phonetic_pt": "Hii ólmôust séd tuu mâtch."
+      },
+      {
+        "en": "We almost made it to the top.",
+        "pt": "Quase chegamos ao topo.",
+        "phonetic_pt": "Uii ólmôust mêid it tu dhê tóp."
+      },
+      {
+        "en": "My battery is almost dead.",
+        "pt": "Minha bateria está quase acabando.",
+        "phonetic_pt": "Mái báttêrrii iz ólmôust déd."
+      },
+      {
+        "en": "It's almost perfect.",
+        "pt": "É quase perfeito.",
+        "phonetic_pt": "Its ólmôust pêrfikt."
+      },
+      {
+        "en": "I almost called you last night.",
+        "pt": "Quase te liguei ontem à noite.",
+        "phonetic_pt": "Ái ólmôust kóld iú lást náit."
+      },
+      {
+        "en": "They're almost here.",
+        "pt": "Eles estão quase aqui.",
+        "phonetic_pt": "Dhêi-rr ólmôust hí-rr."
+      },
+      {
+        "en": "We almost finished the puzzle.",
+        "pt": "Quase terminamos o quebra-cabeça.",
+        "phonetic_pt": "Uii ólmôust fínishd dhê pâzâl."
+      },
+      {
+        "en": "The movie is almost over.",
+        "pt": "O filme está quase no fim.",
+        "phonetic_pt": "Dhê múvii iz ólmôust ôuvêr."
+      },
+      {
+        "en": "I almost didn't make it on time.",
+        "pt": "Quase não consegui chegar a tempo.",
+        "phonetic_pt": "Ái ólmôust dídânt mêik it ôn táim."
+      },
+      {
+        "en": "She almost burst out laughing.",
+        "pt": "Ela quase caiu na gargalhada.",
+        "phonetic_pt": "Shii ólmôust bêrst áut láfing."
+      },
+      {
+        "en": "He's almost as tall as his father now.",
+        "pt": "Ele está quase tão alto quanto o pai agora.",
+        "phonetic_pt": "Híiz ólmôust az tól az hiz fáthêr náu."
+      },
+      {
+        "en": "We almost forgot to bring the snacks.",
+        "pt": "Quase esquecemos de trazer os lanches.",
+        "phonetic_pt": "Uii ólmôust fôrgót tu bríng dhê snáks."
+      },
+      {
+        "en": "It almost feels like summer.",
+        "pt": "Quase parece verão.",
+        "phonetic_pt": "It ólmôust fiils láik sâmêr."
+      }
+    ]
+  },
+  {
+    "id": 261,
+    "rank": 261,
+    "en": "true",
+    "pt": "Verdadeiro (adjetivo)",
+    "phonetic": "/truː/",
+    "phonetic_br": "trúu",
+    "key": "True",
+    "phrases": [
+      {
+        "en": "It's true.",
+        "pt": "É verdade.",
+        "phonetic_pt": "Íts trúu."
+      },
+      {
+        "en": "Is that true?",
+        "pt": "Isso é verdade?",
+        "phonetic_pt": "Íz dhét trúu?"
+      },
+      {
+        "en": "That's so true.",
+        "pt": "Isso é tão verdade.",
+        "phonetic_pt": "Dhêáts sôu trúu."
+      },
+      {
+        "en": "This is a true story.",
+        "pt": "Esta é uma história verdadeira.",
+        "phonetic_pt": "Dhís iz â trúu stôrri."
+      },
+      {
+        "en": "Dreams come true.",
+        "pt": "Sonhos se tornam realidade.",
+        "phonetic_pt": "Driims kâm trúu."
+      },
+      {
+        "en": "She's a true friend.",
+        "pt": "Ela é uma verdadeira amiga.",
+        "phonetic_pt": "Shiiz â trúu frênd."
+      },
+      {
+        "en": "He stayed true to his word.",
+        "pt": "Ele cumpriu sua palavra.",
+        "phonetic_pt": "Hii stêid trúu tuu hiz uêrd."
+      },
+      {
+        "en": "Find your true passion.",
+        "pt": "Encontre sua verdadeira paixão.",
+        "phonetic_pt": "Fáind iôrr trúu péshân."
+      },
+      {
+        "en": "That statement rings true.",
+        "pt": "Essa afirmação soa verdadeira.",
+        "phonetic_pt": "Dhét stêitmênt rríngs trúu."
+      },
+      {
+        "en": "Do you think it's true?",
+        "pt": "Você acha que é verdade?",
+        "phonetic_pt": "Dúu iú thínk íts trúu?"
+      },
+      {
+        "en": "True love lasts forever.",
+        "pt": "O amor verdadeiro dura para sempre.",
+        "phonetic_pt": "Trúu lâv lésts forrêvêrr."
+      },
+      {
+        "en": "It's true to life.",
+        "pt": "É fiel à vida real.",
+        "phonetic_pt": "Íts trúu tuu láif."
+      },
+      {
+        "en": "Tell me the true version.",
+        "pt": "Conte-me a versão verdadeira.",
+        "phonetic_pt": "Tél mii dhâ trúu vêrrshân."
+      },
+      {
+        "en": "He showed his true colors.",
+        "pt": "Ele mostrou suas verdadeiras cores.",
+        "phonetic_pt": "Hii shôud hiz trúu kâlêrrs."
+      },
+      {
+        "en": "We need to find the true cause.",
+        "pt": "Precisamos encontrar a verdadeira causa.",
+        "phonetic_pt": "Uii niid tuu fáind dhâ trúu kóz."
+      },
+      {
+        "en": "This is a true bargain.",
+        "pt": "Isso é uma verdadeira pechincha.",
+        "phonetic_pt": "Dhís iz â trúu bárrgân."
+      },
+      {
+        "en": "Is it true or false?",
+        "pt": "É verdadeiro ou falso?",
+        "phonetic_pt": "Íz ít trúu ôrr fóls?"
+      },
+      {
+        "en": "Stay true to yourself.",
+        "pt": "Seja fiel a si mesmo.",
+        "phonetic_pt": "Stêi trúu tuu iurrsélf."
+      },
+      {
+        "en": "The true meaning of Christmas.",
+        "pt": "O verdadeiro significado do Natal.",
+        "phonetic_pt": "Dhâ trúu miining âv Krísmâs."
+      },
+      {
+        "en": "That's a true classic movie.",
+        "pt": "Esse é um verdadeiro filme clássico.",
+        "phonetic_pt": "Dhêáts â trúu klásik múvii."
+      },
+      {
+        "en": "A true leader inspires others.",
+        "pt": "Um verdadeiro líder inspira os outros.",
+        "phonetic_pt": "Â trúu liidêrr înspáirrrs âdhêrrs."
+      },
+      {
+        "en": "His true intentions were clear.",
+        "pt": "Suas verdadeiras intenções eram claras.",
+        "phonetic_pt": "Hiz trúu înténshânz uêrr kliirr."
+      },
+      {
+        "en": "It's true for most people.",
+        "pt": "É verdade para a maioria das pessoas.",
+        "phonetic_pt": "Íts trúu fôrr môust piipl."
+      },
+      {
+        "en": "My prediction came true.",
+        "pt": "Minha previsão se realizou.",
+        "phonetic_pt": "Mái prêdíkshân kêim trúu."
+      },
+      {
+        "en": "He's a true gentleman.",
+        "pt": "Ele é um verdadeiro cavalheiro.",
+        "phonetic_pt": "Hiiz â trúu jéntlmân."
+      },
+      {
+        "en": "You spoke the true facts.",
+        "pt": "Você disse os fatos verdadeiros.",
+        "phonetic_pt": "Iú spôuk dhâ trúu fékts."
+      },
+      {
+        "en": "The true value of friendship.",
+        "pt": "O verdadeiro valor da amizade.",
+        "phonetic_pt": "Dhâ trúu véliú âv frêndshíp."
+      },
+      {
+        "en": "This is a true reflection of his skill.",
+        "pt": "Esta é uma verdadeira reflexão de sua habilidade.",
+        "phonetic_pt": "Dhís iz â trúu rriflékshân âv hiz skíl."
+      },
+      {
+        "en": "True happiness comes from within.",
+        "pt": "A verdadeira felicidade vem de dentro.",
+        "phonetic_pt": "Trúu hépiinês kâms frrâm uídhín."
+      },
+      {
+        "en": "Only time will tell the true story.",
+        "pt": "Só o tempo dirá a verdadeira história.",
+        "phonetic_pt": "Ôunli táim uíl tél dhâ trúu stôrri."
+      }
+    ]
+  },
+  {
+    "id": 262,
+    "rank": 262,
+    "en": "happy",
+    "pt": "feliz (adjetivo)",
+    "phonetic": "/ˈhæpi/",
+    "phonetic_br": "rápii",
+    "key": "Happy",
+    "phrases": [
+      {
+        "en": "I'm so happy to see you!",
+        "pt": "Estou tão feliz em te ver!",
+        "phonetic_pt": "Áim sôu rápii tchu sii iú!"
+      },
+      {
+        "en": "She looks really happy today.",
+        "pt": "Ela parece muito feliz hoje.",
+        "phonetic_pt": "Shii luks rrêli rápii tudêi."
+      },
+      {
+        "en": "Are you happy with your new car?",
+        "pt": "Você está feliz com seu carro novo?",
+        "phonetic_pt": "Árr iú rápii uidh iúrr niú kârr?"
+      },
+      {
+        "en": "We're all happy for their success.",
+        "pt": "Estamos todos felizes pelo sucesso deles.",
+        "phonetic_pt": "Uírr ól rápii fôrr dhêrr sâksés."
+      },
+      {
+        "en": "He's not happy about the decision.",
+        "pt": "Ele não está feliz com a decisão.",
+        "phonetic_pt": "Riiz nót rápii âbáut dhâ disízhân."
+      },
+      {
+        "en": "This news makes me very happy.",
+        "pt": "Essa notícia me deixa muito feliz.",
+        "phonetic_pt": "Dhís niúz mêiks mii vêri rápii."
+      },
+      {
+        "en": "I'd be happy to help you with that.",
+        "pt": "Eu ficaria feliz em te ajudar com isso.",
+        "phonetic_pt": "Áid bii rápii tchu rélp iú uidh dhét."
+      },
+      {
+        "en": "They had a very happy childhood.",
+        "pt": "Eles tiveram uma infância muito feliz.",
+        "phonetic_pt": "Dhêi rád â vêri rápii cháildrúd."
+      },
+      {
+        "en": "What makes you happy?",
+        "pt": "O que te faz feliz?",
+        "phonetic_pt": "Uát mêiks iú rápii?"
+      },
+      {
+        "en": "I hope you have a happy life.",
+        "pt": "Eu espero que você tenha uma vida feliz.",
+        "phonetic_pt": "Ái rôup iú rráv â rápii láif."
+      },
+      {
+        "en": "She was happy to receive the gift.",
+        "pt": "Ela ficou feliz em receber o presente.",
+        "phonetic_pt": "Shii uás rápii tchu risíiv dhâ guíft."
+      },
+      {
+        "en": "My dog is always happy to see me.",
+        "pt": "Meu cachorro está sempre feliz em me ver.",
+        "phonetic_pt": "Mái dôg iz óluêiz rápii tchu sii mii."
+      },
+      {
+        "en": "Are you a happy person generally?",
+        "pt": "Você é uma pessoa feliz no geral?",
+        "phonetic_pt": "Árr iú â rápii pêrsân djênêrâli?"
+      },
+      {
+        "en": "We were happy to accept their invitation.",
+        "pt": "Ficamos felizes em aceitar o convite deles.",
+        "phonetic_pt": "Uii uêrr rápii tchu âksépt dhêrr invâtêishân."
+      },
+      {
+        "en": "He wished them a happy anniversary.",
+        "pt": "Ele desejou a eles um feliz aniversário.",
+        "phonetic_pt": "Rii uísht dhêm â rápii anivêrsâri."
+      },
+      {
+        "en": "I'm not happy until the job is done.",
+        "pt": "Não estou feliz até que o trabalho esteja feito.",
+        "phonetic_pt": "Áim nót rápii ântíl dhâ djób iz dân."
+      },
+      {
+        "en": "It's important to find what makes you happy.",
+        "pt": "É importante encontrar o que te faz feliz.",
+        "phonetic_pt": "Íts impórtânt tchu fáind uát mêiks iú rápii."
+      },
+      {
+        "en": "They seem very happy together.",
+        "pt": "Eles parecem muito felizes juntos.",
+        "phonetic_pt": "Dhêi siim vêri rápii tugédhârr."
+      },
+      {
+        "en": "I'll be happy to answer any questions.",
+        "pt": "Ficarei feliz em responder a quaisquer perguntas.",
+        "phonetic_pt": "Áil bii rápii tchu énsârr éni kuéstchâns."
+      },
+      {
+        "en": "A happy customer is our top priority.",
+        "pt": "Um cliente feliz é nossa principal prioridade.",
+        "phonetic_pt": "Â rápii kâstâmârr iz áuârr tóp praiórâti."
+      },
+      {
+        "en": "She was happy just to be there.",
+        "pt": "Ela estava feliz apenas por estar lá.",
+        "phonetic_pt": "Shii uás rápii djâst tchu bii dhêrr."
+      },
+      {
+        "en": "He always has a happy demeanor.",
+        "pt": "Ele sempre tem um semblante feliz.",
+        "phonetic_pt": "Rii óluêiz rráz â rápii dimiinârr."
+      },
+      {
+        "en": "We had a happy time on our vacation.",
+        "pt": "Tivemos um tempo feliz em nossas férias.",
+        "phonetic_pt": "Uii rád â rápii táim ôn áuârr vêikêishân."
+      },
+      {
+        "en": "Don't worry, be happy!",
+        "pt": "Não se preocupe, seja feliz!",
+        "phonetic_pt": "Dônt uâri, bii rápii!"
+      },
+      {
+        "en": "I'm genuinely happy for your promotion.",
+        "pt": "Estou genuinamente feliz pela sua promoção.",
+        "phonetic_pt": "Áim djêniúiinli rápii fôrr iúrr promôushân."
+      },
+      {
+        "en": "It makes me happy when I see old friends.",
+        "pt": "Isso me deixa feliz quando vejo velhos amigos.",
+        "phonetic_pt": "Ít mêiks mii rápii uên ái sii ôuld frêndz."
+      },
+      {
+        "en": "Everyone deserves to be happy.",
+        "pt": "Todo mundo merece ser feliz.",
+        "phonetic_pt": "Évriuan dizêrvz tchu bii rápii."
+      },
+      {
+        "en": "The kids were happy playing in the park.",
+        "pt": "As crianças estavam felizes brincando no parque.",
+        "phonetic_pt": "Dhâ kídz uêrr rápii plêiing in dhâ párk."
+      },
+      {
+        "en": "I feel happy and content right now.",
+        "pt": "Eu me sinto feliz e contente agora.",
+        "phonetic_pt": "Ái fiil rápii end kântênt ráit náu."
+      },
+      {
+        "en": "Wishing you a very happy birthday!",
+        "pt": "Desejo a você um feliz aniversário!",
+        "phonetic_pt": "Uíshing iú â vêri rápii bârthdêi!"
+      }
+    ]
+  },
+  {
+    "id": 263,
+    "rank": 263,
+    "en": "bad",
+    "pt": "ruim / mau (adjetivo)",
+    "phonetic": "/bæd/",
+    "phonetic_br": "béd",
+    "key": "bad",
+    "phrases": [
+      {
+        "en": "This food tastes really bad.",
+        "pt": "Esta comida tem um gosto muito ruim.",
+        "phonetic_pt": "Dhís fuud têists rrâli béd."
+      },
+      {
+        "en": "I had a bad day at work.",
+        "pt": "Eu tive um dia ruim no trabalho.",
+        "phonetic_pt": "Ái rád â béd dêi át uêrk."
+      },
+      {
+        "en": "Don't feel bad about it.",
+        "pt": "Não se sinta mal por isso.",
+        "phonetic_pt": "Dônt fiil béd âbáut ít."
+      },
+      {
+        "en": "That was a pretty bad movie.",
+        "pt": "Aquele foi um filme bem ruim.",
+        "phonetic_pt": "Dhét uóz â prríri béd muvii."
+      },
+      {
+        "en": "The weather is really bad today.",
+        "pt": "O tempo está muito ruim hoje.",
+        "phonetic_pt": "Dhâ uédhârr ís rrâli béd tudei."
+      },
+      {
+        "en": "He's a bad influence on her.",
+        "pt": "Ele é uma má influência para ela.",
+        "phonetic_pt": "Hiiz â béd ínfluêns ôn rr."
+      },
+      {
+        "en": "She felt bad for forgetting his birthday.",
+        "pt": "Ela se sentiu mal por esquecer o aniversário dele.",
+        "phonetic_pt": "Shii félt béd fôrr fôrrguéríng rís bârthdei."
+      },
+      {
+        "en": "It's not a bad idea.",
+        "pt": "Não é uma má ideia.",
+        "phonetic_pt": "Íts nót â béd áidia."
+      },
+      {
+        "en": "My internet connection is very bad.",
+        "pt": "Minha conexão de internet está muito ruim.",
+        "phonetic_pt": "Mái íntârrnét kârrnékshin ís vêrri béd."
+      },
+      {
+        "en": "I have a bad feeling about this.",
+        "pt": "Tenho um mau pressentimento sobre isso.",
+        "phonetic_pt": "Ái rráv â béd fiilíng âbáut dhís."
+      },
+      {
+        "en": "The team played a really bad game.",
+        "pt": "O time jogou uma partida muito ruim.",
+        "phonetic_pt": "Dhâ tiim plêid â rrâli béd guêim."
+      },
+      {
+        "en": "This milk smells bad.",
+        "pt": "Este leite cheira mal.",
+        "phonetic_pt": "Dhís mílk sméls béd."
+      },
+      {
+        "en": "Is it a bad time to talk?",
+        "pt": "É uma hora ruim para conversar?",
+        "phonetic_pt": "Íz ít â béd táim tuu tóók?"
+      },
+      {
+        "en": "He got a bad grade on the test.",
+        "pt": "Ele tirou uma nota ruim na prova.",
+        "phonetic_pt": "Hii gót â béd grêid ôn dhâ tést."
+      },
+      {
+        "en": "That neighborhood has a bad reputation.",
+        "pt": "Aquele bairro tem uma má reputação.",
+        "phonetic_pt": "Dhét nêibârrruud rráz â béd rêpiutêishân."
+      },
+      {
+        "en": "I'm having a bad hair day.",
+        "pt": "Estou com um dia de cabelo ruim.",
+        "phonetic_pt": "Áim rrávíng â béd rrér dêi."
+      },
+      {
+        "en": "Don't let one bad experience ruin it for you.",
+        "pt": "Não deixe uma experiência ruim estragar tudo para você.",
+        "phonetic_pt": "Dônt lét uân béd êkspíriêns rruín ít fôrr iú."
+      },
+      {
+        "en": "They made a bad decision.",
+        "pt": "Eles tomaram uma má decisão.",
+        "phonetic_pt": "Dhei mêid â béd disízhen."
+      },
+      {
+        "en": "My back is really bad after the workout.",
+        "pt": "Minhas costas estão muito ruins depois do treino.",
+        "phonetic_pt": "Mái bék ís rrâli béd áftârr dhâ uêrkáut."
+      },
+      {
+        "en": "It's too bad you can't come.",
+        "pt": "É uma pena que você não possa vir.",
+        "phonetic_pt": "Íts tuu béd iú ként kâm."
+      },
+      {
+        "en": "What's so bad about that?",
+        "pt": "O que há de tão ruim nisso?",
+        "phonetic_pt": "Uáts sou béd âbáut dhét?"
+      },
+      {
+        "en": "He's not a bad guy, just misunderstood.",
+        "pt": "Ele não é uma pessoa ruim, apenas incompreendido.",
+        "phonetic_pt": "Hiiz nót â béd gái, djâst mísândârrstuud."
+      },
+      {
+        "en": "The economy is in a bad state.",
+        "pt": "A economia está em um mau estado.",
+        "phonetic_pt": "Dhâ ikónâmii ís ín â béd stêit."
+      },
+      {
+        "en": "I woke up with a bad headache.",
+        "pt": "Acordei com uma dor de cabeça forte.",
+        "phonetic_pt": "Ái uôuk âp uíth â béd rrédêik."
+      },
+      {
+        "en": "That was a bad call by the referee.",
+        "pt": "Aquilo foi uma má decisão do árbitro.",
+        "phonetic_pt": "Dhét uóz â béd kóól bái dhâ rrêfârrrii."
+      },
+      {
+        "en": "This cough sounds pretty bad.",
+        "pt": "Essa tosse parece bem ruim.",
+        "phonetic_pt": "Dhís kóóf sáundz prríri béd."
+      },
+      {
+        "en": "She's in a bad mood today.",
+        "pt": "Ela está de mau humor hoje.",
+        "phonetic_pt": "Shiiz ín â béd muud tudei."
+      },
+      {
+        "en": "We had some really bad luck.",
+        "pt": "Tivemos muito azar.",
+        "phonetic_pt": "Uii rád sâm rrâli béd lâk."
+      },
+      {
+        "en": "It's a bad habit to bite your nails.",
+        "pt": "É um mau hábito roer as unhas.",
+        "phonetic_pt": "Íts â béd rrápít tuu báit iôrr nêils."
+      },
+      {
+        "en": "The service at that restaurant was consistently bad.",
+        "pt": "O serviço daquele restaurante era consistentemente ruim.",
+        "phonetic_pt": "Dhâ sêrrvís át dhét rrêstârrónt uóz kânsístântli béd."
+      }
+    ]
+  },
+  {
+    "id": 264,
+    "rank": 264,
+    "en": "important",
+    "pt": "importante (adjetivo)",
+    "phonetic": "/ɪmˈpɔːrtənt/",
+    "phonetic_br": "im-pôrr-tânt",
+    "key": "Important",
+    "phrases": [
+      {
+        "en": "It's important to stay hydrated, especially in summer.",
+        "pt": "É importante manter-se hidratado, especialmente no verão.",
+        "phonetic_pt": "Its im-pôrr-tânt tâ stêi ráidrêirêd, ê-spé-shâ-lii in sâm-êrr."
+      },
+      {
+        "en": "Learning a new language can be very important for your career.",
+        "pt": "Aprender um novo idioma pode ser muito importante para sua carreira.",
+        "phonetic_pt": "Lêrr-nîng ê niú lân-guêdj kân bii vê-rii im-pôrr-tânt fôrr iôrr kâ-rí-êrr."
+      },
+      {
+        "en": "Family is the most important thing to me.",
+        "pt": "A família é a coisa mais importante para mim.",
+        "phonetic_pt": "Fá-mâ-lii iz dhâ môust im-pôrr-tânt thîng tu mii."
+      },
+      {
+        "en": "Don't forget that your opinion is important.",
+        "pt": "Não se esqueça que sua opinião é importante.",
+        "phonetic_pt": "Dôunt fôrr-guét dhât iôrr ô-pín-iân iz im-pôrr-tânt."
+      },
+      {
+        "en": "It's important to finish this report by Friday.",
+        "pt": "É importante terminar este relatório até sexta-feira.",
+        "phonetic_pt": "Its im-pôrr-tânt tâ fîn-ish dhís rri-pôrt bái fráid-êi."
+      },
+      {
+        "en": "Communication is key, it's very important in any relationship.",
+        "pt": "A comunicação é fundamental, é muito importante em qualquer relacionamento.",
+        "phonetic_pt": "Kâ-miu-nî-kêi-shân iz kii, its vê-rii im-pôrr-tânt in ê-nii rri-lêi-shân-shîp."
+      },
+      {
+        "en": "Was it important that you arrived early?",
+        "pt": "Foi importante que você chegasse cedo?",
+        "phonetic_pt": "Uâz it im-pôrr-tânt dhât iú âr-ráivd êrr-lii?"
+      },
+      {
+        "en": "What's the most important advice you've ever received?",
+        "pt": "Qual é o conselho mais importante que você já recebeu?",
+        "phonetic_pt": "Uâts dhâ môust im-pôrr-tânt âd-váis iúv ê-vêrr rri-síivd?"
+      },
+      {
+        "en": "It's important to vote in every election.",
+        "pt": "É importante votar em todas as eleições.",
+        "phonetic_pt": "Its im-pôrr-tânt tâ vôut in ê-vrii î-lék-shân."
+      },
+      {
+        "en": "He made an important discovery yesterday.",
+        "pt": "Ele fez uma descoberta importante ontem.",
+        "phonetic_pt": "Hii mêid ân im-pôrr-tânt dîs-kâv-ê-rii iés-têrr-dêi."
+      },
+      {
+        "en": "How important is it to save money for retirement?",
+        "pt": "Quão importante é economizar dinheiro para a aposentadoria?",
+        "phonetic_pt": "Ráu im-pôrr-tânt iz it tâ sêiv mâ-nii fôrr rri-táir-mênt?"
+      },
+      {
+        "en": "Getting enough sleep is incredibly important for your health.",
+        "pt": "Dormir o suficiente é incrivelmente importante para sua saúde.",
+        "phonetic_pt": "Guét-îng i-nâf sliip iz în-kréd-â-blii im-pôrr-tânt fôrr iôrr hélth."
+      },
+      {
+        "en": "This is an important step towards our goal.",
+        "pt": "Este é um passo importante em direção ao nosso objetivo.",
+        "phonetic_pt": "Dhís iz ân im-pôrr-tânt stêp tô-uêrrds áu-êrr gôul."
+      },
+      {
+        "en": "It's important to respect different cultures.",
+        "pt": "É importante respeitar diferentes culturas.",
+        "phonetic_pt": "Its im-pôrr-tânt tâ rri-spékt dif-rênt kâl-tchêrrz."
+      },
+      {
+        "en": "She has an important meeting this afternoon.",
+        "pt": "Ela tem uma reunião importante esta tarde.",
+        "phonetic_pt": "Shii hâz ân im-pôrr-tânt mii-tîng dhís áf-têrr-nuun."
+      },
+      {
+        "en": "Is it really that important?",
+        "pt": "É realmente tão importante assim?",
+        "phonetic_pt": "Iz it rrí-â-lii dhât im-pôrr-tânt?"
+      },
+      {
+        "en": "They made an important decision for the company's future.",
+        "pt": "Eles tomaram uma decisão importante para o futuro da empresa.",
+        "phonetic_pt": "Dhêi mêid ân im-pôrr-tânt dî-sí-zhân fôrr dhâ kâm-pâ-niis fiú-tchêrr."
+      },
+      {
+        "en": "It's important to always read the instructions.",
+        "pt": "É importante sempre ler as instruções.",
+        "phonetic_pt": "Its im-pôrr-tânt tâ ól-uêiz rriid dhî în-strâk-shânz."
+      },
+      {
+        "en": "Health is more important than wealth.",
+        "pt": "A saúde é mais importante que a riqueza.",
+        "phonetic_pt": "Hélth iz môrr im-pôrr-tânt dhân uélth."
+      },
+      {
+        "en": "He considers his dog a very important member of the family.",
+        "pt": "Ele considera seu cachorro um membro muito importante da família.",
+        "phonetic_pt": "Hii kân-sîd-êrrz hiz dôg ê vê-rii im-pôrr-tânt mêm-bêrr âv dhâ fá-mâ-lii."
+      },
+      {
+        "en": "It's important to be kind to strangers.",
+        "pt": "É importante ser gentil com estranhos.",
+        "phonetic_pt": "Its im-pôrr-tânt tâ bii káind tâ strêin-jêrrz."
+      },
+      {
+        "en": "This information is highly important.",
+        "pt": "Esta informação é altamente importante.",
+        "phonetic_pt": "Dhís în-fôrr-mêi-shân iz rrái-lii im-pôrr-tânt."
+      },
+      {
+        "en": "What's the most important thing you learned today?",
+        "pt": "Qual é a coisa mais importante que você aprendeu hoje?",
+        "phonetic_pt": "Uâts dhâ môust im-pôrr-tânt thîng iú lêrrnd tâ-dêi?"
+      },
+      {
+        "en": "It was an important day for science.",
+        "pt": "Foi um dia importante para a ciência.",
+        "phonetic_pt": "It uâz ân im-pôrr-tânt dêi fôrr sái-êns."
+      },
+      {
+        "en": "It's important to set realistic goals.",
+        "pt": "É importante definir metas realistas.",
+        "phonetic_pt": "Its im-pôrr-tânt tâ set rrí-â-lís-tik gôulz."
+      },
+      {
+        "en": "Your support is very important to us.",
+        "pt": "Seu apoio é muito importante para nós.",
+        "phonetic_pt": "Iôrr sâ-pôrt iz vê-rii im-pôrr-tânt tu âs."
+      },
+      {
+        "en": "Making mistakes is an important part of learning.",
+        "pt": "Cometer erros é uma parte importante do aprendizado.",
+        "phonetic_pt": "Mêik-îng mîs-têiks iz ân im-pôrr-tânt pârt âv lêrr-nîng."
+      },
+      {
+        "en": "Is punctuality important in your culture?",
+        "pt": "A pontualidade é importante na sua cultura?",
+        "phonetic_pt": "Iz pânk-tchu-á-lâ-tii im-pôrr-tânt in iôrr kâl-tchêrr?"
+      },
+      {
+        "en": "The manager said it was important to be on time.",
+        "pt": "O gerente disse que era importante ser pontual.",
+        "phonetic_pt": "Dhâ mân-â-jêrr sed it uâz im-pôrr-tânt tâ bii ân táim."
+      },
+      {
+        "en": "Having a clear purpose is important for motivation.",
+        "pt": "Ter um propósito claro é importante para a motivação.",
+        "phonetic_pt": "Háv-îng ê klírr pârr-pâs iz im-pôrr-tânt fôrr môu-tâ-vêi-shân."
       }
     ]
   }

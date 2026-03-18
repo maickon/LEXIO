@@ -43,6 +43,7 @@ const Pages = (() => {
     }
 
     UI.updateSidebar();
+    UI.renderEngagement('engagement-indicator');
   }
 
   // ══════════════════════════════════════════════
@@ -83,7 +84,7 @@ const Pages = (() => {
     // Monta estrutura sem as imagens primeiro
     container.innerHTML = `
       <div class="learn-wrap">
-        ${_wordHero(word)}
+        ${_wordHero(word, phrases)}
         <div id="img-grid-placeholder"></div>
         ${_phraseSection(word, phrases)}
         ${_habitBox(habit)}
@@ -106,9 +107,9 @@ const Pages = (() => {
     });
   }
 
-  function _wordHero(w) {
+  function _wordHero(w, phrases) {
     const escaped = w.en.replace(/'/g, "\\'");
-    const allPhrases = JSON.stringify(w.phrases.map(p => p.en)).replace(/"/g, '&quot;');
+    const allPhrases = JSON.stringify(phrases.map(p => p.en)).replace(/"/g, '&quot;');
     const phonetic = `
     <span class="phonetic-badge">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7"><path d="M12 3a9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 9-9m0 2a7 7 0 0 0-7 7 7 7 0 0 0 7 7 7 7 0 0 0 7-7 7 7 0 0 0-7-7m1 3v3.586l2.707 2.707-1.414 1.414L11 13.414V8h2z"/><path d="M9 7c0-.552.448-1 1-1s1 .448 1 1v1H9V7z" style="display:none"/></svg>
@@ -240,7 +241,39 @@ const Pages = (() => {
   }
 
   async function _playAll(phrases) {
-    await Audio.speakSequence(phrases, 800);
+    const cards = document.querySelectorAll('.phrase-card');
+
+    const highlight = (i) => {
+        cards.forEach((c, idx) => {
+            const isActive = idx === i;
+            c.style.transition  = 'opacity 0.2s, box-shadow 0.2s';
+            c.style.opacity     = isActive ? '1' : '0.35';
+            c.style.boxShadow   = isActive ? '0 0 0 1px var(--cyan)' : 'none';
+
+            const en = c.querySelector('.phrase-en');
+            const ph = c.querySelector('.phrase-phonetic');
+            if (en) en.style.color = isActive ? 'var(--white)' : '';
+            if (ph) ph.style.color = isActive ? 'var(--cyan)'  : '';
+
+            if (isActive) {
+                c.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    };
+
+    const reset = () => {
+        cards.forEach(c => {
+            c.style.opacity   = '1';
+            c.style.boxShadow = 'none';
+            const en = c.querySelector('.phrase-en');
+            const ph = c.querySelector('.phrase-phonetic');
+            if (en) en.style.color = '';
+            if (ph) ph.style.color = '';
+        });
+    };
+
+    await Audio.speakSequence(phrases, 600, highlight);
+    reset();
   }
 
   function markLearned(wordId) {

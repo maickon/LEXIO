@@ -73,7 +73,6 @@ const UI = (() => {
     const pg = document.querySelector(`[data-page="${name}"]`);
     if (pg) {
       pg.style.display = 'block';
-      // reset scroll
       pg.scrollTop = 0;
       const pageContent = document.querySelector('.page-content');
       if (pageContent) pageContent.scrollTop = 0;
@@ -96,15 +95,123 @@ const UI = (() => {
     });
   }
 
+  // ── ENGAGEMENT INDICATOR ─────────────────────────
+  const _engagement = {
+    hot:     { icon: '🔥', label: 'VOCÊ ESTÁ EM CHAMAS',     color: '#ff6b00', bg: 'rgba(255,107,0,0.08)',  border: 'rgba(255,107,0,0.25)' },
+    warm:    { icon: '⚡', label: 'RITMO FORTE',              color: '#ffdd00', bg: 'rgba(255,221,0,0.06)',  border: 'rgba(255,221,0,0.2)'  },
+    active:  { icon: '✅', label: 'ESTUDANDO HOJE',           color: '#00ff88', bg: 'rgba(0,255,136,0.06)', border: 'rgba(0,255,136,0.2)'  },
+    cooling: { icon: '🌤️', label: 'ESFRIANDO — VOLTE AMANHÃ', color: '#00f5ff', bg: 'rgba(0,245,255,0.05)', border: 'rgba(0,245,255,0.15)' },
+    cold:    { icon: '❄️', label: 'FRIO — RETOME O HÁBITO',   color: '#a78bfa', bg: 'rgba(167,139,250,0.06)', border: 'rgba(167,139,250,0.2)' },
+    frozen:  { icon: '💀', label: 'INATIVO — RECOMECE AGORA', color: '#ff00aa', bg: 'rgba(255,0,170,0.06)', border: 'rgba(255,0,170,0.2)'  },
+  };
+
+  function _engagementSubtext(level, s) {
+    const days = State.daysSinceLastActive();
+    switch (level) {
+      case 'hot':
+        return `${s.streak} dias seguidos · ${s.totalSessions} sessões no total`;
+      case 'warm':
+        return `${s.streak} dias consecutivos · continue assim`;
+      case 'active':
+        return `Streak atual: ${s.streak} dia${s.streak !== 1 ? 's' : ''} · ${s.totalSessions} sessões no total`;
+      case 'cooling':
+        return `Último acesso ontem · streak em risco`;
+      case 'cold':
+        return `${days} dias sem estudar · streak zerado`;
+      case 'frozen':
+        return `${days} dias de inatividade · cada dia conta`;
+      default:
+        return '';
+    }
+  }
+
+  function renderEngagement(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const s     = State.get();
+    const level = State.engagementLevel();
+    const cfg   = _engagement[level];
+    const sub   = _engagementSubtext(level, s);
+
+    container.innerHTML = '';
+
+    const card = document.createElement('div');
+    card.style.cssText = `
+      display:flex;align-items:center;gap:14px;
+      background:${cfg.bg};
+      border:1px solid ${cfg.border};
+      border-radius:12px;
+      padding:14px 16px;
+    `;
+
+    // Ícone
+    const icon = document.createElement('div');
+    icon.style.cssText = 'font-size:1.6rem;flex-shrink:0;line-height:1';
+    icon.textContent = cfg.icon;
+    card.appendChild(icon);
+
+    // Textos
+    const texts = document.createElement('div');
+    texts.style.cssText = 'flex:1;min-width:0';
+
+    const label = document.createElement('div');
+    label.style.cssText = `
+      font-family:var(--font-display);font-size:0.72rem;font-weight:700;
+      color:${cfg.color};letter-spacing:0.1em;margin-bottom:3px;
+    `;
+    label.textContent = cfg.label;
+
+    const subtext = document.createElement('div');
+    subtext.style.cssText = 'font-size:0.78rem;color:rgba(236,238,255,0.5);';
+    subtext.textContent = sub;
+
+    texts.appendChild(label);
+    texts.appendChild(subtext);
+    card.appendChild(texts);
+
+    // Mini stats lado direito
+    const stats = document.createElement('div');
+    stats.style.cssText = `
+      display:flex;flex-direction:column;align-items:flex-end;
+      gap:4px;flex-shrink:0;
+    `;
+
+    const statStreak = document.createElement('div');
+    statStreak.style.cssText = `
+      font-family:var(--font-mono);font-size:0.65rem;
+      color:${cfg.color};white-space:nowrap;
+    `;
+    statStreak.textContent = `🔥 ${s.streak}d streak`;
+
+    const statSessions = document.createElement('div');
+    statSessions.style.cssText = `
+      font-family:var(--font-mono);font-size:0.62rem;
+      color:rgba(236,238,255,0.3);white-space:nowrap;
+    `;
+    statSessions.textContent = `${s.totalSessions || 1} sessões`;
+
+    stats.appendChild(statStreak);
+    stats.appendChild(statSessions);
+    card.appendChild(stats);
+
+    container.appendChild(card);
+  }
+
   // ── SIDEBAR STATS ────────────────────────────────
   function updateSidebar() {
     const s = State.get();
     const el = (id) => document.getElementById(id);
-    if (el('sb-streak'))  el('sb-streak').textContent  = s.streak + 'd';
-    if (el('sb-mastered')) el('sb-mastered').textContent = s.mastered.length;
-    if (el('sb-total'))   el('sb-total').textContent   = WORDS_DB.length;
-    if (el('topbar-streak'))  el('topbar-streak').textContent  = s.streak;
+    if (el('sb-streak'))       el('sb-streak').textContent       = s.streak + 'd';
+    if (el('sb-mastered'))     el('sb-mastered').textContent     = s.mastered.length;
+    if (el('sb-total'))        el('sb-total').textContent        = WORDS_DB.length;
+    if (el('topbar-streak'))   el('topbar-streak').textContent   = s.streak;
     if (el('topbar-mastered')) el('topbar-mastered').textContent = s.mastered.length;
+
+    // Atualiza indicador de engajamento se estiver visível
+    if (document.getElementById('engagement-indicator')) {
+      renderEngagement('engagement-indicator');
+    }
   }
 
   // ── MODAL DE LICENÇA EXPIRADA ─────────────────────
@@ -119,7 +226,6 @@ const UI = (() => {
       day: '2-digit', month: 'long', year: 'numeric'
     });
 
-    // ── Overlay
     const modal = document.createElement('div');
     modal.id = 'expired-modal';
     modal.style.cssText = `
@@ -129,7 +235,6 @@ const UI = (() => {
       backdrop-filter:blur(6px);animation:fadeIn 0.25s ease;
     `;
 
-    // ── Card
     const card = document.createElement('div');
     card.style.cssText = `
       background:var(--panel);border:1px solid var(--border);
@@ -137,12 +242,10 @@ const UI = (() => {
       position:relative;overflow:hidden;
     `;
 
-    // ── Barra topo
     const topBar = document.createElement('div');
     topBar.style.cssText = 'height:3px;background:linear-gradient(90deg,var(--magenta),var(--yellow))';
     card.appendChild(topBar);
 
-    // ── Botão fechar
     const btnClose = document.createElement('button');
     btnClose.textContent = '✕';
     btnClose.style.cssText = `
@@ -154,11 +257,9 @@ const UI = (() => {
     btnClose.addEventListener('click', () => modal.remove());
     card.appendChild(btnClose);
 
-    // ── Corpo com padding
     const body = document.createElement('div');
     body.style.cssText = 'padding:28px 24px 24px';
 
-    // ── Ícone + título
     const titulo = document.createElement('div');
     titulo.innerHTML = `
       <div style="font-size:2rem;margin-bottom:10px">⏳</div>
@@ -169,7 +270,6 @@ const UI = (() => {
     `;
     body.appendChild(titulo);
 
-    // ── Info datas
     const infoDatas = document.createElement('div');
     infoDatas.style.cssText = `
       background:rgba(255,255,255,0.03);border:1px solid var(--border);
@@ -194,7 +294,6 @@ const UI = (() => {
     `;
     body.appendChild(infoDatas);
 
-    // ── Mensagem motivacional
     const motivacao = document.createElement('div');
     motivacao.style.cssText = `
       border-left:3px solid var(--yellow);padding:12px 14px;
@@ -212,7 +311,6 @@ const UI = (() => {
     `;
     body.appendChild(motivacao);
 
-    // ── Botão renovar
     const btnRenovar = document.createElement('a');
     btnRenovar.href   = LEXIO_CONFIG.license.buyUrl;
     btnRenovar.target = '_blank';
@@ -241,7 +339,6 @@ const UI = (() => {
     });
     body.appendChild(btnRenovar);
 
-    // ── Rodapé
     const rodape = document.createElement('div');
     rodape.style.cssText = `
       text-align:center;margin-top:12px;
@@ -253,16 +350,20 @@ const UI = (() => {
     `;
     body.appendChild(rodape);
 
-    // ── Monta hierarquia
     card.appendChild(body);
     modal.appendChild(card);
     document.body.appendChild(modal);
 
-    // Fecha ao clicar no fundo
     modal.addEventListener('click', e => {
       if (e.target === modal) modal.remove();
     });
   }
-  
-  return { toast, confetti, spawnParticles, showScreen, showPage, updateSpeedUI, updateSidebar, showExpiredModal };
+
+  return {
+    toast, confetti, spawnParticles,
+    showScreen, showPage,
+    updateSpeedUI, updateSidebar,
+    renderEngagement,
+    showExpiredModal
+  };
 })();

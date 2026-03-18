@@ -334,7 +334,7 @@ body::before {
   background:var(--panel);
   border:1px solid var(--border);
   border-radius:var(--radius);
-  padding:24px 20px; margin-bottom:16px;
+  padding:24px 20px; margin-bottom:10px;
   position:relative; overflow:hidden;
 }
 .evo-header::before {

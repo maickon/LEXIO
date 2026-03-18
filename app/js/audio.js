@@ -26,10 +26,11 @@ const Audio = (() => {
     window.speechSynthesis.speak(utter);
   }
 
-  async function speakSequence(texts, delayMs = 700) {
-    for (const t of texts) {
+  async function speakSequence(texts, delayMs = 700, onEachStart = null) {
+    for (let i = 0; i < texts.length; i++) {
+      if (onEachStart) onEachStart(i);
       await new Promise(res => {
-        const utter = new SpeechSynthesisUtterance(t);
+        const utter = new SpeechSynthesisUtterance(texts[i]);
         utter.lang  = 'en-US';
         utter.rate  = State.get().speed;
         utter.onend = () => setTimeout(res, delayMs);
