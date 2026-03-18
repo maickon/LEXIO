@@ -2,13 +2,13 @@
   "name": "LEXIO — English Mastery",
   "short_name": "LEXIO",
   "description": "Domine o inglês aprendendo as palavras mais usadas do idioma.",
-  "start_url": "/",
+  "start_url": "https://maickon.github.io/LEXIO/app/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#050508",
   "theme_color": "#050508",
   "lang": "pt-BR",
-  "scope": "https://maickon.github.io/LEXIO/",
+  "scope": "https://maickon.github.io/LEXIO/app/",
   "icons": [
     {
       "src": "icons/icon-192.png",
