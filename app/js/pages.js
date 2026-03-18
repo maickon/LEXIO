@@ -14,14 +14,14 @@ const Pages = (() => {
     const pct      = Math.round((mastered / total) * 100);
     const inProg   = Object.keys(s.inProgress).length;
 
-    _set('evo-big-num',    mastered);
-    _set('evo-in-prog',    inProg);
-    _set('evo-remaining',  s.queue.length);
-    _set('evo-streak',     s.streak + ' 🔥');
-    _set('evo-mastered',   mastered);
-    _set('evo-inprog2',    inProg);
-    _set('evo-tests',      s.totalTests);
-    _set('evo-pct',        pct + '%');
+    Helper._set('evo-big-num',    mastered);
+    Helper._set('evo-in-prog',    inProg);
+    Helper._set('evo-remaining',  s.queue.length);
+    Helper._set('evo-streak',     s.streak + ' 🔥');
+    Helper._set('evo-mastered',   mastered);
+    Helper._set('evo-inprog2',    inProg);
+    Helper._set('evo-tests',      s.totalTests);
+    Helper._set('evo-pct',        pct + '%');
 
     // ring
     const ring = document.getElementById('ring-fill');
@@ -54,7 +54,7 @@ const Pages = (() => {
     const available = WORDS_DB.filter(w => State.queueIds().includes(w.id));
 
     if (available.length === 0) {
-      container.innerHTML = _emptyState(
+      container.innerHTML = Helper._emptyState(
         'LEXIO',
         'TODAS AS PALAVRAS ESTUDADAS!',
         'Vá para Testes para dominar o vocabulário e alcançar 100%.'
@@ -196,7 +196,7 @@ const Pages = (() => {
       const esc = p.en.replace(/'/g, "\\'");
       const highlighted = w.key
       ? p.en.replace(
-          new RegExp('\\b(' + escapeRegex(w.key) + ')\\b', 'i'),
+          new RegExp('\\b(' + Helper._escapeRegex(w.key) + ')\\b', 'i'),
           '<span class="key">$1</span>'
         )
       : p.en;
@@ -273,7 +273,7 @@ const Pages = (() => {
     const ids = State.inProgressIds();
 
     if (ids.length === 0) {
-      container.innerHTML = _emptyState(
+      container.innerHTML = Helper._emptyState(
         '◎',
         'NADA PARA TESTAR',
         'Marque palavras como aprendidas na seção de Aprendizado primeiro.'
@@ -388,7 +388,7 @@ const Pages = (() => {
 
       UI.updateSidebar();
       playFeedback('success', ({ msg, pt }) => {
-        _showSystemMessage(fb, msg, pt);
+        Helper._showSystemMessage(fb, msg, pt);
       }).then(() => {
         setTimeout(() => {
           if (isMastered && State.isAllMastered()) {
@@ -406,7 +406,7 @@ const Pages = (() => {
       State.addTestResult(_testWordId, false);
       UI.updateSidebar();
       playFeedback('error', ({ msg, pt }) => {
-        _showSystemMessage(fb, msg, pt);
+        Helper._showSystemMessage(fb, msg, pt);
       });
     }
   }
@@ -422,46 +422,6 @@ const Pages = (() => {
     UI.confetti(60);
   }
 
-  // ── HELPERS ──────────────────────────────────────
-  function _set(id, val) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = val;
-  }
-
-  function _emptyState(icon, title, sub) {
-    return `<div class="empty-state"><div class="empty-icon">${icon}</div><div class="empty-title">${title}</div><div class="empty-sub">${sub}</div></div>`;
-  }
-
-  function escapeRegex(s) {
-    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  }
-
-  function _showSystemMessage(container, msg, pt) {
-    const box = document.createElement('div');
-    box.style.cssText = `
-      margin-top: 14px;
-      padding: 12px 14px;
-      background: rgba(0,245,255,0.04);
-      border: 1px solid rgba(0,245,255,0.15);
-      border-left: 3px solid var(--cyan);
-      border-radius: 0 6px 6px 0;
-      animation: fadeUp 0.3s ease both;
-    `;
-    box.innerHTML = `
-      <div style="font-family:var(--font-mono);font-size:0.55rem;color:var(--cyan);
-                  letter-spacing:0.2em;margin-bottom:6px;display:flex;align-items:center;gap:6px">
-        <span>◈</span> SYSTEM MESSAGE
-      </div>
-      <div style="font-size:0.92rem;color:var(--white);line-height:1.5;margin-bottom:4px">
-        ${msg}
-      </div>
-      <div style="font-size:0.78rem;color:rgba(236,238,255,0.45);font-style:italic">
-        ${pt}
-      </div>
-    `;
-    container.appendChild(box);
-  }
-
   function fuel() {
     Books.render();
   }
@@ -470,6 +430,5 @@ const Pages = (() => {
     evolution, learn, test, fuel,   // ← adicione fuel aqui
     markLearned, nextWord, checkTest,
     _playTest, _playAll,
-    _showSystemMessage
   };
 })();

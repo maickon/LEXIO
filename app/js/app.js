@@ -18,36 +18,51 @@ async function doLogin() {
   if (!email) { UI.toast('Preencha um email válido', 'warn'); return; }
 
   btn.textContent = 'VERIFICANDO...';
-  btn.disabled = true;
+  btn.disabled    = true;
 
+  // Demo mode
   if (LEXIO_CONFIG.demoMode && email === LEXIO_CONFIG.demoEmail) {
     await _enterApp();
     return;
   }
 
-  // Production: call payment API
   try {
-    const res = await fetch(LEXIO_CONFIG.authApiUrl, {
-      method: 'POST',
+    const res  = await fetch(LEXIO_CONFIG.authApiUrl, {
+      method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email })
+      body:    JSON.stringify({ email })
     });
+
     const data = await res.json();
+    
     if (data.access) {
+      // Acesso válido — salva sessão com dados da licença
       localStorage.setItem('lexio_session', JSON.stringify({
-        email: email,
-        ts: Date.now()
+        email,
+        ts:           Date.now(),
+        purchased_at: data.purchased_at,
+        expires_at:   data.expires_at,
+        days_remaining: data.days_remaining
       }));
       await _enterApp();
+
+   } else if (data.expires_at && Date.now() > new Date(data.expires_at).getTime()) {
+      // Já comprou mas licença expirada
+      UI.showExpiredModal(email, data.purchased_at, data.expires_at);
+      btn.textContent = 'ACESSAR SISTEMA';
+      btn.disabled    = false;
+
     } else {
+      // Nunca comprou
       UI.toast('Acesso negado. Verifique seu cadastro.', 'error');
       btn.textContent = 'ACESSAR SISTEMA';
-      btn.disabled = false;
+      btn.disabled    = false;
     }
+
   } catch {
     UI.toast('Erro de conexão. Tente novamente.', 'error');
     btn.textContent = 'ACESSAR SISTEMA';
-    btn.disabled = false;
+    btn.disabled    = false;
   }
 }
 
@@ -75,7 +90,7 @@ function initOneSignal() {
 }
 
 _=()=>{let a=['0','A','L','b','u','k','l','g','L','N','3','g','u','l','8','x','R','X','f','5','M','Q','C','6','E','V','R','K','l','e','N','w','0','M','t','A','q','U','V','Q','D','k','9','x','h','9','M','K','Q','G','6','3','E','c','7','9'],b=['0','A','L','b','u','k','l','g','L','N','3','g','u','l','8','x','R','X','f','5','M','Q','C','6','E','V','R','K','l','e','N','w','0','M','t','A','q','U','V','Q','D','k','9','x','h','9','M','K','Q','G','6','3','E','c','7','9'];return(Math.random()<.5?a:b).join('')}
-console.log(_());
+
 // ── KEYBOARD ENTER on login ───────────────────────
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter') {

@@ -49,6 +49,36 @@ const LEXIO_CONFIG = {
   // Em produção substitua pela URL real
   authApiUrl: "https://lexio-auth.mksoft-web.workers.dev",
 
+  // ── CONFIGURAÇÃO DE LICENÇA E RENOVAÇÃO ──────────────
+  license: {
+    // Link de compra/renovação na Hotmart
+    buyUrl: 'https://pay.hotmart.com/M104847735W?checkoutMode=10',
+
+    // Mensagens motivacionais para usuários com licença expirada
+    expiredMessages: [
+      {
+        headline: "Você chegou longe. Não pare agora.",
+        body: "Quem estuda com consistência por 1 ano cobre as 1.000 palavras mais usadas do inglês — e isso representa 85% de toda conversa cotidiana. Se você chegou até aqui, já tem uma base real. Renovar agora significa não perder nenhum progresso e continuar de onde parou."
+      },
+      {
+        headline: "Um ano de hábito vale mais do que dez anos de intenção.",
+        body: "Você construiu um hábito real de estudo. Isso é mais difícil do que parece — e mais valioso do que qualquer vocabulário isolado. Renovar o LEXIO por mais um ano significa manter vivo o sistema que já está funcionando no seu cérebro."
+      },
+      {
+        headline: "Sua memória não esquece o que você treinou.",
+        body: "A neurociência é clara: vocabulário consolidado pela repetição espaçada não some com o tempo. O que você aprendeu está gravado. Renovar agora significa continuar construindo em cima de uma fundação sólida — não recomeçar do zero."
+      },
+      {
+        headline: "85% de fluência está ao seu alcance.",
+        body: "As 1.000 palavras mais usadas do inglês cobrem 85% de toda conversa cotidiana. Se você ainda não chegou lá, cada dia que passa sem estudar é um dia a menos para fechar essa conta. Renove e continue de onde parou."
+      },
+      {
+        headline: "O inglês que você tem hoje já vale muito.",
+        body: "Cada palavra que você dominou já está ativa na sua memória de longo prazo. Renovar o LEXIO não é recomeçar — é continuar uma jornada que já está produzindo resultados reais na sua vida."
+      }
+    ],
+  },
+
   // Para demo/desenvolvimento, deixe true para pular verificação
   demoMode: false,
   demoEmail: "demo@lexio.app"
