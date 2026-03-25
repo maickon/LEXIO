@@ -79,7 +79,7 @@ const LEXIO_CONFIG = {
     ],
   },
 
-  devMode: true,
+  devMode: false,
   // Para demo/desenvolvimento, deixe true para pular verificação
   demoMode: false,
   demoEmail: "demo@lexio.app"
