@@ -195,9 +195,9 @@ const Pages = (() => {
   function _phraseSection(w, phrases) {
     const items = phrases.map(p => {
       const esc = p.en.replace(/'/g, "\\'");
-      const highlighted = w.key
+      const highlighted = p.key
       ? p.en.replace(
-          new RegExp('\\b(' + Helper._escapeRegex(w.key) + ')\\b', 'i'),
+          new RegExp('\\b(' + Helper._escapeRegex(p.key) + ')\\b', 'i'),
           '<span class="key">$1</span>'
         )
       : p.en;
