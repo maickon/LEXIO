@@ -47,7 +47,7 @@ const LEXIO_CONFIG = {
   // ── AUTENTICAÇÃO ─────────────────────────────────
   // URL da sua API de pagamento para validar acesso
   // Em produção substitua pela URL real
-  authApiUrl: "https://lexio-auth.mksoft-web.workers.dev",
+  authApiUrl: "https://api.mksoft.com.br/lexio/index.php",
 
   // ── CONFIGURAÇÃO DE LICENÇA E RENOVAÇÃO ──────────────
   license: {
