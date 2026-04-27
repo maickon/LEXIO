@@ -114,7 +114,7 @@ const Pages = (() => {
     <span class="phonetic-badge">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7"><path d="M12 3a9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 9-9m0 2a7 7 0 0 0-7 7 7 7 0 0 0 7 7 7 7 0 0 0 7-7 7 7 0 0 0-7-7m1 3v3.586l2.707 2.707-1.414 1.414L11 13.414V8h2z"/><path d="M9 7c0-.552.448-1 1-1s1 .448 1 1v1H9V7z" style="display:none"/></svg>
       <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7;margin-right:3px"><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/></svg>
-      como pronunciar: /${w.phonetic_br}/
+      como pronunciar: /${w.phonetic_en}/
     </span>`;
 
     return `
@@ -208,13 +208,13 @@ const Pages = (() => {
           </button>
           <div class="phrase-body">
             <div class="phrase-en">${highlighted}</div>
-            ${p.phonetic_pt ? `<div class="phrase-phonetic">
+            ${p.phonetic_en ? `<div class="phrase-phonetic">
               <span class="phonetic-badge">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7"><path d="M12 3a9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 9-9m0 2a7 7 0 0 0-7 7 7 7 0 0 0 7 7 7 7 0 0 0 7-7 7 7 0 0 0-7-7m1 3v3.586l2.707 2.707-1.414 1.414L11 13.414V8h2z"/><path d="M9 7c0-.552.448-1 1-1s1 .448 1 1v1H9V7z" style="display:none"/></svg>
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.7;margin-right:3px"><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/></svg>
                 como pronunciar
               </span>
-              ${p.phonetic_pt}
+              ${p.phonetic_en}
             </div>` : ''}
             <div class="phrase-pt">
               <span class="translation-badge">🇧🇷</span>
