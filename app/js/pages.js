@@ -318,6 +318,8 @@ const Pages = (() => {
     if (_testPlayTimeout)  { clearTimeout(_testPlayTimeout);  _testPlayTimeout  = null; }
     if (_testFocusTimeout) { clearTimeout(_testFocusTimeout); _testFocusTimeout = null; }
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    const _oldCtx = document.getElementById('test-context-card');
+    if (_oldCtx) _oldCtx.remove();
 
     const container = document.getElementById('test-content');
 
@@ -468,9 +470,10 @@ const Pages = (() => {
     } else {
       input.classList.add('wrong');
       fb.className = 'test-feedback fail';
-      fb.innerHTML = `✗ Resposta correta: <strong style="color:var(--white)">${_testAnswer}</strong>`;
+      fb.innerHTML = `✗ Não foi dessa vez — veja abaixo a resposta correta`;
       State.addTestResult(_testWordId, false);
       UI.updateSidebar();
+      _showErrorContext();
       playFeedback('error', ({ msg, pt }) => {
         Helper._showSystemMessage(fb, msg, pt);
       });
@@ -490,6 +493,63 @@ const Pages = (() => {
 
   function fuel() {
     Books.render();
+  }
+
+  function _showErrorContext() {
+    const word = WORDS_DB.find(w => w.id === _testWordId);
+    if (!word) return;
+
+    const existing = document.getElementById('test-context-card');
+    if (existing) existing.remove();
+
+    const card = document.createElement('div');
+    card.id        = 'test-context-card';
+    card.className = 'test-context-card';
+
+    const isWord = _testAnswer.trim() === word.en.trim();
+    const listenIcon = `<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`;
+    const escapedAnswer = _testAnswer.replace(/'/g, "\\'");
+
+    if (isWord) {
+      // Busca uma frase de exemplo das frases aprendidas
+      const learnedPhrases = State.getLearnedPhrases(_testWordId);
+      const pool    = learnedPhrases.length > 0 ? learnedPhrases : word.phrases;
+      const example = pool[0] || null;
+      const highlighted = example
+        ? example.en.replace(
+            new RegExp('\\b(' + Helper._escapeRegex(word.en) + ')\\b', 'i'),
+            '<span class="ctx-key">$1</span>'
+          )
+        : '';
+
+      card.innerHTML = `
+        <div class="ctx-label">// PALAVRA CORRETA</div>
+        <div class="ctx-word">${word.en}</div>
+        <div class="ctx-word-pt">${word.pt}</div>
+        ${highlighted ? `<div class="ctx-example">${highlighted}</div>` : ''}
+        <button class="ctx-listen-btn" onclick="Audio.speak('${word.en.replace(/'/g,"\\'")}', this)">
+          ${listenIcon} OUVIR NOVAMENTE
+        </button>`;
+    } else {
+      // Frase: busca a tradução nas frases aprendidas
+      const learnedPhrases = State.getLearnedPhrases(_testWordId);
+      const allPhrases     = learnedPhrases.length > 0 ? learnedPhrases : word.phrases;
+      const match          = allPhrases.find(p => p.en === _testAnswer);
+      const pt             = match ? match.pt : '';
+
+      card.innerHTML = `
+        <div class="ctx-label">// FRASE CORRETA</div>
+        <div class="ctx-phrase">${_testAnswer}</div>
+        ${pt ? `<div class="ctx-pt">🇧🇷 ${pt}</div>` : ''}
+        <button class="ctx-listen-btn" onclick="Audio.speak('${escapedAnswer}', this)">
+          ${listenIcon} OUVIR NOVAMENTE
+        </button>`;
+    }
+
+    const fb = document.getElementById('test-fb');
+    if (fb) fb.insertAdjacentElement('afterend', card);
+
+    requestAnimationFrame(() => card.classList.add('visible'));
   }
 
   function showHint() {
