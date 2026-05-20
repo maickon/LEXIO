@@ -4,18 +4,19 @@
 
 const State = (() => {
   let s = {
-    loggedIn:      false,
-    speed:         1,
-    currentWordId: null,
-    queue:         [],   // word ids not yet moved to inProgress
-    inProgress:    {},   // { wordId: masteryCount }
-    lastHitAt:     {},   // { wordId: timestamp (ms) do último acerto válido }
-    mastered:      [],   // word ids fully mastered
-    totalTests:    0,
-    streak:        0,    // dias consecutivos de acesso
-    totalSessions: 0,    // total de vezes que abriu o app
-    lastActive:    null, // toDateString() do último acesso
-    prevActive:    null, // toDateString() do penúltimo acesso (para calcular dias sem usar)
+    loggedIn:       false,
+    speed:          1,
+    currentWordId:  null,
+    queue:          [],   // word ids not yet moved to inProgress
+    inProgress:     {},   // { wordId: masteryCount }
+    learnedPhrases: {},   // { wordId: [{en, pt, phonetic_en, key}, ...] } — frases sorteadas no aprendizado
+    lastHitAt:      {},   // { wordId: timestamp (ms) do último acerto válido }
+    mastered:       [],   // word ids fully mastered
+    totalTests:     0,
+    streak:         0,    // dias consecutivos de acesso
+    totalSessions:  0,    // total de vezes que abriu o app
+    lastActive:     null, // toDateString() do último acesso
+    prevActive:     null, // toDateString() do penúltimo acesso (para calcular dias sem usar)
   };
 
   async function load() {
@@ -90,11 +91,30 @@ const State = (() => {
   function setSpeed(v)     { s.speed = v; save(); }
   function setLogin(v)     { s.loggedIn = v; }
 
-  function markInProgress(wordId) {
+  function markInProgress(wordId, phrases) {
     s.queue = s.queue.filter(id => id !== wordId);
     if (!(wordId in s.inProgress)) s.inProgress[wordId] = 0;
+    if (phrases && phrases.length > 0) s.learnedPhrases[wordId] = phrases;
     s.currentWordId = null;
     save();
+  }
+
+  function getLearnedPhrases(wordId) {
+    return s.learnedPhrases[wordId] || [];
+  }
+
+  // Retorna IDs cujo intervalo de repetição espaçada já expirou (prontos para pontuar)
+  // Se nenhum estiver pronto, retorna todos (fallback)
+  function readyInProgressIds() {
+    const now = Date.now();
+    const all = Object.keys(s.inProgress).map(Number);
+    const ready = all.filter(id => {
+      const hits       = s.inProgress[id] || 0;
+      const lastHit    = s.lastHitAt[id]  || 0;
+      const intervalMs = (LEXIO_CONFIG.masteryIntervals[hits] || 0) * 3600000;
+      return (now - lastHit) >= intervalMs;
+    });
+    return ready.length > 0 ? ready : all;
   }
 
   function addTestResult(wordId, correct) {
@@ -136,7 +156,8 @@ const State = (() => {
   return {
     load, save, get, setSpeed, setLogin,
     markInProgress, addTestResult,
-    inProgressIds, masteredIds, queueIds,
+    inProgressIds, masteredIds, queueIds, readyInProgressIds,
+    getLearnedPhrases,
     progress, isAllMastered,
     daysSinceLastActive, engagementLevel
   };

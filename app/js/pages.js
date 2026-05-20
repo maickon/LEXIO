@@ -74,9 +74,11 @@ const Pages = (() => {
       State.get().currentWordId = word.id;
     }
 
-    // pick 8 random phrases
+    // pick 8 random phrases e guarda para uso posterior no teste
     const phrases = [...word.phrases].sort(() => Math.random() - 0.5)
                                      .slice(0, LEXIO_CONFIG.phrasesPerWord);
+    _learnPhrases = phrases;
+    _learnWordId  = word.id;
 
     // random habit tip
     const habit = HABIT_TIPS[Math.floor(Math.random() * HABIT_TIPS.length)];
@@ -277,7 +279,8 @@ const Pages = (() => {
   }
 
   function markLearned(wordId) {
-    State.markInProgress(wordId);
+    const phrases = (_learnWordId === wordId && _learnPhrases) ? _learnPhrases : [];
+    State.markInProgress(wordId, phrases);
     UI.toast('⬡ Palavra adicionada ao banco de testes!', 'cyan');
     playSuccess();
     UI.confetti(15);
@@ -295,15 +298,30 @@ const Pages = (() => {
   }
 
   // ══════════════════════════════════════════════
+  // LEARN — estado da sessão de aprendizado
+  // ══════════════════════════════════════════════
+  let _learnPhrases = null;
+  let _learnWordId  = null;
+
+  // ══════════════════════════════════════════════
   // TEST
   // ══════════════════════════════════════════════
-  let _testAnswer = '';
-  let _testWordId = null;
-  let _testAttempted = false;
+  let _testAnswer       = '';
+  let _testWordId       = null;
+  let _testAttempted    = false;
+  let _testPlayTimeout  = null;
+  let _testFocusTimeout = null;
 
   function test() {
+    // Cancela timeouts pendentes de um teste anterior para evitar race condition
+    if (_testPlayTimeout)  { clearTimeout(_testPlayTimeout);  _testPlayTimeout  = null; }
+    if (_testFocusTimeout) { clearTimeout(_testFocusTimeout); _testFocusTimeout = null; }
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+
     const container = document.getElementById('test-content');
-    const ids = State.inProgressIds();
+
+    // Usa apenas palavras cujo intervalo de repetição espaçada já expirou
+    const ids = State.readyInProgressIds();
 
     if (ids.length === 0) {
       container.innerHTML = Helper._emptyState(
@@ -319,11 +337,16 @@ const Pages = (() => {
     const word  = WORDS_DB.find(w => w.id === _testWordId);
     const mastery = State.get().inProgress[_testWordId] || 0;
 
-    // 50/50: word or phrase
-    const usePhrase = word.phrases.length > 0 && Math.random() > 0.5;
+    // 50/50: word or phrase — usa apenas as frases sorteadas no aprendizado
+    const learnedPhrases = State.getLearnedPhrases(_testWordId);
+    const phrasePool     = learnedPhrases.length > 0
+      ? learnedPhrases
+      : word.phrases.slice(0, LEXIO_CONFIG.phrasesPerWord);
+
+    const usePhrase = phrasePool.length > 0 && Math.random() > 0.5;
     let testEN, hintPT;
     if (usePhrase) {
-      const p = word.phrases[Math.floor(Math.random() * word.phrases.length)];
+      const p = phrasePool[Math.floor(Math.random() * phrasePool.length)];
       testEN = p.en; hintPT = p.pt;
     } else {
       testEN = word.en; hintPT = word.pt;
@@ -369,10 +392,14 @@ const Pages = (() => {
       </div>`;
 
     document.getElementById('test-input').dataset.answer = testEN;
-    setTimeout(() => Pages._playTest(), 500);
 
-    // auto-focus input after audio starts
-    setTimeout(() => {
+    _testPlayTimeout = setTimeout(() => {
+      _testPlayTimeout = null;
+      Pages._playTest();
+    }, 500);
+
+    _testFocusTimeout = setTimeout(() => {
+      _testFocusTimeout = null;
       const inp = document.getElementById('test-input');
       if (inp) inp.focus();
     }, 1500);
