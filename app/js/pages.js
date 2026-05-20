@@ -310,6 +310,7 @@ const Pages = (() => {
   let _testWordId       = null;
   let _testAttempted    = false;
   let _hintUsed         = false;
+  let _sessionStreak    = 0;
   let _testPlayTimeout  = null;
   let _testFocusTimeout = null;
 
@@ -373,6 +374,7 @@ const Pages = (() => {
             </div>
           </div>
           <div class="mastery-dots">${dots}</div>
+          ${(() => { const { html, cls } = _streakBadge(); return html ? `<div class="session-streak${cls ? ' ' + cls : ''}" id="session-streak">${html}</div>` : `<div class="session-streak" id="session-streak" style="display:none"></div>`; })()}
         </div>
 
         <div class="test-card">
@@ -436,6 +438,12 @@ const Pages = (() => {
     if (correct) {
       input.classList.add('correct');
 
+      _sessionStreak++;
+      if (_sessionStreak === 3)  UI.toast('🔥 3 acertos seguidos!', 'cyan');
+      if (_sessionStreak === 5)  UI.toast('⚡ 5 seguidos! Você está pegando fogo!', 'cyan');
+      if (_sessionStreak === 10) UI.toast('💀 10 SEGUIDOS! LENDÁRIO!', 'green');
+      _updateStreakUI();
+
       const newCount   = State.addTestResult(_testWordId, true);
       const isMastered = State.masteredIds().includes(_testWordId);
       const hoursLeft  = State.get()._lastSkipReason || null;
@@ -476,6 +484,8 @@ const Pages = (() => {
       input.classList.add('wrong');
       fb.className = 'test-feedback fail';
       fb.innerHTML = `✗ Não foi dessa vez — veja abaixo a resposta correta`;
+      _sessionStreak = 0;
+      _updateStreakUI();
       State.addTestResult(_testWordId, false);
       UI.updateSidebar();
       _showErrorContext();
@@ -555,6 +565,29 @@ const Pages = (() => {
     if (fb) fb.insertAdjacentElement('afterend', card);
 
     requestAnimationFrame(() => card.classList.add('visible'));
+  }
+
+  function _streakBadge() {
+    if (_sessionStreak <= 0) return { html: '', cls: '' };
+    let icon = '✓', color = 'var(--cyan)', cls = '';
+    if (_sessionStreak >= 10)     { icon = '💀'; color = 'var(--magenta)'; cls = 'legend'; }
+    else if (_sessionStreak >= 5) { icon = '⚡'; color = 'var(--yellow)';  cls = 'bolt';   }
+    else if (_sessionStreak >= 3) { icon = '🔥'; color = 'var(--orange)';  cls = 'fire';   }
+    return {
+      html: `<span style="color:${color}">${icon} ${_sessionStreak} ACERTOS SEGUIDOS</span>`,
+      cls,
+    };
+  }
+
+  function _updateStreakUI() {
+    const el = document.getElementById('session-streak');
+    if (!el) return;
+    if (_sessionStreak <= 0) { el.style.display = 'none'; return; }
+    const { html, cls } = _streakBadge();
+    el.innerHTML   = html;
+    el.className   = `session-streak streak-pop${cls ? ' ' + cls : ''}`;
+    el.style.display = 'flex';
+    setTimeout(() => el.classList.remove('streak-pop'), 400);
   }
 
   function showReview() {

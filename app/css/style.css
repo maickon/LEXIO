@@ -708,6 +708,23 @@ body::before {
 .test-actions { display:flex; gap:10px; }
 .test-actions .btn { flex:1; }
 
+/* ── SESSION STREAK ── */
+.session-streak {
+  display:flex; align-items:center; justify-content:center;
+  margin-top:10px; padding:6px 10px;
+  background:rgba(0,245,255,0.04); border-radius:var(--radius-sm);
+  font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.1em;
+  transition:background 0.3s;
+}
+.session-streak.fire   { background:rgba(255,107,0,0.07); }
+.session-streak.bolt   { background:rgba(255,221,0,0.07); }
+.session-streak.legend { background:rgba(255,0,170,0.07); }
+@keyframes streakPop {
+  0%,100% { transform:scale(1); }
+  45%     { transform:scale(1.07); }
+}
+.streak-pop { animation:streakPop 0.35s ease; }
+
 /* ── MASTERY CARD — revisão rápida ── */
 .mastery-right { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
 .review-btn {
