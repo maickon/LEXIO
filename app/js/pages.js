@@ -309,6 +309,7 @@ const Pages = (() => {
   let _testAnswer       = '';
   let _testIsPhrase     = false;
   let _testPT           = '';
+  let _testPhoneticEn   = '';
   let _testWordId       = null;
   let _testAttempted    = false;
   let _hintUsed         = false;
@@ -353,16 +354,17 @@ const Pages = (() => {
       : word.phrases.slice(0, LEXIO_CONFIG.phrasesPerWord);
 
     const usePhrase = phrasePool.length > 0 && Math.random() > 0.5;
-    let testEN, hintPT;
+    let testEN, hintPT, hintPhonetic;
     if (usePhrase) {
       const p = phrasePool[Math.floor(Math.random() * phrasePool.length)];
-      testEN = p.en; hintPT = p.pt;
+      testEN = p.en; hintPT = p.pt; hintPhonetic = p.phonetic_en || '';
     } else {
-      testEN = word.en; hintPT = word.pt;
+      testEN = word.en; hintPT = word.pt; hintPhonetic = word.phonetic_en || '';
     }
-    _testAnswer   = testEN;
-    _testIsPhrase = usePhrase;
-    _testPT       = hintPT;
+    _testAnswer     = testEN;
+    _testIsPhrase   = usePhrase;
+    _testPT         = hintPT;
+    _testPhoneticEn = hintPhonetic;
 
     const dots = Array(LEXIO_CONFIG.masteryThreshold).fill(0).map((_,i) =>
       `<div class="dot ${i < mastery ? 'filled' : ''}"></div>`).join('');
@@ -557,6 +559,7 @@ const Pages = (() => {
         <div class="ctx-label">// PALAVRA CORRETA</div>
         <div class="ctx-word">${word.en}</div>
         <div class="ctx-word-pt">${word.pt}</div>
+        ${word.phonetic_en ? `<div class="ctx-phonetic">🔊 ${word.phonetic_en}</div>` : ''}
         ${highlighted ? `<div class="ctx-example">${highlighted}</div>` : ''}
         <button class="ctx-listen-btn" onclick="Audio.speak('${word.en.replace(/'/g,"\\'")}', this)">
           ${listenIcon} OUVIR NOVAMENTE
@@ -566,7 +569,8 @@ const Pages = (() => {
       const learnedPhrases = State.getLearnedPhrases(_testWordId);
       const allPhrases     = learnedPhrases.length > 0 ? learnedPhrases : word.phrases;
       const match          = allPhrases.find(p => p.en === _testAnswer);
-      const pt             = match ? match.pt : _testPT || '';
+      const pt             = match ? match.pt          : _testPT         || '';
+      const phonetic_en    = match ? match.phonetic_en : _testPhoneticEn || '';
 
       const { wrong, cWords, tWords } = _findWrongWords(_testAnswer, typed || '');
 
@@ -590,7 +594,8 @@ const Pages = (() => {
       card.innerHTML = `
         <div class="ctx-label">// FRASE CORRETA</div>
         <div class="ctx-phrase">${highlightedPhrase}</div>
-        ${pt ? `<div class="ctx-pt">🇧🇷 ${pt}</div>` : ''}
+        ${pt          ? `<div class="ctx-pt">🇧🇷 ${pt}</div>` : ''}
+        ${phonetic_en ? `<div class="ctx-phonetic">🔊 ${phonetic_en}</div>` : ''}
         ${wrongCount > 0 ? `
           <div class="ctx-wrong-section">
             <div class="ctx-wrong-label">${wrongLabel}</div>
@@ -742,7 +747,8 @@ const Pages = (() => {
 
       display.innerHTML = `
         <div style="line-height:1.7;margin-bottom:5px">${masked}</div>
-        ${_testPT ? `<div style="font-size:0.7rem;color:var(--muted2);font-family:sans-serif;letter-spacing:0">🇧🇷 ${_testPT}</div>` : ''}`;
+        ${_testPT ? `<div style="font-size:0.7rem;color:var(--muted2);font-family:sans-serif;letter-spacing:0;margin-bottom:3px">🇧🇷 ${_testPT}</div>` : ''}
+        ${_testPhoneticEn ? `<div style="font-size:0.7rem;color:var(--cyan);font-family:sans-serif;letter-spacing:0">🔊 ${_testPhoneticEn}</div>` : ''}`;
     }
 
     display.style.display = 'block';

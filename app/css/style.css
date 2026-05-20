@@ -837,6 +837,10 @@ body::before {
   line-height:1.5; border-top:1px solid var(--border); padding-top:8px;
 }
 .ctx-key { color:var(--orange); font-weight:700; }
+.ctx-phonetic {
+  font-size:0.75rem; color:var(--cyan); margin-bottom:10px;
+  font-family:var(--font-mono); letter-spacing:0.04em;
+}
 .ctx-wrong-word { color:var(--orange); font-weight:700; }
 .ctx-wrong-section {
   margin-top:10px; padding-top:10px;
