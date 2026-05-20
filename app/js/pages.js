@@ -74,9 +74,11 @@ const Pages = (() => {
       State.get().currentWordId = word.id;
     }
 
-    // pick 8 random phrases
+    // pick 8 random phrases e guarda para uso posterior no teste
     const phrases = [...word.phrases].sort(() => Math.random() - 0.5)
                                      .slice(0, LEXIO_CONFIG.phrasesPerWord);
+    _learnPhrases = phrases;
+    _learnWordId  = word.id;
 
     // random habit tip
     const habit = HABIT_TIPS[Math.floor(Math.random() * HABIT_TIPS.length)];
@@ -277,7 +279,8 @@ const Pages = (() => {
   }
 
   function markLearned(wordId) {
-    State.markInProgress(wordId);
+    const phrases = (_learnWordId === wordId && _learnPhrases) ? _learnPhrases : [];
+    State.markInProgress(wordId, phrases);
     UI.toast('⬡ Palavra adicionada ao banco de testes!', 'cyan');
     playSuccess();
     UI.confetti(15);
@@ -295,15 +298,36 @@ const Pages = (() => {
   }
 
   // ══════════════════════════════════════════════
+  // LEARN — estado da sessão de aprendizado
+  // ══════════════════════════════════════════════
+  let _learnPhrases = null;
+  let _learnWordId  = null;
+
+  // ══════════════════════════════════════════════
   // TEST
   // ══════════════════════════════════════════════
-  let _testAnswer = '';
-  let _testWordId = null;
-  let _testAttempted = false;
+  let _testAnswer       = '';
+  let _testWordId       = null;
+  let _testAttempted    = false;
+  let _hintUsed         = false;
+  let _sessionStreak    = 0;
+  let _testPlayTimeout  = null;
+  let _testFocusTimeout = null;
 
   function test() {
+    // Cancela timeouts pendentes de um teste anterior para evitar race condition
+    if (_testPlayTimeout)  { clearTimeout(_testPlayTimeout);  _testPlayTimeout  = null; }
+    if (_testFocusTimeout) { clearTimeout(_testFocusTimeout); _testFocusTimeout = null; }
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    const _oldCtx    = document.getElementById('test-context-card');
+    if (_oldCtx) _oldCtx.remove();
+    const _oldReview = document.getElementById('review-panel');
+    if (_oldReview) _oldReview.remove();
+
     const container = document.getElementById('test-content');
-    const ids = State.inProgressIds();
+
+    // Usa apenas palavras cujo intervalo de repetição espaçada já expirou
+    const ids = State.readyInProgressIds();
 
     if (ids.length === 0) {
       container.innerHTML = Helper._emptyState(
@@ -315,15 +339,21 @@ const Pages = (() => {
     }
 
     _testAttempted = false;
+    _hintUsed      = false;
     _testWordId = ids[Math.floor(Math.random() * ids.length)];
     const word  = WORDS_DB.find(w => w.id === _testWordId);
     const mastery = State.get().inProgress[_testWordId] || 0;
 
-    // 50/50: word or phrase
-    const usePhrase = word.phrases.length > 0 && Math.random() > 0.5;
+    // 50/50: word or phrase — usa apenas as frases sorteadas no aprendizado
+    const learnedPhrases = State.getLearnedPhrases(_testWordId);
+    const phrasePool     = learnedPhrases.length > 0
+      ? learnedPhrases
+      : word.phrases.slice(0, LEXIO_CONFIG.phrasesPerWord);
+
+    const usePhrase = phrasePool.length > 0 && Math.random() > 0.5;
     let testEN, hintPT;
     if (usePhrase) {
-      const p = word.phrases[Math.floor(Math.random() * word.phrases.length)];
+      const p = phrasePool[Math.floor(Math.random() * phrasePool.length)];
       testEN = p.en; hintPT = p.pt;
     } else {
       testEN = word.en; hintPT = word.pt;
@@ -338,9 +368,14 @@ const Pages = (() => {
         <div class="mastery-card">
           <div class="mastery-top">
             <div class="mastery-word">${word.en.toUpperCase()}</div>
-            <div class="mastery-count">${mastery}/${LEXIO_CONFIG.masteryThreshold}</div>
+            <div class="mastery-right">
+              <div class="mastery-count">${mastery}/${LEXIO_CONFIG.masteryThreshold}</div>
+              <button class="review-btn" id="review-btn" onclick="Pages.showReview()">↺ REVISAR</button>
+            </div>
           </div>
           <div class="mastery-dots">${dots}</div>
+          ${_waitIndicatorHTML(_testWordId)}
+          ${(() => { const { html, cls } = _streakBadge(); return html ? `<div class="session-streak${cls ? ' ' + cls : ''}" id="session-streak">${html}</div>` : `<div class="session-streak" id="session-streak" style="display:none"></div>`; })()}
         </div>
 
         <div class="test-card">
@@ -360,6 +395,10 @@ const Pages = (() => {
               autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
               onkeydown="if(event.key==='Enter')Pages.checkTest()">
           </div>
+          <div class="test-hint-row">
+            <button class="test-hint-btn" id="test-hint-btn" onclick="Pages.showHint()">? DICA</button>
+            <div class="test-hint-display" id="test-hint-display"></div>
+          </div>
           <div class="test-feedback" id="test-fb"></div>
           <div class="test-actions">
             <button class="btn btn-magenta" onclick="Pages.checkTest()">◎ VERIFICAR</button>
@@ -369,10 +408,14 @@ const Pages = (() => {
       </div>`;
 
     document.getElementById('test-input').dataset.answer = testEN;
-    setTimeout(() => Pages._playTest(), 500);
 
-    // auto-focus input after audio starts
-    setTimeout(() => {
+    _testPlayTimeout = setTimeout(() => {
+      _testPlayTimeout = null;
+      Pages._playTest();
+    }, 500);
+
+    _testFocusTimeout = setTimeout(() => {
+      _testFocusTimeout = null;
       const inp = document.getElementById('test-input');
       if (inp) inp.focus();
     }, 1500);
@@ -395,6 +438,12 @@ const Pages = (() => {
 
     if (correct) {
       input.classList.add('correct');
+
+      _sessionStreak++;
+      if (_sessionStreak === 3)  UI.toast('🔥 3 acertos seguidos!', 'cyan');
+      if (_sessionStreak === 5)  UI.toast('⚡ 5 seguidos! Você está pegando fogo!', 'cyan');
+      if (_sessionStreak === 10) UI.toast('💀 10 SEGUIDOS! LENDÁRIO!', 'green');
+      _updateStreakUI();
 
       const newCount   = State.addTestResult(_testWordId, true);
       const isMastered = State.masteredIds().includes(_testWordId);
@@ -435,9 +484,12 @@ const Pages = (() => {
     } else {
       input.classList.add('wrong');
       fb.className = 'test-feedback fail';
-      fb.innerHTML = `✗ Resposta correta: <strong style="color:var(--white)">${_testAnswer}</strong>`;
+      fb.innerHTML = `✗ Não foi dessa vez — veja abaixo a resposta correta`;
+      _sessionStreak = 0;
+      _updateStreakUI();
       State.addTestResult(_testWordId, false);
       UI.updateSidebar();
+      _showErrorContext();
       playFeedback('error', ({ msg, pt }) => {
         Helper._showSystemMessage(fb, msg, pt);
       });
@@ -459,9 +511,194 @@ const Pages = (() => {
     Books.render();
   }
 
+  function _showErrorContext() {
+    const word = WORDS_DB.find(w => w.id === _testWordId);
+    if (!word) return;
+
+    const existing = document.getElementById('test-context-card');
+    if (existing) existing.remove();
+
+    const card = document.createElement('div');
+    card.id        = 'test-context-card';
+    card.className = 'test-context-card';
+
+    const isWord = _testAnswer.trim() === word.en.trim();
+    const listenIcon = `<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`;
+    const escapedAnswer = _testAnswer.replace(/'/g, "\\'");
+
+    if (isWord) {
+      // Busca uma frase de exemplo das frases aprendidas
+      const learnedPhrases = State.getLearnedPhrases(_testWordId);
+      const pool    = learnedPhrases.length > 0 ? learnedPhrases : word.phrases;
+      const example = pool[0] || null;
+      const highlighted = example
+        ? example.en.replace(
+            new RegExp('\\b(' + Helper._escapeRegex(word.en) + ')\\b', 'i'),
+            '<span class="ctx-key">$1</span>'
+          )
+        : '';
+
+      card.innerHTML = `
+        <div class="ctx-label">// PALAVRA CORRETA</div>
+        <div class="ctx-word">${word.en}</div>
+        <div class="ctx-word-pt">${word.pt}</div>
+        ${highlighted ? `<div class="ctx-example">${highlighted}</div>` : ''}
+        <button class="ctx-listen-btn" onclick="Audio.speak('${word.en.replace(/'/g,"\\'")}', this)">
+          ${listenIcon} OUVIR NOVAMENTE
+        </button>`;
+    } else {
+      // Frase: busca a tradução nas frases aprendidas
+      const learnedPhrases = State.getLearnedPhrases(_testWordId);
+      const allPhrases     = learnedPhrases.length > 0 ? learnedPhrases : word.phrases;
+      const match          = allPhrases.find(p => p.en === _testAnswer);
+      const pt             = match ? match.pt : '';
+
+      card.innerHTML = `
+        <div class="ctx-label">// FRASE CORRETA</div>
+        <div class="ctx-phrase">${_testAnswer}</div>
+        ${pt ? `<div class="ctx-pt">🇧🇷 ${pt}</div>` : ''}
+        <button class="ctx-listen-btn" onclick="Audio.speak('${escapedAnswer}', this)">
+          ${listenIcon} OUVIR NOVAMENTE
+        </button>`;
+    }
+
+    const fb = document.getElementById('test-fb');
+    if (fb) fb.insertAdjacentElement('afterend', card);
+
+    requestAnimationFrame(() => card.classList.add('visible'));
+  }
+
+  function _formatWait(ms) {
+    if (ms <= 0) return null;
+    const totalMin = Math.ceil(ms / 60000);
+    if (totalMin < 60) return `${totalMin}min`;
+    const hours = Math.floor(totalMin / 60);
+    const mins  = totalMin % 60;
+    if (hours < 24) return mins > 0 ? `${hours}h ${mins}min` : `${hours}h`;
+    const days = Math.floor(hours / 24);
+    const remH = hours % 24;
+    return remH > 0 ? `${days}d ${remH}h` : `${days}d`;
+  }
+
+  function _waitIndicatorHTML(wordId) {
+    const ms = State.msUntilNextHit(wordId);
+    const clockIcon = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>`;
+    const checkIcon = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>`;
+    if (ms > 0) {
+      return `<div class="wait-indicator">${clockIcon} PRÓXIMO PONTO EM ${_formatWait(ms)}</div>`;
+    }
+    const hits = State.get().inProgress[wordId] || 0;
+    if (hits > 0) {
+      return `<div class="wait-ready">${checkIcon} ACERTO CONTA PONTO AGORA</div>`;
+    }
+    return '';
+  }
+
+  function _streakBadge() {
+    if (_sessionStreak <= 0) return { html: '', cls: '' };
+    let icon = '✓', color = 'var(--cyan)', cls = '';
+    if (_sessionStreak >= 10)     { icon = '💀'; color = 'var(--magenta)'; cls = 'legend'; }
+    else if (_sessionStreak >= 5) { icon = '⚡'; color = 'var(--yellow)';  cls = 'bolt';   }
+    else if (_sessionStreak >= 3) { icon = '🔥'; color = 'var(--orange)';  cls = 'fire';   }
+    return {
+      html: `<span style="color:${color}">${icon} ${_sessionStreak} ACERTOS SEGUIDOS</span>`,
+      cls,
+    };
+  }
+
+  function _updateStreakUI() {
+    const el = document.getElementById('session-streak');
+    if (!el) return;
+    if (_sessionStreak <= 0) { el.style.display = 'none'; return; }
+    const { html, cls } = _streakBadge();
+    el.innerHTML   = html;
+    el.className   = `session-streak streak-pop${cls ? ' ' + cls : ''}`;
+    el.style.display = 'flex';
+    setTimeout(() => el.classList.remove('streak-pop'), 400);
+  }
+
+  function showReview() {
+    const word = WORDS_DB.find(w => w.id === _testWordId);
+    if (!word) return;
+
+    // Alterna: fecha se já aberto
+    const existing = document.getElementById('review-panel');
+    if (existing) { closeReview(); return; }
+
+    const btn = document.getElementById('review-btn');
+    if (btn) { btn.disabled = true; btn.textContent = '↻ OUVINDO...'; }
+
+    const learnedPhrases = State.getLearnedPhrases(_testWordId);
+    const phrases = learnedPhrases.length > 0
+      ? learnedPhrases
+      : word.phrases.slice(0, LEXIO_CONFIG.phrasesPerWord);
+
+    const panel = document.createElement('div');
+    panel.id        = 'review-panel';
+    panel.className = 'review-panel';
+    panel.innerHTML = `
+      <div class="review-header">
+        <div class="review-label">// FRASES DE "${word.en.toUpperCase()}"</div>
+        <button class="review-close-btn" onclick="Pages.closeReview()">✕</button>
+      </div>
+      <div id="review-list">
+        ${phrases.map((p, i) => `
+          <div class="review-phrase-item" id="review-item-${i}">
+            <div class="review-phrase-en">${p.en}</div>
+            <div class="review-phrase-pt">🇧🇷 ${p.pt}</div>
+          </div>`).join('')}
+      </div>`;
+
+    const testCard = document.querySelector('.test-card');
+    if (testCard) testCard.insertAdjacentElement('beforebegin', panel);
+    requestAnimationFrame(() => panel.classList.add('visible'));
+
+    const texts = phrases.map(p => p.en);
+    Audio.speakSequence(texts, 500, i => {
+      document.querySelectorAll('.review-phrase-item').forEach((el, idx) => {
+        el.classList.toggle('active', idx === i);
+        if (idx === i) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }).then(() => {
+      document.querySelectorAll('.review-phrase-item').forEach(el => el.classList.remove('active'));
+      if (btn) { btn.disabled = false; btn.textContent = '↺ REVISAR'; }
+    });
+  }
+
+  function closeReview() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    const panel = document.getElementById('review-panel');
+    if (panel) {
+      panel.classList.remove('visible');
+      setTimeout(() => panel.remove(), 300);
+    }
+    const btn = document.getElementById('review-btn');
+    if (btn) { btn.disabled = false; btn.textContent = '↺ REVISAR'; }
+  }
+
+  function showHint() {
+    const btn     = document.getElementById('test-hint-btn');
+    const display = document.getElementById('test-hint-display');
+    if (!display || _hintUsed) return;
+    _hintUsed = true;
+
+    const words = _testAnswer.trim().split(/\s+/);
+    let hint;
+    if (words.length === 1) {
+      const w = _testAnswer;
+      hint = w[0].toUpperCase() + '—'.repeat(Math.max(0, w.length - 1)) + `  (${w.length} letras)`;
+    } else {
+      hint = `${words.length} palavras — começa com "${words[0][0].toUpperCase()}"`;
+    }
+
+    display.textContent = hint;
+    display.style.display = 'block';
+    if (btn) { btn.disabled = true; btn.textContent = '✓ DICA'; }
+  }
+
   return {
-    evolution, learn, test, fuel,   // ← adicione fuel aqui
+    evolution, learn, test, fuel,
     markLearned, nextWord, checkTest,
-    _playTest, _playAll,
+    _playTest, _playAll, showHint, showReview, closeReview,
   };
 })();
