@@ -708,6 +708,54 @@ body::before {
 .test-actions { display:flex; gap:10px; }
 .test-actions .btn { flex:1; }
 
+/* ── MASTERY CARD — revisão rápida ── */
+.mastery-right { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+.review-btn {
+  background:transparent; border:1px solid var(--border2);
+  border-radius:var(--radius-sm); color:var(--muted2);
+  font-family:var(--font-mono); font-size:0.55rem; letter-spacing:0.1em;
+  padding:4px 10px; cursor:pointer; transition:all 0.2s; white-space:nowrap;
+}
+.review-btn:hover:not(:disabled) { border-color:var(--cyan); color:var(--cyan); }
+.review-btn:disabled { opacity:0.5; cursor:default; }
+
+/* ── REVIEW PANEL ── */
+.review-panel {
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:var(--radius); padding:16px; margin-bottom:12px;
+  opacity:0; transform:translateY(-8px);
+  transition:opacity 0.3s ease, transform 0.3s ease;
+  max-height:300px; overflow-y:auto;
+}
+.review-panel.visible { opacity:1; transform:translateY(0); }
+.review-header {
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:12px;
+}
+.review-label {
+  font-family:var(--font-mono); font-size:0.5rem; color:var(--cyan);
+  letter-spacing:0.2em;
+}
+.review-close-btn {
+  background:transparent; border:none; color:var(--muted2);
+  font-size:1rem; cursor:pointer; padding:2px 6px; line-height:1;
+  transition:color 0.15s;
+}
+.review-close-btn:hover { color:var(--white); }
+.review-phrase-item {
+  padding:10px 12px; border-radius:var(--radius-sm); margin-bottom:4px;
+  transition:all 0.2s; border:1px solid transparent;
+}
+.review-phrase-item.active {
+  background:rgba(0,245,255,0.06); border-color:rgba(0,245,255,0.3);
+}
+.review-phrase-en {
+  font-size:0.85rem; color:rgba(236,238,255,0.55); line-height:1.4;
+}
+.review-phrase-item.active .review-phrase-en { color:var(--white); }
+.review-phrase-pt { font-size:0.72rem; color:var(--muted2); margin-top:3px; }
+.review-phrase-item.active .review-phrase-pt { color:var(--cyan); }
+
 /* ── HINT ── */
 .test-hint-row {
   display:flex; align-items:center; gap:12px; margin-bottom:14px;

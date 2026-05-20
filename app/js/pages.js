@@ -318,8 +318,10 @@ const Pages = (() => {
     if (_testPlayTimeout)  { clearTimeout(_testPlayTimeout);  _testPlayTimeout  = null; }
     if (_testFocusTimeout) { clearTimeout(_testFocusTimeout); _testFocusTimeout = null; }
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-    const _oldCtx = document.getElementById('test-context-card');
+    const _oldCtx    = document.getElementById('test-context-card');
     if (_oldCtx) _oldCtx.remove();
+    const _oldReview = document.getElementById('review-panel');
+    if (_oldReview) _oldReview.remove();
 
     const container = document.getElementById('test-content');
 
@@ -365,7 +367,10 @@ const Pages = (() => {
         <div class="mastery-card">
           <div class="mastery-top">
             <div class="mastery-word">${word.en.toUpperCase()}</div>
-            <div class="mastery-count">${mastery}/${LEXIO_CONFIG.masteryThreshold}</div>
+            <div class="mastery-right">
+              <div class="mastery-count">${mastery}/${LEXIO_CONFIG.masteryThreshold}</div>
+              <button class="review-btn" id="review-btn" onclick="Pages.showReview()">↺ REVISAR</button>
+            </div>
           </div>
           <div class="mastery-dots">${dots}</div>
         </div>
@@ -552,6 +557,65 @@ const Pages = (() => {
     requestAnimationFrame(() => card.classList.add('visible'));
   }
 
+  function showReview() {
+    const word = WORDS_DB.find(w => w.id === _testWordId);
+    if (!word) return;
+
+    // Alterna: fecha se já aberto
+    const existing = document.getElementById('review-panel');
+    if (existing) { closeReview(); return; }
+
+    const btn = document.getElementById('review-btn');
+    if (btn) { btn.disabled = true; btn.textContent = '↻ OUVINDO...'; }
+
+    const learnedPhrases = State.getLearnedPhrases(_testWordId);
+    const phrases = learnedPhrases.length > 0
+      ? learnedPhrases
+      : word.phrases.slice(0, LEXIO_CONFIG.phrasesPerWord);
+
+    const panel = document.createElement('div');
+    panel.id        = 'review-panel';
+    panel.className = 'review-panel';
+    panel.innerHTML = `
+      <div class="review-header">
+        <div class="review-label">// FRASES DE "${word.en.toUpperCase()}"</div>
+        <button class="review-close-btn" onclick="Pages.closeReview()">✕</button>
+      </div>
+      <div id="review-list">
+        ${phrases.map((p, i) => `
+          <div class="review-phrase-item" id="review-item-${i}">
+            <div class="review-phrase-en">${p.en}</div>
+            <div class="review-phrase-pt">🇧🇷 ${p.pt}</div>
+          </div>`).join('')}
+      </div>`;
+
+    const testCard = document.querySelector('.test-card');
+    if (testCard) testCard.insertAdjacentElement('beforebegin', panel);
+    requestAnimationFrame(() => panel.classList.add('visible'));
+
+    const texts = phrases.map(p => p.en);
+    Audio.speakSequence(texts, 500, i => {
+      document.querySelectorAll('.review-phrase-item').forEach((el, idx) => {
+        el.classList.toggle('active', idx === i);
+        if (idx === i) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }).then(() => {
+      document.querySelectorAll('.review-phrase-item').forEach(el => el.classList.remove('active'));
+      if (btn) { btn.disabled = false; btn.textContent = '↺ REVISAR'; }
+    });
+  }
+
+  function closeReview() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    const panel = document.getElementById('review-panel');
+    if (panel) {
+      panel.classList.remove('visible');
+      setTimeout(() => panel.remove(), 300);
+    }
+    const btn = document.getElementById('review-btn');
+    if (btn) { btn.disabled = false; btn.textContent = '↺ REVISAR'; }
+  }
+
   function showHint() {
     const btn     = document.getElementById('test-hint-btn');
     const display = document.getElementById('test-hint-display');
@@ -575,6 +639,6 @@ const Pages = (() => {
   return {
     evolution, learn, test, fuel,
     markLearned, nextWord, checkTest,
-    _playTest, _playAll, showHint,
+    _playTest, _playAll, showHint, showReview, closeReview,
   };
 })();
