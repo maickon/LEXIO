@@ -307,6 +307,8 @@ const Pages = (() => {
   // TEST
   // ══════════════════════════════════════════════
   let _testAnswer       = '';
+  let _testIsPhrase     = false;
+  let _testPT           = '';
   let _testWordId       = null;
   let _testAttempted    = false;
   let _hintUsed         = false;
@@ -358,7 +360,9 @@ const Pages = (() => {
     } else {
       testEN = word.en; hintPT = word.pt;
     }
-    _testAnswer = testEN;
+    _testAnswer   = testEN;
+    _testIsPhrase = usePhrase;
+    _testPT       = hintPT;
 
     const dots = Array(LEXIO_CONFIG.masteryThreshold).fill(0).map((_,i) =>
       `<div class="dot ${i < mastery ? 'filled' : ''}"></div>`).join('');
@@ -489,7 +493,7 @@ const Pages = (() => {
       _updateStreakUI();
       State.addTestResult(_testWordId, false);
       UI.updateSidebar();
-      _showErrorContext();
+      _showErrorContext(typed);
       playFeedback('error', ({ msg, pt }) => {
         Helper._showSystemMessage(fb, msg, pt);
       });
@@ -511,7 +515,19 @@ const Pages = (() => {
     Books.render();
   }
 
-  function _showErrorContext() {
+  function _findWrongWords(correct, typed) {
+    const norm   = s => s.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, ' ').trim();
+    const cWords = norm(correct).split(' ');
+    const tWords = norm(typed).split(' ');
+    const wrong  = new Set();
+    const maxLen = Math.max(cWords.length, tWords.length);
+    for (let i = 0; i < maxLen; i++) {
+      if ((cWords[i] || '') !== (tWords[i] || '')) wrong.add(i);
+    }
+    return { wrong, cWords, tWords };
+  }
+
+  function _showErrorContext(typed) {
     const word = WORDS_DB.find(w => w.id === _testWordId);
     if (!word) return;
 
@@ -522,12 +538,11 @@ const Pages = (() => {
     card.id        = 'test-context-card';
     card.className = 'test-context-card';
 
-    const isWord = _testAnswer.trim() === word.en.trim();
-    const listenIcon = `<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`;
+    const listenIcon    = `<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`;
     const escapedAnswer = _testAnswer.replace(/'/g, "\\'");
 
-    if (isWord) {
-      // Busca uma frase de exemplo das frases aprendidas
+    if (!_testIsPhrase) {
+      // Palavra: exibe com frase de exemplo
       const learnedPhrases = State.getLearnedPhrases(_testWordId);
       const pool    = learnedPhrases.length > 0 ? learnedPhrases : word.phrases;
       const example = pool[0] || null;
@@ -547,16 +562,40 @@ const Pages = (() => {
           ${listenIcon} OUVIR NOVAMENTE
         </button>`;
     } else {
-      // Frase: busca a tradução nas frases aprendidas
+      // Frase: comparação palavra por palavra
       const learnedPhrases = State.getLearnedPhrases(_testWordId);
       const allPhrases     = learnedPhrases.length > 0 ? learnedPhrases : word.phrases;
       const match          = allPhrases.find(p => p.en === _testAnswer);
-      const pt             = match ? match.pt : '';
+      const pt             = match ? match.pt : _testPT || '';
+
+      const { wrong, cWords, tWords } = _findWrongWords(_testAnswer, typed || '');
+
+      // Frase original com palavras erradas marcadas em vermelho
+      const highlightedPhrase = _testAnswer.split(' ').map((w, i) =>
+        wrong.has(i) ? `<span class="ctx-wrong-word">${w}</span>` : w
+      ).join(' ');
+
+      // Lista de divergências palavra por palavra
+      const wrongCount = wrong.size;
+      const wrongLabel = wrongCount === 1
+        ? 'Você errou essa palavra:'
+        : `Você errou essas ${wrongCount} palavras:`;
+      const wrongList = [...wrong].map(i => `
+        <div class="ctx-word-diff">
+          <span class="ctx-word-wrong">✗ ${tWords[i] || '(não digitado)'}</span>
+          <span class="ctx-arrow">→</span>
+          <span class="ctx-word-correct">✓ ${cWords[i] || '(faltando)'}</span>
+        </div>`).join('');
 
       card.innerHTML = `
         <div class="ctx-label">// FRASE CORRETA</div>
-        <div class="ctx-phrase">${_testAnswer}</div>
+        <div class="ctx-phrase">${highlightedPhrase}</div>
         ${pt ? `<div class="ctx-pt">🇧🇷 ${pt}</div>` : ''}
+        ${wrongCount > 0 ? `
+          <div class="ctx-wrong-section">
+            <div class="ctx-wrong-label">${wrongLabel}</div>
+            ${wrongList}
+          </div>` : ''}
         <button class="ctx-listen-btn" onclick="Audio.speak('${escapedAnswer}', this)">
           ${listenIcon} OUVIR NOVAMENTE
         </button>`;
@@ -564,7 +603,6 @@ const Pages = (() => {
 
     const fb = document.getElementById('test-fb');
     if (fb) fb.insertAdjacentElement('afterend', card);
-
     requestAnimationFrame(() => card.classList.add('visible'));
   }
 
@@ -682,16 +720,31 @@ const Pages = (() => {
     if (!display || _hintUsed) return;
     _hintUsed = true;
 
-    const words = _testAnswer.trim().split(/\s+/);
-    let hint;
-    if (words.length === 1) {
+    if (!_testIsPhrase) {
+      // Palavra: primeira letra + traços + contagem
       const w = _testAnswer;
-      hint = w[0].toUpperCase() + '—'.repeat(Math.max(0, w.length - 1)) + `  (${w.length} letras)`;
+      const hint = w[0].toUpperCase() + '—'.repeat(Math.max(0, w.length - 1)) + `  (${w.length} letras)`;
+      display.innerHTML = `<span>${hint}</span>`;
     } else {
-      hint = `${words.length} palavras — começa com "${words[0][0].toUpperCase()}"`;
+      // Frase: mascara palavras aleatoriamente, mostra tradução PT
+      const words   = _testAnswer.trim().split(' ');
+      const maxShow = Math.max(1, Math.floor(words.length / 2));
+      const count   = Math.floor(Math.random() * maxShow) + 1; // 1 até maxShow
+
+      // Embaralha índices e revela os primeiros 'count'
+      const pool = words.map((_, i) => i);
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      const revealed = new Set(pool.slice(0, count));
+      const masked   = words.map((w, i) => revealed.has(i) ? `<strong>${w}</strong>` : '...').join(' ');
+
+      display.innerHTML = `
+        <div style="line-height:1.7;margin-bottom:5px">${masked}</div>
+        ${_testPT ? `<div style="font-size:0.7rem;color:var(--muted2);font-family:sans-serif;letter-spacing:0">🇧🇷 ${_testPT}</div>` : ''}`;
     }
 
-    display.textContent = hint;
     display.style.display = 'block';
     if (btn) { btn.disabled = true; btn.textContent = '✓ DICA'; }
   }
