@@ -837,6 +837,23 @@ body::before {
   line-height:1.5; border-top:1px solid var(--border); padding-top:8px;
 }
 .ctx-key { color:var(--orange); font-weight:700; }
+.ctx-wrong-word { color:var(--orange); font-weight:700; }
+.ctx-wrong-section {
+  margin-top:10px; padding-top:10px;
+  border-top:1px solid rgba(255,107,0,0.2);
+}
+.ctx-wrong-label {
+  font-family:var(--font-mono); font-size:0.58rem; color:var(--orange);
+  letter-spacing:0.1em; margin-bottom:8px;
+}
+.ctx-word-diff {
+  display:flex; align-items:center; gap:8px; margin-bottom:5px;
+  font-family:var(--font-mono); font-size:0.75rem;
+}
+.ctx-word-wrong   { color:rgba(255,107,0,0.75); }
+.ctx-arrow        { color:var(--muted2); }
+.ctx-word-correct { color:var(--green); font-weight:700; }
+
 .ctx-listen-btn {
   background:transparent; border:1px solid rgba(255,107,0,0.35);
   border-radius:var(--radius-sm); color:var(--orange);
