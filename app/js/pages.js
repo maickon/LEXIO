@@ -374,6 +374,7 @@ const Pages = (() => {
             </div>
           </div>
           <div class="mastery-dots">${dots}</div>
+          ${_waitIndicatorHTML(_testWordId)}
           ${(() => { const { html, cls } = _streakBadge(); return html ? `<div class="session-streak${cls ? ' ' + cls : ''}" id="session-streak">${html}</div>` : `<div class="session-streak" id="session-streak" style="display:none"></div>`; })()}
         </div>
 
@@ -565,6 +566,32 @@ const Pages = (() => {
     if (fb) fb.insertAdjacentElement('afterend', card);
 
     requestAnimationFrame(() => card.classList.add('visible'));
+  }
+
+  function _formatWait(ms) {
+    if (ms <= 0) return null;
+    const totalMin = Math.ceil(ms / 60000);
+    if (totalMin < 60) return `${totalMin}min`;
+    const hours = Math.floor(totalMin / 60);
+    const mins  = totalMin % 60;
+    if (hours < 24) return mins > 0 ? `${hours}h ${mins}min` : `${hours}h`;
+    const days = Math.floor(hours / 24);
+    const remH = hours % 24;
+    return remH > 0 ? `${days}d ${remH}h` : `${days}d`;
+  }
+
+  function _waitIndicatorHTML(wordId) {
+    const ms = State.msUntilNextHit(wordId);
+    const clockIcon = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>`;
+    const checkIcon = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>`;
+    if (ms > 0) {
+      return `<div class="wait-indicator">${clockIcon} PRÓXIMO PONTO EM ${_formatWait(ms)}</div>`;
+    }
+    const hits = State.get().inProgress[wordId] || 0;
+    if (hits > 0) {
+      return `<div class="wait-ready">${checkIcon} ACERTO CONTA PONTO AGORA</div>`;
+    }
+    return '';
   }
 
   function _streakBadge() {

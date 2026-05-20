@@ -147,6 +147,15 @@ const State = (() => {
     return s.inProgress[wordId] ?? LEXIO_CONFIG.masteryThreshold;
   }
 
+  // Milissegundos restantes até o próximo acerto válido (0 = pode pontuar agora)
+  function msUntilNextHit(wordId) {
+    const hits       = s.inProgress[wordId] || 0;
+    const lastHit    = s.lastHitAt[wordId]  || 0;
+    const intervalMs = (LEXIO_CONFIG.masteryIntervals[hits] || 0) * 3600000;
+    const remaining  = intervalMs - (Date.now() - lastHit);
+    return remaining > 0 ? remaining : 0;
+  }
+
   function inProgressIds() { return Object.keys(s.inProgress).map(Number); }
   function masteredIds()    { return s.mastered; }
   function queueIds()       { return s.queue; }
@@ -157,7 +166,7 @@ const State = (() => {
     load, save, get, setSpeed, setLogin,
     markInProgress, addTestResult,
     inProgressIds, masteredIds, queueIds, readyInProgressIds,
-    getLearnedPhrases,
+    getLearnedPhrases, msUntilNextHit,
     progress, isAllMastered,
     daysSinceLastActive, engagementLevel
   };

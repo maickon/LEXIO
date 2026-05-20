@@ -708,6 +708,23 @@ body::before {
 .test-actions { display:flex; gap:10px; }
 .test-actions .btn { flex:1; }
 
+/* ── WAIT INDICATOR (intervalo de repetição espaçada) ── */
+.wait-indicator {
+  display:flex; align-items:center; gap:6px; justify-content:center;
+  font-family:var(--font-mono); font-size:0.57rem; letter-spacing:0.1em;
+  color:var(--muted2); margin-top:10px;
+  padding:6px 10px; border-radius:var(--radius-sm);
+  background:rgba(255,255,255,0.02); border:1px solid var(--border);
+}
+.wait-indicator svg { flex-shrink:0; opacity:0.6; }
+.wait-ready {
+  display:flex; align-items:center; gap:6px; justify-content:center;
+  font-family:var(--font-mono); font-size:0.57rem; letter-spacing:0.1em;
+  color:var(--green); margin-top:10px;
+  padding:6px 10px; border-radius:var(--radius-sm);
+  background:rgba(0,255,136,0.04); border:1px solid rgba(0,255,136,0.2);
+}
+
 /* ── SESSION STREAK ── */
 .session-streak {
   display:flex; align-items:center; justify-content:center;
