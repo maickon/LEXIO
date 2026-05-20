@@ -309,6 +309,7 @@ const Pages = (() => {
   let _testAnswer       = '';
   let _testWordId       = null;
   let _testAttempted    = false;
+  let _hintUsed         = false;
   let _testPlayTimeout  = null;
   let _testFocusTimeout = null;
 
@@ -333,6 +334,7 @@ const Pages = (() => {
     }
 
     _testAttempted = false;
+    _hintUsed      = false;
     _testWordId = ids[Math.floor(Math.random() * ids.length)];
     const word  = WORDS_DB.find(w => w.id === _testWordId);
     const mastery = State.get().inProgress[_testWordId] || 0;
@@ -382,6 +384,10 @@ const Pages = (() => {
               placeholder="${usePhrase ? 'Digite a frase...' : 'Digite a palavra...'}"
               autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
               onkeydown="if(event.key==='Enter')Pages.checkTest()">
+          </div>
+          <div class="test-hint-row">
+            <button class="test-hint-btn" id="test-hint-btn" onclick="Pages.showHint()">? DICA</button>
+            <div class="test-hint-display" id="test-hint-display"></div>
           </div>
           <div class="test-feedback" id="test-fb"></div>
           <div class="test-actions">
@@ -486,9 +492,29 @@ const Pages = (() => {
     Books.render();
   }
 
+  function showHint() {
+    const btn     = document.getElementById('test-hint-btn');
+    const display = document.getElementById('test-hint-display');
+    if (!display || _hintUsed) return;
+    _hintUsed = true;
+
+    const words = _testAnswer.trim().split(/\s+/);
+    let hint;
+    if (words.length === 1) {
+      const w = _testAnswer;
+      hint = w[0].toUpperCase() + '—'.repeat(Math.max(0, w.length - 1)) + `  (${w.length} letras)`;
+    } else {
+      hint = `${words.length} palavras — começa com "${words[0][0].toUpperCase()}"`;
+    }
+
+    display.textContent = hint;
+    display.style.display = 'block';
+    if (btn) { btn.disabled = true; btn.textContent = '✓ DICA'; }
+  }
+
   return {
-    evolution, learn, test, fuel,   // ← adicione fuel aqui
+    evolution, learn, test, fuel,
     markLearned, nextWord, checkTest,
-    _playTest, _playAll,
+    _playTest, _playAll, showHint,
   };
 })();
